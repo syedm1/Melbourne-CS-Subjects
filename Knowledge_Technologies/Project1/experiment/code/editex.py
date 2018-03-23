@@ -66,8 +66,8 @@ def editex():
         line = line.strip()
         # change special symbol to '#'
         for i in range(len(line)):
-            if ALPHABET.index(line[i]) == -1:
-                line[i] = '#'
+            if ALPHABET.find(line[i]) == -1:
+                line = line[:i] +  '#' + line[(i+1):]
         # compute the similarity
         min_dis = 99
         min_set = set()

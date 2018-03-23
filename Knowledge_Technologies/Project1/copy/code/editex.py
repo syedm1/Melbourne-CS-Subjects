@@ -43,7 +43,7 @@ def distance(a, b):
         for j in range(1, b_len):
             dp[i][j] = min( dp[i-1][j] + D[ALPHABET.index(a[i-1])][ALPHABET.index(a[i])],\
                             dp[i][j-1] + D[ALPHABET.index(b[j-1])][ALPHABET.index(b[j])],\
-                            dp[i-1][j-1]+D[ALPHABET.index(a[i])][ALPHABET.index(b[j])])
+                            dp[i-1][j-1] + D[ALPHABET.index(a[i])][ALPHABET.index(b[j])])
 
     return dp[a_len-1][b_len-1]
 
@@ -62,7 +62,12 @@ def editex():
 
     # process misspell file
     for line in mis_f.readlines():
+        print ('\n' + line,)    # test
         line = line.strip()
+        # change special symbol to '#'
+        for i in range(len(line)):
+            if ALPHABET.index(line[i]) == -1:
+                line[i] = '#'
         # compute the similarity
         min_dis = 99
         min_set = set()
@@ -79,6 +84,7 @@ def editex():
         res_f.write(str(min_dis) + '\t')
         for i in min_set:
             res_f.write(dic[i] + '\t')
+            print(dic[i] + '\t')    # test
         res_f.write('\n')
     res_f.close()
     mis_f.close()

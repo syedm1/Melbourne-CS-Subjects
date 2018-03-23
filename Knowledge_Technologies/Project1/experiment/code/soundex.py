@@ -15,9 +15,12 @@ for i in range (len (letter_group)):
 def string2soundex(a):
     res = a[0]
     # translate and remove dumplicate
-    last_num = 99
+    last_num = 7
     for ch in a[1:]:
-        cur_num = soundex_dict[ch]
+        if ch in soundex_dict:
+            cur_num = soundex_dict[ch]
+        else:
+            cur_num = 7
         if cur_num == last_num:
             pass
         else:

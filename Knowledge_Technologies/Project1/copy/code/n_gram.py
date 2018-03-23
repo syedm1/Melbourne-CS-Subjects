@@ -62,7 +62,7 @@ def n_gram(N):
     res_f.close()
 
 def main():
-    for i in range(1, 3):
+    for i in range(1, 10):
         n_gram(i)
 
 if __name__ == "__main__":

@@ -7,7 +7,7 @@
 3	agist	against	
 2	ain	
 0	airborn	
-3	award	awkward	
+3	awkward	award	
 4	alcohol	
 2	alchymy	
 3	alter	
@@ -18,7 +18,7 @@
 3	amazon	
 3	amide	ame	ade	amd	
 5	amend	
-3	sancy	acy	dancy	any	anciency	fancy	nancy	anc	
+3	acy	dancy	any	fancy	sancy	anciency	nancy	anc	
 3	af	an	
 1	apology	
 2	appro	
@@ -41,10 +41,10 @@
 0	balling	
 0	ballon	
 4	balls	bac	balsa	
-4	bauk	bk	bark	back	bank	bask	ba	balk	
+4	bk	bark	bauk	back	bank	bask	ba	balk	
 3	baw	
 0	bearfoot	
-4	bebed	behn	behe	beeb	beebe	beebee	be	eh	beth	
+4	bebed	behe	behn	beeb	eh	beebe	beebee	be	beth	
 4	beech	botch	bebotch	
 0	beery	
 2	bee	
@@ -57,13 +57,13 @@
 3	bitch	biotech	botch	
 3	bitch	
 3	bitch	
-4	bitch	birchen	bitches	witchen	bitched	kitchen	
+4	bitch	birchen	bitched	bitches	witchen	kitchen	
 4	bitch	bit	
 4	thc	bic	bit	
 3	bish	bits	
 4	bines	bigness	bizones	bizes	
 3	biz	
-3	lar	blare	bar	belar	blear	bolar	blair	blart	
+3	blare	lar	bar	belar	blear	bolar	blair	blart	
 3	latently	
 2	bleiler	
 0	blond	
@@ -88,7 +88,7 @@
 4	rotal	brool	
 1	brubru	
 0	brussels	
-4	brit	bryn	brat	bret	yt	bt	bryant	brot	br	brut	tryt	
+4	brit	bt	brat	bret	yt	bryant	brot	br	bryn	brut	tryt	
 1	bs	bbss	
 3	bubba	
 3	buggier	buggies	
@@ -100,7 +100,7 @@
 3	byth	
 3	cack	cracky	cackly	caky	
 5	scaffie	
-4	canes	canones	hones	cajones	cones	
+4	canes	cajones	hones	cones	canones	
 2	cairene	calcaire	
 3	cameron	cameo	
 6	camouflage	
@@ -108,7 +108,7 @@
 3	caprice	
 3	cary	carzey	
 4	catboat	hatbox	
-4	selfie	cele	ce	
+4	cele	selfie	ce	
 0	centre	
 3	heezy	
 2	cheerios	
@@ -116,7 +116,7 @@
 3	chad	
 1	chon	
 4	croiik	ci	ck	ik	
-3	claik	clink	click	cli	clk	
+3	claik	click	clink	clk	cli	
 4	clitoris	
 3	clumsy	
 0	colour	
@@ -137,7 +137,7 @@
 1	cutie	
 0	daemon	
 3	daimon	
-3	dab	diamb	dam	amb	
+3	dab	dam	amb	diamb	
 4	dark	
 3	dago	
 0	dearth	
@@ -160,11 +160,11 @@
 3	doit	dont	doni	
 4	douche	diadoche	
 1	dosh	
-3	drawk	drake	dak	drank	
+3	drank	drake	dak	drawk	
 0	dray	
 0	droll	
 3	drunk	
-3	daubes	dues	dubs	
+3	dues	daubes	dubs	
 1	duffus	
 0	dumby	
 0	dun	
@@ -185,16 +185,16 @@
 0	entre	
 2	entre	
 4	ef	enif	enum	en	
-4	ronnie	connie	bonnie	donnie	yonnie	
+4	connie	yonnie	donnie	ronnie	bonnie	
 4	epitome	
 4	everything	
 3	exempt	except	expt	
-3	emys	beys	es	ys	eyes	keys	weys	ey	eyas	deys	leys	
+3	keys	emys	beys	es	ys	eyes	leys	ey	eyas	deys	weys	
 6	facebook	book	
 0	faery	
 3	fage	aget	
-4	fagged	fagger	fage	faggot	aget	
-4	fait	agit	faggot	baggit	
+4	fage	aget	fagged	fagger	faggot	
+4	faggot	agit	fait	baggit	
 3	agit	fait	
 0	fagot	
 2	fatale	
@@ -211,28 +211,28 @@
 5	fit	baw	
 0	flem	
 0	flodge	
-3	forking	oking	
+3	oking	forking	
 2	fooling	
 3	fog	
 0	foot	
 1	forsee	
 3	foray	forty	
-6	foreplay	four	flay	forlay	play	
+6	flay	forlay	play	foreplay	four	
 3	forty	fouty	
 3	freck	freak	
 4	fris	frisky	fribby	
 3	fcc	
-4	luckly	feckly	fickly	fuck	
+4	feckly	luckly	fickly	fuck	
 4	fu	fuji	fuck	funk	fusk	fulk	
-3	uk	fu	fuck	fusk	funk	fulk	
-4	uk	fu	fuck	kkk	fusk	funk	fulk	
+3	fu	uk	fuck	fusk	funk	fulk	
+4	fu	uk	fuck	kkk	fusk	funk	fulk	
 3	funge	fun	funje	funebre	
 3	fug	fur	
 0	gabor	
 3	ache	gauche	
 0	gaea	
-3	gaize	gie	gaine	gae	
-3	aint	gant	gainst	gain	gait	
+3	gie	gaize	gaine	gae	
+3	gait	gant	aint	gain	gainst	
 3	gam	gaz	
 0	gaol	
 0	gave	
@@ -241,7 +241,7 @@
 4	geez	gees	
 0	ge	
 3	genius	
-5	gade	gere	ge	
+5	gade	ge	gere	
 3	hei	ghi	
 3	gehey	hey	gey	
 3	irk	
@@ -253,18 +253,18 @@
 4	gores	
 5	guss	goss	
 3	gon	
-4	grat	grot	gt	gret	grit	gr	
+4	grat	grot	gr	gt	gret	grit	
 3	rammer	gramme	gammer	
-3	gravy	grave	gravely	gravery	
+3	gravy	gravery	grave	gravely	
 0	gret	
 3	grocer	
 3	gritrock	grok	rock	
 4	brodie	goodie	
 0	grosse	
 3	grr	
-3	gluey	gue	gey	aguey	guy	
-3	gluey	gue	gey	aguey	guy	
-3	guha	gush	guhr	uh	gu	
+3	gey	gluey	aguey	gue	guy	
+3	gey	gluey	aguey	gue	guy	
+3	guha	guhr	uh	gush	gu	
 0	guildford	
 1	guinness	
 0	gullable	
@@ -276,14 +276,14 @@
 3	hamster	
 3	anus	hans	
 0	harang	
-3	haring	hartin	hating	charting	hearting	
+3	charting	hartin	hating	haring	hearting	
 3	hater	
 4	hade	
 0	hatter	
 2	hathaway	hadaway	hay	
 3	haw	hwt	hat	
 3	hayter	hyte	haye	hate	
-3	haze	az	ha	hz	hazy	ahaz	hayz	
+3	az	ha	hz	haze	hazy	ahaz	hayz	
 0	hed	
 3	hee	
 3	hello	
@@ -301,31 +301,31 @@
 0	homey	
 3	homme	
 0	honour	
-3	hosny	hny	ony	honky	horny	hon	honey	phony	hoy	
+3	hosny	hny	hoy	ony	honky	horny	hon	honey	phony	
 0	hoody	
 1	hog	
 1	hoopless	
 0	hore	
 1	hot	
-4	lp	hr	holp	hp	halp	help	
+4	lp	holp	hp	halp	hr	help	
 1	hs	
 3	humerus	
 3	hundi	hun	uni	hui	
 4	hunnic	unit	tunnit	hunt	
-3	dot	idiot	ido	
+3	dot	ido	idiot	
 3	niklas	
 4	illiterate	
 3	immigration	
 0	inane	
 0	inbread	
-6	includible	inedible	imperdible	incredible	
+6	includible	imperdible	inedible	incredible	
 0	infinity	
 3	information	
 4	gerland	
 3	in	
 4	invoy	enjoy	injoin	joy	
-3	iten	intens	tens	
-3	litz	sitz	ditz	ritz	it	itza	fitz	
+3	iten	tens	intens	
+3	litz	ditz	ritz	sitz	it	itza	fitz	
 0	jalopy	
 3	jah	
 5	jean	jeez	jear	walz	
@@ -335,7 +335,7 @@
 3	jealous	
 4	junius	jens	genius	
 0	jeopardy	
-4	hipped	sipped	kipped	ripped	tipped	pipped	zipped	nipped	dipped	gipped	jipper	yipped	lipped	
+4	hipped	sipped	kipped	ripped	tipped	pipped	zipped	dipped	lipped	nipped	gipped	jipper	yipped	
 3	jit	joist	ist	
 4	mobbie	bobbie	dobbie	robbie	joie	jobble	jobe	
 0	jogging	
@@ -360,13 +360,13 @@
 4	tikrit	
 3	ult	
 3	urva	
-4	korwa	kua	kurta	
+4	kurta	korwa	kua	
 3	ku	kw	
-5	jazy	gazy	hazy	dazy	mazy	twazzy	ky	kw	lazy	kwan	
-3	kyar	kyat	ya	kyah	ky	ka	kyak	
+5	jazy	gazy	hazy	dazy	ky	mazy	twazzy	kw	lazy	kwan	
+3	kyar	kyat	ya	ky	ka	kyak	kyah	
 0	kyke	
 4	baffin	lain	
-3	lamias	amis	lams	lais	lamish	
+3	lams	lamias	lais	amis	lamish	
 3	lao	lam	alamo	
 0	lawyer	
 0	layed	
@@ -391,7 +391,7 @@
 0	looser	
 3	loose	loosely	looey	
 1	lox	
-4	boozer	looter	loomer	doozer	loover	glozer	looser	looker	lozenger	looper	
+4	looter	loomer	doozer	boozer	looser	loover	glozer	looker	lozenger	looper	
 3	lop	l	lol	
 3	lou	loulu	l	lol	
 4	lu	lv	hv	
@@ -416,7 +416,7 @@
 4	matamata	mama	
 0	manches	
 3	manton	manation	
-3	macon	man	mon	mao	mason	machaon	
+3	macon	man	mon	mason	mao	machaon	
 0	marajuana	
 0	marihuana	
 2	mastaba	
@@ -456,13 +456,13 @@
 4	oktoberfest	
 3	ock	
 4	og	of	mg	
-3	ogdoad	og	od	gd	
-3	ogam	og	ogum	gm	om	
-3	oh	hg	og	
+3	og	ogdoad	od	gd	
+3	ogum	og	ogam	gm	om	
+3	hg	og	oh	
 4	onward	bookward	ward	
 1	ol	
 1	ol	
-3	mong	dong	kong	wong	nong	on	ng	ongoing	long	bong	rong	cong	oolong	song	tong	oblong	onding	og	pong	gong	jong	hong	
+3	mong	dong	kong	rong	wong	nong	on	ng	song	ongoing	long	bong	cong	oolong	tong	oblong	hong	onding	og	pong	gong	jong	
 3	obeyer	goober	
 3	orgasm	
 3	orgies	forgie	
@@ -473,7 +473,7 @@
 1	pah	
 2	palach	
 0	pacifically	
-3	pais	pilpai	pari	pani	paid	pali	opai	pain	pi	paip	pair	paik	ai	palapalai	pasi	pail	peai	pa	pahi	paki	pausai	
+3	pain	pilpai	palapalai	peai	pi	pa	pani	opai	paip	pair	pahi	pausai	pais	pari	paid	pali	pasi	paik	ai	pail	paki	
 3	party	pay	partway	
 3	pata	pa	patata	
 0	pawned	
@@ -482,8 +482,8 @@
 3	peale	
 0	pensil	
 3	pens	
-3	pelops	peps	ps	pops	
-3	pelops	peps	ps	pops	
+3	pelops	ps	pops	peps	
+3	pelops	ps	pops	peps	
 3	persist	
 2	perverse	
 0	phage	
@@ -496,7 +496,7 @@
 3	plait	planity	plant	
 3	plage	
 3	plaza	laz	
-3	plo	lox	phlox	pox	plotx	
+3	plotx	lox	pox	plo	phlox	
 0	plutonic	
 3	p	poe	pop	pep	
 4	pontin	postin	
@@ -506,7 +506,7 @@
 3	pone	pons	pose	
 0	popple	
 0	poseur	
-3	powny	pon	powan	pow	own	
+3	powny	pon	pow	powan	own	
 2	probably	
 1	prof	
 3	proke	rok	pro	
@@ -521,26 +521,26 @@
 3	pawned	
 3	pawning	pining	
 3	pw	pawn	
-4	wool	rool	zool	dool	gool	ql	ol	pool	bool	mool	sool	cool	hool	tool	fool	
+4	rool	zool	dool	gool	ol	pool	bool	ql	wool	mool	sool	cool	hool	tool	fool	
 3	oot	
 3	oot	
 1	queen	
 1	ques	
-3	querl	url	quarl	quirl	
+3	quirl	querl	url	quarl	
 3	rap	rep	rae	
 3	rapido	raid	
-3	graip	rap	rip	
+3	graip	rip	rap	
 0	raper	
 0	raper	
 3	raspberry	
 3	racist	
 3	awk	raw	rawky	drawk	
-3	reagent	ren	
+3	ren	reagent	
 3	reve	
 4	pediculous	ridiculous	
 0	reneg	
 0	renig	
-3	resold	cresol	resoil	resole	resoles	
+3	resoil	resold	resole	resoles	cresol	
 3	retargeted	restarted	retarred	
 2	tartaret	
 0	rite	
@@ -549,7 +549,7 @@
 4	rohmer	roer	roarer	
 3	rotl	
 0	roud	
-3	retd	td	rt	rd	
+3	td	retd	rt	rd	
 5	rude	
 3	ruffe	
 4	sexy	
@@ -574,11 +574,11 @@
 3	sked	sike	sinked	spiked	sicked	silked	
 0	sike	
 0	sike	
-3	simson	simpsons	simons	sons	sims	
+3	simson	simons	simpsons	sons	sims	
 0	skelly	
 1	sleep	
 1	smells	
-4	sat	sprat	rat	scrat	surat	
+4	sprat	rat	surat	sat	scrat	
 3	smart	
 1	sop	
 0	sope	
@@ -602,7 +602,7 @@
 0	sware	
 0	swarve	
 3	swa	wav	sav	
-4	slete	skete	sweet	tete	sweeter	sweetie	sweeten	spete	sweeswee	swede	
+4	slete	sweetie	skete	sweeswee	sweet	tete	spete	sweeten	sweeter	swede	
 3	t	tat	aht	
 5	tano	toki	
 3	ty	tantawy	
@@ -612,14 +612,14 @@
 0	teached	
 3	tath	teth	teat	eath	teathe	th	
 3	tembe	ember	ter	
-3	ted	erd	ter	
+3	ter	erd	ted	
 2	terrific	
 3	testicles	
-6	today	tay	tuesday	day	
+6	tay	tuesday	day	today	
 0	tew	
 3	table	
 0	tha	
-3	tha	thawy	tay	thy	hay	
+3	tha	thy	hay	thawy	tay	
 0	theater	teather	
 0	theatre	
 0	thee	
@@ -632,7 +632,7 @@
 0	thy	
 1	tidies	
 0	til	
-3	lak	tilak	talak	
+3	lak	talak	tilak	
 0	toi	
 3	toki	to	toko	
 4	tolt	
@@ -640,21 +640,21 @@
 6	tchi	
 4	marrow	tomorrow	tarrow	
 1	tole	
-3	stranger	ranger	tanger	
+3	tanger	stranger	ranger	
 0	travellers	
 4	trend	trended	trendel	
 3	rikk	
 0	troupe	
 3	tup	taupe	tupek	tue	stupe	tuple	
-4	ber	reber	heber	umber	weber	
-3	ruman	man	urman	kuman	unman	unhuman	human	yuman	
+4	weber	ber	umber	heber	reber	
+3	ruman	urman	kuman	man	unman	unhuman	human	yuman	
 3	umgang	um	mg	ug	
 0	unlit	
 1	uni	
 1	unie	
 0	unphased	
 0	untied	
-3	ur	uk	turk	gurk	murk	burk	lurk	
+3	uk	turk	gurk	murk	ur	burk	lurk	
 0	ur	
 0	ussels	
 2	va	
@@ -664,7 +664,7 @@
 4	venesia	
 3	lillian	villan	
 0	vittles	
-3	voter	oer	voder	ver	voe	vomer	vower	
+3	voter	vower	oer	voder	ver	voe	vomer	
 7	oldermost	
 3	wat	wah	aht	
 0	waisting	
@@ -677,7 +677,7 @@
 2	wt	
 3	haen	when	whan	whalen	
 0	whang	
-3	whim	whip	himp	wimp	
+3	whip	whim	himp	wimp	
 0	whingeing	
 3	wh	whoa	
 3	hoar	whar	whoa	
@@ -694,7 +694,7 @@
 4	woman	wyn	won	women	
 4	woman	wyn	won	women	
 3	wone	once	
-5	woolie	woodie	cookie	okie	kookie	woke	nookie	sookie	rookie	bookie	
+5	woolie	woodie	cookie	okie	kookie	sookie	woke	nookie	rookie	bookie	
 2	woodwose	
 3	wo	
 3	rod	wro	wod	

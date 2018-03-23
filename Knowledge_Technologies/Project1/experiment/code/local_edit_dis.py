@@ -12,9 +12,9 @@ def distance(a, b):
     b_len = len(b) + 1
     dp = [[0 for i in range(b_len)] for j in range(a_len)]
     for i in range(a_len):
-        dp[i][0] = i
+        dp[i][0] = 0
     for i in range(b_len):
-        dp[0][i] = i
+        dp[0][i] = 0
     # dp
     max_dis = 0
     for i in range(1, a_len):
@@ -38,10 +38,9 @@ def edit_dis():
 
     # process misspell file
     for line in mis_f.readlines():
-        # print (line) # test
         line = line.strip()
         # compute the similarity
-        max_dis = 0
+        max_dis = -99
         max_set = set()
         for i in range(len(dic)):
             dis = distance(dic[i], line)
@@ -51,7 +50,7 @@ def edit_dis():
                 max_set.add(i)
             elif dis == max_dis:
                 max_set.add(i)
-        # print (max_set)   # test
+        print(str(max_dis) + '\t')
         res_f.write(str(max_dis) + '\t')
         for i in max_set:
             res_f.write(dic[i] + '\t')

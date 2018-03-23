@@ -7,7 +7,7 @@
 15	agist	against	
 14	ain	
 0	airborn	
-15	award	awkward	
+15	awkward	award	
 16	al	
 14	alchymy	
 15	alter	
@@ -41,7 +41,7 @@
 0	balling	
 0	ballon	
 16	balls	bac	
-16	bauk	bk	bark	back	bank	bask	ba	balk	
+16	bk	bark	bauk	back	bank	bask	ba	balk	
 15	baw	
 0	bearfoot	
 16	bebed	
@@ -57,13 +57,13 @@
 15	bitch	biotech	botch	
 15	bitch	
 15	bitch	
-16	bitch	birchen	bitches	witchen	bitched	kitchen	
+16	bitch	birchen	bitched	bitches	witchen	kitchen	
 16	bitch	bit	
 16	thc	bic	bit	
 15	bish	bits	
 16	bigness	
 15	biz	
-15	blastular	lar	blare	bar	belar	blear	bolar	blair	blart	
+15	blastular	blare	lar	bar	belar	blear	bolar	blair	blart	
 15	latently	
 13	bleiler	
 0	blond	
@@ -88,7 +88,7 @@
 16	brool	
 11	brubru	
 0	brussels	
-16	brit	bryn	brat	bret	yt	bt	bryant	brot	br	brut	tryt	
+16	brit	bt	brat	bret	yt	bryant	brot	br	bryn	brut	tryt	
 13	bs	bbss	
 15	bubba	
 15	buggier	buggies	
@@ -100,15 +100,15 @@
 15	byth	
 15	cack	cracky	cackly	caky	
 18	cane	caffeine	caffeone	carene	caffle	cafe	caffre	caff	cene	
-16	canes	canones	hones	cajones	cones	
+16	canes	cajones	hones	cones	canones	
 13	calcaire	
 15	cameron	cameo	
-20	cage	camote	auge	came	
+20	came	cage	camote	auge	
 16	canadians	
 15	caprice	
 15	cary	carzey	
 16	hatbox	
-16	selfie	cele	ce	
+16	cele	selfie	ce	
 0	centre	
 15	heezy	
 16	cheerios	cherries	
@@ -116,7 +116,7 @@
 15	chad	
 13	chon	
 16	croiik	ci	ck	ik	
-15	claik	clink	click	cli	clk	
+15	claik	click	clink	clk	cli	
 16	clitoris	
 15	clumsy	
 0	colour	
@@ -137,7 +137,7 @@
 13	cutie	
 0	daemon	
 15	daimon	
-15	dab	diamb	dam	amb	
+15	dab	dam	amb	diamb	
 16	dark	
 15	dago	
 0	dearth	
@@ -160,11 +160,11 @@
 15	doit	dont	doni	
 16	douche	
 13	dosh	
-15	drawk	drake	dak	drank	
+15	drank	drake	dak	drawk	
 0	dray	
 0	droll	
 15	drunk	
-15	daubes	dues	dubs	
+15	dues	daubes	dubs	
 13	duffus	
 0	dumby	
 0	dun	
@@ -185,11 +185,11 @@
 0	entre	
 15	entre	
 16	ef	enif	enum	en	
-16	ronnie	connie	bonnie	donnie	yonnie	
+16	connie	yonnie	donnie	ronnie	bonnie	
 16	epitome	
 16	everything	
 15	exempt	except	expt	
-15	emys	beys	es	ys	eyes	keys	weys	ey	eyas	deys	leys	
+15	keys	emys	beys	es	ys	eyes	leys	ey	eyas	deys	weys	
 18	facebook	book	
 0	faery	
 15	fage	aget	
@@ -211,28 +211,28 @@
 17	fit	baw	
 0	flem	
 0	flodge	
-15	forking	oking	
+15	oking	forking	
 15	follying	
 15	fog	
 11	foot	
 13	forsee	
 15	foray	forty	
-18	foreplay	four	flay	forlay	play	
+18	flay	forlay	play	foreplay	four	
 15	forty	fouty	
 15	freck	freak	
 16	fris	frisky	fribby	
 15	fcc	
-16	luckly	feckly	fickly	fuck	
+16	feckly	luckly	fickly	fuck	
 16	fu	fuji	fuck	funk	fusk	fulk	
-15	uk	fu	fuck	fusk	funk	fulk	
-16	fusk	fu	funk	fuck	fulk	
+15	fu	uk	fuck	fusk	funk	fulk	
+16	fu	fuck	fusk	funk	fulk	
 15	funge	fun	funje	funebre	
 15	fug	fur	
 0	gabor	
 15	ache	gauche	
 0	gaea	
-15	gaize	gie	gaine	gae	
-15	aint	gant	gainst	gain	gait	
+15	gie	gaize	gaine	gae	
+15	gait	gant	aint	gain	gainst	
 15	gam	gaz	
 0	gaol	
 0	gave	
@@ -241,7 +241,7 @@
 16	geez	gees	
 0	ge	
 15	genius	
-17	gade	gere	ge	
+17	gade	ge	gere	
 15	hei	ghi	
 15	gehey	hey	gey	
 15	irk	
@@ -253,18 +253,18 @@
 17	gores	
 17	guss	goss	
 15	gon	
-16	grat	grot	gt	gret	grit	gr	
+16	grat	grot	gr	gt	gret	grit	
 15	rammer	gramme	gammer	
-15	gravy	grave	gravely	gravery	
+15	gravy	gravery	grave	gravely	
 0	gret	
 15	grocer	
 15	gritrock	grok	rock	
 16	brodie	goodie	
 0	grosse	
 15	grr	
-15	gluey	gue	gey	aguey	guy	
-15	gluey	gue	gey	aguey	guy	
-15	guha	gush	guhr	uh	gu	
+15	gey	gluey	aguey	gue	guy	
+15	gey	gluey	aguey	gue	guy	
+15	guha	guhr	uh	gush	gu	
 0	guildford	
 13	guinness	
 0	gullable	
@@ -276,14 +276,14 @@
 15	hamster	
 15	anus	hans	
 0	harang	
-15	haring	hartin	hating	charting	hearting	
+15	charting	hartin	hating	haring	hearting	
 15	hater	
 16	hade	
 0	hatter	
 13	hathaway	
 15	haw	hwt	hat	
 15	hayter	hyte	haye	hate	
-15	haze	az	ha	hz	hazy	ahaz	hayz	
+15	az	ha	hz	haze	hazy	ahaz	hayz	
 0	hed	
 15	hee	
 15	hello	
@@ -301,31 +301,31 @@
 0	homey	
 15	homme	
 0	honour	
-15	hosny	hny	homophony	ony	honky	horny	hon	honey	phony	hoy	
+15	hosny	hny	hoy	homophony	ony	honky	horny	hon	honey	phony	
 0	hoody	
 13	hog	
 13	hoopless	
 0	hore	
 13	hot	
-16	lp	hr	holp	hp	halp	help	
+16	lp	holp	hp	halp	hr	help	
 12	hs	
 15	humerus	
 15	hundi	hun	uni	hui	
 16	hunnic	tunnit	hunt	
-15	dot	idiot	ido	
+15	dot	ido	idiot	
 15	niklas	
 16	illiterate	
 15	immigration	
 0	inane	
 0	inbread	
-18	includible	inedible	imperdible	incredible	
+18	includible	imperdible	inedible	incredible	
 0	infinity	
 15	information	
 16	gerland	
 15	in	
 16	invoy	enjoy	joy	
-15	iten	intens	tens	
-15	litz	sitz	ditz	ritz	it	itza	fitz	
+15	iten	tens	intens	
+15	litz	ditz	ritz	sitz	it	itza	fitz	
 0	jalopy	
 15	jah	
 17	jean	jeez	jear	walz	
@@ -335,7 +335,7 @@
 15	jealous	
 16	junius	jens	genius	
 0	jeopardy	
-16	hipped	sipped	kipped	ripped	tipped	pipped	zipped	nipped	dipped	gipped	jipper	yipped	lipped	
+16	hipped	sipped	kipped	ripped	tipped	pipped	zipped	dipped	lipped	nipped	gipped	jipper	yipped	
 15	jit	joist	ist	
 16	mobbie	bobbie	dobbie	robbie	joie	jobble	jobe	
 0	jogging	
@@ -360,13 +360,13 @@
 17	k	katik	
 15	ult	
 15	urva	
-16	korwa	kua	kurta	
+16	kurta	korwa	kua	
 15	ku	kw	
-17	jazy	gazy	hazy	dazy	mazy	ky	kw	lazy	kwan	
-15	kyar	kyat	ya	kyah	ky	ka	kyak	
+17	jazy	gazy	hazy	dazy	ky	mazy	kw	lazy	kwan	
+15	kyar	kyat	ya	ky	ka	kyak	kyah	
 0	kyke	
 16	baffin	lain	
-15	lamias	amis	lams	lais	lamish	
+15	lams	lamias	lais	amis	lamish	
 15	lao	lam	alamo	
 0	lawyer	
 0	layed	
@@ -391,11 +391,11 @@
 0	looser	
 15	loose	loosely	looey	
 13	lox	
-16	boozer	looter	loomer	doozer	loover	looser	looker	looper	
+16	looter	loomer	doozer	boozer	looser	loover	looker	looper	
 15	lop	l	lol	
 15	lou	loulu	l	lol	
 16	lu	lv	hv	
-16	lu	lutz	lull	lula	lulu	
+16	lula	lulu	lull	lu	lutz	
 0	lute	
 16	loverly	
 15	luxe	
@@ -416,7 +416,7 @@
 16	mama	
 0	manches	
 15	manton	manation	
-15	macon	man	mon	mao	mason	machaon	
+15	macon	man	mon	mason	mao	machaon	
 0	marajuana	
 0	marihuana	
 14	mastaba	
@@ -456,9 +456,9 @@
 16	oktoberfest	
 15	ock	
 16	og	of	mg	
-15	ogdoad	og	od	gd	
-15	ogam	og	ogum	gm	om	
-15	oh	hg	og	
+15	og	ogdoad	od	gd	
+15	ogum	og	ogam	gm	om	
+15	hg	og	oh	
 16	onward	bookward	ward	
 13	ol	
 12	ol	
@@ -473,7 +473,7 @@
 13	pah	
 14	palach	
 0	pacifically	
-15	pais	pilpai	pari	pani	paid	pali	opai	pain	pi	paip	pair	paik	ai	pasi	pail	peai	pa	pahi	paki	pausai	
+15	pais	pilpai	pari	pani	paid	pali	opai	pain	peai	pi	paip	pair	pasi	paik	ai	pail	pa	pahi	paki	pausai	
 15	party	pay	partway	
 15	pata	pa	
 0	pawned	
@@ -482,8 +482,8 @@
 15	peale	
 0	pensil	
 15	pens	
-15	pelops	peps	ps	pops	
-15	pelops	peps	ps	pops	
+15	pelops	ps	pops	peps	
+15	pelops	ps	pops	peps	
 15	persist	
 15	perversive	perv	pere	pervertive	pe	perverse	
 0	phage	
@@ -496,7 +496,7 @@
 15	plait	planity	plant	
 15	plage	
 15	plaza	laz	
-15	plo	lox	phlox	pox	plotx	
+15	plotx	lox	pox	plo	phlox	
 0	plutonic	
 15	p	poe	pop	pep	
 16	pontin	postin	
@@ -506,7 +506,7 @@
 15	pone	pons	pose	
 0	popple	
 0	poseur	
-15	powny	pon	powan	pow	own	
+15	powny	pon	pow	powan	own	
 15	probably	
 13	prof	
 15	proke	rok	pro	
@@ -517,25 +517,25 @@
 0	psyche	
 15	puppies	puppied	pie	
 15	purpose	
-16	pousy	puy	pussy	pudsy	pursy	
+16	pudsy	pursy	pussy	pousy	puy	
 15	pawned	
 15	pawning	
 15	pw	pawn	
-16	wool	rool	zool	dool	gool	ql	ol	pool	bool	mool	sool	cool	hool	tool	fool	
+16	rool	zool	dool	gool	ol	pool	bool	ql	wool	mool	sool	cool	hool	tool	fool	
 15	oot	
 15	oot	
 13	queen	
 13	ques	
-15	querl	url	quarl	quirl	
+15	quirl	querl	url	quarl	
 15	rap	rep	rae	
 15	rapido	raid	
-15	graip	rap	rip	
+15	graip	rip	rap	
 0	raper	
 0	raper	
 15	raspberry	
 15	racist	
 15	awk	raw	rawky	drawk	
-15	reagent	ren	
+15	ren	reagent	
 15	reve	
 16	pediculous	ridiculous	
 0	reneg	
@@ -549,7 +549,7 @@
 16	rohmer	roer	roarer	
 15	rotl	
 0	roud	
-15	retd	td	rt	rd	
+15	td	retd	rt	rd	
 17	rude	
 15	ruffe	
 16	sexy	
@@ -574,18 +574,18 @@
 15	sked	sike	sinked	spiked	sicked	silked	
 0	sike	
 0	sike	
-15	simson	simpsons	simons	sons	sims	
+15	simson	simons	simpsons	sons	sims	
 0	skelly	
 13	sleep	
 13	smells	
-16	sat	sprat	rat	scrat	surat	
+16	sprat	rat	surat	sat	scrat	
 15	smart	
 13	sop	
 0	sope	
 15	sophomore	
 0	speal	
 0	spelt	
-15	se	sprose	sepose	pose	spouse	
+15	sepose	spouse	se	pose	sprose	
 15	sterid	
 15	sty	
 11	stomachache	
@@ -612,14 +612,14 @@
 0	teached	
 15	tath	teth	teat	eath	teathe	th	
 15	tembe	ember	ter	
-15	ted	erd	ter	
+15	ter	erd	ted	
 18	terbic	terrific	teri	
 15	testicles	
-18	today	tay	tuesday	day	
+18	tay	tuesday	day	today	
 0	tew	
 15	table	
 0	tha	
-15	tha	thawy	tay	thy	hay	
+15	tha	thy	hay	thawy	tay	
 0	theater	
 0	theatre	
 0	thee	
@@ -632,7 +632,7 @@
 0	thy	
 13	tidies	
 0	til	
-15	lak	tilak	talak	
+15	lak	talak	tilak	
 0	toi	
 15	toki	to	toko	
 16	tolt	
@@ -640,21 +640,21 @@
 18	tchi	
 16	marrow	tomorrow	tarrow	
 13	tole	
-15	transchanger	stranger	ranger	tanger	
+15	tanger	stranger	ranger	transchanger	
 0	travellers	
 16	trend	trended	trendel	
 15	rikk	
 0	troupe	
 15	tup	taupe	tupek	tue	stupe	tuple	
-16	ber	reber	heber	umber	weber	
-15	ruman	man	urman	kuman	unman	unhuman	human	yuman	
+16	weber	ber	umber	heber	reber	
+15	ruman	urman	kuman	man	unman	unhuman	human	yuman	
 15	umgang	um	mg	ug	
 0	unlit	
 13	uni	
 13	unie	
 0	unphased	
 0	untied	
-15	ur	uk	turk	gurk	murk	burk	lurk	
+15	uk	turk	gurk	murk	ur	burk	lurk	
 0	ur	
 15	uss	useless	
 14	va	
@@ -664,7 +664,7 @@
 16	venesia	
 15	villan	
 0	vittles	
-15	voter	oer	voder	ver	voe	vomer	vower	
+15	voter	vower	oer	voder	ver	voe	vomer	
 20	volt	mort	
 15	wat	wah	aht	
 0	waisting	
@@ -677,7 +677,7 @@
 14	wt	
 15	haen	when	whan	whalen	
 0	whang	
-15	whim	whip	himp	wimp	
+15	whip	whim	himp	wimp	
 0	whingeing	
 15	wh	whoa	
 15	hoar	whar	whoa	
