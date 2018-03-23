@@ -21,13 +21,13 @@ def distance(a, b):
             # scheme1, indel and replace +1, match 0
             # dp[i][j] = min(dp[i-1][j]+1, dp[i][j-1]+1, dp[i-1][j-1]+(0 if a[i-1] == b[j-1] else 1))
             # scheme2, indel and replace +1, match -1
-            dp[i][j] = min(dp[i-1][j]+1, dp[i][j-1]+1, dp[i-1][j-1]+(0 if a[i-1] == b[j-1] else 1))
+            dp[i][j] = min(dp[i-1][j]+1, dp[i][j-1]+1, dp[i-1][j-1]+(-1 if a[i-1] == b[j-1] else 1))
     return dp[a_len-1][b_len-1]
 
 def edit_dis():
     mis_f = open("../data/misspell.txt", 'r')
     dic_f = open("../data/dictionary.txt", 'r')
-    res_f = open("../result/edit_dis_scheme2", 'w')
+    res_f = open("../result/global_edit_dis_scheme2", 'w')
 
     # read dictionary
     dic = []
