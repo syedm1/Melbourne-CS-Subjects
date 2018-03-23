@@ -1,0 +1,32 @@
+%------------PREAMBLE
+\include{preamble}
+\usepackage{morefloats}
+%---------------------------
+                                          
+\begin{document}
+
+%---------------------------TITLE PAGE
+\include{cover}
+%---------------------------
+
+%---------------------------TABLE OF CONTENTS
+\tableofcontents
+%---------------------------
+
+%---------------------------MAIN BODY
+\input{chapter1}
+%---------------------------
+
+%---------------------------APPENDICES
+\begin{appendices}
+ \input{appendix1}
+\end{appendices}
+%---------------------------
+
+%---------------------------BIBLIOGRAPHY
+\addcontentsline{toc}{chapter}{Bibliography}
+\bibliographystyle{abbrv}
+\bibliography{biblio}
+%---------------------------
+
+\end{document}

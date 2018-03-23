@@ -1,0 +1,13 @@
+\begin{thebibliography}{1}
+
+\bibitem{abramowitz1970}
+M.~Abramowitz and I.~Stegun.
+\newblock {\em Handbook of Mathematical Functions}.
+\newblock Dover Publishing Inc. New York, 1970.
+
+\bibitem{press1992}
+W.~H. Press, S.~A. Teukolsky, W.~T. Vetterling, and B.~P. Flannery.
+\newblock {\em Numerical recipes in Fortran (Cambridge)}.
+\newblock Cambridge Univ. Press, 1992.
+
+\end{thebibliography}
