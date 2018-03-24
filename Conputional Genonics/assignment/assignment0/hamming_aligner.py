@@ -1,5 +1,5 @@
 #!/usr/lib/python2.7
-#Group member: Haonan Li, Muqing Li
+#Group member: Haonan Li
 
 def reverse(read):
     reverse_read = ""
@@ -21,6 +21,8 @@ def hamming_distance(a, b):
     for i in range(len(a)):
         if a[i] != b[i]:
             dis += 1
+        if dis > 2:
+            return dis
     return dis
 
 def hamming_match(read, ref):
