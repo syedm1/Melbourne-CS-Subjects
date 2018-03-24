@@ -38,22 +38,19 @@ def hamming_dis(a, b, min_dis):
             dis += 1
         if dis > mis_dis:
             return dis, min_set
-    return dis, min_set
+    return dis, mis_set
+
 
 # Read two files
 def init(ref_file, read_file):
-    
     # Reference
     ref_f = open(ref_file, "r")
     line = ref_f.readline()
-    line = line.strip()
-    ref_name = line[1:]
     ref = ">"
     for line in ref_f.readlines():
         line = line.strip()
         ref += line
     ref = ref.upper()
-
     # Read file
     read_f = open(read_file, "r")
     reads = []
@@ -65,33 +62,28 @@ def init(ref_file, read_file):
         read_quality = read_f.readline().strip()
         reads.append((read_name, read, read_quality))
         line = read_f.readline()
-    return (ref_name, ref, reads)
+    return (ref, reads)
 
 
 # Aligner 
-def alignment(ref_file, read_file, out_file):
-    ref_name, ref, reads = init(ref_file, read_file)
-    plot_qs(reads, "../data/quality_score.png")
-    '''
-    out_f = open(out_file, "w")
-    out_f.write("READ_NEME\tREF_NAME\tPOS\tSTRAND\tNUMBER_OF_ALIGNMENTS\tHAMMING_DISTANCE\n")
-    
+def alignment(ref, reads):
     # read is tuple of (read_name, read_sequence, quality)
     # all reads
+    reads_mis = []
     for read in reads:
-        min_dis = 2
-        min_set = set()
+        min_dis = 9999
+        mis_set = set()
         # forward search
         # all positions
         for start in range(len(ref)-len(read[1])):
             end = start + len(read[1])
-            dis = hamming_dis(read[1], ref[start:end])
+            dis, mis = hamming_dis(read[1], ref[start:end], min_dis)
             if dis < min_dis:
                 min_dis = dis
-                min_set.clear()
-                min_set.add(start)
-            elif dis == min_dis:
-                min_set.add(start)
+                mis_set = mis
+            # elif dis == min_dis:
+            #     min_set.
+        '''
         # reverse search
         if reverse(read[1]) != read[1]:
             r_read = reverse(read[1])
@@ -105,24 +97,11 @@ def alignment(ref_file, read_file, out_file):
                     min_set.add(0-start)
                 elif dis == min_dis:
                     min_set.add(0-start)
-        # output 
-        out_f.write(read[0] + '\t' + ref_name + '\t' )
-        strand = '-'
-        min_pos = 9999
-        if len(min_set) == 0:
-            out_f.write("0\t*\t*\t*\n")
-        else:
-            for pos in min_set:
-                if abs(pos)<min_pos:
-                    min_pos = abs(pos)
-                    if pos > 0:
-                        strand = '+'
-                    elif pos < 0:
-                        strand = '-'
-            out_f.write(str(min_pos) + '\t' + strand + '\t' + str(len(min_set)) + '\t' + str(min_dis) + '\n')
-    '''
+        '''
+        reads_mis.append((read[0],read[1],read[2],mis_set)) 
 
-def plot_qs(reads, out_qs):
+# Plot distribution of base quality score
+def plot_base_qs(reads, out_qs):
     qs = []
     rlen = {}
     for read in reads:
@@ -133,7 +112,11 @@ def plot_qs(reads, out_qs):
     plt.boxplot([list(i) for i in zip(*qs)])
     plt.show()
     plt.savefig(out_qs)
-        
+
+
+# Plot distribution of quality score of all mismatches 
+def plot_mis_qs(reads_mis, out_qs)        
+    print 
 
 # Usage of the tool
 def usage():
@@ -163,9 +146,14 @@ def main(argv):
         usage()
         sys.exit()
        
-    out_file = "../data/naive_alignment.txt"
     # main process
-    alignment(ref_file, read_file, out_file)
+    out_base_qs = "../data/base_qs.png"
+    out_mis_qs = "../data/mis_qs.png"
+    ref, reads = init(ref_file, read_file)
+    reads_mis = alignment(ref, reads)
+    # plot
+    plot_base_qs(reads, out_base_qs)
+    plot_mis_qs(reads_mis, out_base_qs)
 
 if __name__ == "__main__":
     main(sys.argv)
