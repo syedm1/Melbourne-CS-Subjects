@@ -5,6 +5,7 @@
 
 import os
 import sys
+from numpy import *
 import getopt
 import matplotlib
 matplotlib.use('Agg')
@@ -28,7 +29,7 @@ def reverse(read):
     return reverse_read
 
 
-# Compute hamming distance less than mis_dis
+# Compute hamming distance less than min_dis
 def hamming_dis(a, b, min_dis):
     dis = 0
     mis_set = set()
@@ -36,8 +37,8 @@ def hamming_dis(a, b, min_dis):
         if a[i] != b[i]:
             mis_set.add(i)
             dis += 1
-        if dis > mis_dis:
-            return dis, min_set
+        if dis > min_dis:
+            return dis, mis_set
     return dis, mis_set
 
 
@@ -81,24 +82,27 @@ def alignment(ref, reads):
             if dis < min_dis:
                 min_dis = dis
                 mis_set = mis
+            # Consider more than 1 best match
             # elif dis == min_dis:
             #     min_set.
-        '''
+        
         # reverse search
         if reverse(read[1]) != read[1]:
-            r_read = reverse(read[1])
+            ref = reverse(ref)
             # all positions
             for start in range(len(ref)-len(read[1])):
                 end = start + len(read[1])
-                dis = hamming_dis(r_read, ref[start:end])
+                dis, mis = hamming_dis(read[1], ref[start:end], min_dis)
                 if dis < min_dis:
                     min_dis = dis
-                    min_set.clear()
-                    min_set.add(0-start)
-                elif dis == min_dis:
-                    min_set.add(0-start)
-        '''
+                    mis_set = mis
+                    # More than 1 best match
+                    # elif dis == min_dis:
+                    #    min_set.add(0-start)
+        
         reads_mis.append((read[0],read[1],read[2],mis_set)) 
+        
+    return reads_mis
 
 # Plot distribution of base quality score
 def plot_base_qs(reads, out_qs):
@@ -115,8 +119,23 @@ def plot_base_qs(reads, out_qs):
 
 
 # Plot distribution of quality score of all mismatches 
-def plot_mis_qs(reads_mis, out_qs)        
-    print 
+def plot_mis_qs(reads_mis, out_qs):
+    ms = []
+    rlen = {}
+    for read in reads_mis:
+        n_mis = zeros(len(read[1]))
+        for pos in read[3]:
+            n_mis[pos] = 1
+        ms.append(n_mis)
+    msc = zeros(len(reads_mis[0][1]))
+    for r in ms:
+        for j in range(len(r)):
+            msc[j] += r[j]
+    # print msc
+    plt.bar(range(len(msc)), msc)
+    plt.show()
+    plt.savefig(out_qs)
+
 
 # Usage of the tool
 def usage():
@@ -153,7 +172,7 @@ def main(argv):
     reads_mis = alignment(ref, reads)
     # plot
     plot_base_qs(reads, out_base_qs)
-    plot_mis_qs(reads_mis, out_base_qs)
+    plot_mis_qs(reads_mis, out_mis_qs)
 
 if __name__ == "__main__":
     main(sys.argv)
