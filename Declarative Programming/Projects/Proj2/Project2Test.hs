@@ -13,7 +13,8 @@ import Project2
 
 -- | Compute the correct answer to a guess.  First argument is the 
 --   target, second is the guess.
-response :: [String] -> [String] -> (Int,Int,Int)
+-- response :: [String] -> [String] -> (Int,Int,Int)
+response :: [[Char]] -> [[Char]] -> (Int,Int,Int)
 response target guess = (right, rightKind, rightColor)
   where 
         common      = mintersect guess target
