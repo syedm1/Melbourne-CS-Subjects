@@ -5,17 +5,18 @@
 %           using Fourier transform.                     %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-function res = pattern_finder(wavfile)
+function res = pattern_finder(wavfile,patfile)
 
-[y,Fs] = audioread(wavfile);
-x = y(:,1);
-y2 = y(:,2);
+[y1,Fs] = audioread(wavfile);
+x1 = y1(:,1);
 
-%f_y = fft(y1);
-%conj_f_y1 = conj(f_y1);
-%mid_res = conj_f_y1 .* f_y1;
-%res = ifft(mid_res);
+[y2,Fs] = audioread(wavfile);
+x2 = y2(:,1);
 
+corr_vec = spectral_correlation_1d(x1,x2)
+
+
+%{
 X_f=fft(x);
 figure (1)
 subplot(2,1,1);
@@ -28,7 +29,7 @@ xlabel('frequency')
 title('frequency domian')
 
 X1_f=X_f;
-X1_f(10:end) = 0;
+X1_f(10:90) = 0;
 
 X2_f=X_f;
 X2_f(1:90)=0;
@@ -44,3 +45,4 @@ title('Reconsturctured x1')
 figure (3)
 plot(real(x2_reconstruc));
 title('Reconsturctured x2')
+%}

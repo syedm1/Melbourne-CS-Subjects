@@ -2,21 +2,90 @@
 -- Email:   <haonanl5@student.unimelb.edu.au>
 -- Student ID : 955022
 
--- Thinking: If you are sure one is in the set, then you should contain it is your guess anytime.
-
 
 module Project2 (initialGuess, nextGuess, GameState) where
 
+import Data.List
+type GameState = (Int, [[String]])
+
+-- Initial guess: guess all pieces are "BP", the guess set size is the size of the game. Trough this initial, I can know the number of "BP" and the number of "WP", and the number of BLACK pieces except "BP". Thess three informatin is very useful to reduce the possible sets.
+initialGuess :: Int -> ([String],GameState)
+initialGuess size = (st, (0,[])) where 
+    st = repeatt size ["BP"]
+
+-- Tools: repeat one element of give times in a list
+repeatt :: Int -> [a] -> [a]
+repeatt n (x:xs)
+    | n == 0 = xs
+    | otherwise = [x] ++ (repeatt (n-1) (x:xs))
+
+-- Return all possible subsets of a given list
+subSet :: Int -> [String] -> [[String]]
+subSet 0 _ = [[]]
+subSet _ [] = [[]]
+subSet n (x:xs) 
+    | n > (length xs) + 1 = subSet (n-1) (x:xs)
+    | otherwise = (subSet n xs) ++ (add x (subSet (n-1) xs))
+
+-- Delete repeated element in a list
+prune :: (Eq a) => [a] -> [a] -> [a]
+prune a [] = a
+prune a (x:xs) 
+    | elem x a = prune a xs
+    | otherwise = prune ([x] ++ a) xs
+
+-- Add one element to every element list in a list [[a]]
+add :: a -> [[a]] -> [[a]]
+add a [] = []
+add a (x:xs) = [([a] ++ x )] ++ (add a xs)
+
+-- Add each element in a list [a] to every element list in a list [[a]]
+addl :: [a] -> [[a]] -> [[a]]
+addl a [] = []
+addl a (x:xs) = [(a ++ x )] ++ (addl a xs)
+
+-- Return a element with longest length in a list
+longest :: [String] -> [[String]] -> [String]
+longest a [] = a
+longest a (x:xs)
+    | length a > length x = longest a xs
+    | otherwise = longest x xs
 
 
+-- Initial guess can get exactly information, other do same process, always guess the longest candidate set.
+nextGuess :: ([String],GameState) -> (Int,Int,Int) -> ([String],GameState)
+nextGuess (bgs,(nth, bcand)) (t1,t2,t3) 
+    = (gs,((nth+1),cand)) where
+        pieces1 = ["BK","BQ","BR","BR","BB","BB","BN","BN"]
+        pieces2 = ["WK","WQ","WR","WR","WB","WB","WN","WN"]
+        cand 
+            | nth == 0  = addl ((repeatt t1 ["BP"]) ++ (repeatt t2 ["WP"])) 
+                            [ x ++ y | x <- (prune [] (subSet t3 pieces1)), y <- (prune [] (subSet ((length bgs)-t1-t2-t3) pieces2))]
+            | otherwise =  filter (same_res bgs (t1,t2,t3)) bcand
+        gs = longest [] cand
+
+-- A filter, compare the result of our own judgement system with the tuple received from hinder. If the same, retain the set as candidate, if not, delete it from candidate set.
+same_res :: [String] -> (Int,Int,Int) -> [String] -> Bool
+same_res bgs (t1,t2,t3) x
+    | judge x bgs == (t1,t2,t3) = True
+    | otherwise = False
 
 
+-- Copy from test code
+judge :: [String] -> [String] -> (Int,Int,Int)
+judge cand guess = (right, right_kind, right_color) where 
+        common      = mintersect guess cand
+        right       = length common
+        rguess      = foldr (delete) guess common
+        rcand       = foldr (delete) cand common
+        right_color  = length $ mintersect (map (!!0) rguess) (map (!!0) rcand)
+        right_kind   = length $ mintersect (map (!!1) rguess) (map (!!1) rcand)
 
-
-
-
-
-
+mintersect :: Eq a => [a] -> [a] -> [a]
+mintersect [] _ = []
+mintersect (x:xs) r 
+    | elem x r = x : mintersect xs (delete x r)
+    | otherwise = mintersect xs r 
 
 
 
@@ -27,7 +96,7 @@ module Project2 (initialGuess, nextGuess, GameState) where
 {-
 
 -----------------------------------------------------------------------------
--- Naive solution:Guess every piece seperately. Each time, we just put     --
+-- Naive solution: Guess every piece seperately. Each time, we just put    --
 -- one kind of piece into the guess set. If the hinder returns a number    --
 -- of correct pieces equal with the size of our guess set, put one more    --
 -- same item into the set, until the returned correct pieces smaller than  --
@@ -70,30 +139,3 @@ type GameState = ([String], [String])
 
 -}
 
-
-
-{-
-
--- takes an input argument giving the size of the game, and returns a pair of an initial guess and a game state.
--- Chess Elements
-data Color = Black | White
-    deriving (Show)
-data Kind = King | Queen | Rook | Bishop | Knight | Pawn
-    deriving (Show)
-data Piece = BK | BQ | BR | BB | BN | BP | WK | WQ | WR | WB | WN | WP
-    deriving (Show)
-
--- GameState Elements
-data GameConts
-    = ColorCont Color Int
-    | KindCont Kind Int
-    | PieceCont Piece Int
-    deriving (Show)
-
-    gs = ["BK","BQ","BR","BR","BB","BB","BN","BN","BP","BP","BP","BP","BP","BP","BP","BP", 
-            "WK","WQ","WR","WR","WB","WB","WN","WN","WP","WP","WP","WP","WP","WP","WP","WP"]
-
--- GameState: include all number of Chess Element
-type GameState = [GameConts]
-
--}
