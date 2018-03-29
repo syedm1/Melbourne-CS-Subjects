@@ -1,7 +1,6 @@
 #!usr/lib/python2.7
-# Auther:       Haonan Li
-# E-mail:       haonanl5@student.unimelb.edu.au
-# Student-ID:   955022
+# Auther    : Haonan Li <haonanl5@student.unimelb.edu.au>
+# Porpuse   : Alignment with hamming distance less than 3 of a FASTQ read file.
 
 import os
 import sys
@@ -94,7 +93,7 @@ def alignment(index_file, ref_file, read_file, out_file):
                     ref_pos = int(ref_pos)
                     start = ref_pos-read_pos
                     end = ref_pos+len(read[1])-read_pos
-                    if start>0 and end<=len(ref):
+                    if start > 0 and end <= len(ref):
                         dis = hamming_dis(read[1], ref[start:end])
                         if dis < min_dis:
                             min_dis = dis
@@ -114,7 +113,7 @@ def alignment(index_file, ref_file, read_file, out_file):
                         ref_pos = int(ref_pos)
                         start = ref_pos-read_pos
                         end = ref_pos+len(r_read)-read_pos
-                        if start>0 and end<=len(ref):
+                        if start > 0 and end <= len(ref):
                             dis = hamming_dis(r_read, ref[start:end])
                             if dis < min_dis:
                                 min_dis = dis
@@ -123,36 +122,39 @@ def alignment(index_file, ref_file, read_file, out_file):
                             elif dis == min_dis:
                                 min_set.add(0-start)
         # output 
-        out_f.write(read[0] + '\t' + ref_name + '\t' )
         strand = '-'
         min_pos = 9999
         if len(min_set) == 0:
-            out_f.write("0\t*\t*\t*\n")
+            out_f.write(read[0] + "\t*\t0\t*\t0\t*\n")
         else:
             for pos in min_set:
-                if abs(pos)<min_pos:
+                if abs(pos) < min_pos:
                     min_pos = abs(pos)
                     if pos > 0:
                         strand = '+'
                     elif pos < 0:
                         strand = '-'
-            out_f.write(str(min_pos) + '\t' + strand + '\t' + str(len(min_set)) + '\t' + str(min_dis) + '\n')
+            out_f.write( read[0] + '\t' + ref_name + '\t' + str(min_pos) \
+                            + '\t' + strand + '\t' + str(len(min_set))   \
+                            + '\t' + str(min_dis) + '\n' )
         
         
 
-# Usage of the tool
+# Help doc 
 def usage():
-   print ("usage:python indexer.py [options] ... [-i indexfile | -f reffile | -r readfile] ...")
+   print ("usage:python indexer.py [options] ... [-i indexfile | -f reffile | ... ]")
    print ("Options and arguments:")
-   print ("-h     :help")
-   print ("-i     :indexfile, reference index file")
-   print ("-f     :referencefile, reference file.")
-   print ("-r     :readfile, a FASTQ read file.")
+   print ("-h     :Help")
+   print ("-i     :Reference index file")
+   print ("-f     :Reference file.")
+   print ("-r     :FASTQ read file.")
+   print ("-o     :Output of alignment result file.")
 
 
 def main(argv):
     try:
-        opts, args = getopt.getopt(argv[1:], "hi:f:r:", ["help","index=","reference=","read="])
+        opts, args = getopt.getopt(argv[1:], "hi:f:r:o:", 
+        ["help", "index=", "reference=", "read=", "output="])
     except getopt.GetoptError:
         usage()
         sys.exit(2)
@@ -166,14 +168,16 @@ def main(argv):
             ref_file = arg
         elif opt in ('-r', '--read'):
             read_file = arg
+        elif opt in ('-o', '--output'):
+            out_file = arg
     # If two essential variables has been defined
     if not('index_file' in locals().keys()) or \
         not('ref_file' in locals().keys()) or \
+        not('out_file' in locals().keys()) or \
         not('read_file' in locals().keys()):
         usage()
         sys.exit()
        
-    out_file = "../data/alignment.txt"
     # main process
     alignment(index_file, ref_file, read_file, out_file)
 

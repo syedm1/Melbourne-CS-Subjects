@@ -1,7 +1,6 @@
 #!usr/lib/python2.7
-# Auther:       Haonan Li
-# E-mail:       haonanl5@student.unimelb.edu.au
-# Student-ID:   955022
+# Auther    : Haonan Li <haonanl5@student.unimelb.edu.au>
+# Porpuse   : Build a k-mer index for a FASTA reference file
 
 import os
 import sys
@@ -44,16 +43,18 @@ def build_index(out_file, ref_name, ref_dict, k):
 
 # Usage of the tool
 def usage():
-   print ("usage:python indexer.py [options] ... [-f inputfile | -k value] ...")
+   print ("usage:python indexer.py [options] ... [-i inputfile | -k value] ...")
    print ("Options and arguments:")
    print ("-h     :help")
-   print ("-f     :inputfile, absolute or relevant path of the reference file")
+   print ("-i     :inputfile, absolute or relevant path of the reference file.")
    print ("-k     :inputvalue, the number k of k-mers.")
+   print ("-o     :outputfile, absolute or relevant path of the output file.")
 
 
 def main(argv):
     try:
-        opts, args = getopt.getopt(argv[1:], "hf:k:", ["inputfile=inputk="])
+        opts, args = getopt.getopt(argv[1:], "hi:k:o:", \
+        ["inputfile=", "inputk=", "outputfile="])
     except getopt.GetoptError:
         usage()
         sys.exit(2)
@@ -61,16 +62,20 @@ def main(argv):
         if opt in ('-h', '--help'):
             usage()
             sys.exit()
-        elif opt in ('-f', '--inputfile'):
+        elif opt in ('-i', '--inputfile'):
             ref_file = arg
         elif opt in ('-k', '--inputk'):
             k = int(arg)
-    # If two essential variables has been defined
-    if not('ref_file' in locals().keys()) or not('k' in locals().keys()):
+        elif opt in ('-o','--outputfile'):
+            out_file = arg
+    
+    # Make sure the parameters were defined
+    if not('ref_file' in locals().keys()) or \
+       not('k' in locals().keys()) or \
+       not('out_file' in locals().keys()):
         usage()
         sys.exit()
        
-    out_file = os.path.dirname(ref_file) + '/index.txt'
     # main process
     ref_name, ref_dict = get_kmer_dict(ref_file, k)
     build_index(out_file, ref_name, ref_dict, k)
