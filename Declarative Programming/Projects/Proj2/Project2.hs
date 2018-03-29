@@ -1,17 +1,32 @@
--- Author       : Haonan Li
--- Email        : <haonanl5@student.unimelb.edu.au>
--- Student ID   : 955022
+-- Author   : Haonan Li <haonanl5@student.unimelb.edu.au>
+-- Purpose  : Implement the guessing part of a logical guessing game.
+
+
+-- Introduction of ChessGuess: ChessGuess is a two-player logical guessing 
+-- game. one player is hider and the other is guesser. The hider begins by 
+-- selecting the size of the game from 0 to 32. And then selects up to size 
+-- chess pieces out of a chess set and hides them. Once the hider has selected 
+-- the target set of pieces, the guesser repeatedly chooses a subset of chess 
+-- pieces and tells it to the hider, who responds by giving the guesser three 
+-- numbers indicate the number of correct guess pieces, right kind but wrong 
+-- colour pieces, and right colour but wrong kind pieces separatly. This 
+-- program complete the guesser part. 
+
+-- Introduction of Code: We first guess all "BP" with game size. from the 
+-- feedback we know the number of "BP" and "WP" and black pieces except "BP". 
+-- Then we build a candidate set with all possible target with exact number of
+-- "BP", "WP" and black pieces. The we always choose a set with maximum number 
+-- of pieces as new guess. And compare the feedback with our own judgement, 
+-- remove the candidate does not match. 
 
 
 module Project2 (initialGuess, nextGuess, GameState) where
-
 import Data.List
+
+-- Function : Save times of guesses and the candidate target set. 
 type GameState = (Int, [[String]])
 
-
--- Function : Initial guess, guess with all "BP" and size is size of the 
---            game. Gamestate saves times of guesses and the candidate target 
---            sets. It will initialize at the second guess.
+-- Function : Initial guess, guess all "BP" with the size of the game. 
 -- Input    : One number.
 -- Output   : One guess set and a gamestate tuple.
 initialGuess :: Int -> ([String],GameState)
@@ -29,13 +44,11 @@ longest (x:y:z)
     | otherwise           = longest (y:z)
 
 
--- Function : Decide the next guess using received message and current game 
---            state. We process the second guess seperatly because of 
---            initilization of candidate sets. For the nth guess (n>2). We 
---            always judge every candidate set with the last guess, if the 
---            result is the same with the result received from hinder, keep it
---            in candidates, after this, we just choose one longest set of the
---            candidates as new guess.
+-- Function : Decide the next guess. We process the second guess seperatly. 
+--            For the nth guess (n>2). We always judge every candidate if the 
+--            result is the same with the feedback received from hinder, keep 
+--            it in candidate target set. Then, we randomly choose one set with 
+--            maximum number of pieces from the candidate set as new guess.
 -- Input    : A tuple of [String] and GameState, and a tuple of three integers. 
 -- Output   : A tuple of [String] and GameState, They are new guess and updated
 --            game state seperately.
@@ -47,8 +60,7 @@ nextGuess (bgs,(nth, bcand)) guess_res
         gs   = longest cand
 
 
--- Function : The second guess, From initial guess, We can know the number 
---            of "BP" and "WP" and Black pieces except "BP". We initialize 
+-- Function : The second guess, From initial guess,  We initialize 
 --            candidate target set with these informations. And find one with 
 --            largest length as the second guess.
 -- Input    : A tuple of [String] and GameState, and a tuple of three integers.
