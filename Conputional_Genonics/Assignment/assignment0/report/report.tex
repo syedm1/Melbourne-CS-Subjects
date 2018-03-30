@@ -1,0 +1,67 @@
+\documentclass[a4paper]{article}
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+
+\title{\bfseries{COMP90016 -- Group Assignment 1 \\ 
+	Naive  Reads Alignment}}
+\author{Haonan Li, Xiaojing Li}
+
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Introduction}
+\label{sec:introduction}
+
+This task analysis simulated sequencing data from a short reference genome.
+
+\section{Experiments \& Results}
+\label{sec:experiment}
+
+In this task, we use naive alignment method to align reads to the given reference sequence. The ``naive'' here means we only consider perfect matches to the either forward or reverse strand of the reference. 
+
+Table \ref{tab:alignments} shows the alignment statistics results.  Specifically, how many reads were aligned to 0 positions and exactly N position (in absolute numbers and precent). 
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{c|c|c|c|c|c|c|c|c|c|c|c|c}
+		\hline
+		N-pos & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 \\
+		\hline
+		Reads & 23 & 91 & 52 & 24 & 16 & 7 & 1 & 1 & 2 & 0 & 0 & 1 \\
+		\hline
+	\end{tabular}
+	\caption{\label{tab:alignments}Alignment Statistics. }
+\end{table}
+
+\section{Discussion}
+\label{sec:discussion}
+Experiment results reflect there are 10.55\% reads not aligning to the reference. Theoretically, Reads in highly polymorphic regions, repetitive regions, or reads with indels may not be aligned.
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{c|c|c|c}
+		\hline
+		Reads length & 5 & 6 & 7\\
+		\hline
+		Pieces num & 6 & 204 & 8 \\
+		\hline
+		Not Aligned & 0 & 17 & 6 \\
+		\hline
+	\end{tabular}
+	\caption{\label{tab:reads_length} Reads length related Results }
+\end{table}
+
+But in particular work, we make Table \ref{tab:reads_length} to analyze the not aligned reads related problem. In this Table, we find that 75\% reads with length 7 were not aligned. Moreover, we also notice that the particular reads indicates in the last column of  Table \ref{tab:alignments} whose length is 5. Based on these results, we think reads with long length tends is more likely fail to be aligned, these reads should be created by insertion. At the same time, the short reads, which may be created by deletion, are less specific than the 6bp long fragments so they may have more alignment positions.
+
+
+
+%\begin{thebibliography}{9}
+%\end{thebibliography}
+\end{document}
