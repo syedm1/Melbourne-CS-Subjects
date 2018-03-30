@@ -1,8 +1,0 @@
-\contentsline {chapter}{\numberline {1}Formatting options}{2}{chapter.1}
-\contentsline {section}{\numberline {1.1}Equations and tables}{2}{section.1.1}
-\contentsline {section}{\numberline {1.2}Pictures and figures}{3}{section.1.2}
-\contentsline {section}{\numberline {1.3}Computer code}{4}{section.1.3}
-\contentsline {subsection}{\numberline {1.3.1}Code input/output}{4}{subsection.1.3.1}
-\contentsline {subsection}{\numberline {1.3.2}Code written verbatim}{4}{subsection.1.3.2}
-\contentsline {chapter}{Appendix \numberline {A}Program flowchart}{6}{Appendix.a.A}
-\contentsline {chapter}{Bibliography}{6}{figure.caption.4}
