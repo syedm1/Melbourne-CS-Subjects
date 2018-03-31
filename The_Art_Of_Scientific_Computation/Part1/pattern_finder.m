@@ -13,8 +13,9 @@ x1 = y1(:,1);
 [y2,Fs] = audioread(wavfile);
 x2 = y2(:,1);
 
-corr_vec = spectral_correlation_1d(x1,x2)
+corr_vec = spectral_correlation_function(x1',x2')
 
+res = corr_vec
 
 %{
 X_f=fft(x);

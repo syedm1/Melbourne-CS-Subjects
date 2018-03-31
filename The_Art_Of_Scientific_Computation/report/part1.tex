@@ -172,4 +172,35 @@ Table \ref{tab:run_time} compare the run time of two different method of task in
 
 \section{Pattern Finder}
 
+In this task, I pick a piece of music and cut a small piece of it (a durm) through listening. Figure \ref{fig:wave} shows two piece of  waveforms separately. And 
+\ref{fig:crr_vis3} shows all occurance of the element, because it is not a normalized correlation picture, all positions with the y-coordinates larger than 1000 is the appearance of the drum. We can also find that others background noise have effect of our calculate but not serious.
 
+\begin{figure}[h!]
+	\centering
+	\begin{subfigure}[t]{0.45\linewidth}
+		\includegraphics[width=1\linewidth]{figures/part1/drum.eps}
+		\caption{drum waveform}
+		\label{fig:drum}
+	\end{subfigure}
+	\begin{subfigure}[t]{0.45\linewidth}
+		\centering
+		\includegraphics[width=1\linewidth]{figures/part1/piece_of_music.eps}
+		\caption{music waveform}
+		\label{fig:music}
+	\end{subfigure}
+	\caption{Two oscllographs}
+	\label{fig:wave}
+\end{figure} 
+
+\begin{figure}[h!]
+	\centering
+		\includegraphics[width=1\linewidth]{figures/part1/crr_vis3.eps}
+	\caption{Two oscllographs}
+	\label{fig:crr_vis3}
+\end{figure} 
+
+\section{Cross correlation in 3 dimension}
+
+This part is just some thinking of me, not really theme related. 
+
+From the above research, we know that 1d cross correlation can be used to process acoustical signal and 2d cross correlation is very useful for image processing. Then, how about 3d cross correlation? If 3d cross correlation can be build, we can easily know the space structure similarity of two object, theoretiaclly. This task may have its value in research in microcosmos like molecular physics and microbiology. Consider we have one cell with particular disease as specimen but we do not know the reason of its pathogenicity. At the same time, we have several cells, some of which have the disease. If we can find spatial cross correlation between the specimen and other cell, and same diseased cell have the similar space structure, we can distinguish the healthy cell and diseases.

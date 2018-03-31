@@ -4,13 +4,14 @@
 \contentsline {section}{\numberline {1.3}Normalised Spatial Cross Correlation in 2d}{3}{section.1.3}
 \contentsline {section}{\numberline {1.4}Image Alignment}{3}{section.1.4}
 \contentsline {section}{\numberline {1.5}Spectral Cross Correlation}{4}{section.1.5}
-\contentsline {section}{\numberline {1.6}Pattern Finder}{5}{section.1.6}
-\contentsline {chapter}{Appendix \numberline {A}Matlab code }{6}{Appendix.a.A}
-\contentsline {section}{\numberline {A.1}Part 1}{6}{section.a.A.1}
-\contentsline {subsection}{\numberline {A.1.1}Normalised Spatial Cross Correlation in 1d}{6}{subsection.a.A.1.1}
-\contentsline {subsection}{\numberline {A.1.2}Signal Offset}{6}{subsection.a.A.1.2}
-\contentsline {subsection}{\numberline {A.1.3}Normalised Spatial Cross Correlation in 2d}{7}{subsection.a.A.1.3}
-\contentsline {subsection}{\numberline {A.1.4}Image Alignment}{8}{subsection.a.A.1.4}
-\contentsline {subsection}{\numberline {A.1.5}Spectral Cross Correlation}{8}{subsection.a.A.1.5}
-\contentsline {subsection}{\numberline {A.1.6}Pattern Finder}{10}{subsection.a.A.1.6}
-\contentsline {chapter}{Bibliography}{10}{lstnumber.-6.48}
+\contentsline {section}{\numberline {1.6}Pattern Finder}{6}{section.1.6}
+\contentsline {section}{\numberline {1.7}Cross correlation in 3 dimension}{7}{section.1.7}
+\contentsline {chapter}{Appendix \numberline {A}Matlab code }{8}{Appendix.a.A}
+\contentsline {section}{\numberline {A.1}Part 1}{8}{section.a.A.1}
+\contentsline {subsection}{\numberline {A.1.1}Normalised Spatial Cross Correlation in 1d}{8}{subsection.a.A.1.1}
+\contentsline {subsection}{\numberline {A.1.2}Signal Offset}{8}{subsection.a.A.1.2}
+\contentsline {subsection}{\numberline {A.1.3}Normalised Spatial Cross Correlation in 2d}{9}{subsection.a.A.1.3}
+\contentsline {subsection}{\numberline {A.1.4}Image Alignment}{10}{subsection.a.A.1.4}
+\contentsline {subsection}{\numberline {A.1.5}Spectral Cross Correlation}{10}{subsection.a.A.1.5}
+\contentsline {subsection}{\numberline {A.1.6}Pattern Finder}{12}{subsection.a.A.1.6}
+\contentsline {chapter}{Bibliography}{12}{lstnumber.-6.48}
