@@ -58,14 +58,13 @@ Table \ref{tab:1} and Figure \ref{fig:1} show the time comsuming for k-mer align
 The result is not surprised. Because the  complexity of naive Hamming distance aligner is O(ngl), where n is the number of reads, g the length of the genome, and l the length of the reads. But for indexed aligner, the complexity is O(nlp), where p is the average number indexes for each k-mer, it is depend on the length of k and ref. Because the number of different k-mer for a vertain k is $2^k$. If the k is large, the complexity of k-mer indexed aligner could be O(nl).
 
 \subsection{Task 3}
-\begin{figure}[!htb]
 
-	
 FIgure \ref{a}  shows the distribution of base quality scores of all the reads for each position, and Figure \ref{b} the distributions of quality scores of all mismatches for alignment to the given reference ref1.fa  (also by position). 
 
 Compare these two images, we find that the range of each position's quality score of two piecture is almost the same, whis indicates even a position have a high average quality score or most quality scores of this position is high, mismatch also happened. We also find that the upper quartile are almost the same in these two pictures for the same position. However, the lower quartile and median show some different. For all positions, the lower quatile of mismatched picture always less than the statistics for all reads. This is due to more low quality scores appear in the mismatched set.  
 Besides, as the position vary form 1 to 100, the average quality score become lower and lower, mismatches increase. This was reflected by the median lines, they overlap the bottom of the picture for most positions near to 100.
 
+\begin{figure}[!htb]
 	
 	\centering
 	\subfigure[All the reads for each position]{
@@ -78,7 +77,6 @@ Besides, as the position vary form 1 to 100, the average quality score become lo
 	\caption{Distribution of base quality scores.}
 	\label{fig:2} 
 
-	
 \end{figure}
  
 

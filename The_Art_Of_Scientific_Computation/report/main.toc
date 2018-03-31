@@ -1,0 +1,7 @@
+\contentsline {chapter}{\numberline {1}Cross Correlations}{2}{chapter.1}
+\contentsline {section}{\numberline {1.1}Normalised Spatial Cross Correlation in 1d}{2}{section.1.1}
+\contentsline {section}{\numberline {1.2}Signal Offset}{2}{section.1.2}
+\contentsline {section}{\numberline {1.3}Normalised Spatial Cross Correlation in 2d}{2}{section.1.3}
+\contentsline {section}{\numberline {1.4}Find patterns}{3}{section.1.4}
+\contentsline {chapter}{Appendix \numberline {A}Program flowchart}{5}{Appendix.a.A}
+\contentsline {chapter}{Bibliography}{5}{figure.caption.6}
