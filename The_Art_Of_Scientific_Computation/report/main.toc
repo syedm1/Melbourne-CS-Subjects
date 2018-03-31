@@ -1,7 +1,16 @@
 \contentsline {chapter}{\numberline {1}Cross Correlations}{2}{chapter.1}
 \contentsline {section}{\numberline {1.1}Normalised Spatial Cross Correlation in 1d}{2}{section.1.1}
-\contentsline {section}{\numberline {1.2}Signal Offset}{2}{section.1.2}
-\contentsline {section}{\numberline {1.3}Normalised Spatial Cross Correlation in 2d}{2}{section.1.3}
-\contentsline {section}{\numberline {1.4}Find patterns}{3}{section.1.4}
-\contentsline {chapter}{Appendix \numberline {A}Program flowchart}{5}{Appendix.a.A}
-\contentsline {chapter}{Bibliography}{5}{figure.caption.6}
+\contentsline {section}{\numberline {1.2}Signal Offset}{3}{section.1.2}
+\contentsline {section}{\numberline {1.3}Normalised Spatial Cross Correlation in 2d}{3}{section.1.3}
+\contentsline {section}{\numberline {1.4}Image Alignment}{3}{section.1.4}
+\contentsline {section}{\numberline {1.5}Spectral Cross Correlation}{4}{section.1.5}
+\contentsline {section}{\numberline {1.6}Pattern Finder}{5}{section.1.6}
+\contentsline {chapter}{Appendix \numberline {A}Matlab code }{6}{Appendix.a.A}
+\contentsline {section}{\numberline {A.1}Part 1}{6}{section.a.A.1}
+\contentsline {subsection}{\numberline {A.1.1}Normalised Spatial Cross Correlation in 1d}{6}{subsection.a.A.1.1}
+\contentsline {subsection}{\numberline {A.1.2}Signal Offset}{6}{subsection.a.A.1.2}
+\contentsline {subsection}{\numberline {A.1.3}Normalised Spatial Cross Correlation in 2d}{7}{subsection.a.A.1.3}
+\contentsline {subsection}{\numberline {A.1.4}Image Alignment}{8}{subsection.a.A.1.4}
+\contentsline {subsection}{\numberline {A.1.5}Spectral Cross Correlation}{8}{subsection.a.A.1.5}
+\contentsline {subsection}{\numberline {A.1.6}Pattern Finder}{10}{subsection.a.A.1.6}
+\contentsline {chapter}{Bibliography}{10}{lstnumber.-6.48}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.6.5)  31 MAR 2018 16:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.6.5)  1 APR 2018 01:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -11,8 +11,8 @@ Babel <3.10> and hyphenation patterns for 84 language(s) loaded.
 
 (./preamble.tex (/usr/local/texlive/2017/texmf-dist/tex/latex/base/report.cls
 Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
-(/usr/local/texlive/2017/texmf-dist/tex/latex/base/size10.clo
-File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
 \c@chapter=\count80
@@ -620,12 +620,8 @@ LaTeX Font Info:    Try loading font information for OT1+pcr on input line 230.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-))
-
-LaTeX Warning: Unused global option(s):
-    [10.5pt].
-
-(./main.aux (./cover.aux))
+)) (./main.aux
+(./cover.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
@@ -642,8 +638,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
 LaTeX Font Info:    ... okay on input line 8.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 8.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 8.
-
-(/usr/local/texlive/2017/texmf-dist/tex/latex/base/ts1cmr.fd
+ (/usr/local/texlive/2017/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 8.
@@ -669,12 +664,12 @@ LaTeX Font Info:    ... okay on input line 8.
 * \topmargin=-52.36449pt
 * \headheight=12.0pt
 * \headsep=25.0pt
-* \topskip=10.0pt
+* \topskip=12.0pt
 * \footskip=30.0pt
-* \marginparwidth=57.0pt
-* \marginparsep=11.0pt
+* \marginparwidth=35.0pt
+* \marginparsep=10.0pt
 * \columnsep=10.0pt
-* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
@@ -779,7 +774,7 @@ LaTeX Info: Redefining \nameref on input line 8.
 \openout2 = `cover.aux'.
 
  (./cover.tex
-<figures/uom_banner.pdf, id=32, 421.77576pt x 424.98775pt>
+<figures/uom_banner.pdf, id=44, 421.77576pt x 424.98775pt>
 File: figures/uom_banner.pdf Graphic file (type pdf)
 
 <use figures/uom_banner.pdf>
@@ -795,7 +790,7 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 23.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<figures/coulomb_direct.pdf, id=33, 449.48239pt x 385.25063pt>
+<figures/coulomb_direct.pdf, id=45, 449.48239pt x 385.25063pt>
 File: figures/coulomb_direct.pdf Graphic file (type pdf)
 
 <use figures/coulomb_direct.pdf>
@@ -811,7 +806,7 @@ es/uom_banner.pdf> <./figures/coulomb_direct.pdf
 
 pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/coulomb_direct.pdf
 ): PDF inclusion: multiple pdfs with page group included in a single page
->]) (./main.toc)
+>] [2]) (./main.toc)
 \tf@toc=\write4
 \openout4 = `main.toc'.
 
@@ -824,105 +819,139 @@ l.1 \chapter
 
 ]
 Chapter 1.
-[2
+pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.42 
+      [2
 
-] <figures/part1/wallypuzzle_rocketman.png, id=72, 20.05493pt x 22.22302pt>
+]
+Package epstopdf Info: Source file: <figures/part1/crr_vis0.eps>
+(epstopdf)                    date: 2018-03-31 17:40:16
+(epstopdf)                    size: 111732 bytes
+(epstopdf)             Output file: <figures/part1/crr_vis0-eps-converted-to.pd
+f>
+(epstopdf)                    date: 2018-03-31 21:08:23
+(epstopdf)                    size: 38433 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/part1/crr_vis0-eps
+-converted-to.pdf figures/part1/crr_vis0.eps>
+(epstopdf)             \includegraphics on input line 55.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/part1/crr_vis0-eps-converted-to.pdf, id=86, 562.1pt x 421.575pt>
+File: figures/part1/crr_vis0-eps-converted-to.pdf Graphic file (type pdf)
+
+<use figures/part1/crr_vis0-eps-converted-to.pdf>
+Package pdftex.def Info: figures/part1/crr_vis0-eps-converted-to.pdf used on in
+put line 55.
+(pdftex.def)             Requested size: 241.84843pt x 181.38306pt.
+ [3 <./figures/part1/crr_vis0-eps-converted-to.pdf>]
+<figures/part1/wallypuzzle_rocketman.png, id=102, 20.05493pt x 22.22302pt>
 File: figures/part1/wallypuzzle_rocketman.png Graphic file (type png)
 
 <use figures/part1/wallypuzzle_rocketman.png>
 Package pdftex.def Info: figures/part1/wallypuzzle_rocketman.png used on input 
-line 73.
-(pdftex.def)             Requested size: 193.47578pt x 214.47754pt.
+line 86.
+(pdftex.def)             Requested size: 130.59859pt x 144.77478pt.
 
-<figures/part1/wallypuzzle.png, id=74, 441.93105pt x 275.71005pt>
+<figures/part1/wallypuzzle.png, id=104, 441.93105pt x 275.71005pt>
 File: figures/part1/wallypuzzle.png Graphic file (type png)
 
 <use figures/part1/wallypuzzle.png>
-Package pdftex.def Info: figures/part1/wallypuzzle.png used on input line 81.
-(pdftex.def)             Requested size: 290.22107pt x 181.0689pt.
-Package epstopdf Info: Source file: <figures/part1/crr_vis.eps>
-(epstopdf)                    date: 2018-03-31 15:24:36
-(epstopdf)                    size: 124150 bytes
-(epstopdf)             Output file: <figures/part1/crr_vis-eps-converted-to.pdf
->
-(epstopdf)                    date: 2018-03-31 15:25:51
-(epstopdf)                    size: 45311 bytes
-(epstopdf)             Command: <repstopdf --outfile=figures/part1/crr_vis-eps-
-converted-to.pdf figures/part1/crr_vis.eps>
-(epstopdf)             \includegraphics on input line 91.
+Package pdftex.def Info: figures/part1/wallypuzzle.png used on input line 92.
+(pdftex.def)             Requested size: 217.66211pt x 135.79326pt.
+Package epstopdf Info: Source file: <figures/part1/crr_vis1.eps>
+(epstopdf)                    date: 2018-03-31 22:16:41
+(epstopdf)                    size: 124785 bytes
+(epstopdf)             Output file: <figures/part1/crr_vis1-eps-converted-to.pd
+f>
+(epstopdf)                    date: 2018-03-31 22:18:24
+(epstopdf)                    size: 43796 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/part1/crr_vis1-eps
+-converted-to.pdf figures/part1/crr_vis1.eps>
+(epstopdf)             \includegraphics on input line 104.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/part1/crr_vis-eps-converted-to.pdf, id=78, 562.1pt x 421.575pt>
-File: figures/part1/crr_vis-eps-converted-to.pdf Graphic file (type pdf)
+<figures/part1/crr_vis1-eps-converted-to.pdf, id=108, 562.1pt x 421.575pt>
+File: figures/part1/crr_vis1-eps-converted-to.pdf Graphic file (type pdf)
 
-<use figures/part1/crr_vis-eps-converted-to.pdf>
-Package pdftex.def Info: figures/part1/crr_vis-eps-converted-to.pdf used on inp
-ut line 91.
-(pdftex.def)             Requested size: 193.47578pt x 145.10258pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
+<use figures/part1/crr_vis1-eps-converted-to.pdf>
+Package pdftex.def Info: figures/part1/crr_vis1-eps-converted-to.pdf used on in
+put line 104.
+(pdftex.def)             Requested size: 217.66211pt x 163.24283pt.
 Package epstopdf Info: Source file: <figures/part1/crr_vis2.eps>
 (epstopdf)                    date: 2018-03-31 16:14:12
 (epstopdf)                    size: 397481 bytes
 (epstopdf)             Output file: <figures/part1/crr_vis2-eps-converted-to.pd
 f>
-(epstopdf)                    date: 2018-03-31 16:16:08
+(epstopdf)                    date: 2018-03-31 21:08:24
 (epstopdf)                    size: 154102 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/part1/crr_vis2-eps
 -converted-to.pdf figures/part1/crr_vis2.eps>
-(epstopdf)             \includegraphics on input line 99.
+(epstopdf)             \includegraphics on input line 110.
 Package epstopdf Info: Output file is already uptodate.
-<figures/part1/crr_vis2-eps-converted-to.pdf, id=79, 562.1pt x 421.575pt>
+
+<figures/part1/crr_vis2-eps-converted-to.pdf, id=109, 562.1pt x 421.575pt>
 File: figures/part1/crr_vis2-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/part1/crr_vis2-eps-converted-to.pdf>
 Package pdftex.def Info: figures/part1/crr_vis2-eps-converted-to.pdf used on in
-put line 99.
-(pdftex.def)             Requested size: 193.47578pt x 145.10258pt.
+put line 110.
+(pdftex.def)             Requested size: 217.66211pt x 163.24283pt.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<figures/part1/wallypuzzle_result.png, id=80, 959.7456pt x 587.3142pt>
+<figures/part1/wallypuzzle_result.png, id=110, 959.7456pt x 587.3142pt>
 File: figures/part1/wallypuzzle_result.png Graphic file (type png)
 
 <use figures/part1/wallypuzzle_result.png>
 Package pdftex.def Info: figures/part1/wallypuzzle_result.png used on input lin
-e 107.
-(pdftex.def)             Requested size: 290.22107pt x 177.6026pt.
+e 119.
+(pdftex.def)             Requested size: 386.95897pt x 236.80347pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) (./appendix1.tex [3 <./figures/part1/wallypuzzle_rocketman.png> <./figures/pa
-rt1/wallypuzzle.png>] [4 <./figures/part1/crr_vis-eps-converted-to.pdf> <./figu
-res/part1/crr_vis2-eps-converted-to.pdf> <./figures/part1/wallypuzzle_result.pn
+[4 <./figures/part1/wallypuzzle_rocketman.png> <./figures/part1/wallypuzzle.png
+> <./figures/part1/crr_vis1-eps-converted-to.pdf> <./figures/part1/crr_vis2-eps
+-converted-to.pdf>]) (./appendix1.tex [5 <./figures/part1/wallypuzzle_result.pn
 g (PNG copy)>]
 Appendix A.
+(./code/part1/normalised_spatial_correlation_1d.m
+LaTeX Font Info:    Try loading font information for TS1+pcr on input line 18.
 
-Underfull \hbox (badness 10000) in paragraph at lines 3--4
+(/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/ts1pcr.fd
+File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
+))
+(./code/part1/signal_offset_checker.m [6
 
- []
+])
+(./code/part1/normalised_spatial_correlation_2d.m [7])
+(./code/part1/find_the_rocket_man.m)
+(./code/part1/spectral_correlation_function.m [8]
+LaTeX Font Info:    Try loading font information for OML+pcr on input line 26.
 
+(/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/omlpcr.fd
+File: omlpcr.fd 
+)
+LaTeX Font Info:    Font shape `OML/pcr/m/n' in size <10> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 26.
+) [9]
+(./code/part1/pattern_finder.m
+LaTeX Font Info:    Try loading font information for OMS+pcr on input line 19.
 
-Underfull \hbox (badness 10000) in paragraph at lines 5--6
+(/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/omspcr.fd
+File: omspcr.fd 
+)
+LaTeX Font Info:    Font shape `OMS/pcr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 19.
+)) (./main.bbl
+[10]
 
- []
+LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
-<figures/flowchart.pdf, id=114, 516.9144pt x 724.30597pt>
-File: figures/flowchart.pdf Graphic file (type pdf)
-
-<use figures/flowchart.pdf>
-Package pdftex.def Info: figures/flowchart.pdf used on input line 11.
-(pdftex.def)             Requested size: 241.84843pt x 338.87657pt.
-) (./main.bbl [5
-
- <./figures/flowchart.pdf>])
+)
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 34.
-
-[6
+ [11
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 34.
@@ -930,37 +959,41 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 34.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 34.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 34.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: F9AABCB08028E472D71BF00D46785BCB;465.
+(rerunfilecheck)             Checksum: 0C6C244AA7A5A8538859ABDE1C356F65;651.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 34.
  ) 
 Here is how much of TeX's memory you used:
- 12010 strings out of 492995
- 179683 string characters out of 6132705
- 307971 words of memory out of 5000000
- 15297 multiletter control sequences out of 15000+600000
- 13875 words of font info for 51 fonts, out of 8000000 for 9000
+ 12558 strings out of 492995
+ 187624 string characters out of 6132705
+ 409984 words of memory out of 5000000
+ 15547 multiletter control sequences out of 15000+600000
+ 19011 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,7n,45p,521b,388s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
-></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></
-usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></
-usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></u
-sr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
-r/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/
-local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/lo
-cal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loca
-l/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/
-texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/tex
-live/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texliv
-e/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
-/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/
-2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2
-017/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on main.pdf (7 pages, 14396551 bytes).
+ 40i,8n,45p,537b,1810s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/t
+exlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/te
+xlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/tex
+live/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texl
+ive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texl
+ive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texli
+ve/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texliv
+e/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive
+/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2
+017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/201
+7/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2017/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2017/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2017/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2017/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2017/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2017/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2017/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2017/texmf-dist/fon
+ts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2017/texmf-dist/fonts
+/type1/urw/courier/ucrr8a.pfb>
+Output written on main.pdf (13 pages, 14450038 bytes).
 PDF statistics:
- 190 PDF objects out of 1000 (max. 8388607)
- 143 compressed objects within 2 object streams
- 22 named destinations out of 1000 (max. 500000)
- 97 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 549 PDF objects out of 1000 (max. 8388607)
+ 490 compressed objects within 5 object streams
+ 280 named destinations out of 1000 (max. 500000)
+ 121 words of extra memory for PDF output out of 10000 (max. 10000000)
 

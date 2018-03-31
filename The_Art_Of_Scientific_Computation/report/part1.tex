@@ -1,6 +1,8 @@
 \chapter{Cross Correlations}\label{part: cross correlations}
 
-Cross correlation is powerful (and very simple) statistical tool for computing the degree to which two signals are correlated (or similar). and also for computing lags.  
+Cross correlation is powerful (and very simple) statistical tool for computing the degree to which two signals are correlated (or similar). and also for computing lags. In this part, we first learn the cross correlation in 1 dimension and its applications to singal processing. Then we extend it to 2 dimensions and familiar its usage in image processing. 
+
+After these basic concepts and application, we begin tp consider the effciency of computer cross correlation. We find it is really slow as the signals and images become larger, then we apply a new method as an alternative to spatial method, which is spectral cross correlation with a Fourier transform and inverse Fourier transform. We find this method achieve better performance in scale data.
 
 \section{Normalised Spatial Cross Correlation in 1d}
 
@@ -13,7 +15,7 @@ r=\frac{1}{N}
 \sum_{i=1}^{i=N}(f(i)-\bar{f})(g(i)-\bar{g})
 \end{equation*}
 
-The problem at the moment is that the value of r is somewhat arbitrary because of the varient amplitude of signal. One way around this is to normalise signal with the root-mean-quare. Normalized cross correlation is typically done by subtracting the mean and dividing by the standard deviation. As:
+The problem of the above funtion is that the value of $r$ is somewhat arbitrary because of the varient amplitude of $f$ and $g$. One way around this is to normalise signal with the root-mean-quare. Normalized cross correlation is typically done by subtracting the mean and dividing by the standard deviation. As:
 
 \begin{equation*}
 r=\frac{1}{N}
@@ -36,15 +38,24 @@ Matlab code of normalized 1d cross correlation is in appendix.
 
 \section{Signal Offset}
 
-If there are two signals(denote by vector) come from the same source and are just offset by some time. We can easily use cross correlation find the offset time and distance between two sensors. Just find the max value's posision of the cross correlation vector compute from two signal. Then find corresponding positions in the signal and compute the offset of the signal vector. If we know the rate and propagation speed, we can compute offset time and distance between the two sensors as follow:
+If there are two signals (denote by vector) come from the same source and are just offset by some time. We can easily use cross correlation find the offset time and distance between two sensors. First find the max value's position of the cross correlation vector computed from two signals. Then find corresponding positions of the two signals and compute the offset of the signal vector. If we know the sample rate and propagation speed, we can compute offset time and distance between the two sensors as follow:
 
 \begin{equation*}
 \text{offset time}=\frac{\text{offset}}{\text{sample rate}} 
 \end{equation*}
 
 \begin{equation*}
-\text{distance}=\text{offset time} * \text{propagation speed}
+\text{distance}=\text{(offset time)} * \text{(propagation speed)}
 \end{equation*}
+
+In this task, we take two signal files and compute the cross correlation between them. Figure \ show the result of the cross correlation.
+
+\begin{figure}[h!]
+	\centering
+		\includegraphics[width=0.50\linewidth]{figures/part1/crr_vis0.eps}
+		\caption{Cross correlation of two signals.}
+		\label{fig:crr_vis0}
+\end{figure} 
 
 \section{Normalised Spatial Cross Correlation in 2d}
 
@@ -69,51 +80,96 @@ Images are just a matrix of pixel values in most image processing. It is natural
 Here, we have a section (rocket man) show in Figure \ref{fig:rocketman} and a search region (maze) as Figure \ref{fig:maze-a}.
 
 \begin{figure}[h!]
-	\begin{center}
-		\includegraphics[width=0.40\linewidth]{figures/part1/wallypuzzle_rocketman.png}
-	\end{center}
-	\caption{Rocket Man (section)}
-	\label{fig:rocketman}
+	\centering
+		\begin{subfigure}[t]{0.45\linewidth}
+			\centering
+			\includegraphics[width=0.6\linewidth]{figures/part1/wallypuzzle_rocketman.png}
+			\caption{Rocket Man (section). }
+			\label{fig:rocketman}
+		\end{subfigure}
+		\begin{subfigure}[t]{0.45\linewidth}
+			\centering
+			\includegraphics[width=1\linewidth]{figures/part1/wallypuzzle.png}
+			\caption{Maze (search region). }
+			\label{fig:maze-a}
+		\end{subfigure}
+		\caption{Image alignment.}
+\end{figure} 
+
+The visualizetion of cross correlation is shown in Figure \ref{fig:crr_vis1} and Figure \ref{fig:crr_vis2} . The maximum of the cross-correlation corresponds to the estimated location of the section. Which means the most similar position of the section and search region. We mark it with a red star in the whole image. The result shows in Figure \ref{fig:maze-b}.
+
+\begin{figure}[h!]
+	\centering
+	\begin{subfigure}[t]{0.45\linewidth}
+		\includegraphics[width=1\linewidth]{figures/part1/crr_vis1.eps}
+		\caption{2D visualization}
+		\label{fig:crr_vis1}
+	\end{subfigure}
+	\begin{subfigure}[t]{0.45\linewidth}
+		\centering
+		\includegraphics[width=1\linewidth]{figures/part1/crr_vis2.eps}
+		\caption{3D visualization}
+		\label{fig:crr_vis2}
+	\end{subfigure}
+	\caption{Cross correlation visualizetion}
 \end{figure} 
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.60\linewidth]{figures/part1/wallypuzzle.png}
-	\centering
-	\caption{Maze (search region). }
-	\label{fig:maze-a}
-\end{figure} 
-
-The visualizetion of cross correlation is shown in Figure \ref{fig:crr_vis} and Figure \ref{fig:crr_vis2} . The maximum of the cross-correlation corresponds to the estimated location of the section. Which means the most similar position of the section and search region. We mark it with a red star in the whole image. The result shows in Figure \ref{fig:maze-b}.
-
-\begin{figure}[h!]
-	\begin{center}
-		\includegraphics[width=0.40\linewidth]{figures/part1/crr_vis.eps}
-	\end{center}
-	\caption{Cross correlation 2D visualization}
-	\label{fig:crr_vis}
-\end{figure} 
-
-\begin{figure}[h!]
-	\begin{center}
-		\includegraphics[width=0.40\linewidth]{figures/part1/crr_vis2.eps}
-	\end{center}
-	\caption{Cross correlation 3D visualization}
-	\label{fig:crr_vis2}
-\end{figure} 
-
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=0.60\linewidth]{figures/part1/wallypuzzle_result.png}
-\centering
-\caption{Align result. }
-\label{fig:maze-b}
+		\includegraphics[width=0.80\linewidth]{figures/part1/wallypuzzle_result.png}
+		\caption{Image Alignment result. }
+		\label{fig:maze-b}
 \end{figure} 
 
 \section{Spectral Cross Correlation}
 
 Cross correlation can also be done in the spectral domain by completing a Fourier transform, multiplying signals, and doing an inverse Fourier transform.
 
+In this task, we use a fast Fourier transform (FFT) algorithm to convert a signal from its original domain to a representation in the frequency domain and inverse fast Fourier transform (IFFT) vice versa. It is an advanced algorithm of the discrete Fourier transform (DFT), And it manages to reduce the complexity of computing the DFT from $O(n^2)$, which arises if one simply applies the definition of DFT, to $O(n\log n)$.
+
+Fast Fourier transform is a very usedul and powerful algorithm in computing convolution and cross correlation. It can be shown that the discrete convolution of signal $u$ and $v$ as defined by,
+
+\begin{equation*}
+(u*v)(\tau)=\sum_{m=1}^{N}u(m)v(\tau-m)
+\end{equation*}
+
+can also be expressed in terms of Foutier transform
+
+\begin{equation*}
+(u*v)(\tau)=\mathcal{F}^{-1}\{\mathcal{F}(u)\cdot \mathcal{F}(v)\}
+\end{equation*}
+
+where $\mathcal{F}(u)$ is the Fourier transform of $u$, $\mathcal{F}(v)$ is the Fourier transform of $v$, and $\mathcal{F}^{-1}$ is the inverse Fourier transform.
+
+As for cross correlation, it can be calculated through summation of a product.
+
+\begin{equation*}
+(u*v)(\tau)=\sum_{m=1}^{N}u^*(m)v(\tau+m)
+\end{equation*}
+
+or using FFTs.
+
+\begin{equation*}
+	(u*v)(\tau)=\mathcal{F}^{-1}\{(\mathcal{F}(u))^{*}\cdot \mathcal{F}(v)\}
+\end{equation*}
+
+Where the $*$ refers to the complex conjugate.
+
+Table \ref{tab:run_time} compare the run time of two different method of task in section 2. From which we can find that spectral method using Fourier transform achieves better performance.
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{c|c|c}
+		\hline
+		method & Spatial  & Spectral \\
+		\hline
+		time(s) & 4.6741 & 0.1103 \\
+		\hline
+	\end{tabular}
+	\caption{Run time compare of spatial and spectral methods.}
+	\label{tab:run_time}
+\end{table}
 
 \section{Pattern Finder}
+
 
