@@ -52,9 +52,7 @@ def edit_dis():
                 min_set.add(i)
         # print min_set
         res_f.write(str(min_dis) + '\t')
-        print min_dis
         for i in min_set:
-            print dic[i]
             res_f.write(dic[i] + '\t')
         res_f.write('\n')
     mis_f.close()
