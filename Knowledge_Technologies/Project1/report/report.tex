@@ -33,11 +33,16 @@ In this section, we simplily introduce the algorithms we evaluated in our paper.
 
 \noindent\textbf{Soundex} Soundex, developed by Odell and Russell, and patented in 1918 \cite{bibid}. Uses codes based on the sound of each letter to translate a word into an at most 4 character's string. In this paper, we call it Soundex code. Soundex algorithm are given in Figure \ref{fig:soundex}.
 
-\noindent\textbf{N-Gram} 
+\noindent\textbf{N-Gram} N-Gram methods are string distance methods based on n-gram counts, where a n-gram of string $s$ is any substring of $s$ of some fixed length. We get silimarity of words by comparing n-gram distance, which is proposed by \cite{_}, defines as:
 
-\noindent\textbf{Edit distance}
+\begin{equation}
+|N_[s]|+|N_{t}|-2|N_{s}N_{t}|
+\end{equation}
+where $N_{s}$ is the set of n-gram in string $s$. 
 
-\noindent\textbf{Editex}
+\noindent\textbf{Edit distance} Edit distance calculates by defining single character insertions, deletions (indels) and replacements costs  needed to tansform one string into another. 
+
+\noindent\textbf{Editex} 
 
 
 \section{Experiment}
