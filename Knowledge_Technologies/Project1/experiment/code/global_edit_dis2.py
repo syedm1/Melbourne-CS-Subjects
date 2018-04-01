@@ -43,7 +43,6 @@ def edit_dis():
         min_dis = 99
         min_set = set()
         for i in range(len(dic)):
-        # for i in range(50):
             dis = distance(dic[i], line)
             if dis < min_dis:
                 min_dis = dis
@@ -51,12 +50,11 @@ def edit_dis():
                 min_set.add(i)
             elif dis == min_dis:
                 min_set.add(i)
-            # accelerate, if the same word exits, break it
-            if min_dis == 0:
-                break
         # print min_set
         res_f.write(str(min_dis) + '\t')
+        print min_dis
         for i in min_set:
+            print dic[i]
             res_f.write(dic[i] + '\t')
         res_f.write('\n')
     mis_f.close()

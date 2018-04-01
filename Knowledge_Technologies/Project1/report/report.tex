@@ -1,0 +1,175 @@
+\documentclass[11pt]{article}
+\usepackage{colacl}
+\usepackage{multirow}
+\sloppy
+
+
+
+\title{Spelling Correction Method Evaluation}
+%\author
+%{Haonan Li \\
+%haonanl5@student.unimelb.edu.au}
+
+
+
+\begin{document}
+\maketitle
+
+
+\begin{abstract}
+
+This paper investages several spell checking methods. The main goal is to compare and analysis the performance of spelling correction methods,  on a peculiar data set: a number of headwords taken from UrbanDictionary1 that have been automatically identified as being misspelled \cite{}
+
+\end{abstract}
+
+\section{Introduction}
+
+Spelling correction is a basic task in natural language processing. The method of spelling correction have been very mature. Some neural method also been presented in recent years. In this paper, we investigate some non-neural network method to deal with it. Including soundex, n gram, edit distance and editex.
+
+
+\section{Method}
+
+In this section, we simplily introduce the algorithms we evaluated in our paper. 
+
+\noindent\textbf{Soundex} Soundex, developed by Odell and Russell, and patented in 1918 \cite{bibid}. Uses codes based on the sound of each letter to translate a word into an at most 4 character's string. In this paper, we call it Soundex code. Soundex algorithm are given in Figure \ref{fig:soundex}.
+
+\noindent\textbf{N-Gram} 
+
+\noindent\textbf{Edit distance}
+
+\noindent\textbf{Editex}
+
+
+\section{Experiment}
+
+\subsection{Dataset} 
+
+\subsection{Settings} 
+
+\noindent\textbf{Soundex} Calculate the soundex code for every word and then matched with global edit distance.
+
+\noindent\textbf{N-Gram} We evaluate the N-Gram algorithm for n in range 1 to 9. For a particular $n$, we first pad (n-1) \# in the front and end of every word. This gurantee the building of n-gram set. For example, 5-gram set for word ``he'' defined as: 
+
+\begin{equation}
+\{\#\#\#\#h, \#\#\#he, \#\#he\#, \#he\#\#, he\#\#\#, e\#\#\#\#\}
+\end{equation}
+
+\noindent\textbf{Edit Distance} There are two kinds of edit distance algorithm, local edit distance and global edit distance. In this paper,  we implement both of them and evaluate them. For global edit distance, we have two distance calculate scheme: 1) (+1) for indel and mismatch and (-1) for match; 2) (+1) for indel and mismatch and do nothing for match. The different between them will discuss in Section \ref{X}. For local distance algorithm, we use (-1) for indel and mismatch and (+1) for match, and always assign 0 if 0 is better.
+
+\noindent\textbf{Editex} We calculate the editex follows \cite{} settings.
+
+\begin{table}
+	\centering
+	\begin{tabular}{c|c}
+		\hline
+		\textbf{Type} & \textbf{Words number} \\
+		\hline
+		Testset size & 716 \\
+		\hline
+		Dictionary  size & 393954 \\
+		\hline
+		Misspelled in Dictionary & 175 \\
+		\hline
+		Correct not in Dictionary & 122 \\
+		\hline
+	\end{tabular}
+	\caption{Dataset}
+	\label{tab:dataset}
+\end{table}
+
+ 
+\section{Results}
+
+\begin{table}
+	\centering
+	\begin{tabular}{c|c|c|c|c}
+		\hline
+		N &Predicted & Right & Precision & Recall \\
+		\hline
+		 1 & 7150 & 183 & 2.56 & 25.56 \\
+		\hline
+		 2 & 1484 & 151 & 10.19 & 21.09  \\
+		\hline
+		 3 & 1429 & 149 & 10.43 & 20.81 \\
+		\hline
+		 4 & 1426 & 148 & 10.38 & 20.67 \\
+		\hline
+	\end{tabular}
+	\caption{N-gram algorithm results}
+	\label{tab:ngram}
+\end{table}
+
+\begin{table}
+	\centering
+	\begin{tabular}{c|c|c|c|c}
+		\hline
+		Scheme &Predicted & Right & Precision & Recall \\
+		\hline
+		 GED-1 & 5528 & 253 & 4.57 & 32.12 \\
+		\hline
+		GED-2 &  &  &  &   \\
+		\hline
+		LED & 727774 & 133 & 0.02 & 18.58 \\
+		\hline
+	\end{tabular}
+	\caption{Edit distance algorithm results}
+	\label{tab:editdis}
+\end{table}
+
+
+\begin{table*}
+	\centering
+	\begin{tabular}{c|c|c|c|c}
+		\hline
+		Method &Predicted & Right & Precision & Recall \\
+		\hline
+		Soundex & 495146 & 436 & 0.09 & 60.89 \\
+		\hline
+		Local Edit Distance  & 727774 & 133 & 0.02 & 18.58 \\
+		\hline
+		Global Edit Distance  &  &  &  &   \\
+		\hline
+		N-Gram (N=2) & 1484 & 151 & 10.18 & 21.09 \\
+		\hline
+		Editex & 2830 & 230 & 8.13 & 32.12 \\
+		\hline
+	\end{tabular}
+	\caption{All method results}
+	\label{tab:result}
+\end{table*}
+
+\begin{table*}
+	\centering
+	\begin{tabular}{c|c|c|c}
+		\hline
+		Method & Misspelled & Correct & Matched set \\
+		\hline
+		\multirow{2}*{Soundex} & accually & actually & akal, axile, azalea, asylees, auxiliar, acculturational, ... \\
+		 & ahain & again & awin, annoy, ani, aam, aani, aoyama, anne, ayme, anay, ... \\
+		\hline
+		\multirow{2}*{Local Edit Distance}  & accually & actually & actually, tactually, unactually, contactually, ...  \\
+		 & ahain & again & disenchain, rechain, toolchain, toolchains, ... \\
+		\hline
+		\multirow{2}*{Global Edit Distance}  & accually & actually & actually \\
+		 & ahain & again & chain, amain, arain, again, ghain, alain, hain  \\
+		\hline
+		\multirow{2}*{N-Gram (N=2)} & accually & actually & actually, ally \\
+		 & ahain & again & ain  \\
+		\hline
+		\multirow{2}*{Editex} & actually & actually & usually, actually, annually, facially, casually, chally, ... \\
+		 & ahain & again & amain,  attain, arain, again, alain, hain \\
+		\hline
+	\end{tabular}
+	\caption{Demostrate of different algorithm's spelling correction result.}
+	\label{tab:match}
+\end{table*}
+
+
+\section{Conclusions}
+
+
+
+%\bibliographystyle{acl}
+%\bibliography{bibliography}
+
+\end{document}

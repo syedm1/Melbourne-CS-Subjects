@@ -1,0 +1,122 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.6.5)  1 APR 2018 17:05
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**report.tex
+(./report.tex
+LaTeX2e <2017-04-15>
+Babel <3.10> and hyphenation patterns for 84 language(s) loaded.
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/size11.clo
+File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+) (./colacl.sty
+
+ALTW 2005 Proceedings style -- June 7th 2005
+derived from
+ACL-COLING 1998 Proceedings style -- March 31st 1998
+
+\titlebox=\skip43
+) (/usr/local/texlive/2017/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2016/11/25 v2.2 Span multiple rows of a table
+\multirow@colwidth=\skip44
+\multirow@cntb=\count87
+\multirow@dima=\skip45
+\bigstrutjot=\dimen103
+)
+(./report.aux)
+\openout1 = `report.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 16.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 16.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 16.
+
+
+LaTeX Warning: No \author given.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 51.
+
+Overfull \hbox (48.97742pt too wide) detected at line 55
+\OMS/cmsy/m/n/10.95 f\OT1/cmr/m/n/10.95 ####\OML/cmm/m/it/10.95 h; \OT1/cmr/m/n
+/10.95 ###\OML/cmm/m/it/10.95 he; \OT1/cmr/m/n/10.95 ##\OML/cmm/m/it/10.95 he\O
+T1/cmr/m/n/10.95 #\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 #\OML/cmm/m/it/10.95
+ he\OT1/cmr/m/n/10.95 ##\OML/cmm/m/it/10.95 ; he\OT1/cmr/m/n/10.95 ###\OML/cmm/
+m/it/10.95 ; e\OT1/cmr/m/n/10.95 ####\OMS/cmsy/m/n/10.95 g
+ []
+
+
+LaTeX Warning: Reference `X' on page 1 undefined on input line 57.
+
+
+Overfull \hbox (2.3749pt too wide) in paragraph at lines 63--76
+ [][] 
+ []
+
+
+Overfull \hbox (14.9531pt too wide) in paragraph at lines 104--115
+ [][] 
+ []
+
+
+Overfull \hbox (46.61652pt too wide) in paragraph at lines 143--163
+ [][] 
+ []
+
+[1{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+
+
+
+]
+[2] (./report.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 314 strings out of 492995
+ 3632 string characters out of 6132705
+ 68074 words of memory out of 5000000
+ 3935 multiletter control sequences out of 15000+600000
+ 8512 words of font info for 30 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 22i,9n,19p,572b,212s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
+/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
+sr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on report.pdf (2 pages, 70608 bytes).
+PDF statistics:
+ 31 PDF objects out of 1000 (max. 8388607)
+ 21 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+

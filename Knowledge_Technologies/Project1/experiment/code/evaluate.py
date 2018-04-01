@@ -5,10 +5,9 @@
 import sys
 import os
 
-def evaluate(pre_fpath, out_fpath):
+def evaluate(pre_fpath):
     # read predicted file
     pre_f = open(pre_fpath, "r")
-    out_f = open(out_fpath, "w")
     predict = []
     for line in pre_f.readlines():
         ss = set()
@@ -31,15 +30,23 @@ def evaluate(pre_fpath, out_fpath):
         if line in predict[line_num]:
             correct_res += 1
         line_num += 1
-    
-    print(pre_fpath + '\t' + str(attempt_res) + '\t' + str(correct_res) + '\n')
 
+    print(pre_fpath + '\t' + \
+        str(attempt_res) + '\t' + \
+        str(correct_res) + '\t' + \
+        str(float(correct_res)/attempt_res) + '\t' + \
+        str(float(correct_res)/716) + '\n'
+        )
+
+    cor_f.close()
     pre_f.close()
-    out_f.close()
        
 def main():
-    for i in range(2,10):
-        evaluate("../result/n_gram"+str(i), "../evaluate/n_gram2")
+    root = "../result/"
+
+    for i in os.listdir(root):
+        print i
+        evaluate(root+i)
 
 if __name__ == "__main__":
     main()
