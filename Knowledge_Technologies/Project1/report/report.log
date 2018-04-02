@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.6.5)  1 APR 2018 17:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.6.5)  2 APR 2018 18:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -61,62 +61,76 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 LaTeX Warning: No \author given.
 
+
+LaTeX Warning: Reference `fig:soundex' on page 1 undefined on input line 34.
+
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 51.
+(Font)              <10.95> on input line 36.
 
-Overfull \hbox (48.97742pt too wide) detected at line 55
-\OMS/cmsy/m/n/10.95 f\OT1/cmr/m/n/10.95 ####\OML/cmm/m/it/10.95 h; \OT1/cmr/m/n
-/10.95 ###\OML/cmm/m/it/10.95 he; \OT1/cmr/m/n/10.95 ##\OML/cmm/m/it/10.95 he\O
-T1/cmr/m/n/10.95 #\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 #\OML/cmm/m/it/10.95
- he\OT1/cmr/m/n/10.95 ##\OML/cmm/m/it/10.95 ; he\OT1/cmr/m/n/10.95 ###\OML/cmm/
-m/it/10.95 ; e\OT1/cmr/m/n/10.95 ####\OMS/cmsy/m/n/10.95 g
+Underfull \hbox (badness 1092) in paragraph at lines 42--43
+\OT1/cmr/bx/n/10.95 Edit dis-tance \OT1/cmr/m/n/10.95 Edit dis-tance cal-cu-lat
+es by
  []
 
 
-LaTeX Warning: Reference `X' on page 1 undefined on input line 57.
-
-
-Overfull \hbox (2.3749pt too wide) in paragraph at lines 63--76
+Overfull \hbox (2.3749pt too wide) in paragraph at lines 55--68
  [][] 
  []
 
 
-Overfull \hbox (14.9531pt too wide) in paragraph at lines 104--115
- [][] 
- []
-
-
-Overfull \hbox (46.61652pt too wide) in paragraph at lines 143--163
- [][] 
- []
+LaTeX Warning: Reference `X' on page 1 undefined on input line 81.
 
 [1{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 
 ]
-[2] (./report.aux)
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 89.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 89.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 96.
+
+[2] (./report.bbl
+Underfull \hbox (badness 1983) in paragraph at lines 16--20
+[]\OT1/cmr/m/n/10.95 Esko Ukko-nen.  1992.  Ap-prox-i-mate string
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--20
+\OT1/cmr/m/n/10.95 match-ing with q-grams and max-i-mal
+ []
+
+) [3
+
+] (./report.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 314 strings out of 492995
- 3632 string characters out of 6132705
- 68074 words of memory out of 5000000
- 3935 multiletter control sequences out of 15000+600000
- 8512 words of font info for 30 fonts, out of 8000000 for 9000
+ 333 strings out of 492995
+ 3886 string characters out of 6132705
+ 70074 words of memory out of 5000000
+ 3947 multiletter control sequences out of 15000+600000
+ 9770 words of font info for 34 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 22i,9n,19p,572b,212s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 23i,9n,19p,952b,212s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
-/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
-sr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on report.pdf (2 pages, 70608 bytes).
+/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></u
+sr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
+/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/lo
+cal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local
+/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/te
+xlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/tex
+live/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on report.pdf (3 pages, 129197 bytes).
 PDF statistics:
- 31 PDF objects out of 1000 (max. 8388607)
- 21 compressed objects within 1 object stream
+ 54 PDF objects out of 1000 (max. 8388607)
+ 38 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
