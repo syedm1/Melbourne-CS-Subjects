@@ -1,16 +1,67 @@
 \begin{thebibliography}{}
 
-\bibitem[\protect\citename{Hall and Dowling}1980]{Hall1980ApproximateSM}
+\bibitem[\protect\citename{Brill and Moore}2000]{Brill2000An}
+Eric Brill and Robert~C Moore.
+\newblock 2000.
+\newblock An improved error model for noisy channel spelling correction.
+\newblock In {\em Proc. Meeting of the Association for Computarional
+  Linguistics}, pages 286--293.
+
+\bibitem[\protect\citename{Eger \bgroup et al.\egroup }2016]{Eger2016A}
+Steffen Eger, Tim Vor~Der Brück, and Alexander Mehler.
+\newblock 2016.
+\newblock A comparison of four character-level string-to-string translation
+  models for (ocr) spelling error correction.
+\newblock {\em Prague Bulletin of Mathematical Linguistics}, 105(1):77--99.
+
+\bibitem[\protect\citename{Gadd}1988]{Gadd1988‘}
+T.~N. Gadd.
+\newblock 1988.
+\newblock ‘fisching fore werds’: phonetic retrieval of written text in
+  information systems.
+\newblock {\em Program Electronic Library & Information Systems},
+  22(3):222--237.
+
+\bibitem[\protect\citename{Hall and Dowling}1980a]{Hall1980}
 Patrick A.~V. Hall and Geoff~R. Dowling.
-\newblock 1980.
+\newblock 1980a.
+\newblock Approximate string matching.
+\newblock {\em ACM Comput. Surv.}
+
+\bibitem[\protect\citename{Hall and Dowling}1980b]{Hall1980ApproximateSM}
+Patrick A.~V. Hall and Geoff~R. Dowling.
+\newblock 1980b.
 \newblock Approximate string matching.
 \newblock {\em ACM Comput. Surv.}, 12:381--402.
+
+\bibitem[\protect\citename{Han and Baldwin}2011]{Han2011}
+Bo~Han and Timothy Baldwin.
+\newblock 2011.
+\newblock Lexical normalisation of short text messages: Makn sens a \#twitter.
+\newblock In {\em Proceedings of the 49th Annual Meeting of the Association for
+  Computational Linguistics: Human Language Technologies - Volume 1}, pages
+  368--378.
+
+\bibitem[\protect\citename{Levenshtein}1965]{Levenshtein1965Binary}
+V.~I Levenshtein.
+\newblock 1965.
+\newblock Binary codes capable of correcting deletions, insertions and
+  reversals.
+\newblock {\em Dokl.akad.nauk Sssr}, 10(1):845&ndash;848.
 
 \bibitem[\protect\citename{Saphra}2016]{Saphra2016EvaluatingIW}
 Naomi Saphra.
 \newblock 2016.
 \newblock Evaluating informal-domain word representations with urbandictionary.
 \newblock In {\em RepEval@ACL}.
+
+\bibitem[\protect\citename{Silfverberg \bgroup et al.\egroup
+  }2016]{Silfverberg2016Data}
+Miikka Silfverberg, Pekka Kauppinen, and Krister Lindén.
+\newblock 2016.
+\newblock Data-driven spelling correction using weighted finite-state methods.
+\newblock In {\em Sigfsm Workshop on Statistical Nlp and Weighted Automata},
+  pages 51--59.
 
 \bibitem[\protect\citename{Ukkonen}1992]{Ukkonen1992ApproximateSM}
 Esko Ukkonen.

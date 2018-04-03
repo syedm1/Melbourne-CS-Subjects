@@ -18,37 +18,38 @@
 
 \begin{abstract}
 
-This paper investages several spell checking methods. The main goal is to compare and analysis the performance of spelling correction methods on a peculiar data set.
+This paper investages several spelling correction methods. The main goal is to compare and analysis the performance of spelling correction methods on a peculiar data set, illustrate the characteristic of different string matchind algorithm.
 
 \end{abstract}
 
 \section{Introduction}
 
-Spelling correction is a basic task in natural language processing. The method of spelling correction have been very mature. Some neural method also been presented in recent years. In this paper, we investigate some non-neural network method to deal with it. Including soundex, n gram, edit distance and editex.
+Spelling correction is an old NLP task.  From traditional non-neural methods \cite{Hall1980}\cite{Gadd1988‘}\cite{Brill2000An}, to neural methods \cite{Han2011}\cite{Eger2016A}\cite{Silfverberg2016Data} presented in recent years. The performance of spelling correction methods have been better and better and become relatively mature. 
+
+In this paper, we investigates some old but really effective and impactful algorithms' performance on spelling correction task. Use a newly UrbanDictionary\footnote{A crowd-compiled dictionary of informal words and slang with over 7 million entries. http://urbandictionary.com} dataset.
+The algorithm been evaluated Includ Soundex, N-gram, Edit-distance and Editex.
 
 
-\section{Method}
+\section{Methods}
 
-In this section, we simplily introduce the algorithms we evaluated in our paper. 
+In this section, we simply introduce the algorithms we evaluated in our paper. 
 
-\noindent\textbf{Soundex} Soundex, developed by Odell and Russell, and patented in 1918 \cite{Hall1980ApproximateSM}. Uses codes based on the sound of each letter to translate a word into an at most 4 character's string. In this paper, we call it Soundex code. Soundex algorithm are given in Figure \ref{fig:soundex}.
+\noindent\textbf{Soundex} was developed by Odell and Russell, and patented in 1918 \cite{Hall1980ApproximateSM}. Uses codes based on the sound of each letter to translate a word into an at most 4 character's string. We call it Soundex code in this paper.
 
-\noindent\textbf{N-Gram} N-Gram methods are string distance methods based on n-gram counts, where a n-gram of string $s$ is any substring of $s$ of some fixed length. We get silimarity of words by comparing n-gram distance, which is proposed by \cite{Ukkonen1992ApproximateSM}, defines as:
+\noindent\textbf{N-Gram} methods are string distance methods based on n-gram counts, where a n-gram of string $s$ is any substring of $s$ of some fixed length. This algorithm defines silimarity of words by calculating n-gram distance, which was proposed by \cite{Ukkonen1992ApproximateSM} defines as:
 \begin{equation}
 |N_{s}|+|N_{t}|-2|N_{s}N_{t}|
 \end{equation}
 where $N_{s}$ is the set of n-gram in string $s$. 
 
-\noindent\textbf{Edit distance} Edit distance calculates by defining single character insertions, deletions (indels) and replacements costs  needed to tansform one string into another. 
+\noindent\textbf{Edit distance} presented by \cite{Levenshtein1965Binary},  also know as Levenshtein distance, which is defined as the minimum number of elementary edit operations needed to transform one string into another.
 
-\noindent\textbf{Editex} Presented by \cite{Zobel1996PhoneticSM}, is a method combines phonetic matching and edit distance. In this method, alphabets also be grouped similar with soundex. Then, edit distance will be  calculated with the grouping info, the distance between two letter in the same group defines 1 while the different group defins 2. This scheme makes distance between similar phonetic words smaller.
+\noindent\textbf{Editex} presented by \cite{Zobel1996PhoneticSM}, is a method combines phonetic matching and edit distance. In this method, alphabets also be grouped similar with soundex. Then, edit distance will be calculated with the grouping info, the distance between two letters in the same group defines 1 while the different groups defins 2. This scheme makes distance between similar phonetic words closer.
 
 
-\section{Experiment}
+\section{Experiments}
 
-\subsection{Dataset} 
-
-In our experiment, we use a particular dataset: a number of headwords taken from UrbanDictionary1 that have been automatically identified as being misspelled \cite{Saphra2016EvaluatingIW}. We use a  sub-sample of actual data posted to UrbanDictionary, this dataset simulates the spelling data in the real world as much as possible.
+\subsection{Data} 
 
 \begin{table}
 	\centering
@@ -69,7 +70,9 @@ In our experiment, we use a particular dataset: a number of headwords taken from
 	\label{tab:dataset}
 \end{table}
 
-\subsection{Settings} 
+For our experiments we use a particular dataset:  a sub-sample of actual data posted to UrbanDictionary, in which a number of headwords taken from have been automatically identified as being misspelled \cite{Saphra2016EvaluatingIW}. This dataset simulates the spelling errer data in the real world as much as possible so that is suitable for our task. Table \ref{tab:dataset} shows the statistics of our dataset.
+
+\subsection{Setting} 
 
 \noindent\textbf{Soundex} Calculate the soundex code for every word and then matched with global edit distance.
 
@@ -188,14 +191,16 @@ As for results of local edit distance algorithm. The predicted words is explosiv
 
 Table \ref{tab:match} shows the two words' demostrate output of the best match for each algorithm  and Table \ref{tab:result} shows the results of all evaluation.
 
-From Table \ref{tab:result} we knows that toth soundex and local edit distance predicted too much best matches. The reason for soundex is that for words with a fixed first letter, the number of different soundex code is only 1000, 3 digitals from 0-9. This will lead to plenty of words have the same soundex code.
+From Table \ref{tab:result} we knows that toth soundex and local edit distance predicted too much best matches. The reason for soundex is that for words with a fixed first letter, the number of different soundex code is only 1000, 3 digitals from 0-9. This will lead to plenty of words have the same soundex code.The first two lines of Table \ref{tab:match} demostrate the soundex's result, from which we may find the pronounce of the matched set is somewhat similar with the misspelled word. But the spelling of them are various, which may lead to a number of meaningless predicet.
 
-Although the precision of soundex is extremely low,  it's result seems much better than local edit distance for both precision and recall. It is not hard to think of computing edis distance based on the soundex results. This is a naive combination of two algorithm which is exceeded by editex. 
+Although the precision of soundex is extremely low,  it's result seems much better than local edit distance for both precision and recall, which also demostrates in Table \ref{tab:match}.  Obviously, both ``actually'' and any string with a substring is ``actually'' are treated the same. This is the trait of local edit distance, part matching.
 
-In Table \ref{tab:result}, we find that 
+As for global edit distance matching, this is a pretty good algorithm for spelling correction that get a acceptable precision and recall. It is not hard to think of computing edis distance based on the soundex results. This is a naive combination of two algorithm which is exceeded by editex. 
 
+We find that editex can get almost the same precision with global edit distance but higher recall. Which might because editex combines the advantage of soundex with edit distance. Form the last two rows of Table \ref{tab:match}, we find that editex matched words with small edit distance and also consider pronounciation.
 
 \section{Conclusions}
+
 
 
 \bibliographystyle{acl}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.6.5)  2 APR 2018 18:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.6.5)  3 APR 2018 00:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -62,47 +62,99 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Warning: No \author given.
 
 
-LaTeX Warning: Reference `fig:soundex' on page 1 undefined on input line 34.
+Underfull \hbox (badness 3068) in paragraph at lines 27--28
+\OT1/cmr/m/n/10.95 ing, 1980a)(Gadd, 1988)(Brill and Moore,
+ []
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 36.
+(Font)              <10.95> on input line 29.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 29.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 29.
 
-Underfull \hbox (badness 1092) in paragraph at lines 42--43
-\OT1/cmr/bx/n/10.95 Edit dis-tance \OT1/cmr/m/n/10.95 Edit dis-tance cal-cu-lat
-es by
+Underfull \hbox (badness 10000) in paragraph at lines 29--29
+[][]\OT1/cmr/m/n/9 A crowd-compiled dic-tio-nary of in-for-mal
  []
 
 
-Overfull \hbox (2.3749pt too wide) in paragraph at lines 55--68
+Underfull \hbox (badness 10000) in paragraph at lines 29--29
+\OT1/cmr/m/n/9 words and slang with over 7 mil-lion en-tries.
+ []
+
+
+Underfull \hbox (badness 2261) in paragraph at lines 45--46
+\OT1/cmr/bx/n/10.95 Edit dis-tance \OT1/cmr/m/n/10.95 pre-sented by (Lev-en-sht
+ein,
+ []
+
+
+Overfull \hbox (2.3749pt too wide) in paragraph at lines 56--69
  [][] 
  []
-
-
-LaTeX Warning: Reference `X' on page 1 undefined on input line 81.
 
 [1{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 
 ]
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 89.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 89.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 96.
 
-[2] (./report.bbl
-Underfull \hbox (badness 1983) in paragraph at lines 16--20
+LaTeX Warning: Reference `X' on page 2 undefined on input line 84.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 99.
+
+Underfull \vbox (badness 4467) has occurred while \output is active []
+
+ [2]
+(./report.bbl
+Missing character: There is no Ã in font cmr10!
+Missing character: There is no ¼ in font cmr10!
+
+Underfull \hbox (badness 6575) in paragraph at lines 11--16
+\OT1/cmr/m/n/10.95 der Mehler.  2016.  A com-par-i-son of
+ []
+
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ˜ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ™ in font cmr10!
+! Misplaced alignment tab character &.
+l.22 \newblock {\em Program Electronic Library &
+                                                 Information Systems},
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+[3]
+! Misplaced alignment tab character &.
+l.50 ...lock {\em Dokl.akad.nauk Sssr}, 10(1):845&
+                                                  ndash;848.
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no Ã in font cmr10!
+Missing character: There is no © in font cmr10!
+
+Underfull \hbox (badness 1983) in paragraph at lines 67--71
 []\OT1/cmr/m/n/10.95 Esko Ukko-nen.  1992.  Ap-prox-i-mate string
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 16--20
+Underfull \hbox (badness 10000) in paragraph at lines 67--71
 \OT1/cmr/m/n/10.95 match-ing with q-grams and max-i-mal
  []
 
-) [3
+) [4
 
 ] (./report.aux)
 
@@ -110,13 +162,13 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 333 strings out of 492995
- 3886 string characters out of 6132705
+ 339 strings out of 492995
+ 3973 string characters out of 6132705
  70074 words of memory out of 5000000
- 3947 multiletter control sequences out of 15000+600000
+ 3953 multiletter control sequences out of 15000+600000
  9770 words of font info for 34 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 23i,9n,19p,952b,212s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 24i,9n,19p,952b,212s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
@@ -127,10 +179,10 @@ cal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local
 /texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/te
 xlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/tex
 live/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on report.pdf (3 pages, 129197 bytes).
+Output written on report.pdf (4 pages, 138069 bytes).
 PDF statistics:
- 54 PDF objects out of 1000 (max. 8388607)
- 38 compressed objects within 1 object stream
+ 57 PDF objects out of 1000 (max. 8388607)
+ 40 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
