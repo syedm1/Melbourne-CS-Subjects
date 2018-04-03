@@ -1,5 +1,11 @@
 \begin{thebibliography}{}
 
+\bibitem[\protect\citename{Altschul and Erickson}1986]{Altschul1986Locally}
+S.~F. Altschul and B.~W. Erickson.
+\newblock 1986.
+\newblock Locally optimal subalignments using nonlinear similarity functions.
+\newblock {\em Bulletin of Mathematical Biology}, 48(5-6):633--660.
+
 \bibitem[\protect\citename{Brill and Moore}2000]{Brill2000An}
 Eric Brill and Robert~C Moore.
 \newblock 2000.
@@ -19,7 +25,7 @@ T.~N. Gadd.
 \newblock 1988.
 \newblock ‘fisching fore werds’: phonetic retrieval of written text in
   information systems.
-\newblock {\em Program Electronic Library & Information Systems},
+\newblock {\em Program Electronic Library \& Information Systems},
   22(3):222--237.
 
 \bibitem[\protect\citename{Hall and Dowling}1980a]{Hall1980}
@@ -47,7 +53,14 @@ V.~I Levenshtein.
 \newblock 1965.
 \newblock Binary codes capable of correcting deletions, insertions and
   reversals.
-\newblock {\em Dokl.akad.nauk Sssr}, 10(1):845&ndash;848.
+\newblock {\em Dokl.akad.nauk Sssr}, 10(1).
+
+\bibitem[\protect\citename{Raghavan \bgroup et al.\egroup }1989]{Raghavan1989}
+Vijay Raghavan, Gwang S.~Jung, and Peter Bollmann.
+\newblock 1989.
+\newblock A critical investigation of recall and precision as measures of
+  retrieval system performance.
+\newblock 7:205--229, 07.
 
 \bibitem[\protect\citename{Saphra}2016]{Saphra2016EvaluatingIW}
 Naomi Saphra.
