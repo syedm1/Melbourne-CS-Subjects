@@ -1,5 +1,5 @@
 \contentsline {chapter}{\numberline {1}Cross Correlations}{2}{chapter.1}
-\contentsline {section}{\numberline {1.1}Normalised Spatial Cross Correlation in 1d}{2}{section.1.1}
+\contentsline {section}{\numberline {1.1}Normalized Spatial Cross Correlation in 1d}{2}{section.1.1}
 \contentsline {section}{\numberline {1.2}Signal Offset}{3}{section.1.2}
 \contentsline {section}{\numberline {1.3}Normalised Spatial Cross Correlation in 2d}{3}{section.1.3}
 \contentsline {section}{\numberline {1.4}Image Alignment}{3}{section.1.4}

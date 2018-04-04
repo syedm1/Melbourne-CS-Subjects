@@ -9,7 +9,7 @@
 -- the target set of pieces, the guesser repeatedly chooses a subset of chess 
 -- pieces and tells it to the hider, who responds by giving the guesser three 
 -- numbers indicate the number of correct guess pieces, right kind but wrong 
--- colour pieces, and right colour but wrong kind pieces separatly. This 
+-- color pieces, and right color but wrong kind pieces separately. This 
 -- program complete the guesser part. 
 
 -- Introduction of Code: We first guess all "BP" with game size. from the 
@@ -19,9 +19,9 @@
 -- of pieces as new guess. And compare the feedback with our own judgement, 
 -- remove the candidate does not match. 
 
--- Evalution:   Game Size : 4     Average Guesses : 3.6592 (10000 times)
---              Game Size : 5     Average Guesses : 3.7835 (10000 times)
---              Game Size : 32    Average Guesses : 4.8380 (2000  times)
+-- Evaluation:   Game Size : 4     Average Guesses : 3.6592 (10000 times)
+--               Game Size : 5     Average Guesses : 3.7835 (10000 times)
+--               Game Size : 32    Average Guesses : 4.8380 (2000  times)
 
 module Project2 (initialGuess, nextGuess, GameState) where
 import Data.List
@@ -47,14 +47,14 @@ longest (x:y:z)
     | otherwise           = longest (y:z)
 
 
--- Function : Decide the next guess. We process the second guess seperatly. 
+-- Function : Decide the next guess. We process the second guess separately. 
 --            For the nth guess (n>2). We always judge every candidate if the 
 --            result is the same with the feedback received from hinder, keep 
 --            it in candidate target set. Then, we randomly choose one set with 
 --            maximum number of pieces from the candidate set as new guess.
 -- Input    : A tuple of [String] and GameState, and a tuple of three integers. 
 -- Output   : A tuple of [String] and GameState, They are new guess and updated
---            game state seperately.
+--            game state separately.
 nextGuess :: ([String],GameState) -> (Int,Int,Int) -> ([String],GameState)
 nextGuess (bgs,(nth, bcand)) guess_res
     | nth == 1  = secondGuess (bgs,(nth, bcand)) guess_res
@@ -68,7 +68,7 @@ nextGuess (bgs,(nth, bcand)) guess_res
 --            largest length as the second guess.
 -- Input    : A tuple of [String] and GameState, and a tuple of three integers.
 -- Output   : A tuple of [String] and GameState, They are new guess and updated
---            game state seperately.
+--            game state separately.
 secondGuess :: ([String],GameState) -> (Int,Int,Int) -> ([String],GameState)   
 secondGuess (bgs,(nth, bcand)) (t1,t2,t3) = (gs,((nth+1),cand)) where
     pieces1 = ["BK","BQ","BR","BR","BB","BB","BN","BN"]
@@ -105,7 +105,7 @@ sameRes bgs (t1,t2,t3) x
 -- Input    : A guess list and a target list.
 -- Output   : A tuple with three integers, indicate the number of same elements,
 --            same kind but different color elements and same color but 
---            edifferent kind lements.
+--            different kind elements.
 myJudge :: [String] -> [String] -> (Int,Int,Int)
 myJudge cand gs = (n_same, n_same_k, n_same_c) where 
     same      = myIntersect gs cand
@@ -114,7 +114,7 @@ myJudge cand gs = (n_same, n_same_k, n_same_c) where
     n_same_k  = length (myIntersect (map (!!1) gs) (map (!!1) cand)) - n_same
 
 
--- Function : Computer the insetsection of two lists.
+-- Function : Computer the inset-section of two lists.
 -- Input    : Two list L1, L2.
 -- Output   : One list of the same elements in L1 and L2.
 myIntersect :: Eq a => [a] -> [a] -> [a]

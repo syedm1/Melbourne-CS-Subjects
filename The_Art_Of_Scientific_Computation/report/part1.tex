@@ -1,10 +1,10 @@
 \chapter{Cross Correlations}\label{part: cross correlations}
 
-Cross correlation is powerful (and very simple) statistical tool for computing the degree to which two signals are correlated (or similar). and also for computing lags. In this part, we first learn the cross correlation in 1 dimension and its applications to singal processing. Then we extend it to 2 dimensions and familiar its usage in image processing. 
+Cross correlation is powerful (and very simple) statistical tool for computing the degree to which two signals are correlated (or similar). and also for computing lags. In this part, we first learn the cross correlation in 1 dimension and its applications to signal processing. Then we extend it to 2 dimensions and familiar its usage in image processing. 
 
-After these basic concepts and application, we begin tp consider the effciency of computer cross correlation. We find it is really slow as the signals and images become larger, then we apply a new method as an alternative to spatial method, which is spectral cross correlation with a Fourier transform and inverse Fourier transform. We find this method achieve better performance in scale data.
+After these basic concepts and application, we consider the efficiency of computer cross correlation. We find it is really slow as the signals and images become larger, then we apply a new method as an alternative to spatial method, which is spectral cross correlation with a Fourier transform and inverse Fourier transform. We find this method achieve better performance in scale data.
 
-\section{Normalised Spatial Cross Correlation in 1d}
+\section{Normalized Spatial Cross Correlation in 1d}
 
 In signal processing, cross-correlation is a measure of similarity of two series as a function of the displacement of one relative to the other. As we all know, signal could be continuous and discrete. In this project, we only focus discrete signal. 
 
@@ -15,7 +15,7 @@ r=\frac{1}{N}
 \sum_{i=1}^{i=N}(f(i)-\bar{f})(g(i)-\bar{g})
 \end{equation*}
 
-The problem of the above funtion is that the value of $r$ is somewhat arbitrary because of the varient amplitude of $f$ and $g$. One way around this is to normalise signal with the root-mean-quare. Normalized cross correlation is typically done by subtracting the mean and dividing by the standard deviation. As:
+The problem of the above function is that the value of $r$ is somewhat arbitrary because of the variant amplitude of $f$ and $g$. One way around this is to normalize signal with the root-mean-quare. Normalized cross correlation is typically done by subtracting the mean and dividing by the standard deviation. As:
 
 \begin{equation*}
 r=\frac{1}{N}
@@ -59,7 +59,7 @@ In this task, we take two signal files and compute the cross correlation between
 
 \section{Normalised Spatial Cross Correlation in 2d}
 
-The cros correlation can be extended to two-dimensional matrix. Condiser two matrices, t (template) and A (search region), The matrix A willl always larger than the matrix t. We can use two nested for-loops to ``leg'' t over A, compute for each ``lag'' the cross-correlation. Normolized cross correlation of two matrices defines as:
+The cros correlation can be extended to two-dimensional matrix. Consider two matrices, t (template) and A (search region), The matrix A will always larger than the matrix t. We can use two nested for-loops to ``leg'' t over A, compute for each ``lag'' the cross-correlation. Normalized cross correlation of two matrices defines as:
 
 \begin{equation*}
 R(lag_{x},lag_{y})=
@@ -96,7 +96,7 @@ Here, we have a section (rocket man) show in Figure \ref{fig:rocketman} and a se
 		\caption{Image alignment.}
 \end{figure} 
 
-The visualizetion of cross correlation is shown in Figure \ref{fig:crr_vis1} and Figure \ref{fig:crr_vis2} . The maximum of the cross-correlation corresponds to the estimated location of the section. Which means the most similar position of the section and search region. We mark it with a red star in the whole image. The result shows in Figure \ref{fig:maze-b}.
+The visualization of cross correlation is shown in Figure \ref{fig:crr_vis1} and Figure \ref{fig:crr_vis2} . The maximum of the cross-correlation corresponds to the estimated location of the section. Which means the most similar position of the section and search region. We mark it with a red star in the whole image. The result shows in Figure \ref{fig:maze-b}.
 
 \begin{figure}[h!]
 	\centering
@@ -111,7 +111,7 @@ The visualizetion of cross correlation is shown in Figure \ref{fig:crr_vis1} and
 		\caption{3D visualization}
 		\label{fig:crr_vis2}
 	\end{subfigure}
-	\caption{Cross correlation visualizetion}
+	\caption{Cross correlation visualization}
 \end{figure} 
 
 \begin{figure}[h!]
@@ -127,13 +127,13 @@ Cross correlation can also be done in the spectral domain by completing a Fourie
 
 In this task, we use a fast Fourier transform (FFT) algorithm to convert a signal from its original domain to a representation in the frequency domain and inverse fast Fourier transform (IFFT) vice versa. It is an advanced algorithm of the discrete Fourier transform (DFT), And it manages to reduce the complexity of computing the DFT from $O(n^2)$, which arises if one simply applies the definition of DFT, to $O(n\log n)$.
 
-Fast Fourier transform is a very usedul and powerful algorithm in computing convolution and cross correlation. It can be shown that the discrete convolution of signal $u$ and $v$ as defined by,
+Fast Fourier transform is a very useful and powerful algorithm in computing convolution and cross correlation. It can be shown that the discrete convolution of signal $u$ and $v$ as defined by,
 
 \begin{equation*}
 (u*v)(\tau)=\sum_{m=1}^{N}u(m)v(\tau-m)
 \end{equation*}
 
-can also be expressed in terms of Foutier transform
+can also be expressed in terms of Fourier transform
 
 \begin{equation*}
 (u*v)(\tau)=\mathcal{F}^{-1}\{\mathcal{F}(u)\cdot \mathcal{F}(v)\}
@@ -172,8 +172,8 @@ Table \ref{tab:run_time} compare the run time of two different method of task in
 
 \section{Pattern Finder}
 
-In this task, I pick a piece of music and cut a small piece of it (a durm) through listening. Figure \ref{fig:wave} shows two piece of  waveforms separately. And 
-\ref{fig:crr_vis3} shows all occurance of the element, because it is not a normalized correlation picture, all positions with the y-coordinates larger than 1000 is the appearance of the drum. We can also find that others background noise have effect of our calculate but not serious.
+In this task, I pick a piece of music and cut a small piece of it (a drum) through listening. Figure \ref{fig:wave} shows two piece of  waveforms separately. And 
+\ref{fig:crr_vis3} shows all occurrence of the element, because it is not a normalized correlation picture, all positions with the y-coordinates larger than 1000 is the appearance of the drum. We can also find that others background noise have effect of our calculate but not serious.
 
 \begin{figure}[h!]
 	\centering
@@ -188,7 +188,7 @@ In this task, I pick a piece of music and cut a small piece of it (a durm) throu
 		\caption{music waveform}
 		\label{fig:music}
 	\end{subfigure}
-	\caption{Two oscllographs}
+	\caption{Two oscillographs}
 	\label{fig:wave}
 \end{figure} 
 
@@ -203,4 +203,4 @@ In this task, I pick a piece of music and cut a small piece of it (a durm) throu
 
 This part is just some thinking of me, not really theme related. 
 
-From the above research, we know that 1d cross correlation can be used to process acoustical signal and 2d cross correlation is very useful for image processing. Then, how about 3d cross correlation? If 3d cross correlation can be build, we can easily know the space structure similarity of two object, theoretiaclly. This task may have its value in research in microcosmos like molecular physics and microbiology. Consider we have one cell with particular disease as specimen but we do not know the reason of its pathogenicity. At the same time, we have several cells, some of which have the disease. If we can find spatial cross correlation between the specimen and other cell, and same diseased cell have the similar space structure, we can distinguish the healthy cell and diseases.
+From the above research, we know that 1d cross correlation can be used to process acoustical signal and 2d cross correlation is very useful for image processing. Then, how about 3d cross correlation? If 3d cross correlation can be build, we can easily know the space structure similarity of two object, theoretically. This task may have its value in research in microcosmos like molecular physics and microbiology. Consider we have one cell with particular disease as specimen but we do not know the reason of its pathogenicity. At the same time, we have several cells, some of which have the disease. If we can find spatial cross correlation between the specimen and other cell, and same diseased cell have the similar space structure, we can distinguish the healthy cell and diseases.

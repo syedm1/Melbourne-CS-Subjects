@@ -1,20 +1,26 @@
 #!usr/lib/python2.7
 # Auther    : Haonan Li <haonanl5@student.unimelb.edu.au>
-# Porpuse   : Visualization of speed of index-alignment 
 
 import matplotlib.pyplot as plt
+import numpy as np
 
-num_k = ['1', '2', '3', '4']
-x = range(len(num_k))
-y1 = [2.56, 10.19, 10.43, 10.38]
-y2 = [25.56, 21.09, 20.81, 20.67]
-plt.plot(x, y1, marker='o', mec='r', mfc='w',label='ref1')
-plt.plot(x, y2, marker='*', ms=10, label='ref2')
+scale_ls = range(7)  
+index_ls = ['Soundex','N-Gram','LEG','GED','Editex']  
+plt.xticks(scale_ls, index_ls)
+
+a = plt.subplot(1, 1, 1)
+
+x = [10, 20, 30, 40, 50]
+x1 = [7, 17, 27, 37, 47]
+
+
+Y1 = [0.1, 0.3, 8, 10, 8]
+Y2 = [61, 18, 28, 21, 32]
+
+
+plt.bar(x1, Y1, facecolor='red', width=3, label = 'Recall')
+plt.bar(x, Y2, facecolor='blue', width=3, label = 'Precision')
+
 plt.legend()
-plt.xticks(x, num_k, rotation=45)
-plt.margins(0)
-plt.subplots_adjust(bottom=0.15)
-plt.xlabel("N") 
-plt.ylabel("") 
 
 plt.show()
