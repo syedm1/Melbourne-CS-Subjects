@@ -59,21 +59,21 @@ The result is not surprised. Because the  complexity of naive Hamming distance a
 
 \subsection{Task 3}
 
-FIgure \ref{a}  shows the distribution of base quality scores of all the reads for each position, and Figure \ref{b} the distributions of quality scores of all mismatches for alignment to the given reference ref1.fa  (also by position). 
+FIgure \ref{a}  shows the distribution of base quality scores of all the reads for each position, and Figure \ref{b} the distributions of quality scores of all mismatches for best alignment to the given reference ref1.fa  (also by position). 
 
-Compare these two images, we find that the range of each position's quality score of two piecture is almost the same, whis indicates even a position have a high average quality score or most quality scores of this position is high, mismatch also happened. We also find that the upper quartile are almost the same in these two pictures for the same position. However, the lower quartile and median show some different. For all positions, the lower quatile of mismatched picture always less than the statistics for all reads. This is due to more low quality scores appear in the mismatched set.  
-Besides, as the position vary form 1 to 100, the average quality score become lower and lower, mismatches increase. This was reflected by the median lines, they overlap the bottom of the picture for most positions near to 100.
+Compare these two images, we find that the range of each position's quality score of two piecture is similar, which indicates even a position have a high average quality score or most quality scores of this position is high, mismatches occured.  However, no matter the upper quartile, lower quartile and median, two pictures show some differences. For most positions, the box of upper quartile to lower quartile of mismatched picture always lower than the that for all reads. This might due to more low quality scores appear in the mismatched set.  Alghouth there are exceptions that median for mismatches upper than it fao all reads, which might because the dataset is small.
+
+Besides, as the position vary form 1 to 100, the average quality score become lower, mismatches increase. This was reflected by the median lines that get closer to the bottum and even overlap with it as the positions near to 100.
 
 \begin{figure}[!htb]
 	
 	\centering
 	\subfigure[All the reads for each position]{
 		\label{a} 
-		\includegraphics[width=0.4\textwidth]{base_qs.png}}
-	\hspace{0.5in}
+		\includegraphics[width=0.47\textwidth]{base_qs.png}}
 	\subfigure[All mismatches]{
 		\label{b} 
-		\includegraphics[width=0.4\textwidth]{mis_qs.png}}
+		\includegraphics[width=0.47\textwidth]{mis_qs.png}}
 	\caption{Distribution of base quality scores.}
 	\label{fig:2} 
 

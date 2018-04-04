@@ -72,7 +72,7 @@ def alignment(ref, reads):
     # all reads
     reads_mis = []
     for read in reads:
-        min_dis = 9999
+        min_dis = 2
         min_pos = 9999
         mis_set = set()
         # forward search
@@ -80,7 +80,10 @@ def alignment(ref, reads):
         for start in range(len(ref)-len(read[1])):
             end = start + len(read[1])
             dis, mis = hamming_dis(read[1], ref[start:end], min_dis)
-            if dis < min_dis:
+            if dis == 0:
+                mis_dis = dis
+                mis_set.clear()
+            elif dis < min_dis:
                 min_dis = dis
                 mis_set = mis
                 min_pos = start
@@ -92,11 +95,13 @@ def alignment(ref, reads):
             for start in range(len(ref)-len(read[1])):
                 end = start + len(read[1])
                 dis, mis = hamming_dis(read[1], ref[start:end], min_dis)
-                if (dis < min_dis) or (dis == min_dis and start < min_pos):
+                if dis == 0:
+                    mis_dis = dis
+                    mis_set.clear()
+                elif (dis < min_dis) or (dis == min_dis and start < min_pos):
                     min_dis = dis
                     mis_set = mis
                     min_pos = start
-        
         reads_mis.append((read[0],read[1],read[2],mis_set)) 
         
     return reads_mis
@@ -121,7 +126,6 @@ def plot_mis_qs(reads_mis, out_qs):
     for read in reads_mis:
         for pos in read[3]:
             scores[pos].append(ord(read[2][pos])-ord('!'))
-    # print msc
     plt.boxplot(scores)
     plt.show()
     plt.savefig(out_qs)
@@ -165,7 +169,7 @@ def main(argv):
     ref, reads = init(ref_file, read_file)
     reads_mis = alignment(ref, reads)
     # plot
-    plot_base_qs(reads, out_base_qs)
+    # plot_base_qs(reads, out_base_qs)
     plot_mis_qs(reads_mis, out_mis_qs)
 
 if __name__ == "__main__":
