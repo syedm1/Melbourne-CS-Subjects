@@ -28,7 +28,7 @@
 
 \section{Introduction}
 
-Spelling correction is an old NLP task.  From traditional non-neural methods \cite{Hall1980,Gadd1988‘,Brill2000An}, to neural methods \cite{Han2011,Eger2016A,Silfverberg2016Data} presented in recent years. The performance of spelling correction methods have been better and better and become relatively mature. 
+Spelling correction is an old NLP task.  From traditional non-neural methods \cite{Hall1980,Gadd1988‘,Brill2000An}, to neural methods  presents in recent years \cite{Han2011,Eger2016A,Silfverberg2016Data}. The performance of spelling correction methods have been better and better and relatively mature. 
 
 In this paper, we investigates some old but really effective and impactful algorithms' performance on spelling correction task. Use a newly UrbanDictionary\footnote{A crowd-compiled dictionary of informal words and slang with over 7 million entries. http://urbandictionary.com} dataset.
 The algorithm been evaluated include Soundex, N-gram, Edit-distance and Editex.
@@ -128,12 +128,12 @@ For our experiments we use a particular dataset:  a sub-sample of actual data po
 
 \noindent\textbf{Soundex} Calculate the Soundex code for every word and then matched with global edit distance.
 
-\noindent\textbf{N-Gram} We evaluate the N-Gram algorithm for n in range 1 to 9. For a particular $n$, we first pad (n-1) $\sharp$ in the front and end of every word. This guarantee the building of n-gram set. For example, 5-gram set for word ``he'' defined as: 
+\noindent\textbf{N-Gram} We evaluate the N-Gram algorithm for n in range 1 to 9. For a particular $n$, we first pad (n-1) ``$\sharp$'' in the front and end of every word. This guarantee the building of n-gram set. For example, 5-gram set for word ``he'' defined as: 
 \begin{equation}
 \{\sharp\sharp\sharp\sharp h, \sharp\sharp\sharp he, \sharp\sharp he\sharp, \sharp he\sharp\sharp, he\sharp\sharp\sharp, e\sharp\sharp\sharp\sharp\}
 \end{equation}
 
-\noindent\textbf{Edit Distance} There are two kinds of edit distance algorithm, local edit distance and global edit distance. In this paper,  we implement both of them and evaluate them. For global edit distance, we have two distance calculate scheme: 1) (+1) for indel and mismatch and nothing to do for match; 2) (+1) for indel and mismatch and (-1) for match. The different between them will discuss in Section \ref{lab:res}. For local distance algorithm, we use (-1) for indel and mismatch and (+1) for match, and always assign 0 if 0 is better.
+\noindent\textbf{Edit Distance} There are two kinds of edit distance algorithm, local edit distance (LED) and global edit distance (GED). In this paper,  we implement both of them and evaluate them. For global edit distance, we have two distance calculate scheme: 1) (+1) for indel and mismatch and nothing to do for match; 2) (+1) for indel and mismatch and (-1) for match. The different between them will discuss in Section \ref{lab:res}. For local distance algorithm, we use (-1) for indel and mismatch and (+1) for match, and always assign 0 if 0 is better.
 
 \noindent\textbf{Editex} We calculate the Editex follows  \cite{Zobel1996PhoneticSM} setting.
  
@@ -141,7 +141,7 @@ For our experiments we use a particular dataset:  a sub-sample of actual data po
 
 \subsection{Evaluation Method}
 
-For all experiments in this paper. We keep all parallel best results as matched corrections for a misspelling. For example, the Soundex code for word ``adn'' is ``a35'', while for ``attain'', ``attainabilities'', ``adamas'', ``atom'' etc. are the same. No matter how many words in dictionary have the same code with ``adn'', all of them seem equally. Although this may result in a bad performance on precision when the predicted set is large. \footnote{We also do more experiments on parameter optimization. For example, randomly selecting three best matches as predicted words, which may increase precision for Soundex and local edit distance and impact recall for all algorithm. Due to space limitation, we could not list it here.}
+For all experiments in this paper. We keep all parallel best results as matched corrections for a misspelling. For example, the Soundex code for word ``adn'' is ``a35'', while for ``attain'', ``attainabilities'', ``adamas'', ``atom'' etc. are the same. No matter how many words in dictionary have the same code with ``adn'', all of them seem equally. Although this may result in a bad performance on precision when the predicted set is large.\footnote{We also do more experiments on parameter optimization. For example, randomly selecting three best matches as predicted words, which may increase precision for Soundex and local edit distance and impact recall for all algorithm. Due to space limitation, we could not list it here.}
 
 \subsection{N-Gram Algorithm Evaluation}
 
@@ -207,7 +207,7 @@ For all experiments in this paper. We keep all parallel best results as matched 
 
 We employ the original results to evaluate since the purpose of this paper is to illustrates the characteristics of different string matching algorithms through a spelling correction task, rather than find a best algorithm with parameters to correct the misspelled datasets.\footnote{The dataset we used contains only 716 words, even find best algorithm with parameters, it might be some kind of overfitting of the particular datasets.} We use recall and precision as measured of algorithm performance follows \cite{Raghavan1989}.
 
-The results of n-gram algorithm shows in Table \ref{tab:ngram}, in which we see that when $N=1$, the number of predicted words is large and recall is the highest. This illustrates that around 25.56\% of the misspelled words are character shifted without deletions and insertions for the best matches for $N=1$ means two words have the same consist of characters but maybe different order. However, the precision of $N=1$ is really low which makes it not a good parameter for the algorithm. $N=2$ and $N=3$ gives more balanced and significant results. For $N>=4$, the results are all the same. The reason might be that padding $n-1 \sharp$ strategy for n-gram result in the related similarity tend to be stable when n is large. 
+The results of n-gram algorithm shows in Table \ref{tab:ngram}, in which we see that when $N=1$, the number of predicted words is large and recall is the highest. This illustrates that around 25.56\% of the misspelled words are character shifted without deletions and insertions for the best matches for $N=1$ means two words have the same consist of characters but maybe different order. However, the precision of $N=1$ is really low which makes it not a good parameter for the algorithm. $N=2$ and $N=3$ gives more balanced and significant results. For $N\geq 4$, the results are all the same. The reason might be that padding $n-1$ ``$\sharp$'' strategy for n-gram result in the related similarity tend to be stable when n is large. 
 
 
 \subsection{Edit Distance Algorithm Evaluation}
@@ -225,7 +225,7 @@ As for results of local edit distance algorithm. The predicted words is explosiv
 	\label{fig:evaluate}
 \end{figure}
 
-Table \ref{tab:result} shows a full scale evaluation and Table \ref{tab:match} demonstrates output of the best match of two words for each algorithm.
+Table \ref{tab:result} shows a full scale evaluation and Figure \ref{fig:evaluate} is the visualization of it. Table \ref{tab:match} demonstrates output of the best match of two words for each algorithm.
 
 From Table \ref{tab:result} we knows that both Soundex and local edit distance predicted plenty of best matches. The reason for Soundex is that for words with a fixed first letter, the number of different Soundex code is only 1000 (3 digitals from 0-9). This will lead to many words have the same Soundex code. The first two lines of Table \ref{tab:match} demonstrates the Soundex's results, from which we find the pronounce of the matched set is somewhat similar but the spelling of them various, which will leads to a number of meaningless predicts.
 
@@ -253,7 +253,7 @@ From Table \ref{tab:result} we knows that both Soundex and local edit distance p
 		& ahain & again & amain,  attain, arain, again, alain, hain \\
 		\hline
 	\end{tabular}
-	\caption{Demonstrate of different algorithm's spelling correction results.}
+	\caption{Output demonstration for all algorithms.}
 	\label{tab:match}
 \end{table*}
 
@@ -261,7 +261,7 @@ Although the precision of Soundex is extremely low,  it seems much better than l
 
 As for global edit distance matching, it is such a pretty good algorithm for this spelling correction task that get a acceptable precision and recall. Based on the analysis of Soundex's high recall and global edit distance's high precision and recall, it is not hard to think of computing edit distance based on the Soundex results. Editex algorithm make use of Soundex information and combine it with edit distance algorithm. 
 
-We find that Editex gets almost the same precision with global edit distance but higher recall. Which might because Editex combines the advantage of Soundex with edit distance. Form the last two rows of Table \ref{tab:match}, we find that Editex matched words with small edit distance and also consider pronunciation. Figure \ref{fig:evaluate} is the visualization of the evaluation.
+We find that Editex gets almost the same precision with global edit distance but higher recall, which might because Editex combines the advantage of Soundex with edit distance. Form the last two rows of Table \ref{tab:match}, we find that Editex matched words with small edit distance and also consider pronunciation. 
 
 
 \section{Conclusion}
