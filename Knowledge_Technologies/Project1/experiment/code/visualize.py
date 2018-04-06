@@ -18,8 +18,8 @@ Y1 = [0.1, 0.3, 8, 10, 8]
 Y2 = [61, 18, 28, 21, 32]
 
 
-plt.bar(x1, Y1, facecolor='red', width=3, label = 'Recall')
-plt.bar(x, Y2, facecolor='blue', width=3, label = 'Precision')
+plt.bar(x1, Y1, facecolor='red', width=3, label = 'Precision')
+plt.bar(x, Y2, facecolor='blue', width=3, label = 'Recall')
 
 plt.legend()
 

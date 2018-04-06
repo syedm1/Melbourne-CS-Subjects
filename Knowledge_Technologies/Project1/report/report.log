@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.6.5)  5 APR 2018 01:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.6.5)  6 APR 2018 13:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -322,12 +322,12 @@ Overfull \hbox (9.03374pt too wide) in paragraph at lines 101--102
  [][] 
  []
 
-[2 <./img/editex.pdf>] <img/evaluate.pdf, id=84, 614.295pt x 398.48875pt>
+[2 <./img/editex.pdf>] <img/evaluate.pdf, id=84, 614.295pt x 392.46625pt>
 File: img/evaluate.pdf Graphic file (type pdf)
 
 <use img/evaluate.pdf>
 Package pdftex.def Info: img/evaluate.pdf used on input line 223.
-(pdftex.def)             Requested size: 234.87749pt x 152.36368pt.
+(pdftex.def)             Requested size: 234.87749pt x 150.06094pt.
 
 Overfull \hbox (9.03374pt too wide) in paragraph at lines 223--224
  [][] 
@@ -363,7 +363,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 80--84
 Here is how much of TeX's memory you used:
  3230 strings out of 492995
  42830 string characters out of 6132705
- 121058 words of memory out of 5000000
+ 121059 words of memory out of 5000000
  6719 multiletter control sequences out of 15000+600000
  11347 words of font info for 41 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -379,7 +379,7 @@ cmr8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
 9.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10
 .pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.
 pfb>
-Output written on report.pdf (4 pages, 950503 bytes).
+Output written on report.pdf (4 pages, 970405 bytes).
 PDF statistics:
  171 PDF objects out of 1000 (max. 8388607)
  74 compressed objects within 1 object stream
