@@ -53,7 +53,7 @@ For the last task, we extend our algorithm to further investigate mismatches to 
 	\caption{\label{fig:1}Time consuming for k-mer indexed alignment. (k=0, refers to  the naive aligner.}
 \end{figure}
 
-Table \ref{tab:1} and Figure \ref{fig:1} show the time consuming for k-mer aligner work on the given datasets. K=0 refers to the naive aligner proposed in group assignment. From these results, we find that new aligner is much more efficiently than the naive alignments. As the increase of k, the speed of alignment increase. For a small k ($k<6$), the change is obvious. But if k is large ($k>8$), the accelerate become less obviously.
+Table \ref{tab:1} and Figure \ref{fig:1} show the time consuming for k-mer aligner work on the given datasets. K=0 refers to the naive aligner proposed in group assignment. From these results, we find that new aligner is much more efficiently than the naive alignments. As the increase of k, the speed of alignment increase. For a small k ($k<6$), the change is obvious. But if k is large ($k>8$), the acceleration become less obviously.
 
 The result is not surprised. Because the  complexity of naive Hamming distance aligner is O(ngl), where n is the number of reads, g the length of the genome, and l the length of the reads. But for indexed aligner, the complexity is O(nlp), where p is the average number of positions for each k-mer in index file, it is depend on the length of k and reference. As the number of different k-mer for a certain k is $2^k$. If the k is large, the complexity of k-mer indexed aligner could be O(nl).
 
@@ -61,9 +61,9 @@ The result is not surprised. Because the  complexity of naive Hamming distance a
 
 Figure \ref{a}  shows the distribution of base quality scores of all the reads for each position, and Figure \ref{b} the distributions of quality scores of all mismatches for best alignment to the given reference ref1.fa  (also by position). 
 
-Compare these two images, we find that the range of each position's quality score of two picture is similar, which indicates even a position have a high average quality score or most quality scores of this position is high, mismatches occurred.  However, no matter the upper quartile, lower quartile and median, two pictures show some differences. For most positions, the box of upper quartile to lower quartile of mismatched picture always lower than the that for all reads. This might due to more low quality scores appear in the mismatched set.  Algorithm there are exceptions that median for mismatches upper than it for all reads, which might because the dataset is small.
+Compare these two images, we find that the range of each position's quality score of two pictures are similar, which indicates even a position has a high average quality score or most quality scores of this position is high, mismatches occurred.  In addition, both of them shows that the middle position's quality score commonly higher than the start and end of the reads, this might because of the sequencing method.
 
-Besides, as the position vary form 1 to 100, the average quality score become lower, mismatches increase. This was reflected by the median lines that get closer to the bottom and even overlap with it as the positions near to 100.
+However, no matter the upper quartile, lower quartile and median, two pictures show some differences. For most positions, the box of upper quartile to lower quartile of mismatched picture always lower than that for all reads. This might due to more low quality scores appear in the mismatched set.  Algorithm there are exceptions that median for mismatches upper than it for all reads, which might because the dataset is small. Besides, as the position varies form 1 to 100, the average quality score becomes lower, mismatches increase. This was reflected by the median lines that get closer to the bottom and even overlapped with it as the positions near to 100.
 
 \begin{figure}[!htb]
 	
