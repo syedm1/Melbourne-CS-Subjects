@@ -5,6 +5,7 @@
 import os
 import sys
 import getopt
+import time
 
 # Reverse a read
 def reverse(read):
@@ -35,7 +36,7 @@ def hamming_dis(a,b):
     return dis
 
 # Read three files
-def init(index_file, ref_file, read_file):
+def init(index_file, ref_file, read_file, rate):
     # Index file
     index_f = open(index_file, "r")
     line = index_f.readline()
@@ -57,6 +58,7 @@ def init(index_file, ref_file, read_file):
         line = line.strip()
         ref += line
     ref = ref.upper()
+    ref = ref[:int(len(ref)*rate/float(1000))]
 
     # Read file
     read_f = open(read_file, "r")
@@ -69,14 +71,15 @@ def init(index_file, ref_file, read_file):
         read_quality = read_f.readline().strip()
         reads.append((read_name, read, read_quality))
         line = read_f.readline()
+    index_f.close()
+    ref_f.close()
+    read_f.close()
     return (K, ref_index, ref_name, ref, reads)
 
 
 # Aligner 
-def alignment(index_file, ref_file, read_file, out_file):
-    K, ref_index, ref_name, ref, reads = init(index_file, ref_file, read_file)
-    out_f = open(out_file, "w")
-    out_f.write("READ_NEME\tREF_NAME\tPOS\tSTRAND\tNUMBER_OF_ALIGNMENTS\tHAMMING_DISTANCE\n")
+def alignment(index_file, ref_file, read_file, out_file, rate):
+    K, ref_index, ref_name, ref, reads = init(index_file, ref_file, read_file, rate)
     
     # read is tuple of (read_name, read_sequence, quality)
     # all reads
@@ -121,24 +124,6 @@ def alignment(index_file, ref_file, read_file, out_file):
                                 min_set.add(0-start)
                             elif dis == min_dis:
                                 min_set.add(0-start)
-        # output 
-        strand = '-'
-        min_pos = 9999
-        if len(min_set) == 0:
-            out_f.write(read[0] + "\t*\t0\t*\t0\t*\n")
-        else:
-            for pos in min_set:
-                if abs(pos) < min_pos:
-                    min_pos = abs(pos)
-                    if pos > 0:
-                        strand = '+'
-                    elif pos < 0:
-                        strand = '-'
-            out_f.write( read[0] + '\t' + ref_name + '\t' + str(min_pos) \
-                            + '\t' + strand + '\t' + str(len(min_set))   \
-                            + '\t' + str(min_dis) + '\n' )
-        
-        
 
 # Help doc 
 def usage():
@@ -179,7 +164,10 @@ def main(argv):
         sys.exit()
        
     # main process
-    alignment(index_file, ref_file, read_file, out_file)
+    for rate in range (1,1000):
+        start = time.time()
+        alignment(index_file, ref_file, read_file, out_file, rate)
+        print time.time()-start
 
 if __name__ == "__main__":
     main(sys.argv)

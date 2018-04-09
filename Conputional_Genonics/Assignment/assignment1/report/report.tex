@@ -56,9 +56,11 @@ For the last task, we extend our algorithm to further investigate mismatches to 
 	\caption{\label{fig:1}Time consuming for k-mer indexed alignment. (k=0, refers to  the naive aligner.}
 \end{figure}
 
-Table \ref{tab:1} and Figure \ref{fig:1} show the time consuming for k-mer aligner work on the given datasets. K=0 refers to the naive aligner proposed in group assignment. From these results, we find that new aligner is much more efficiently than the naive alignments. As the increase of k, the speed of alignment increase. For a small k ($k<6$), the change is obvious. But if k is large ($k>8$), the acceleration become less obviously.
+Table \ref{tab:1} and Figure \ref{fig:1} show the time consuming for k-mer aligner work on the given datasets. $K=0$ refers to the naive aligner proposed in group assignment. From these results, we find that new aligner is much more efficiently than the naive alignments. As the increase of $k$, the speed of alignment increase. For a small $k$ ($k<6$), the change is obvious. But if $k$ is large ($k>8$), the acceleration become less obviously.
 
-The result is not surprised. Because the  complexity of naive Hamming distance aligner is O(ngl), where n is the number of reads, g the length of the genome, and l the length of the reads. But for indexed aligner, the complexity is O(nlp), where p is the average number of positions for each k-mer in index file, it is depend on the length of k and reference. As the number of different k-mer for a certain k is $2^k$. If the k is large, the complexity of k-mer indexed aligner could be O(nl).
+The result is not surprised. Because the  complexity of naive Hamming distance aligner is $O(ngl)$, where $n$ is the number of reads, $g$ the length of the genome, and $l$ the length of the reads. But for indexed aligner, the complexity is O($nl^2+g$), here are theoretically analysis.
+
+First assuming the length of k-mer is k, where $ k\ll l$, then for each read, we have $l-k$ k-mers and suppose for each k-mer, the number of indexed positions is p. So we need to compre $O((l-k)*l*p)$ times for each read. As $k\ll l$, $O(l-k)=O(l)$. Here, we have a complexity of $O(nl^{2}p)$. We normally assume that we can build a linear spaced index with constant number of positions for each k-mer,\footnote{Actually, if k is large enough, p will equals 1} and length of genome maybe very large, so we need to traverse it to build the index. Finally, the complexity is $O(nl^{2} + g)$.
 
 \subsection{Task 3}
 

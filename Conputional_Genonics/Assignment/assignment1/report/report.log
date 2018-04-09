@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.6.5)  9 APR 2018 15:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.6.5)  9 APR 2018 19:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -892,38 +892,40 @@ Package pdftex.def Info: align_time2.pdf used on input line 55.
  [1
 
 {/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-<base_qs.png, id=17, 578.16pt x 433.62pt>
+<base_qs.png, id=18, 578.16pt x 433.62pt>
 File: base_qs.png Graphic file (type png)
  <use base_qs.png>
-Package pdftex.def Info: base_qs.png used on input line 76.
+Package pdftex.def Info: base_qs.png used on input line 78.
 (pdftex.def)             Requested size: 162.15042pt x 121.61127pt.
 
-<mis_qs.png, id=18, 578.16pt x 433.62pt>
+<mis_qs.png, id=19, 578.16pt x 433.62pt>
 File: mis_qs.png Graphic file (type png)
  <use mis_qs.png>
-Package pdftex.def Info: mis_qs.png used on input line 79.
+Package pdftex.def Info: mis_qs.png used on input line 81.
 (pdftex.def)             Requested size: 162.15042pt x 121.61127pt.
- [2 <./align_time.png> <./align_time2.pdf> <./base_qs.png> <./mis_qs.png>] (./r
-eport.aux) ) 
+ [2 <./align_time.png> <./align_time2.pdf>] [3 <./base_qs.png> <./mis_qs.png>] 
+(./report.aux) ) 
 Here is how much of TeX's memory you used:
  13500 strings out of 492995
  261968 string characters out of 6132705
- 310522 words of memory out of 5000000
+ 311522 words of memory out of 5000000
  16771 multiletter control sequences out of 15000+600000
  9022 words of font info for 33 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,8n,56p,676b,327s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmbx12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mmi10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-mi7.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr1
-0.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.
+</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmbx12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmmi10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmr10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmr12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r6.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.
 pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
->
-Output written on report.pdf (2 pages, 266600 bytes).
+></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+
+Output written on report.pdf (3 pages, 285654 bytes).
 PDF statistics:
- 96 PDF objects out of 1000 (max. 8388607)
- 41 compressed objects within 1 object stream
+ 107 PDF objects out of 1000 (max. 8388607)
+ 49 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  33 words of extra memory for PDF output out of 10000 (max. 10000000)
 
