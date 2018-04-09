@@ -49,18 +49,30 @@ For the last task, we extend our algorithm to further investigate mismatches to 
 
 \begin{figure}[!htb]
 	\centering
-	\subfigure{
-		\includegraphics[width=0.45\textwidth]{align_time.png}}
-	\subfigure{
-		\includegraphics[width=0.45\textwidth]{align_time2.pdf}}
+		\includegraphics[width=0.5\textwidth]{align_time.png}
 	\caption{\label{fig:1}Time consuming for k-mer indexed alignment. (k=0, refers to  the naive aligner.}
 \end{figure}
 
-Table \ref{tab:1} and Figure \ref{fig:1} show the time consuming for k-mer aligner work on the given datasets. $K=0$ refers to the naive aligner proposed in group assignment. From these results, we find that new aligner is much more efficiently than the naive alignments. As the increase of $k$, the speed of alignment increase. For a small $k$ ($k<6$), the change is obvious. But if $k$ is large ($k>8$), the acceleration become less obviously.
+Table \ref{tab:1} shows the time consuming for k-mer aligner work on the given datasets. $K=0$ refers to the naive aligner proposed in group assignment. From these results, we find that new aligner is much more efficiently than the naive alignments.
 
 The result is not surprised. Because the  complexity of naive Hamming distance aligner is $O(ngl)$, where $n$ is the number of reads, $g$ the length of the genome, and $l$ the length of the reads. But for indexed aligner, the complexity is O($nl^2+g$), here are theoretically analysis.
 
 First assuming the length of k-mer is k, where $ k\ll l$, then for each read, we have $l-k$ k-mers and suppose for each k-mer, the number of indexed positions is p. So we need to compre $O((l-k)*l*p)$ times for each read. As $k\ll l$, $O(l-k)=O(l)$. Here, we have a complexity of $O(nl^{2}p)$. We normally assume that we can build a linear spaced index with constant number of positions for each k-mer,\footnote{Actually, if k is large enough, p will equals 1} and length of genome maybe very large, so we need to traverse it to build the index. Finally, the complexity is $O(nl^{2} + g)$.
+
+\begin{figure}[!htb]
+	\centering
+	\subfigure[Time consuming as reference length.]{
+		\label{a1} 
+		\includegraphics[width=0.5\textwidth]{time_ref_len.png}}
+	\subfigure[All mismatches]{
+		\label{bb} 
+		\includegraphics[width=0.5\textwidth]{mis_qs.png}}
+	\subfigure[TIme consuming visulation of fixed k]{
+		\label{cc} 
+		\includegraphics[width=0.5\textwidth]{align_vis.pdf}}
+	\caption{TIme sonsuming analysis.}
+	\label{fig:time} 
+\end{figure}
 
 \subsection{Task 3}
 
@@ -71,7 +83,6 @@ Compare these two images, we find that the range of each position's quality scor
 However, no matter the upper quartile, lower quartile and median, two pictures show some differences. For most positions, the box of upper quartile to lower quartile of mismatched picture always lower than that for all reads. This might due to more low quality scores appear in the mismatched set.  Algorithm there are exceptions that median for mismatches upper than it for all reads, which might because the dataset is small. Besides, as the position varies form 1 to 100, the average quality score becomes lower, mismatches increase. This was reflected by the median lines that get closer to the bottom and even overlapped with it as the positions near to 100.
 
 \begin{figure}[!htb]
-	
 	\centering
 	\subfigure[All the reads for each position]{
 		\label{a} 
@@ -81,7 +92,6 @@ However, no matter the upper quartile, lower quartile and median, two pictures s
 		\includegraphics[width=0.47\textwidth]{mis_qs.png}}
 	\caption{Distribution of base quality scores.}
 	\label{fig:2} 
-
 \end{figure}
  
 

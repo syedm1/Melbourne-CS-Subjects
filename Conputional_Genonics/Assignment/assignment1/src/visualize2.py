@@ -13,11 +13,11 @@ for line in f.readlines():
     time.append(float(t))
 for i in range (1,1000):
     ref_len.append( 15002 * i / 1000 )
-plt.plot(ref_len, time, marker='o', mec='r', mfc='w',label='ref1')
+plt.plot(ref_len, time, mec='r', mfc='w')
 plt.legend()
 plt.margins(0)
 plt.subplots_adjust(bottom=0.15)
-plt.xlabel("Length of indexed k-mer") 
+plt.xlabel("Length of reference") 
 plt.ylabel("Time(s)") 
 
 plt.show() 
