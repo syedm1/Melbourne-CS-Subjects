@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.6.5)  9 APR 2018 20:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.6.5)  9 APR 2018 22:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -877,48 +877,71 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-ABD: EveryShipout initializing macros
-<align_time.png, id=4, 578.16pt x 433.62pt>
-File: align_time.png Graphic file (type png)
- <use align_time.png>
-Package pdftex.def Info: align_time.png used on input line 52.
-(pdftex.def)             Requested size: 172.5pt x 129.37242pt.
- [1
+ABD: EveryShipout initializing macros [1
 
 {/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-<base_qs.png, id=17, 578.16pt x 433.62pt>
+<time_ref_len.png, id=15, 578.16pt x 433.62pt>
+File: time_ref_len.png Graphic file (type png)
+ <use time_ref_len.png>
+Package pdftex.def Info: time_ref_len.png used on input line 67.
+(pdftex.def)             Requested size: 155.24895pt x 116.43716pt.
+
+<time_read_len.png, id=17, 578.16pt x 433.62pt>
+File: time_read_len.png Graphic file (type png)
+ <use time_read_len.png>
+Package pdftex.def Info: time_read_len.png used on input line 70.
+(pdftex.def)             Requested size: 155.24895pt x 116.43716pt.
+
+Underfull \hbox (badness 1014) in paragraph at lines 70--70
+[]\OT1/cmr/m/n/8 (b) Time com-sum-ing change with read
+ []
+
+<align_time.png, id=18, 578.16pt x 433.62pt>
+File: align_time.png Graphic file (type png)
+ <use align_time.png>
+Package pdftex.def Info: align_time.png used on input line 73.
+(pdftex.def)             Requested size: 155.24895pt x 116.43716pt.
+
+<align_vis.pdf, id=19, 578.16pt x 433.62pt>
+File: align_vis.pdf Graphic file (type pdf)
+ <use align_vis.pdf>
+Package pdftex.def Info: align_vis.pdf used on input line 76.
+(pdftex.def)             Requested size: 155.24895pt x 116.43716pt.
+ [2 <./time_ref_len.png> <./time_read_len.png> <./align_time.png> <./align_vis.
+pdf>]
+<base_qs.png, id=78, 578.16pt x 433.62pt>
 File: base_qs.png Graphic file (type png)
  <use base_qs.png>
-Package pdftex.def Info: base_qs.png used on input line 75.
+Package pdftex.def Info: base_qs.png used on input line 93.
 (pdftex.def)             Requested size: 162.15042pt x 121.61127pt.
 
-<mis_qs.png, id=18, 578.16pt x 433.62pt>
+<mis_qs.png, id=79, 578.16pt x 433.62pt>
 File: mis_qs.png Graphic file (type png)
  <use mis_qs.png>
-Package pdftex.def Info: mis_qs.png used on input line 78.
+Package pdftex.def Info: mis_qs.png used on input line 96.
 (pdftex.def)             Requested size: 162.15042pt x 121.61127pt.
- [2 <./align_time.png>] [3 <./base_qs.png> <./mis_qs.png>] (./report.aux) ) 
+ [3 <./base_qs.png> <./mis_qs.png>] (./report.aux) ) 
 Here is how much of TeX's memory you used:
- 13495 strings out of 492995
- 261874 string characters out of 6132705
- 310522 words of memory out of 5000000
- 16767 multiletter control sequences out of 15000+600000
+ 13518 strings out of 492995
+ 262212 string characters out of 6132705
+ 310606 words of memory out of 5000000
+ 16787 multiletter control sequences out of 15000+600000
  9022 words of font info for 33 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,8n,56p,676b,327s stack positions out of 5000i,500n,10000p,200000b,80000s
-</us
-r/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr
-/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/
-local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/lo
-cal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/loca
-l/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/t
-exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texl
-ive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive
-/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on report.pdf (3 pages, 189434 bytes).
+ 62i,8n,56p,676b,331s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2017/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2017/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2017/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2017/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2017/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2017/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2017/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2017/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on report.pdf (3 pages, 323966 bytes).
 PDF statistics:
- 56 PDF objects out of 1000 (max. 8388607)
- 36 compressed objects within 1 object stream
+ 111 PDF objects out of 1000 (max. 8388607)
+ 49 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 28 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 43 words of extra memory for PDF output out of 10000 (max. 10000000)
 

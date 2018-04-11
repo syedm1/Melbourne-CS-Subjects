@@ -58,6 +58,8 @@ def init(index_file, ref_file, read_file, rate):
         line = line.strip()
         ref += line
     ref = ref.upper()
+    ref = ref[:int(len(ref)*rate/float(100))]
+    print len(ref)
 
     # Read file
     read_f = open(read_file, "r")
@@ -66,7 +68,6 @@ def init(index_file, ref_file, read_file, rate):
     while line:
         read_name = line.strip()[1:]
         read = read_f.readline().strip()
-        read = read[:rate]
         read_f.readline()
         read_quality = read_f.readline().strip()
         reads.append((read_name, read, read_quality))
@@ -164,7 +165,7 @@ def main(argv):
         sys.exit()
        
     # main process
-    for rate in range (10,100):
+    for rate in range (1,100):
         start = time.time()
         alignment(index_file, ref_file, read_file, out_file, rate)
         print time.time()-start

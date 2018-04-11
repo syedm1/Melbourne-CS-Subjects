@@ -47,30 +47,34 @@ For the last task, we extend our algorithm to further investigate mismatches to 
 	\caption{\label{tab:1}Time consuming for k-mer indexed alignment. (k=0, refers to  the naive aligner.)}
 \end{table}
 
-\begin{figure}[!htb]
-	\centering
-		\includegraphics[width=0.5\textwidth]{align_time.png}
-	\caption{\label{fig:1}Time consuming for k-mer indexed alignment. (k=0, refers to  the naive aligner.}
-\end{figure}
-
 Table \ref{tab:1} shows the time consuming for k-mer aligner work on the given datasets. $K=0$ refers to the naive aligner proposed in group assignment. From these results, we find that new aligner is much more efficiently than the naive alignments.
 
 The result is not surprised. Because the  complexity of naive Hamming distance aligner is $O(ngl)$, where $n$ is the number of reads, $g$ the length of the genome, and $l$ the length of the reads. But for indexed aligner, the complexity is O($nl^2+g$), here are theoretically analysis.
 
 First assuming the length of k-mer is k, where $ k\ll l$, then for each read, we have $l-k$ k-mers and suppose for each k-mer, the number of indexed positions is p. So we need to compre $O((l-k)*l*p)$ times for each read. As $k\ll l$, $O(l-k)=O(l)$. Here, we have a complexity of $O(nl^{2}p)$. We normally assume that we can build a linear spaced index with constant number of positions for each k-mer,\footnote{Actually, if k is large enough, p will equals 1} and length of genome maybe very large, so we need to traverse it to build the index. Finally, the complexity is $O(nl^{2} + g)$.
 
-\begin{figure}[!htb]
+Figure \ref{aa} shows new aligner's alignment time with the reference length. We change reference length from 0 to 5000 using ref3.fa, with every 15 one point. This figure indicates that time consuming changes linearly with reference length from 0 to 5000, 
+
+Figure \ref{bb} shows new aligner's alignment time with the read length. We can identify it is a part of quadratic function.
+
+Figure \ref{00} shows aligner's alignment time with k (the k-mer length), $k=0$ indicates the naive aligner's time. From which we find that when k is big enough. TIme consuming almost does not change with k.
+
+Figure \ref{cc} is the visualization of two aligner's time comparison. We find that new aligner is faster then the naive aligner.
+\begin{figure}[h]
 	\centering
-	\subfigure[Time consuming as reference length.]{
-		\label{a1} 
-		\includegraphics[width=0.5\textwidth]{time_ref_len.png}}
-	\subfigure[All mismatches]{
+	\subfigure[Time consuming change with reference length]{
+		\label{aa} 
+		\includegraphics[width=0.45\textwidth]{time_ref_len.png}}
+	\subfigure[Time comsuming change with read length]{
 		\label{bb} 
-		\includegraphics[width=0.5\textwidth]{mis_qs.png}}
+		\includegraphics[width=0.45\textwidth]{time_read_len.png}}
+	\subfigure[Time consuming change with k]{
+		\label{00}
+		\includegraphics[width=0.45\textwidth]{align_time.png}}
 	\subfigure[TIme consuming visulation of fixed k]{
 		\label{cc} 
-		\includegraphics[width=0.5\textwidth]{align_vis.pdf}}
-	\caption{TIme sonsuming analysis.}
+		\includegraphics[width=0.45\textwidth]{align_vis.pdf}}
+	\caption{Time sonsuming analysis.}
 	\label{fig:time} 
 \end{figure}
 
