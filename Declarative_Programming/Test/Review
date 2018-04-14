@@ -34,7 +34,7 @@ Question 2: Give value or type error reason
 Expression                                                          Answer
 map (length < 3) [[1],[1,2,3]]                                      ? 
 filter (not.(==3)) [1,2,3]                                          [1,2]
-let a = head [] in 3                                                ?
+let a = head [] in 3                                                exception, rmpty list has no head
 map fst $ filter snd $ zip "abcde" [True,True,False,True]           "abd"
 head $ sort $ zip [3,0,0,2,0] $ reverse [9,0,0,4,8]                 (0,0)
 map snd $ sort $ zip "decl" [1..]                                   "3124"

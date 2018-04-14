@@ -17,11 +17,6 @@ for pileupcolumn in bamfile.pileup():
     for pileupread in pileupcolumn.pileups:
         if not pileupread.is_del and not pileupread.is_refskip:
             bases.append(pileupread.alignment.query_sequence[pileupread.query_position])
-    for i in range(len(bases)):
-        count[pileupcolumn.pos - start + i].append(bases[i])    
-    # print bases
+    print bases
 bamfile.close()
-
-for li in count:
-    print li
 
