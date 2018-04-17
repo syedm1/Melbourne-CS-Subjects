@@ -9,6 +9,7 @@ import sys
 def phase(bam_file):
     bam_f = pysam.AlignmentFile(bam_file,'rb')
     for read in bam_f.fetch('chr15', 28356359, 28366118):
+        print read.cigar
         print read
         
 # Usage of the tool
@@ -38,7 +39,7 @@ def main(argv):
         elif opt in ('-b', '--bam='):
             bam_file = arg
         elif opt in ('-v', '--vcf='):
-            bam_file = arg
+            vcf_file = arg
         elif opt in ('-o','--output='):
             out_file = arg
     
