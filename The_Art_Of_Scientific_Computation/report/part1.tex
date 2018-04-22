@@ -1,6 +1,6 @@
 \chapter{Cross Correlations}\label{part: cross correlations}
 
-Cross correlation is powerful (and very simple) statistical tool for computing the degree to which two signals are correlated (or similar). and also for computing lags. In this part, we first learn the cross correlation in 1 dimension and its applications to signal processing. Then we extend it to 2 dimensions and familiar its usage in image processing. 
+Cross correlation is powerful (and very simple) statistical tool for computing the degree to which two signals are correlated (or similar), and also for computing lags. In this part, we first learn the cross correlation in 1 dimension and its applications to signal processing. Then we extend it to 2 dimensions and familiar its usage in image processing. 
 
 After these basic concepts and application, we consider the efficiency of computer cross correlation. We find it is really slow as the signals and images become larger, then we apply a new method as an alternative to spatial method, which is spectral cross correlation with a Fourier transform and inverse Fourier transform. We find this method achieve better performance in scale data.
 
@@ -33,7 +33,7 @@ where
 \sqrt{\frac{1}{N}\sum_{i=1}^{i=N}(g(i)-\bar{g})^{2}}
 \end{equation*}
 
-Matlab code of normalized 1d cross correlation is in appendix.
+Matlab code of normalized 1d cross correlation is in Appendix \ref{code:1.1}.
 
 
 \section{Signal Offset}
@@ -48,7 +48,7 @@ If there are two signals (denote by vector) come from the same source and are ju
 \text{distance}=\text{(offset time)} * \text{(propagation speed)}
 \end{equation*}
 
-In this task, we take two signal files and compute the cross correlation between them. Figure \ show the result of the cross correlation.
+In this task, we take two signal files and compute the cross correlation between them. Figure \ref{fig:crr_vis0} shows the result of the cross correlation.
 
 \begin{figure}[h!]
 	\centering
@@ -56,6 +56,8 @@ In this task, we take two signal files and compute the cross correlation between
 		\caption{Cross correlation of two signals.}
 		\label{fig:crr_vis0}
 \end{figure} 
+
+Matlab code of signal offset computing is in Appendix \ref{code:1.2}.
 
 \section{Normalised Spatial Cross Correlation in 2d}
 
@@ -71,7 +73,7 @@ R(lag_{x},lag_{y})=
 
 Where $\bar{t}$ is the mean of t, $\overline{A_{lag_{x},lag_{y}}}$ is the mean of A in the region under t. 
 
-Matlab code of normalized 2d cross correlation is in appendix.
+Matlab code of normalized 2d cross correlation is in Appendix \ref{code:1.3}.
 
 \section{Image Alignment}
 
@@ -111,15 +113,17 @@ The visualization of cross correlation is shown in Figure \ref{fig:crr_vis1} and
 		\caption{3D visualization}
 		\label{fig:crr_vis2}
 	\end{subfigure}
-	\caption{Cross correlation visualization}
+	\caption{Cross correlation result matrix visualization}
 \end{figure} 
 
 \begin{figure}[h!]
 	\centering
-		\includegraphics[width=0.80\linewidth]{figures/part1/wallypuzzle_result.png}
+		\includegraphics[width=0.70\linewidth]{figures/part1/wallypuzzle_result.png}
 		\caption{Image Alignment result. }
 		\label{fig:maze-b}
 \end{figure} 
+
+Matlab code of image alognment is in Appendix \ref{code:1.4}.
 
 \section{Spectral Cross Correlation}
 
@@ -159,6 +163,7 @@ Table \ref{tab:run_time} compare the run time of two different method of task in
 
 \begin{table}[h!]
 	\centering
+	\caption{Run time compare of spatial and spectral methods.}
 	\begin{tabular}{c|c|c}
 		\hline
 		method & Spatial  & Spectral \\
@@ -166,9 +171,10 @@ Table \ref{tab:run_time} compare the run time of two different method of task in
 		time(s) & 4.6741 & 0.1103 \\
 		\hline
 	\end{tabular}
-	\caption{Run time compare of spatial and spectral methods.}
 	\label{tab:run_time}
 \end{table}
+
+Matlab code of spectral cross correlation is in Appendix \ref{code:1.5}.
 
 \section{Pattern Finder}
 
@@ -177,30 +183,33 @@ In this task, I pick a piece of music and cut a small piece of it (a drum) throu
 
 \begin{figure}[h!]
 	\centering
-	\begin{subfigure}[t]{0.45\linewidth}
+	\begin{subfigure}[t]{0.32\linewidth}
 		\includegraphics[width=1\linewidth]{figures/part1/drum.eps}
 		\caption{drum waveform}
 		\label{fig:drum}
 	\end{subfigure}
-	\begin{subfigure}[t]{0.45\linewidth}
+	\begin{subfigure}[t]{0.32\linewidth}
 		\centering
 		\includegraphics[width=1\linewidth]{figures/part1/piece_of_music.eps}
 		\caption{music waveform}
 		\label{fig:music}
 	\end{subfigure}
+	\begin{subfigure}[t]{0.32\linewidth}
+		\centering
+		\includegraphics[width=1\linewidth]{figures/part1/crr_vis3.eps}
+		\caption{cross correlation}
+		\label{fig:crr_vis3}
+	\end{subfigure}
 	\caption{Two oscillographs}
 	\label{fig:wave}
 \end{figure} 
 
-\begin{figure}[h!]
-	\centering
-		\includegraphics[width=1\linewidth]{figures/part1/crr_vis3.eps}
-	\caption{Two oscllographs}
-	\label{fig:crr_vis3}
-\end{figure} 
+Matlab code of pattern finder is in Appendix \ref{code:1.6}.
 
-\section{Cross correlation in 3 dimension}
+\section{Cross correlation in three dimensions}
 
-This part is just some thinking of me, not really theme related. 
+This part is just some thinking by myself, not really theme related. 
 
-From the above research, we know that 1d cross correlation can be used to process acoustical signal and 2d cross correlation is very useful for image processing. Then, how about 3d cross correlation? If 3d cross correlation can be build, we can easily know the space structure similarity of two object, theoretically. This task may have its value in research in microcosmos like molecular physics and microbiology. Consider we have one cell with particular disease as specimen but we do not know the reason of its pathogenicity. At the same time, we have several cells, some of which have the disease. If we can find spatial cross correlation between the specimen and other cell, and same diseased cell have the similar space structure, we can distinguish the healthy cell and diseases.
+From the above research, we know that 1d cross correlation can be used to process acoustical signal and 2d cross correlation is very useful for image processing. Then, how about 3d cross correlation? If 3d cross correlation can be compute, we can easily know the space structure's similarity of two objects, theoretically. This task may have its value in microcosmos' research like molecular physics and microbiology. Consider we have one cell with particular disease as specimen and we do not know the reason of its pathogenicity. At the same time, we have several cells, some of which have the particular disease. If we can find spatial cross correlation between the specimen and other cell, base on the hypothesis that same diseased cell have the similar space structure, we can distinguish the healthy cell and diseased cell. 
+
+Computer vision is one of the most popular reearch today. One important reason is people believe 2d object is easy to understand and image compared with 3d object. The 2d techinology today have been more and more mature. However, we live in a 3d (even higher dimensions) world, research in 3d will become mainstream someday, I believe 3d cross correlation will become a basic concept and tools like today's 2d cross correlation in the future.

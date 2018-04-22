@@ -7,21 +7,13 @@
 
 function mat_r = normalised_spatial_correlation_2d(mat_t, mat_A)
 
-% if input is two image
-% pic_a = imread(mat_t)
-% pic_b = imread(mat_A)
-% mat_t = mean(pic_a, 3)
-% mat_A = mean(pic_b, 3)
-
 % init mat_r with 0
 size_t = size(mat_t);
 size_A = size(mat_A);
-% I don't think this size is best, but I have no idea to deal with 
-% out-of-bounds errors at the image edge.
 mat_r = zeros(size_A(1)-size_t(1)+1, size_A(2)-size_t(2)+1);
 size_r = size(mat_r);
 
-% mat_t_ is a mat of mat_t minus mean(mat_t)
+% mat_t_ is a matrix of mat_t minus mean(mat_t)
 mat_t_ = mat_t - mean(mat_t);
 
 for i = 1:size_r(1)

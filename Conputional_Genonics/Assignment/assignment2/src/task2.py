@@ -31,8 +31,8 @@ def snv_caller(ref_file, bam_file, out_file):
     keys = ['A', 'C', 'G', 'T', 'N']
     for pileupcolumn in bam_f.pileup():
         # only consider positions in the range of reference 
-        if pileupcolumn.pos <= end_pos and pileupcolumn.pos >= start_pos:
-            ref_key = ref[pileupcolumn.pos-start_pos]
+        if pileupcolumn.pos+1 < end_pos and pileupcolumn.pos+1 >= start_pos:
+            ref_key = ref[pileupcolumn.pos+1-start_pos]
         else:
             continue
         read_count = 0
@@ -68,7 +68,7 @@ def snv_caller(ref_file, bam_file, out_file):
             quality = score_keyy/float(base_keyy)
             out_f.write (
                 ref_name[3:] + '\t'                         \
-                + str(pileupcolumn.pos) + '\t'              \
+                + str(pileupcolumn.pos+1) + '\t'            \
                 + '.' + '\t'                                \
                 + ref_key + '\t'                            \
                 + keyy[:len(keyy)-1] + '\t'                 \

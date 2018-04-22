@@ -1,11 +1,17 @@
-\BOOKMARK [0][-]{chapter.1}{Cross Correlations}{}% 1
-\BOOKMARK [1][-]{section.1.1}{Normalized Spatial Cross Correlation in 1d}{chapter.1}% 2
-\BOOKMARK [1][-]{section.1.2}{Signal Offset}{chapter.1}% 3
-\BOOKMARK [1][-]{section.1.3}{Normalised Spatial Cross Correlation in 2d}{chapter.1}% 4
-\BOOKMARK [1][-]{section.1.4}{Image Alignment}{chapter.1}% 5
-\BOOKMARK [1][-]{section.1.5}{Spectral Cross Correlation}{chapter.1}% 6
-\BOOKMARK [1][-]{section.1.6}{Pattern Finder}{chapter.1}% 7
-\BOOKMARK [1][-]{section.1.7}{Cross correlation in 3 dimension}{chapter.1}% 8
-\BOOKMARK [0][-]{Appendix.a.A}{Appendix Matlab code }{}% 9
-\BOOKMARK [1][-]{section.a.A.1}{Part 1}{Appendix.a.A}% 10
-\BOOKMARK [0][-]{lstnumber.-6.48}{Bibliography}{}% 11
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 1
+\BOOKMARK [0][-]{chapter.2}{Cross Correlations}{}% 2
+\BOOKMARK [1][-]{section.2.1}{Normalized Spatial Cross Correlation in 1d}{chapter.2}% 3
+\BOOKMARK [1][-]{section.2.2}{Signal Offset}{chapter.2}% 4
+\BOOKMARK [1][-]{section.2.3}{Normalised Spatial Cross Correlation in 2d}{chapter.2}% 5
+\BOOKMARK [1][-]{section.2.4}{Image Alignment}{chapter.2}% 6
+\BOOKMARK [1][-]{section.2.5}{Spectral Cross Correlation}{chapter.2}% 7
+\BOOKMARK [1][-]{section.2.6}{Pattern Finder}{chapter.2}% 8
+\BOOKMARK [1][-]{section.2.7}{Cross correlation in three dimensions}{chapter.2}% 9
+\BOOKMARK [0][-]{chapter.3}{}{}% 10
+\BOOKMARK [1][-]{section.3.1}{Dot Detection Algorithm}{chapter.3}% 11
+\BOOKMARK [1][-]{section.3.2}{Create Calibration Model}{chapter.3}% 12
+\BOOKMARK [1][-]{section.3.3}{Image Comparision}{chapter.3}% 13
+\BOOKMARK [1][-]{section.3.4}{Cross Correlation Optimisation}{chapter.3}% 14
+\BOOKMARK [0][-]{Appendix.a.A}{Appendix Matlab code }{}% 15
+\BOOKMARK [1][-]{section.a.A.1}{Part 1}{Appendix.a.A}% 16
+\BOOKMARK [0][-]{lstnumber.-6.18}{Bibliography}{}% 17

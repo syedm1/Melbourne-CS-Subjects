@@ -16,7 +16,6 @@ for pileupcolumn in bamfile.pileup():
             #count the quality scores
             score = pileupread.alignment.query_qualities[pileupread.query_position]
             score_dict[base] += score
-
     base_count = 0
     for key in keys:
         if base_dict.get(key) > 0:

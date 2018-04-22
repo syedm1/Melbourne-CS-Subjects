@@ -15,15 +15,26 @@ u = [-2:2];
 v = [-2:2];
 [U,V] = meshgrid(u,v);
 mat_gauss = exp(-(U.^2+V.^2)./2/3^2);
+% draw the gaussian template
+% u = [-20:0.1:20];
+% v = [-20:0.1:20];
+% [U,V] = meshgrid(u,v);
+% mat_gauss = exp(-(U.^2+V.^2)./2/3^2);
+% surf(mat_gauss), shading flat
+% hold on
+%
 
 cross_corr = xcorr2(mat_img, mat_gauss);
 % local max cross correlation position
-dots = local_max(cross_corr,5)
+dots = local_max(cross_corr,50);
+dots = order_dots(dots,13,9);
 
 % draw the point in the picture
 % imshow(img)
 % hold on
-% plot(dots(:,2),dots(:,1),'+')
+% plot(dots(:,2),dots(:,1),'+','Markersize',10)
+% draw line to check the point order
+% plot(dots(:,2),dots(:,1))
 end
 
 
@@ -44,5 +55,16 @@ for x = (1+level):(X-level)
         end
     end
 end
+end
 
+% order the dots
+function res = order_dots(dots, n, m)
+res = dots;
+for i=1:m
+    for j=1:n
+        st = (i-1)*n+1;
+        en = i*n;
+        res(st:en,:) = sortrows(dots(st:en,:),2);
+    end
+end
 end

@@ -19,12 +19,12 @@ mat_b = mean(img_b, 3);
 
 res = [];
 % decide window size 
-wsize = round( min(a_X, a_Y) / 5 );
+wsize = round( min(a_X, a_Y) / 10 );
 % compute shift size by overlap
 shift = floor( wsize * (1 - overlap));
 % image comparation
-for i = 0 : floor((a_X - wsize)/shift) - 1
-    for j = 0 : floor((a_Y - wsize)/shift) - 1
+for i = 0 : floor((a_X - wsize)/shift)
+    for j = 0 : floor((a_Y - wsize)/shift)
         xgrid = 1 + i * shift;
         ygrid = 1 + j * shift;
         % find correspond points of two images
@@ -67,9 +67,13 @@ end
 search_region = mat_b(search_left:search_right, search_top:search_bottom);
 
 % find the max cross correlation position
-cross_corr = my_norm_xcorr2(search_region, pattern);
+cross_corr = my_norm_xcorr2_2(search_region, pattern);
 [rel_x,rel_y] = find(cross_corr == max(max(cross_corr)));
 % if several maxium, use the top left one
+if isempty(rel_x)
+    rel_x = zeros(1)
+    rel_y = zeros(1)
+end
 px = rel_x(1) + search_left - 1;
 py = rel_y(1) + search_top - 1;
 

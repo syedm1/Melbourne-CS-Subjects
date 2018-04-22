@@ -14,12 +14,14 @@ sig_1 = file_1.data';
 sig_2 = file_2.data';
 SAMPLE_RATE = 44100;
 
-% compute cross correlation of two signal
 tic;
+
+% compute cross correlation of two signal
 % special method
 cross_cor = spatial_correlation_1d(sig_1, sig_2)';
 % spectral method
 % cross_cor = spectral_correlation_function(sig_1, sig_2)';
+
 run_time = toc
 
 % find the position of max cross coorelation value, 
@@ -27,6 +29,6 @@ run_time = toc
 [max_value, max_pos] = max(abs(cross_cor));
 offset = abs(length(sig_1) - max_pos)
 
-%compute offset time and sensor distance
+% compute offset time and sensor distance
 offset_time = offset / SAMPLE_RATE
 distance = 333 * offset_time

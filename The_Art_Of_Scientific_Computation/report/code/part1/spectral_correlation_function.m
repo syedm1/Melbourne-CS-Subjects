@@ -14,7 +14,7 @@ mid_res = conj_f_a .* f_b;
 vec_c = ifft(mid_res);
 
 
-% Can not deal with N not the power of 2
+% My fft, does not work is NN is not the power of 2
 function res_fft = my_fft(vec)
 
 vec_size = size(vec);
