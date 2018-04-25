@@ -56,7 +56,6 @@ strip_font_tags (HTML_ol bodies:rest) =
   HTML_ol (map strip_font_tags bodies):strip_font_tags rest
 
 
-
 -- Question 5
 
 -- Multi-way trees,

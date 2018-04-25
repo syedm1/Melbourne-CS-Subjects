@@ -1,5 +1,6 @@
 
 data Tree a = Empty | Node a (Tree a) (Tree a)
+    deriving (Show)
 
 tree_sort::Ord a => [a] -> [a]
 tree_sort lst = (traverse_bst . build_bst) lst

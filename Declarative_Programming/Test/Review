@@ -1,23 +1,32 @@
 Important:
     Binary search tree
     Quick sort
+    
+    Eq, Ord, Num, Show, Enum    ---->   type class
+    Int, Char, [Bool]           ---->   type
+    
+    type definition:
+        Enum type   ---->   data <TypeName> = <DataConstructorName1> | ⋯ | <DataConstructorNameN>
+        Normal type ---->   data <Type> = <Constructor> <Type1> ⋯ <TypeN>
+                                where the type of the data constructor is
+                                <Constructor> :: <Type1> -> ⋯ -> <TypeN> -> <Type>
 
 
 Question 1. Type
 
 Variable & Function         Type
 3                           Num a => a
-"abc" ++ "def"              [Char]
+!   "abc" ++ "def"              [Char]
 (+)                         NUm a => a -> a -> a
-[]                          [a]
+!   []                          [a]
 (++)                        [a] -> [a] -> [a]
 show                        Show a => a -> String
-(. length)                  (Int -> a) -> [b] -> a
+!   (. length)                  (Int -> a) -> [b] -> a
 (.)                         (b -> c) -> (a -> b) -> a -> c
 (:)                         a -> [a] -> [a]
 map length                  [[a]] -> [Int]
 length : "xyz"              type error
-[1, 2, 3]                   Num a => [a]
+!   [1, 2, 3]                   Num a => [a]
 (<)                         Ord a => a -> a -> Bool
 map (+3)                    Num a => [a] -> [a]
 foldl                       (a -> b -> a) -> a -> [b] -> a
@@ -25,8 +34,14 @@ foldr                       (a -> b -> b) -> b -> [a] -> b
 Nothing                     Maybe a
 zip [True,True,False]       [a] -> [(Bool,a)]
 zip                         [a] -> [b] -> [(a,b)]
-flip filter "hello"         ?
-
+flip                        (a -> b -> c) -> b -> a -> c 
+group                       Eq a => [a] -> [[a]]
+concatMap                   (a -> [b]) -> [a] -> [b]
+$                           (a -> b) -> a -> b
+Just                        a -> Maybe a
+foldl (++)                  [a] -> [[a]] -> [a]
+const                       a -> b -> a
+((+).const 1)               Num a => b -> a -> a
 
 
 Question 2: Give value or type error reason
@@ -138,12 +153,6 @@ insert a (Node left b right)
   | a == b    = Node left b right
   | a <  b    = Node (insert a left) b right
   | otherwise = Node left b (insert a right)
-
-
-
-
-
-
 
 
 

@@ -42,7 +42,7 @@ def snv_caller(ref_file, bam_file, out_file):
         for pileupread in pileupcolumn.pileups:
             if not pileupread.is_del and not pileupread.is_refskip:
                 score = pileupread.alignment.query_qualities[pileupread.query_position]
-                if score > 19:  
+                if score >= 20:  
                     read_count += 1
                     #count the observed nucleotides
                     base = pileupread.alignment.query_sequence[pileupread.query_position]
@@ -55,14 +55,22 @@ def snv_caller(ref_file, bam_file, out_file):
         keyy = ''
         score_keyy = 0
         base_keyy = 0
+        af = 0.0
+        gt = '0'
+        ngt = 0
         for key in keys:
             if key != ref_key and base_dict.get(key) > 0:
                 prob = float(base_dict.get(key))/read_count
+                af += float(base_dict.get(key))/pileupcolumn.n
                 if prob >= 0.2:
                     keyy = keyy + key + ','
                     score_keyy += score_dict[key]
                     base_keyy += base_dict[key]
+                    ngt += 1
+                    gt += '/'+str(ngt)
     
+        
+
         # write VCF file
         if keyy != '':
             quality = score_keyy/float(base_keyy)
@@ -74,9 +82,9 @@ def snv_caller(ref_file, bam_file, out_file):
                 + keyy[:len(keyy)-1] + '\t'                 \
                 + str(quality) + '\t'                       \
                 + 'PASS' + '\t'                             \
-                + ',' + '\t'                                \
+                + 'AF=' + str(af) + '\t'                    \
                 + 'GT' + '\t'                               \
-                + 'genotype' + '\n')
+                + gt + '\n')
     out_f.close()
         
 # Usage of the tool
