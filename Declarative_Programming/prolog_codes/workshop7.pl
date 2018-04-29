@@ -15,6 +15,10 @@ adjacent(E1,E2,List) :-
 adjacent2(E1,E2,[E1,E2|_]).
 adjacent2(E1,E2,[_|Tail]) :-
     adjacent(E1,E2,Tail).
-    
 
 % QUESTION 5
+before(E1,E2,[E1|List]) :-
+    member(E2,List).
+before(E1,E2,[_|List]) :-
+    before(E1,E2,List).
+

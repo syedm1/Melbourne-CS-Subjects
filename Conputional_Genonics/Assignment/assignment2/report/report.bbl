@@ -1,0 +1,23 @@
+\begin{thebibliography}{2}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Sturm et~al.(2008)Sturm, Richard, Duffy, David, Zhao, Zhen, Fabio,
+  Stark, and Mitchell]{Sturm2008A}
+Sturm, A~Richard, Duffy, L~David, Zhao, Zhen Zhen, P.~N Fabio, Stark, and
+  S~Mitchell.
+\newblock A single snp in an evolutionary conserved region within intron 86 of
+  the herc2 gene determines human blue-brown eye color.
+\newblock \emph{American Journal of Human Genetics}, 82\penalty0 (2):\penalty0
+  424--431, 2008.
+
+\bibitem[Tewhey et~al.(2011)Tewhey, Bansal, Torkamani, Topol, and
+  Schork]{Important2011}
+Ryan Tewhey, Vikas Bansal, Ali Torkamani, Eric Topol, and Nicholas Schork.
+\newblock The importance of phase information for human genomics.
+\newblock 12:\penalty0 215--23, 03 2011.
+
+\end{thebibliography}

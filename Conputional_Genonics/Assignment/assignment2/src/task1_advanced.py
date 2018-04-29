@@ -1,6 +1,6 @@
 #!usr/lib/python2.7
 # Auther    : Haonan Li <haonanl5@student.unimelb.edu.au>
-# Porpuse   : Build a k-mer index for a FASTA reference file
+# Porpuse   : SNV caller with quality filter
 
 import getopt
 import pysam
@@ -18,7 +18,8 @@ def snv_caller(bam_file, out_file):
         for pileupread in pileupcolumn.pileups:
             if not pileupread.is_del and not pileupread.is_refskip:
                 score = pileupread.alignment.query_qualities[pileupread.query_position]
-                if score > 19:  
+                # filter bases with quality score less than 20
+                if score >= 20:  
                     read_count += 1
                     #count the observed nucleotides
                     base = pileupread.alignment.query_sequence[pileupread.query_position]

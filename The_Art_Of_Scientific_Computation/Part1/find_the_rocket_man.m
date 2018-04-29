@@ -16,6 +16,7 @@ size_t = size(mat_t);
 % compute cross correlation
 tic;
 cross_corr = normalised_spatial_correlation_2d(mat_t,mat_A);
+% cross_corr = my_norm_xcorr2_2(mat_A,mat_t);
 run_time = toc
 
 % max cross correlation position

@@ -8,11 +8,11 @@
 function mat_r = my_norm_xcorr2_2(mat_A, mat_t)
 
 % calculate padding
-[tx,ty] = size(mat_t);
-[Ax, Ay] = size(mat_A);
+[Ay, Ax] = size(mat_A);
+[ty,tx] = size(mat_t);
 
 % Change - Compute the cross power spectrum
 Ga = fft2(mat_A);
-Gb = fft2(mat_t, Ax, Ay);
+Gb = fft2(mat_t, Ay, Ax);
 
 mat_r = real(ifft2((Ga.*conj(Gb))./abs(Ga.*conj(Gb))));

@@ -22,12 +22,11 @@ mat_gauss = exp(-(U.^2+V.^2)./2/3^2);
 % mat_gauss = exp(-(U.^2+V.^2)./2/3^2);
 % surf(mat_gauss), shading flat
 % hold on
-%
 
 cross_corr = xcorr2(mat_img, mat_gauss);
 % local max cross correlation position
 dots = local_max(cross_corr,50);
-dots = order_dots(dots,13,9);
+dots = order_dots(dots,21,17);
 
 % draw the point in the picture
 % imshow(img)

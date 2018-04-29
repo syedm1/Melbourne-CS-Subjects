@@ -1,4 +1,4 @@
-\chapter{}
+\chapter{Calibration Model}
 
 
 \section{Dot Detection Algorithm}
@@ -41,6 +41,7 @@ Detect all dots is not the end of this task. For we need to use these dots in th
 	\caption{Dot Storage.}
 \end{figure}
 
+Matlab code of dot detection is in Appendix \ref{code:2.1}.
 
 \section{Create Calibration Model}
 
@@ -59,6 +60,7 @@ Our next step is to create a program which imports all the calibration images an
 	z_{real} = f_{3}(x_{left}, y_{left}, x_{right}, y_{right}) 
 \end{equation*}
 
+Matlab code of normalized 1d cross correlation is in Appendix \ref{code:2.2}.
 
 \section{Image Comparision}
 
@@ -87,6 +89,7 @@ get the position of max correlation and compute the difference in pixel location
 	\label{fig:mel}
 \end{figure}
 
+Matlab code of normalized 1d cross correlation is in Appendix \ref{code:2.3}.
 
 \section{Cross Correlation Optimisation}
 
@@ -121,3 +124,9 @@ There are several parameters, which need to be considered when applying the cros
 	\caption{Multi pass cross correlation. (``center'' in the image refer to the new search region's center, yellow square is the new search region.)}
 	\label{fig:multi_pass}
 \end{figure}
+
+Matlab code of normalized 1d cross correlation is in Appendix \ref{code:2.4}.
+
+\section{Test Scan on Computer Generated Calibrated Images}
+
+\section{Optimised Test Scan}

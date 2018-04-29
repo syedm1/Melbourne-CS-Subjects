@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.6.5)  22 APR 2018 15:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.6.5)  25 APR 2018 22:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -621,7 +621,7 @@ LaTeX Font Info:    Try loading font information for OT1+pcr on input line 230.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )) (./main.aux
-(./cover.aux) (./abstract.aux))
+(./cover.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
@@ -638,8 +638,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
 LaTeX Font Info:    ... okay on input line 8.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 8.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 8.
-
-(/usr/local/texlive/2017/texmf-dist/tex/latex/base/ts1cmr.fd
+ (/usr/local/texlive/2017/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 8.
@@ -775,7 +774,7 @@ LaTeX Info: Redefining \nameref on input line 8.
 \openout2 = `cover.aux'.
 
  (./cover.tex
-<figures/uom_banner.pdf, id=72, 421.77576pt x 424.98775pt>
+<figures/uom_banner.pdf, id=96, 421.77576pt x 424.98775pt>
 File: figures/uom_banner.pdf Graphic file (type pdf)
 
 <use figures/uom_banner.pdf>
@@ -796,30 +795,24 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 
 {/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./figur
-es/uom_banner.pdf>])
-\openout2 = `abstract.aux'.
-
- (./abstract.tex)pdfTeX warning (ext4): destination with the same identifier (n
-ame{page.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.12 \include{abstract}
-                        [1
-
-
-] (./main.toc)
+es/uom_banner.pdf>]) (./main.toc)
 \tf@toc=\write4
 \openout4 = `main.toc'.
 
- (./part0.tex [2
+ (./part0.texpdfTeX warning (ext4): destination with the same identifier (name{
+page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1 \chapter
+            {Mid-term section}\label{part:into} [1
 
 ]
 Chapter 1.
-) (./part1.tex [3
+) (./part1.tex [2
 
 ]
 Chapter 2.
-[4
+[3
 
 ]
 Package epstopdf Info: Source file: <figures/part1/crr_vis0.eps>
@@ -833,15 +826,15 @@ f>
 -converted-to.pdf figures/part1/crr_vis0.eps>
 (epstopdf)             \includegraphics on input line 55.
 Package epstopdf Info: Output file is already uptodate.
- <figures/part1/crr_vis0-eps-converted-to.pdf, id=127, 562.1pt x 421.575pt>
+ <figures/part1/crr_vis0-eps-converted-to.pdf, id=154, 562.1pt x 421.575pt>
 File: figures/part1/crr_vis0-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/part1/crr_vis0-eps-converted-to.pdf>
 Package pdftex.def Info: figures/part1/crr_vis0-eps-converted-to.pdf used on in
 put line 55.
 (pdftex.def)             Requested size: 241.84843pt x 181.38306pt.
- [5 <./figures/part1/crr_vis0-eps-converted-to.pdf>]
-<figures/part1/wallypuzzle_rocketman.png, id=147, 20.05493pt x 22.22302pt>
+ [4 <./figures/part1/crr_vis0-eps-converted-to.pdf>]
+<figures/part1/wallypuzzle_rocketman.png, id=175, 20.05493pt x 22.22302pt>
 File: figures/part1/wallypuzzle_rocketman.png Graphic file (type png)
 
 <use figures/part1/wallypuzzle_rocketman.png>
@@ -849,7 +842,7 @@ Package pdftex.def Info: figures/part1/wallypuzzle_rocketman.png used on input
 line 88.
 (pdftex.def)             Requested size: 130.59859pt x 144.77478pt.
 
-<figures/part1/wallypuzzle.png, id=149, 441.93105pt x 275.71005pt>
+<figures/part1/wallypuzzle.png, id=177, 441.93105pt x 275.71005pt>
 File: figures/part1/wallypuzzle.png Graphic file (type png)
 
 <use figures/part1/wallypuzzle.png>
@@ -867,7 +860,7 @@ f>
 (epstopdf)             \includegraphics on input line 106.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/part1/crr_vis1-eps-converted-to.pdf, id=153, 562.1pt x 421.575pt>
+<figures/part1/crr_vis1-eps-converted-to.pdf, id=181, 562.1pt x 421.575pt>
 File: figures/part1/crr_vis1-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/part1/crr_vis1-eps-converted-to.pdf>
@@ -886,7 +879,7 @@ f>
 (epstopdf)             \includegraphics on input line 112.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/part1/crr_vis2-eps-converted-to.pdf, id=154, 562.1pt x 421.575pt>
+<figures/part1/crr_vis2-eps-converted-to.pdf, id=182, 562.1pt x 421.575pt>
 File: figures/part1/crr_vis2-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/part1/crr_vis2-eps-converted-to.pdf>
@@ -894,7 +887,7 @@ Package pdftex.def Info: figures/part1/crr_vis2-eps-converted-to.pdf used on in
 put line 112.
 (pdftex.def)             Requested size: 217.66211pt x 163.24283pt.
 
-<figures/part1/wallypuzzle_result.png, id=155, 959.7456pt x 587.3142pt>
+<figures/part1/wallypuzzle_result.png, id=183, 959.7456pt x 587.3142pt>
 File: figures/part1/wallypuzzle_result.png Graphic file (type png)
 
 <use figures/part1/wallypuzzle_result.png>
@@ -905,9 +898,9 @@ e 121.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[6 <./figures/part1/wallypuzzle_rocketman.png> <./figures/part1/wallypuzzle.png
+[5 <./figures/part1/wallypuzzle_rocketman.png> <./figures/part1/wallypuzzle.png
 > <./figures/part1/crr_vis1-eps-converted-to.pdf> <./figures/part1/crr_vis2-eps
--converted-to.pdf>] [7 <./figures/part1/wallypuzzle_result.png (PNG copy)>]
+-converted-to.pdf>] [6 <./figures/part1/wallypuzzle_result.png (PNG copy)>]
 Package epstopdf Info: Source file: <figures/part1/drum.eps>
 (epstopdf)                    date: 2018-04-01 02:25:07
 (epstopdf)                    size: 136114 bytes
@@ -919,7 +912,7 @@ verted-to.pdf figures/part1/drum.eps>
 (epstopdf)             \includegraphics on input line 187.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/part1/drum-eps-converted-to.pdf, id=196, 562.1pt x 421.575pt>
+<figures/part1/drum-eps-converted-to.pdf, id=222, 562.1pt x 421.575pt>
 File: figures/part1/drum-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/part1/drum-eps-converted-to.pdf>
@@ -938,7 +931,7 @@ ic-eps-converted-to.pdf figures/part1/piece_of_music.eps>
 (epstopdf)             \includegraphics on input line 193.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/part1/piece_of_music-eps-converted-to.pdf, id=197, 562.1pt x 421.575pt
+<figures/part1/piece_of_music-eps-converted-to.pdf, id=223, 562.1pt x 421.575pt
 >
 File: figures/part1/piece_of_music-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -958,14 +951,14 @@ f>
 (epstopdf)             \includegraphics on input line 199.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/part1/crr_vis3-eps-converted-to.pdf, id=198, 562.1pt x 421.575pt>
+<figures/part1/crr_vis3-eps-converted-to.pdf, id=224, 562.1pt x 421.575pt>
 File: figures/part1/crr_vis3-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/part1/crr_vis3-eps-converted-to.pdf>
 Package pdftex.def Info: figures/part1/crr_vis3-eps-converted-to.pdf used on in
 put line 199.
 (pdftex.def)             Requested size: 154.78653pt x 116.08464pt.
-) (./part2.tex [8 <./figures/part1/drum-eps-converted-to.pdf> <./figures/part1/
+) (./part2.tex [7 <./figures/part1/drum-eps-converted-to.pdf> <./figures/part1/
 piece_of_music-eps-converted-to.pdf> <./figures/part1/crr_vis3-eps-converted-to
 .pdf>]
 Chapter 3.
@@ -993,7 +986,7 @@ o.pdf>
 (epstopdf)             \includegraphics on input line 12.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/part2/gaussian_dis-eps-converted-to.pdf, id=222, 562.1pt x 421.575pt>
+<figures/part2/gaussian_dis-eps-converted-to.pdf, id=249, 562.1pt x 421.575pt>
 File: figures/part2/gaussian_dis-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/part2/gaussian_dis-eps-converted-to.pdf>
@@ -1012,7 +1005,7 @@ ps-converted-to.pdf figures/part2/dot_detect.eps>
 (epstopdf)             \includegraphics on input line 18.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/part2/dot_detect-eps-converted-to.pdf, id=223, 943.525pt x 679.53876pt
+<figures/part2/dot_detect-eps-converted-to.pdf, id=250, 943.525pt x 679.53876pt
 >
 File: figures/part2/dot_detect-eps-converted-to.pdf Graphic file (type pdf)
  <use figures/part2/dot_detect-eps-converted-to.pdf>
@@ -1031,7 +1024,7 @@ o.pdf>
 (epstopdf)             \includegraphics on input line 31.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/part2/dot_disorder-eps-converted-to.pdf, id=226, 1445.4pt x 852.18375p
+<figures/part2/dot_disorder-eps-converted-to.pdf, id=253, 1445.4pt x 852.18375p
 t>
 File: figures/part2/dot_disorder-eps-converted-to.pdf Graphic file (type pdf)
  <use figures/part2/dot_disorder-eps-converted-to.pdf>
@@ -1050,7 +1043,7 @@ eps-converted-to.pdf figures/part2/dot_ordered.eps>
 (epstopdf)             \includegraphics on input line 37.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/part2/dot_ordered-eps-converted-to.pdf, id=227, 1445.4pt x 852.18375pt
+<figures/part2/dot_ordered-eps-converted-to.pdf, id=254, 1445.4pt x 852.18375pt
 >
 File: figures/part2/dot_ordered-eps-converted-to.pdf Graphic file (type pdf)
  <use figures/part2/dot_ordered-eps-converted-to.pdf>
@@ -1061,57 +1054,60 @@ Package pdftex.def Info: figures/part2/dot_ordered-eps-converted-to.pdf used on
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[9
+[8
 
  <./figures/part2/gaussian_dis-eps-converted-to.pdf> <./figures/part2/dot_detec
 t-eps-converted-to.pdf>]
-<figures/part2/mel_left.pdf, id=249, 4047.12pt x 3035.34pt>
+<figures/part2/mel_left.pdf, id=279, 4047.12pt x 3035.34pt>
 File: figures/part2/mel_left.pdf Graphic file (type pdf)
 
 <use figures/part2/mel_left.pdf>
-Package pdftex.def Info: figures/part2/mel_left.pdf used on input line 76.
+Package pdftex.def Info: figures/part2/mel_left.pdf used on input line 78.
 (pdftex.def)             Requested size: 232.17242pt x 174.09996pt.
 
-<figures/part2/mel_right.pdf, id=250, 4047.12pt x 3035.34pt>
+<figures/part2/mel_right.pdf, id=280, 4047.12pt x 3035.34pt>
 File: figures/part2/mel_right.pdf Graphic file (type pdf)
 
 <use figures/part2/mel_right.pdf>
-Package pdftex.def Info: figures/part2/mel_right.pdf used on input line 82.
+Package pdftex.def Info: figures/part2/mel_right.pdf used on input line 84.
 (pdftex.def)             Requested size: 232.17242pt x 174.09996pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[10 <./figures/part2/dot_disorder-eps-converted-to.pdf> <./figures/part2/dot_or
-dered-eps-converted-to.pdf>]
-<figures/part2/window_overlap.pdf, id=262, 803.0pt x 200.75pt>
+[9 <./figures/part2/dot_disorder-eps-converted-to.pdf> <./figures/part2/dot_ord
+ered-eps-converted-to.pdf>]
+<figures/part2/window_overlap.pdf, id=295, 803.0pt x 200.75pt>
 File: figures/part2/window_overlap.pdf Graphic file (type pdf)
 
 <use figures/part2/window_overlap.pdf>
 Package pdftex.def Info: figures/part2/window_overlap.pdf used on input line 10
-4.
+7.
 (pdftex.def)             Requested size: 483.69687pt x 120.9257pt.
 
-<figures/part2/search_region.pdf, id=263, 803.0pt x 304.98843pt>
+<figures/part2/search_region.pdf, id=296, 803.0pt x 304.98843pt>
 File: figures/part2/search_region.pdf Graphic file (type pdf)
 
 <use figures/part2/search_region.pdf>
-Package pdftex.def Info: figures/part2/search_region.pdf used on input line 112
+Package pdftex.def Info: figures/part2/search_region.pdf used on input line 115
 .
 (pdftex.def)             Requested size: 483.69687pt x 183.71579pt.
 
-<figures/part2/multi_pass.pdf, id=264, 803.0pt x 596.57376pt>
-File: figures/part2/multi_pass.pdf Graphic file (type pdf)
-
-<use figures/part2/multi_pass.pdf>
-Package pdftex.def Info: figures/part2/multi_pass.pdf used on input line 120.
-(pdftex.def)             Requested size: 483.69687pt x 359.35797pt.
-)
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-(./appendix1.tex [11 <./figures/part2/mel_left.pdf> <./figures/part2/mel_right.
-pdf
+<figures/part2/multi_pass.pdf, id=297, 803.0pt x 596.57376pt>
+File: figures/part2/multi_pass.pdf Graphic file (type pdf)
+
+<use figures/part2/multi_pass.pdf>
+Package pdftex.def Info: figures/part2/multi_pass.pdf used on input line 123.
+(pdftex.def)             Requested size: 483.69687pt x 359.35797pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) (./appendix1.tex [10 <./figures/part2/mel_left.pdf> <./figures/part2/mel_righ
+t.pdf
 
 pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/part2/mel_right.pd
 f): PDF inclusion: multiple pdfs with page group included in a single page
@@ -1120,11 +1116,11 @@ f): PDF inclusion: multiple pdfs with page group included in a single page
 pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/part2/window_overl
 ap.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 
-> <./figures/part2/search_region.pdf
+>] [11 <./figures/part2/search_region.pdf> <./figures/part2/multi_pass.pdf
 
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/part2/search_regio
-n.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->] [12 <./figures/part2/multi_pass.pdf>]
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/part2/multi_pass.p
+df): PDF inclusion: multiple pdfs with page group included in a single page
+>]
 Appendix A.
 (./code/part1/normalised_spatial_correlation_1d.m
 LaTeX Font Info:    Try loading font information for TS1+pcr on input line 18.
@@ -1132,12 +1128,12 @@ LaTeX Font Info:    Try loading font information for TS1+pcr on input line 18.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/ts1pcr.fd
 File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
 ))
-(./code/part1/signal_offset_checker.m [13
+(./code/part1/signal_offset_checker.m [12
 
 ])
-(./code/part1/normalised_spatial_correlation_2d.m [14])
+(./code/part1/normalised_spatial_correlation_2d.m [13])
 (./code/part1/find_the_rocket_man.m)
-(./code/part1/spectral_correlation_function.m [15]
+(./code/part1/spectral_correlation_function.m [14]
 LaTeX Font Info:    Try loading font information for OML+pcr on input line 26.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/omlpcr.fd
@@ -1146,36 +1142,51 @@ File: omlpcr.fd
 LaTeX Font Info:    Font shape `OML/pcr/m/n' in size <10> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 26.
 )
-(./code/part1/pattern_finder.m [16])) (./main.bbl [17]
+(./code/part1/pattern_finder.m [15]) (./code/part2/dot_detect.m [16])
+(./code/part2/calibration_model.m [17]) (./code/part2/image_compare.m [18])
+(./code/part2/image_compare_optimized.m [19] [20])) (./main.bbl [21]
 
 LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 37.
- [18
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 36.
+ [22
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 37.
- (./main.aux (./cover.aux) (./abstract.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 37.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 37.
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 59379EBADB4981235948B195A262147D;1101.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 37.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 36.
+ (./main.aux (./cover.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 36.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 36.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: B881554561BD003ACECE7B1688F0BD98;1519
+(rerunfilecheck)             After:  2E61A21E76FB49D183163DAD8DEA14C1;1536.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 36.
  ) 
 Here is how much of TeX's memory you used:
- 12629 strings out of 492995
- 189804 string characters out of 6132705
- 398984 words of memory out of 5000000
- 15610 multiletter control sequences out of 15000+600000
+ 13045 strings out of 492995
+ 195787 string characters out of 6132705
+ 409984 words of memory out of 5000000
+ 15724 multiletter control sequences out of 15000+600000
  19011 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  40i,8n,45p,1002b,1810s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{lstnumber.-4.34} has been referenced but does not
+pdfTeX warning (dest): name{lstnumber.-9.76} has been referenced but does not
  exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{lstnumber.-4.34} has been referenced but does not e
+xist, replaced by a fixed one
 
 pdfTeX warning (dest): name{lstnumber.-3.34} has been referenced but does not e
 xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{lstnumber.-10.82} has been referenced but does not 
+exist, replaced by a fixed one
 
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/tex
 live/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texl
@@ -1197,10 +1208,10 @@ nts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2017/texmf-dist/font
 s/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2017/texmf-dist/fonts
 /type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2017/texmf-dist/fonts/t
 ype1/urw/courier/ucrr8a.pfb>
-Output written on main.pdf (19 pages, 16947918 bytes).
+Output written on main.pdf (23 pages, 16975580 bytes).
 PDF statistics:
- 748 PDF objects out of 1000 (max. 8388607)
- 615 compressed objects within 7 object streams
- 267 named destinations out of 1000 (max. 500000)
- 232 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1147 PDF objects out of 1200 (max. 8388607)
+ 1006 compressed objects within 11 object streams
+ 563 named destinations out of 1000 (max. 500000)
+ 280 words of extra memory for PDF output out of 10000 (max. 10000000)
 

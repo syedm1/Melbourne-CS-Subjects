@@ -10,7 +10,7 @@ len = length(vec_a);
 vec_a = vec_a - mean(vec_a);
 vec_b = vec_b - mean(vec_b);
 % compute sigma 
-sigma = sqrt(sum(vec_a.^2)+sum(vec_b.^2))
+sigma = sqrt(sum(vec_a.^2)*sum(vec_b.^2))
 % add 0 in the head and tail of vec_b
 vec_b = [zeros(1, len-1), vec_b, zeros(1, len-1)];
 

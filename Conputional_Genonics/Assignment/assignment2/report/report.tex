@@ -1,0 +1,169 @@
+\documentclass[a4paper]{article}
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage[colorinlistoftodos]{todonotes}
+
+\title{\bfseries{COMP90016 -- Assignment 2 }}
+\author{Haonan Li}
+
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Introduction}
+\label{sec:introduction}
+
+This assignment consists of four tasks. 
+
+The first task is adding a quality filter on a SNV caller. The original caller only report all heterozygotes where two bases present at the same position at a frequency between $20-80\%$ each, advanced caller will take account of the phred base quality ($\geq 20$).
+
+The second task is to build a VCF file from a bam file and its reference. Report any position where at least one base different from the reference presents at a frequency of $20\%$ or higher together with its genotype.
+
+The third task is phasing. We first identify all heterozygotes from the output of task 2. Then fetch all reads contain both positions. After some necessary filter. we finally establish haplotypes if there is a consensus of at least $90\%$ to its phasing. 
+
+In the last task. We predict three person's eys color according to (\cite{Sturm2008A}) based on the detected genotype of two particular variants.
+
+\section{Results \& Discussion}
+\label{sec:experiment}
+\subsection{Task 1}
+
+Table \ref{tab:1} shows the result comparasion of two SNV caller with pysam version 0.14.1 ( on PC). From which we find that the quantity of matched varients are not directly related with the Phred base quality. For sample 1, adding the base quality filter result in the reduction of matched pairs; for sample 2, no changes, for sample 3, the results increase. Because the quantity of reported positions is directly related to bases frequency on the particular position. We analyze the frequency function \ref{fun1}. From this function we can find adding a base quality filter will lead to the reduce of particular base's appearances together with all bases appearances. So the frequancy's trend is uncertain.
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{c|cc|cc}
+		\hline
+		 & \multicolumn{2}{c|}{Basic}  &  \multicolumn{2}{c}{Advanced}   \\
+		 &	Quantity & Quality & Quantity & Quality \\	 
+		\hline
+		Sample1 & 114  & 35.6 & 130 & 36.1 \\
+		\hline
+		Sample2 & 18 & 35.6 & 18 & 36.5  \\
+		\hline
+		Sample3 & 48 & 30.0 & 32 & 32.6  \\
+		\hline
+	\end{tabular}
+	\caption{\label{tab:1}Results of two SNV callers with pysam version 0.14.1. (Where ``Quanlity'' is the average quality score of all bases, ``Basic'' and ``Advanced'' represent the original SNV caller and caller with quality filter separately.)}
+\end{table}
+
+\begin{equation}
+frequency = \frac{particular\ base\ appearances}{all\ bases\ appearances}
+\label{fun1}
+\end{equation}
+
+While Table \ref{tab:2} shows the results on server (digitalis.eng.unimelb.edu.au) with pysam version 0.10.0. Which shows that quantity of advanced caller reduced for all samples, the reason might be that the particular base's appearances reduce more quick than all bases'. Two tables gives the different results. Actually, we think Table \ref{tab:1} is more convinding, the reason already mentioned before. The algorithms for alignment and other operations maybe outdated for the pysam in older version.
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{c|cc|cc}
+		\hline
+		& \multicolumn{2}{c|}{Basic}  &  \multicolumn{2}{c}{Advanced}   \\
+		&	Quantity & Quality & Quantity & Quality \\	 
+		\hline
+		Sample1 & 138  & 30.2 & 114 & 35.3 \\
+		\hline
+		Sample2 & 52 & 21.9 & 8 & 34.4  \\
+		\hline
+		Sample3 & 218 & 21.7 & 36 & 30.7  \\
+		\hline
+	\end{tabular}
+	\caption{\label{tab:2}Results of two SNV callers with pysam version 0.10.0. (Where ``Quanlity'' is the average quality score of all bases, ``Basic'' and ``Advanced'' represent the original SNV caller and caller with quality filter separately.)}
+\end{table}
+
+As for quality, the average base quality improved for all samples on both machines.
+
+
+\subsection{Task 2}
+
+In this task, we only report the positions in the reference which covered by the corresponding bam file for each sample. For the item AF (Allele Frequency), we calculate it by the definition (the allele frequency of the non-reference allele) in the instructions. 
+
+For genotype. We employ two judgement methods. The first is predict a position is  homozygous if one base presents at a frequency of $80\%$ or higher. The second method is predict a position is heterozygous where two bases present at a frequency larger than $20\%$ each. Both methods seem reasonable and they compute the same output for out task.
+
+ However, what if `A' presents $70\%$ on some position and the other three `T', `G', `C' presents $10\%$ separately. The first method predicts a heterozygote but the second method predicts homozygote. In my opinion, I think the second method is more reasonable and useful in practice because we must make sure there are at least two bases who have a relatively high present, then we can ascertain a heterozygote.
+
+\subsection{Task 3}
+
+For this task. We first get all closest position pairs which both of them were identifed heterozygous in task 2. For each position pair, we phase it follow the following steps: 
+\begin{enumerate}
+
+\item We use pysam \texttt{fetch} method to get all reads contain any of the two positions. In fact, some reads may not contain the positions originally but contain them after processing cigar (next step). So, we fetch larger range then the two positions. The case is rarelly but exist. (only 1 case in sample 1).
+
+\item Parse cigar, we delete the corresponding bases for \texttt{cigar} insertion and soft-clip, and padding underscore for \texttt{cigar} deletions. We do the same process for quality scores, which is useful later.
+
+\item Delete reads that don't contain both positions after cigar processing. And delete reads whoes queried position's base quality score is less than 20.
+
+\item Filter the reads that bases on the correspondings positions is not the two varient heterozygous bases. More specifically, if one position is identified heterozygous of two bases `A' and `T', but the base in this position in our processing read is `C', we ignore this read directly. 
+
+\item Calculate consensus and get the final haplotypes or rejected haplotypes. 
+
+\end{enumerate}
+
+Table \ref{tab:3} shows the phasing results of three samples on different version's pysam. Here, we only discuss results on pysam 0.14. The detected and rejected haplotypes for three samples are 13-39, 2-3, 3-1 separately. This information is very useful in further analysis. The inportance of phase informance was demostrate in (\cite{Important2011}). 
+
+In my opioion. phasing result can help understanding allele-specific expression. Because different gene might result in different expression. If we can find some expression that related to the specific haplotypes. It will very helpful for human genetic engineering and genetic disease detection and treatment. It is also useful in determine long distance gene relevance as consensus phasing is transitive. 
+
+Need to mentioned, we find cigars except indel and soft-clip does exist. We seek out them on sample 2 with pysam version 0.10.0 (on server).
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{c|cc|cc}
+		\hline
+		& \multicolumn{2}{c|}{Pysam 0.14}  &  \multicolumn{2}{c}{Pysam 0.10}   \\
+		& $\#$Detected & $\#$Rejected & $\#$Detected & $\#$Rejected \\	 
+		\hline
+		Sample1 & 13  & 49 & 7 & 45 \\
+		\hline
+		Sample2 & 2 & 3 & 1 & 0  \\
+		\hline
+		Sample3 & 3 & 1 & 3 & 1  \\
+		\hline
+	\end{tabular}
+	\caption{\label{tab:3}Results of phasing).}
+\end{table}
+
+
+\subsection{Task 4}
+
+Table \ref{tab:4} shows the genotype for rs1129038 and rs12913832 (their respective 1-based genomic coordinates are chr15:28365618 and chr15:28356859). The reference of these two positions are `A' and `C' separately. We predict most likely eye colour for each of the sample  based on (\cite{Sturm2008A}) and calculate the prediction confidence use the proportion of people with the particular genotypes and have specific eye color .
+
+For the first sample. the genotypes of two position is `A/G' and `C/T'. We predict the eye color of the person is brown. According the row 2,3,4 of Table 3 in (\cite{Sturm2008A}), $confidence =\frac{47+81+8}{1+10+0+47+81+8}=92.52\%$
+
+For the second sample, two positions are not in the output VCF file. So we infered they are homozygous and the genotype are `A/A' and `C/C'. The predicted eye color is blue. According the row 1,7 of Table 3 in (\cite{Sturm2008A}), $confidence =\frac{169+1}{1+1+169+1}=98.84\%$
+
+For the last sample, two genotypes are `G/G' and `T/T' because the AF of them are both 1. Predicted eye color is brown. According the row 5,6,10,11 of Table 3 in (\cite{Sturm2008A}) , $confidence =\frac{18+14+1+3}{0+0+0+0+18+14+1+3}=100\%$
+
+\begin{table}[H]
+	\small
+	\centering
+	\begin{tabular}{c|cc|cc|c|c}
+		\hline
+		& rs1129038 & AF & rs12913832 & AF & Pred-Eye color & Confidence\\	 
+		\hline
+		Sample1 & A/G  & 0.46 & C/T & 0.56 & Brown & 92.52 \\
+		\hline
+		Sample2* & A/A & -- & C/C & --  & Blue & 98.84 \\
+		\hline
+		Sample3 & G/G & 1 & T/T & 1 & Brown & 100 \\
+		\hline
+	\end{tabular}
+	\caption{\label{tab:4}Two specific varients detection with eye color prediction. (`*' means the result is infered rather than directly printed.)}
+\end{table}
+
+Actually, there are several factors may have influence on the confidence. 
+
+First, according to the paper, we know that eye color is not determined by two varients. Other two varients also have influence on it. For example, consider the case: rs1129038 is `A/A' and rs12913832 is `C/C', we fetch row 1 and 7 in the Table. But the number of samples of two rows are varient largely. Row 1 have 170 samples with 169 blue eyes, which means we can almost confirm that the combination of these 4 particular genotypes lead to blue eyes, however, row 7 contains only two samples with one blue eyes, it seems that 50\% of this combination of genotypes have blue eyes. It seems just these condition can not lead to a correct confidence. Because small sample is not representative and we finally assume that people with this kind of haplotype combination is rare. So the calculation of confidence does not analyze the proportion of different haplotype combinations.
+
+Besides, 
+
+
+\bibliographystyle{plainnat}
+\bibliography{report}
+
+\end{document}

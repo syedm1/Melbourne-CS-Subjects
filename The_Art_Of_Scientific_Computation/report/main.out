@@ -1,17 +1,23 @@
-\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 1
-\BOOKMARK [0][-]{chapter.2}{Cross Correlations}{}% 2
-\BOOKMARK [1][-]{section.2.1}{Normalized Spatial Cross Correlation in 1d}{chapter.2}% 3
-\BOOKMARK [1][-]{section.2.2}{Signal Offset}{chapter.2}% 4
-\BOOKMARK [1][-]{section.2.3}{Normalised Spatial Cross Correlation in 2d}{chapter.2}% 5
-\BOOKMARK [1][-]{section.2.4}{Image Alignment}{chapter.2}% 6
-\BOOKMARK [1][-]{section.2.5}{Spectral Cross Correlation}{chapter.2}% 7
-\BOOKMARK [1][-]{section.2.6}{Pattern Finder}{chapter.2}% 8
-\BOOKMARK [1][-]{section.2.7}{Cross correlation in three dimensions}{chapter.2}% 9
-\BOOKMARK [0][-]{chapter.3}{}{}% 10
-\BOOKMARK [1][-]{section.3.1}{Dot Detection Algorithm}{chapter.3}% 11
-\BOOKMARK [1][-]{section.3.2}{Create Calibration Model}{chapter.3}% 12
-\BOOKMARK [1][-]{section.3.3}{Image Comparision}{chapter.3}% 13
-\BOOKMARK [1][-]{section.3.4}{Cross Correlation Optimisation}{chapter.3}% 14
-\BOOKMARK [0][-]{Appendix.a.A}{Appendix Matlab code }{}% 15
-\BOOKMARK [1][-]{section.a.A.1}{Part 1}{Appendix.a.A}% 16
-\BOOKMARK [0][-]{lstnumber.-6.18}{Bibliography}{}% 17
+\BOOKMARK [0][-]{chapter.1}{Mid-term section}{}% 1
+\BOOKMARK [1][-]{section.1.1}{Introduction}{chapter.1}% 2
+\BOOKMARK [1][-]{section.1.2}{Outline of extension}{chapter.1}% 3
+\BOOKMARK [1][-]{section.1.3}{What I hope to learn}{chapter.1}% 4
+\BOOKMARK [0][-]{chapter.2}{Cross Correlations}{}% 5
+\BOOKMARK [1][-]{section.2.1}{Normalized Spatial Cross Correlation in 1d}{chapter.2}% 6
+\BOOKMARK [1][-]{section.2.2}{Signal Offset}{chapter.2}% 7
+\BOOKMARK [1][-]{section.2.3}{Normalised Spatial Cross Correlation in 2d}{chapter.2}% 8
+\BOOKMARK [1][-]{section.2.4}{Image Alignment}{chapter.2}% 9
+\BOOKMARK [1][-]{section.2.5}{Spectral Cross Correlation}{chapter.2}% 10
+\BOOKMARK [1][-]{section.2.6}{Pattern Finder}{chapter.2}% 11
+\BOOKMARK [1][-]{section.2.7}{Cross correlation in three dimensions}{chapter.2}% 12
+\BOOKMARK [0][-]{chapter.3}{Calibration Model}{}% 13
+\BOOKMARK [1][-]{section.3.1}{Dot Detection Algorithm}{chapter.3}% 14
+\BOOKMARK [1][-]{section.3.2}{Create Calibration Model}{chapter.3}% 15
+\BOOKMARK [1][-]{section.3.3}{Image Comparision}{chapter.3}% 16
+\BOOKMARK [1][-]{section.3.4}{Cross Correlation Optimisation}{chapter.3}% 17
+\BOOKMARK [1][-]{section.3.5}{Test Scan on Computer Generated Calibrated Images}{chapter.3}% 18
+\BOOKMARK [1][-]{section.3.6}{Optimised Test Scan}{chapter.3}% 19
+\BOOKMARK [0][-]{Appendix.a.A}{Appendix Matlab code }{}% 20
+\BOOKMARK [1][-]{section.a.A.1}{Part 1}{Appendix.a.A}% 21
+\BOOKMARK [1][-]{section.a.A.2}{Part 2}{Appendix.a.A}% 22
+\BOOKMARK [0][-]{lstnumber.-10.82}{Bibliography}{}% 23

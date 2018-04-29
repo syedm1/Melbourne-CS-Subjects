@@ -1,3 +1,7 @@
+#!usr/lib/python2.7
+# Auther    : Haonan Li <haonanl5@student.unimelb.edu.au>
+# Porpuse   : SNV caller
+
 import pysam
 import sys
 
