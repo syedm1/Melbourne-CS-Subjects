@@ -96,17 +96,58 @@ my_flatten([X|Xs],Z) :-
 %    (list,list) (+,?)
 
 compress([],[]).
-compress([X],[X]).
-compress([X,X|Xs],Zs) :- compress([X|Xs],Zs).
-compress([X,Y|Xs],[X|Zs]) :- 
-    X \= Y,
-    compress([Y|Xs],Zs).
+compress([E],[E]).
+compress([E,E|L1],L2) :-
+    compress([E|L1],L2).
+compress([E1,E2|L1],[E1|L2]) :-
+    E1 \= E2,
+    compress([E2|L1],L2).
 
 
+% 1.09 (**):  Pack consecutive duplicates of list elements into sublists.
+
+% pack(L1,L2) :- the list L2 is obtained from the list L1 by packing
+%    repeated occurrences of elements into separate sublists.
+%    (list,list) (+,?)
+
+pack([],[]).
+pack([X|Xs],[Z|Zs]) :- transfer(X,Xs,Ys,Z), pack(Ys,Zs).
+
+transfer(X,[],[],[X]).
+transfer(X,[Y|Ys],[Y|Ys],[X]) :- X \= Y.
+transfer(X,[X|Xs],Ys,[X|Zs]) :- transfer(X,Xs,Ys,Zs).
 
 
+% 1.10 (*):  Run-length encoding of a list
+
+% encode(L1,L2) :- the list L2 is obtained from the list L1 by run-length
+%    encoding. Consecutive duplicates of elements are encoded as terms [N,E],
+%    where N is the number of duplicates of the element E.
+%    (list,list) (+,?)
+
+encode(L1,L2) :- pack(L1,L3), transform(L3,L2).
+
+transform([],[]).
+transform([[X|Xs]|Ys], [[N,X]|Zs]) :-
+    length([X|Xs],N),
+    transform(Ys,Zs).
 
 
+% 1.11 (*):  Modified run-length encoding
+
+% encode_modified(L1,L2) :- the list L2 is obtained from the list L1 by 
+%    run-length encoding. Consecutive duplicates of elements are encoded 
+%    as terms [N,E], where N is the number of duplicates of the element E.
+%    However, if N equals 1 then the element is simply copied into the 
+%    output list.
+%    (list,list) (+,?)
+
+encode_modified(L1,L2) :- encode(L1,L3), modify(L3,L2).
+
+modify([[1,X]|Xs],[Y|Ys]) :- modify(Xs,Ys).
+modify([[N,X]|Xs],[[N,X]|Ys]) :- 
+    N > 1,
+    modify(Xs,Ys).
 
 
 

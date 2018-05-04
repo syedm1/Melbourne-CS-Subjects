@@ -1,6 +1,6 @@
-replace(E1, L1, E2, L2) :-
-    append(LL,[E1|LR],L1),
-    append(LL,[E2|LR],L2).
+replace(E1, [E1|L], E2, [E2|L]).
+replace(E1, [E|L1], E2, [E|L2]) :-
+    replace(E1, L1, E2, L2).
 
 zip([],[],[]).
 zip([A|As], [B|Bs], [A-B|ABs]) :-
@@ -10,5 +10,3 @@ sublist([],_).
 sublist([X|Xs], Ys) :-
     append(_,[X|Ysl],Ys),
     sublist(Xs,Ysl).
-    
-    

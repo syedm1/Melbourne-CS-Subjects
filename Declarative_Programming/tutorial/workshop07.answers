@@ -92,13 +92,13 @@ tree need not be balanced.  For example,
 is one possible representation of the set of numbers from 1 to 10.  It 
 might be visualized as
 
-                 5
-       /--------/ \--------\
-      2                     9
-     / \                   / \
-    1   3                 7   10
-         \               / \
-          4             6   8
+               5  
+       /------/ \------\
+      2                 9
+     / \               / \
+    1   3             7   10
+         \           / \
+          4         6   8
 
 Hint: Prolog's arithmetic comparison operators are <, >, =< (not <=),
 and >=.  You can also use = and \= for equality and disequality.
