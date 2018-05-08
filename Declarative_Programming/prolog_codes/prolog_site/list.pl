@@ -144,13 +144,128 @@ transform([[X|Xs]|Ys], [[N,X]|Zs]) :-
 
 encode_modified(L1,L2) :- encode(L1,L3), modify(L3,L2).
 
-modify([[1,X]|Xs],[Y|Ys]) :- modify(Xs,Ys).
+modify([[1,_]|Xs],[_|Ys]) :- modify(Xs,Ys).
 modify([[N,X]|Xs],[[N,X]|Ys]) :- 
     N > 1,
     modify(Xs,Ys).
 
 
+% 1.14 (*): Duplicate the elements of a list
 
+% dupli(L1,L2) :- L2 is obtained from L1 by duplicating all elements.
+%    (list,list) (?,?)
+
+dupli([],[]).
+dupli([X|Xs],[X,X|XXs]) :- dupli(Xs,XXs).
+
+
+% 1.15 (**): Duplicate the elements of a list agiven number of times
+
+% dupli(L1,N,L2) :- L2 is obtained from L1 by duplicating all elements
+%    N times.
+%    (list,integer,list) (?,+,?)
+
+dupli1([],_,[]).
+dupli1([X|Xs],T,XXs) :-
+    repeat(X,T,XX),
+    append(XX,Xm,XXs),
+    dupli1(Xs,T,Xm).
+
+repeat(X,1,[X]).
+repeat(X,T,XX) :-
+    Tm is T-1,
+    repeat(X,Tm,Xm),
+    append([X],Xm,XX).
+
+% 1.16 (**):  Drop every N'th element from a list
+
+% drop(L1,N,L2) :- L2 is obtained from L1 by dropping every N'th element.
+%    (list,integer,list) (?,+,?)
+drop(L1,N,L2) :- 
+    drop1(L1,N,L2,N).
+drop1([],_,[],_).
+drop1([_|Xs],N,Y,0) :- drop1(Xs,N,Y,N).
+drop1([E|Xs],N,[E|Ys],X) :-
+    X > 0,
+    X1 is X-1,
+    drop1(Xs,N,Ys,X1).
+        
+
+% 1.17 (*): Split a list into two parts
+
+% split(L,N,L1,L2) :- the list L1 contains the first N elements
+%    of the list L, the list L2 contains the remaining elements.
+%    (list,integer,list,list) (?,+,?,?)
+
+split(L,0,[],L).
+split([E|L],N,[E|L1],L2) :-
+    N > 0,
+    N1 is N-1,
+    split(L,N1,L1,L2).
+
+
+% 1.18 (**):  Extract a slice from a list
+
+% slice(L1,I,K,L2) :- L2 is the list of the elements of L1 between
+%    index I and index K (both included).
+%    (list,integer,integer,list) (?,+,+,?)
+
+slice(List,1,N,List1) :-
+    append(List1,_,List),
+    length(List1,N).
+slice([_|List],L,R,List1) :-
+    L > 1,
+    L1 is L-1,
+    R1 is R-1,
+    slice(List,L1,R1,List1).
+
+
+% 1.22 (*):  Create a list containing all integers within a given range.
+
+% range(I,K,L) :- I <= K, and L is the list containing all 
+%    consecutive integers from I to K.
+%    (integer,integer,list) (+,+,?)
+
+range(A,A,[A]).
+range(A,B,[A|L]) :-
+    A < B,
+    A1 is A+1,
+    range(A1,B,L).
+
+
+% 1.27 (**) Group the elements of a set into disjoint subsets.
+
+group1(S,[A,B,_],[SA,SB,SC]) :-
+    rnd_choose(S,A,SA,SS),
+    rnd_choose(SS,B,SB,SC).
+rnd_choose(S,A,SA,SS) :-
+    sublist(SA,S),
+    length(SA,A),
+    subtract(S,SA,SS).
+sublist([],_).
+sublist([X|Xs], Ys) :-
+    append(_,[X|Ysl],Ys),
+    sublist(Xs,Ysl).
+
+% group(G,Ns,Gs) :- distribute the elements of G into the groups Gs.
+%    The group sizes are given in the list Ns.
+% subtract/3 is predefined
+
+group([],[],[]).
+group(G,[N1|Ns],[G1|Gs]) :- 
+    rnd_choose(G,N1,G1,R),
+    subtract(G,G1,R),
+    group(R,Ns,Gs).
+
+selectN(0,_,[]) :- !.
+selectN(N,L,[X|S]) :- 
+    N > 0, 
+    el(X,L,R), 
+    N1 is N-1,
+    selectN(N1,R,S).
+
+el(X,[X|L],L).
+el(X,[_|L],R) :- el(X,L,R).
 
 
 

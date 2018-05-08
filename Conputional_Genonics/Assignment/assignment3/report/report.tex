@@ -46,7 +46,7 @@ Computing transation probabilities is similar with computing emission probalabil
 
 \noindent\textbf{Question 4}: Describe why a HMM, such as discussed in this task is not very useful for non-clonal data (such as shown in Figure 2 below). Could this shortcoming be alleviated by introducing non-integer CN states?
 
-\noindent\textbf{Answer}: 
+\noindent\textbf{Answer}:  
 
 \section{Task 2}
 
@@ -78,6 +78,16 @@ Complexity = O(n^2 + 3^{1}(\frac{n}{3^{1}})^2 + 3^{2}(\frac{n}{3^{2}})^2+...+3^{
 
 \section{Task 3}
 
+\noindent 1. Figure \ref{fig} visulize the reported CNVs.
+
+\begin{figure}[h]
+	\centering
+		\includegraphics[width=0.8\textwidth]{snv.png}}
+	\caption{Visulization of CNV. (The red part is reported CNVs)}
+	\label{fig} 
+\end{figure}
+
+\noindent 2. To increase sensitivity, we can decrease the Z-threshold, this will lead to more segmentations of the bins meanwhile decreasing the average range of each bins. 
 
 \bibliographystyle{plainnat}
 \bibliography{report}

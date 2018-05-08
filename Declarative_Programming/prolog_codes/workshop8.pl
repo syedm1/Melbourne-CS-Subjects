@@ -11,9 +11,12 @@ tree(node(Left,_,Right)) :-
     tree(Left),
     tree(Right).
 
-tree_list(empty,[]).
-tree_list(node(L,Elt,R),List) :-
-    tree_list(L,List1),
-    tree_list(R,List2).
-    append(List1,[Elt|List2],List)
-    
+tree_list(Tree, List) :-
+    tree_list(Tree, List, []).
+
+tree_list(empty, List, List).
+tree_list(node(L,E,R), List, List0) :-
+    tree_list(R,List1,List0),
+    tree_list(L,List,[E|List1]).
+
+
