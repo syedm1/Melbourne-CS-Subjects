@@ -1,35 +1,15 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Author:   Haonan Li                                    %
 % Purpose:  Receive two matrix, t(template) and A(search %
-%           region) returns normalized cross-correlation %
-%           of these two matrix, A larger than t         %
+%           region) returns normalized cross power       %
+%           spectrum of these two matrix, A larger than t%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%% 2d cross correlation
 function mat_r = my_norm_xcorr2(mat_A, mat_t)
-
-% init mat_r with 0
-size_t = size(mat_t);
-size_A = size(mat_A);
-
-mat_r = zeros(size_A(1)-size_t(1)+1, size_A(2)-size_t(2)+1);
-size_r = size(mat_r);
-
-% mat_t_ is a mat of mat_t minus mean(mat_t)
-mat_t_ = mat_t - mean(mat_t);
-
-for i = 1:size_r(1)
-    for j = 1:size_r(2)
-        % compute mat_r(i,j)
-        % first get the part of mat_A covered by the mat_t 
-        mat_A_under = mat_A(i:(i+size_t(1)-1), j:(j+size_t(2)-1));
-        mat_A_under_ = mat_A_under - mean(mat_A_under);
-        % compute numerator and denominator of the cross correlation
-        numerator = sum(sum(mat_t_ .* mat_A_under_));
-        denominator = sqrt(sum(sum(mat_t_.^2)) * sum(sum(mat_A_under_.^2)));
-        if denominator == 0
-            mat_r(i,j) = 0;
-        else
-            mat_r(i,j) = numerator/denominator;
-        end
-    end
-end
+[Ay, Ax] = size(mat_A);
+[ty,tx] = size(mat_t);
+% Change - Compute the cross power spectrum
+Ga = fft2(mat_A);
+Gb = fft2(mat_t, Ay, Ax);
+mat_r = real(ifft2((Ga.*conj(Gb))./abs(Ga.*conj(Gb))));

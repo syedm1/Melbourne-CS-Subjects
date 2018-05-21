@@ -1,20 +1,19 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Author:   Haonan Li                                    %
-% Purpose:  Compute the spectral cross correlation       %
-%           vector of two vectors of the same size       %
-%           using Fourier transform.                     %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Author:   Haonan Li                                               %
+% Purpose:  Compute the spectral cross correlation of two vectors   %
+%           of the same size using Fourier transform.               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-function vec_c = spectral_correlation_1d(vec_a, vec_b)
+function vec_res = spectral_correlation_1d(vec_a, vec_b)
 
 f_a = fft(vec_a);
 f_b = fft(vec_b);
 conj_f_a = conj(f_a);
 mid_res = conj_f_a .* f_b;
-vec_c = ifft(mid_res);
+vec_res = ifft(mid_res);
 
 
-% My fft, does not work is NN is not the power of 2
+%% My fft, does not work is NN is not the power of 2
 function res_fft = my_fft(vec)
 
 vec_size = size(vec);
@@ -36,7 +35,7 @@ for i = 1 : N
     j1 = j1 + k;
 end
 
-% Butterfly computing
+%% Butterfly computing
 dig = 0;
 k = N;
 while k > 1

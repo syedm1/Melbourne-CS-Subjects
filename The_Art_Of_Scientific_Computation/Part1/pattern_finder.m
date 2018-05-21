@@ -1,18 +1,20 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Author:   Haonan Li                                    %
-% Purpose:  Compute the spectral cross correlation       %
-%           vector of two vectors of the same size       %
-%           using Fourier transform.                     %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Author:   Haonan Li                                               %
+% Purpose:  Find all accurance of a particular element in a song    %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-function res = pattern_finder(wavfile,patfile)
-
-[y1,Fs] = audioread(wavfile);
+function res = pattern_finder(music,pat)
+%% load a music and a particular element (drum)
+[y1,Fs1] = audioread(music);
 x1 = y1(:,1);
-
-[y2,Fs] = audioread(wavfile);
+[y2,Fs2] = audioread(pat);
 x2 = y2(:,1);
 
-corr_vec = spectral_correlation_function(x1',x2')
+%% cross correlation 
+corr_vec = xcorr(x1',x2');
+res = corr_vec;
 
-res = corr_vec
+%% show
+% plot(y1);
+% plot(y2);
+ plot(res);

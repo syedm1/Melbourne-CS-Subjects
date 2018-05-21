@@ -1,0 +1,34 @@
+\begin{thebibliography}{}
+
+\bibitem[\protect\citename{Aoki and Uchida}2011]{Aoki2011A}
+Sho Aoki and Osamu Uchida.
+\newblock 2011.
+\newblock A method for automatically generating the emotional vectors of
+  emoticons using weblog articles.
+\newblock In {\em Proceedings of the 10th WSEAS international conference on
+  Applied computer and applied computational science}, pages 132--136.
+
+\bibitem[\protect\citename{Barbieri \bgroup et al.\egroup
+  }2016]{Barbieri2016What}
+Francesco Barbieri, Francesco Ronzano, and Horacio Saggion.
+\newblock 2016.
+\newblock What does this emoji mean? a vector space skip-gram model for twitter
+  emojis.
+\newblock In {\em Lrec}.
+
+\bibitem[\protect\citename{Barbieri \bgroup et al.\egroup
+  }2017]{Barbieri2017Are}
+Francesco Barbieri, Miguel Ballesteros, and Horacio Saggion.
+\newblock 2017.
+\newblock Are emojis predictable?
+\newblock pages 105--111.
+
+\bibitem[\protect\citename{Cappallo \bgroup et al.\egroup
+  }2015]{Cappallo:2015:IZE:2733373.2806335}
+Spencer Cappallo, Thomas Mensink, and Cees~G.M. Snoek.
+\newblock 2015.
+\newblock Image2emoji: Zero-shot emoji prediction for visual media.
+\newblock In {\em Proceedings of the 23rd ACM International Conference on
+  Multimedia}, MM '15, pages 1311--1314, New York, NY, USA. ACM.
+
+\end{thebibliography}

@@ -82,12 +82,97 @@ Complexity = O(n^2 + 3^{1}(\frac{n}{3^{1}})^2 + 3^{2}(\frac{n}{3^{2}})^2+...+3^{
 
 \begin{figure}[h]
 	\centering
-		\includegraphics[width=0.8\textwidth]{snv.png}}
+		\includegraphics[width=0.8\textwidth]{snv.png}
 	\caption{Visulization of CNV. (The red part is reported CNVs)}
 	\label{fig} 
 \end{figure}
 
 \noindent 2. To increase sensitivity, we can decrease the Z-threshold, this will lead to more segmentations of the bins meanwhile decreasing the average range of each bins. 
+
+\noindent 3. Biology analyze of three large CNVs in the data:
+
+\textbf{a. 50-90Mbp}
+\begin{equation*}
+logR = -0.3 
+\end{equation*}
+\begin{equation*}
+observed\ copy\ number  = 2^{1-0.3}=1.6
+\end{equation*}
+
+assume $colonality = c$, with $CN = x$, there is:
+
+\begin{equation*}
+xc+2(1-c) = 1.6
+\end{equation*}
+
+possible $(x,c)$ pairs:
+
+\begin{equation*}
+x = 1, c = 0.4
+\end{equation*}
+\begin{equation*}
+x = 0, c = 0.2
+\end{equation*}
+
+\textbf{b. 90-125Mbp}
+\begin{equation*}
+logR = -1.3 
+\end{equation*}
+\begin{equation*}
+observed\ copy\ number  = 2^{1-1.3}=0.8
+\end{equation*}
+
+assume $colonality = c$, with $CN = x$, there is:
+
+\begin{equation*}
+xc+2(1-c) = 0.8
+\end{equation*}
+
+possible $(x,c)$ pairs:
+
+\begin{equation*}
+x = 0, c = 0.6
+\end{equation*}
+
+\textbf{c. 125-140Mbp}
+\begin{equation*}
+logR = -0.8
+\end{equation*}
+\begin{equation*}
+observed\ copy\ number  = 2^{1-0.3}=1.1
+\end{equation*}
+
+assume $colonality = c$, with $CN = x$, there is:
+
+\begin{equation*}
+xc+2(1-c) = 1.1
+\end{equation*}
+
+possible $(x,c)$ pairs:
+
+\begin{equation*}
+x = 1, c = 0.9
+\end{equation*}
+\begin{equation*}
+x = 0, c = 0.45
+\end{equation*}
+
+\noindent 4. Assume three CNVs happens independentely on two clones. There are four possible cases for these three CNVs, show in Table \ref{tb:1}
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{c|cccccc}
+		case\# & $x_1$ & $c_1$ & $x_2$ & $c_2$ & $x_3$ & $c_3$ \\
+		\hline
+		1 & 0 & 0.2 & 0 & 0.6 & 0 & 0.45 \\
+		2 & 0 & 0.2 & 0 & 0.6 & 1 & 0.9 \\
+		3 & 1 & 0.4 & 0 & 0.6 & 0 & 0.45 \\
+		4 & 1 & 0.4 & 0 & 0.6 & 1 & 0.9 \\
+	\end{tabular}
+	\label{tb:1}
+\end{table}
+
+For the first and third CNVs, both single and double loss of DNV are possible, for the second CNVs, double copy losses of DNA happens.
 
 \bibliographystyle{plainnat}
 \bibliography{report}

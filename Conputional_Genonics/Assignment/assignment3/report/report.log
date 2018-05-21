@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.6.5)  4 MAY 2018 14:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.6.5)  14 MAY 2018 21:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -927,19 +927,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 45--46
 
  []
 
-[2] (./report.bbl
+[2] <snv.png, id=22, 1300.86pt x 780.516pt>
+File: snv.png Graphic file (type png)
+ <use snv.png>
+Package pdftex.def Info: snv.png used on input line 85.
+(pdftex.def)             Requested size: 276.00105pt x 165.59247pt.
+ [3 <./snv.png>]
+(./report.bbl
 
 Package natbib Warning: Empty `thebibliography' environment on input line 8.
 
-) [3] (./report.aux) ) 
+) [4] (./report.aux) ) 
 Here is how much of TeX's memory you used:
- 13799 strings out of 492995
- 265432 string characters out of 6132705
- 316243 words of memory out of 5000000
- 17067 multiletter control sequences out of 15000+600000
+ 13808 strings out of 492995
+ 265516 string characters out of 6132705
+ 316259 words of memory out of 5000000
+ 17074 multiletter control sequences out of 15000+600000
  9023 words of font info for 33 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,6n,56p,551b,187s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,9n,56p,551b,288s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmbx10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmbx12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsf
@@ -951,10 +957,10 @@ cm/cmr12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm
 r7.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy1
 0.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.
 pfb>
-Output written on report.pdf (3 pages, 112318 bytes).
+Output written on report.pdf (4 pages, 232767 bytes).
 PDF statistics:
- 57 PDF objects out of 1000 (max. 8388607)
- 41 compressed objects within 1 object stream
+ 63 PDF objects out of 1000 (max. 8388607)
+ 44 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 18 words of extra memory for PDF output out of 10000 (max. 10000000)
 

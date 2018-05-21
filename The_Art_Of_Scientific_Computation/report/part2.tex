@@ -1,9 +1,12 @@
 \chapter{Calibration Model}
 
+In this part, we first explicit gaussian template build a dot detection model that can detect dots in calibration plate. We then build a calibration model use detected dots in several image pairs and their correspond coordinate in real space. After that, we employ the model to some image pairs and compute the depth of the scenery in the images. Meanwhile, several optimizatinos are proposed togher with the results of comparison experiments.
 
 \section{Dot Detection Algorithm}
 
-A common method used to calibrate a stereo vision system is to use a calibration plate. The computer vision system then needs to determine where the dots on the plate are. This can be achieved in many ways, but one of the most reliable methods is the ‘Gaussian Peak’ detection method. In this approach, a 2D Gaussian object is used as a template and passed over a search region to identify peaks, in our case ‘dots’ or bright spots. Figure \ref{fig:gaussian_dis} shows the two dimensions gaussian template. We compute the cross correlation of the template with our calibration plate and finally detect the dots with `+' mark as shown in Figure \ref{fig:dot_detect}.
+A common method used to calibrate a stereo vision system is to use a calibration plate. The computer vision system then needs to determine where the dots on the plate are. This can be achieved in many ways, but one of the most reliable methods is the ‘Gaussian Peak’ detection method. In this approach, a 2D Gaussian object is used as a template and passed over a search region to identify peaks, in our case ‘dots’ or bright spots. 
+
+After computes cross-correlation of Gaussian template and calibration plate. We find all dots using local maximum method, that is, each time we find a peak in one part of the result matrix, and set the value in this area to 0. Untill no more peak can be find. Figure \ref{fig:gaussian_dis} shows the two dimensions gaussian template. We compute the cross correlation of the template with our calibration plate and finally detect the dots with `+' mark as shown in Figure \ref{fig:dot_detect}.
 
 \begin{figure}[h!]
 	\centering
@@ -16,13 +19,13 @@ A common method used to calibrate a stereo vision system is to use a calibration
 	\begin{subfigure}[t]{0.45\linewidth}
 		\centering
 		\includegraphics[width=1\linewidth]{figures/part2/dot_detect.eps}
-		\caption{Detected dots }
+		\caption{Dot detection results.}
 		\label{fig:dot_detect}
 	\end{subfigure}
-	\caption{Dot Dectection.}
+	\caption{Dot dectection. The original dots are  bright spots in the figure (b), detected dots are marked with red cross}
 \end{figure}
 
-Detect all dots is not the end of this task. For we need to use these dots in the later work. The points are now stored in the order of its been detected, shown in Figure \ref{fig:dot_disorder}, the read line discribe its storage order. We sort it in order for further using shown like Figure \ref{fig:dot_ordered}.
+The detected dots are saved in the order of its been detected, as shown in Figure \ref{fig:dot_disorder}, the read line reveals the order of the dots been detect. However, we need a list of dots been sorted from top to bottom, left to right. Sorted dots ishows in Figure \ref{fig:dot_ordered}.
 
 \begin{figure}[h!]
 	\centering
@@ -38,14 +41,23 @@ Detect all dots is not the end of this task. For we need to use these dots in th
 		\caption{Ordered dots}
 		\label{fig:dot_ordered}
 	\end{subfigure}
-	\caption{Dot Storage.}
+	\caption{Sort dots from top to bottom, left to right.}
 \end{figure}
 
-Matlab code of dot detection is in Appendix \ref{code:2.1}.
+Source code of Gaussian template matching, dot detection algorithm and dot sort are in Appendix \ref{code:2.1}.
 
 \section{Create Calibration Model}
 
-Our next step is to create a program which imports all the calibration images and records the pixel and real locations of all of the dots in each image. We use a fitting tool to create a 4D surface fit which connects all pixel space to real space within the calibrated zone. In this task, we have several calibration samples. Each sample contains two images, they are from a left and right camera, viewing the same calibration target at a stereo angle of approximately $\pm9^{\circ}$. The calibration target has white dots spaced by 50 mm in the x (horizontal) and y (vertical) directions. The calibration target is shifted to various z locations and we know the distance of it to the cameras. So the dots' locations in real space is know and their locations in the left and right images can also be detected in task 1. We finally find three funtions to fit $x,y$ and $z$ coordinates in real space by using corresding calibrate target's coordinates in left and right images, as
+The next step is to create a program which imports all the calibration images and records the pixel and real locations of all dots in each image. We use a fitting tool to create a 4D surface fit which connects all pixel space to real space within the calibrated zone. In this task, we have several calibration samples. Each sample contains two images, they are from a left and right camera, viewing the same calibration target at a stereo angle of approximately $\pm9^{\circ}$. The calibration target has white dots spaced by 50 mm in the x (horizontal) and y (vertical) directions. The calibration target is shifted to various z locations and we know the distance of it to the cameras. So the dots' locations in real space is know and their locations in the left and right images can also be detected in task 1. Figure \ref{fig:extrinsic} demonstrate the mechanism of calibration model. In this figure, $O$ and $O'$ are two cameras and $X$ is the object.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.6\linewidth]{figures/part2/extrinsic}
+	\caption{Calibration model machenism and extrinsic parameters calcularion.}
+	\label{fig:extrinsic}
+\end{figure}
+
+We use Matlab method \texttt{polyfitn} to build three fit functions for $x,y$ and $z$ coordinates in real space by using corresponding calibrate target's coordinates in left and right images, as
 
 \begin{equation*}
 	\centering
@@ -60,16 +72,15 @@ Our next step is to create a program which imports all the calibration images an
 	z_{real} = f_{3}(x_{left}, y_{left}, x_{right}, y_{right}) 
 \end{equation*}
 
-Matlab code of normalized 1d cross correlation is in Appendix \ref{code:2.2}.
+Besides, we can get more extrinsic parameters like camera's location and orientation in the world. In Figure \ref{fig:extrinsic} the distance between camera and object $z$ is known, $f$ is a camera parameter, $x$ and $x'$ are also known from two pictures. So we can calculare the distance between two cameras through similar triangle theorem.
+
+Source code of calibration model creation is in Appendix \ref{code:2.2}.
 
 \section{Image Comparision}
 
-After we have build calibration model. We want to apply it to practical scene. But in practice, the images took by camera are not the dots with certain distribution rule. Preprocess of the image is needed before we apply it to our calibration model. Here, we first compare two images take by left and right camera, find corresponding objects in two images.
+After build calibration model. We hope to test the performance of our model use a pair of general images. But in practice, the images took by camera are not the dots with certain distribution rule. Preprocess of the image is needed before we apply it to our calibration model. Here, we first compare two images take by left and right camera, find corresponding objects in two images.
 
-As we observed in Chapter 1, the cross correlation technique is a very powerful tool which can sensitively and accurately identify patterns in complex images. Consider the two views of Melbourne University as shown in Figure \ref{fig:mel} . As humans, most of us can easily recognise that both images are of the same scene, only taken from different angles or positions. But we must do image comparision to find corresponding objects in two images and then apply it to calibration model.
-
-We first break up one image in to windows and create a template from one window, like shown in Figure \ref{fig:mel_left} , then create a search region (larger than than the template) in the other image as shown in Figure \ref{fig:mel_right}. Then we scan the template around the search region to find similar features using cross correlation,
-get the position of max correlation and compute the difference in pixel location. Repeat this for all windows and then we can get all corresponding positions which is very similar with the corresponding dots in task 1 and 2.
+As observed in Chapter 1, the cross correlation technique is a very powerful tool which can sensitively and accurately identify patterns in complex images. Consider the two views of Physics South Building in Melbourne University, as shown in Figure \ref{fig:mel} . As humans, most of us can easily recognize that both images are of the same scene, just taken from different angles or positions. But out computers do not have this ability and image comparison must be done to find corresponding objects in two images and then we can apply it to our calibration model.
 
 \begin{figure}[h!]
 	\centering
@@ -89,44 +100,213 @@ get the position of max correlation and compute the difference in pixel location
 	\label{fig:mel}
 \end{figure}
 
-Matlab code of normalized 1d cross correlation is in Appendix \ref{code:2.3}.
+We first break up one image in to windows and create a template from one window, like shown in Figure \ref{fig:mel_left} , then create a search region (larger than than the template) in the other image as shown in Figure \ref{fig:mel_right}. Then we scan the template around the search region to find similar features using cross correlation, get the position of max correlation and compute the difference in pixel location, usually, we call this difference disparity. Repeat this for all windows and then we can get all corresponding positions which is very similar with the corresponding dots in task 1 and 2.
 
-\section{Cross Correlation Optimisation}
+Image compare result shows in Figure \ref{fig:img_cmp}. From which we find that most divided regions have a relatively high disparity. The reason may be that the images are taken by myself so that the distance between to cameras are long and they do not keep in a same high level.
 
-There are several parameters, which need to be considered when applying the cross correlation technique. These include what is the ideal sized window to be used, and how best should it be scanned in search of matching. In this part of the project, we will investigate three optimization strategies:
-
-\begin{itemize}
-	\item Window overlap
-	\item Search region
-	\item Multiple pass
-\end{itemize}
-
-\textbf{a). Variable window overlap}
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=1\linewidth]{figures/part2/window_overlap}
-	\caption{Example of variable window operlap}
+	\includegraphics[width=0.5\linewidth]{figures/part2/img_cmp}
+	\caption{Image compare result, the region with color higher on the colorbar means the higher disparity}
+	\label{fig:img_cmp}
+\end{figure}
+
+For better demonstrate image comparison. We compare two particular images. Figure \ref{fig:img_cmp1} shows the results, From which we can find the smaller windows size, the more information we can get. But because we set the search region is 3 times larger than the template, smaller windows may result in more templates that can not find a good match in the right view images. This problem will be solved in next task.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=1\linewidth]{figures/part2/img_cmp1}
+	\caption{First two images are the image be compared, other four are results of different window size.}
+	\label{fig:img_cmp1}
+\end{figure}
+
+Source code about image comparison and result visulization are in Appendix \ref{code:2.3}.
+
+\section{Cross Correlation Optimization}
+
+There are several parameters, which need to be considered when applying the cross correlation technique. These include what is the ideal sized window to be used, and how best should it be scanned in search of matching. In this part of the project, we investigate three optimization strategies:
+
+\textbf{a). Variable window overlap}
+
+The first optimization is variable window overlap. As mentioned in the last section, to do image compare, the left image will be split to several parts and each part will be searched in the corresponding but larger part of right images. Variable overlap is demonstrates in Figure \ref{fig:window_overlap}, the splited part could have overlap. The most important benifit is it increases the precision of disparity in one particular region, for example, one region will be compared only once if there is no overlap and it will compared 4 times if there are 50\% overlap, like the centre square of the right bottom part in  Figure \ref{fig:window_overlap}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.8\linewidth]{figures/part2/window_overlap}
+	\caption{Example of variable window overlap}
 	\label{fig:window_overlap}
 \end{figure}
 
 \textbf{b).Variable search region geometry}
+
+Variable search region geometry, shown in Figure \ref{fig:search_region}, is essential for a practical image compare model. On the one hand, if the search region is too small, the pattern may completely out of it and we can not get any useful difference information. However, if search region is too big, for example, treat the complete right view image as search region, it is fairly time comsumed. So a proper size of search region is essential. On the other hand, a good shape of search region is also helpful, if our image is took in the same horizontal level, we can use flat search region rather than square region, of course the search region should extend in horizontal rather than vertical, smaller search region could save time for us.
+
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=1\linewidth]{figures/part2/search_region}
+	\includegraphics[width=0.8\linewidth]{figures/part2/search_region}
 	\caption{Example of variable search region}
 	\label{fig:search_region}
 \end{figure}
 
-\textbf{c). Multi-Pass Cross Correlation}
+Actually, what  image comparison do is that for each search region in the first image, find corresponding epipolar line in the right image, and examine all pixels on the epipolar line and pick the best match. In this project, stereo cameras are parallel to each other and camera centers are at same height. Therefore, epipolar lines are fall along the horizontal scan lines of the images. Figure \ref{fig:search_region1b} shows the scan line and more reasonable search region.
+
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=1\linewidth]{figures/part2/multi_pass}
-	\caption{Multi pass cross correlation. (``center'' in the image refer to the new search region's center, yellow square is the new search region.)}
+	\begin{subfigure}[t]{0.48\linewidth}
+		\centering
+		\includegraphics[width=1\linewidth]{figures/part2/search_region1a}
+		\caption{Left view}
+	\end{subfigure}
+	\begin{subfigure}[t]{0.48\linewidth}
+		\centering
+		\includegraphics[width=1\linewidth]{figures/part2/search_region1b}
+		\caption{Right view}
+		\label{fig:search_region1b}
+	\end{subfigure}
+	\caption{Scanlines and more reasonable search region}
+	\label{fig:search_region1}
+\end{figure}
+
+Source code of variable window overlap and variable search region geometry are in Appendix \ref{code:2.4}.
+
+\textbf{c). Multi-Pass Cross Correlation}
+
+This process involves doing a course- to-fine multi-stage correlation. Consider the 2-pass cross correlation shown in Figure \ref{fig:multi_pass} as an example. In simple terms, the first pass is a broad guess at where the object has moved to and the second pass takes the information from this guess and provides finer detail.
+
+For the first pass, the search region in the right image is centred at the same location as the template in the left image. This returns a pair (dpx, dpy) which is used to estimate center for the second pass.
+
+In the second pass, the template was splited to 4 smaller templates and search region in the right image is centred at the location of the template plus (dpx, dpy) and it returns 4 new centers for next pass.
+
+\begin{figure}[h!]
+	\centering
+	\begin{subfigure}[t]{0.48\linewidth}
+		\centering
+		\includegraphics[width=1\linewidth]{figures/part2/multi_pass1}
+		\caption{1st pass, wsize = 64}
+	\end{subfigure}
+	\begin{subfigure}[t]{0.48\linewidth}
+		\centering
+		\includegraphics[width=1\linewidth]{figures/part2/multi_pass2}
+		\caption{2nd pass, wsize = 32}
+	\end{subfigure}
+	\caption{Multi-pass cross correlation. (``center'' in the image refer to the new search region's center, yellow square represents new search regions.)}
 	\label{fig:multi_pass}
 \end{figure}
 
-Matlab code of normalized 1d cross correlation is in Appendix \ref{code:2.4}.
+However, Multi-pass has its flaw, if first pass compute a bad shift distance, the second pass will be influenced  by this and tend to compute a worse shift distance.
+
+Source code of multi-pass cross correlation optimization is in Appendix \ref{code:2.5}.
 
 \section{Test Scan on Computer Generated Calibrated Images}
 
-\section{Optimised Test Scan}
+In this section, we create 3D reconstruction of some test image pairs use fit functions and calibration model. Figure \ref{fig:test_scan} shows the 3D reconstruction on three test image pairs. for each row in Figure \ref{fig:test_scan}, first two images are computer generated calibrated images from two views. The middle one is the image comparison result, the forth image is reconstructed objects in 3D space and last one is a clearer visulization of it.
+
+\begin{figure}[h!]
+	\centering
+	\begin{subfigure}[t]{0.18\linewidth}
+		\centering
+		\includegraphics[width=0.8\linewidth]{figures/part2/test_left_1}
+	\end{subfigure}
+	\begin{subfigure}[t]{0.18\linewidth}
+		\centering
+		\includegraphics[width=0.8\linewidth]{figures/part2/test_right_1}
+	\end{subfigure}
+	\begin{subfigure}[t]{0.20\linewidth}
+		\centering
+		\includegraphics[width=1\linewidth]{figures/part2/test1_cmp}
+	\end{subfigure}
+	\begin{subfigure}[t]{0.20\linewidth}
+		\centering
+		\includegraphics[width=1\linewidth]{figures/part2/test1_scan}
+	\end{subfigure}
+	\begin{subfigure}[t]{0.20\linewidth}
+		\centering
+		\includegraphics[width=1\linewidth]{figures/part2/test1_scan1}
+	\end{subfigure}
+	\begin{subfigure}[t]{0.18\linewidth}
+		\centering
+		\includegraphics[width=0.8\linewidth]{figures/part2/test_left_2}
+	\end{subfigure}
+	\begin{subfigure}[t]{0.18\linewidth}
+		\centering
+		\includegraphics[width=0.8\linewidth]{figures/part2/test_right_2}
+	\end{subfigure}
+	\begin{subfigure}[t]{0.20\linewidth}
+		\centering
+		\includegraphics[width=1\linewidth]{figures/part2/test2_cmp}
+	\end{subfigure}
+	\begin{subfigure}[t]{0.20\linewidth}
+		\centering
+		\includegraphics[width=1\linewidth]{figures/part2/test2_scan}
+	\end{subfigure}
+	\begin{subfigure}[t]{0.20\linewidth}
+		\centering
+		\includegraphics[width=1\linewidth]{figures/part2/test2_scan1}
+	\end{subfigure}
+	\begin{subfigure}[t]{0.18\linewidth}
+		\centering
+		\includegraphics[width=0.8\linewidth]{figures/part2/test_left_3}
+	\end{subfigure}
+	\begin{subfigure}[t]{0.18\linewidth}
+		\centering
+		\includegraphics[width=0.8\linewidth]{figures/part2/test_right_3}
+	\end{subfigure}
+	\begin{subfigure}[t]{0.20\linewidth}
+		\centering
+		\includegraphics[width=1\linewidth]{figures/part2/test3_cmp}
+	\end{subfigure}
+	\begin{subfigure}[t]{0.20\linewidth}
+		\centering
+		\includegraphics[width=1\linewidth]{figures/part2/test3_scan}
+	\end{subfigure}
+	\begin{subfigure}[t]{0.20\linewidth}
+		\centering
+		\includegraphics[width=1\linewidth]{figures/part2/test3_scan1}
+	\end{subfigure}
+	\caption{Test scan on computer generated calibrated images}
+	\label{fig:test_scan}
+ 
+\end{figure}
+
+
+From the above images we find that the image comparison does not work well at the edge of images of the second and third test piras. So we remove these vectors to get a more reasonable 3D resconstruction although there are still spurious exist. 
+
+Source code for 3D restruction is in Appendix \ref{code:2.6} and \ref{code:2.7}. There are many limitations of the program. First, we implement two versions code for test 1, and others. For test1, we use dot detextion algorithm which return all dots' position in two images. For test 2 and 3, we use image comparison algorithm but it dose not work well at the edge of the images. 
+
+
+\section{Optimized Test Scan}
+
+In this section, we investage some optimization of test scan, Actually, the plots shows in last section are optimized test scan.  Figure \ref{fig:scan_op} show the progress of search region's optimizations. Figure \ref{fig:scan_op_a} is the result of 1,5x flat search region and Figure \ref{fig:scan_op_b} is the result of 1.5x square region. We can find results on square search region performs better than results on flat search region. Figure \ref{fig:scan_op_c} is the result of 3x square search region, we find it is better than the result of 1.5x square search region. It may beacuse the larger search region could return a more precise resuls, of course it costs more time.
+
+\begin{figure}[h!]
+	\centering
+	\begin{subfigure}[t]{0.3\linewidth}
+		\centering
+		\includegraphics[width=1\linewidth]{figures/part2/scan2f}
+		\caption{1.5x flat search region}
+		\label{fig:scan_op_a}
+	\end{subfigure}
+	\begin{subfigure}[t]{0.3\linewidth}
+		\centering
+		\includegraphics[width=1\linewidth]{figures/part2/scan2}
+		\caption{1.5x square search region}
+		\label{fig:scan_op_b}
+	\end{subfigure}
+	\begin{subfigure}[t]{0.3\linewidth}
+		\centering
+		\includegraphics[width=1\linewidth]{figures/part2/scan3}
+		\caption{3x square search region}
+		\label{fig:scan_op_c}
+	\end{subfigure}
+	\caption{Optimization of scan test}
+	\label{fig:scan_op}
+\end{figure}
+
+
+\section{Better Calibration model}
+
+In this chapter, we build a calibration model and combina it with image comparison and finally reconstruct a 3D objects of images. There are some thinking of myself. 
+
+The built calibration model is base on the function fitting of several calibration plates. Although these plates distribute in different place in 3D space. They cover a little space of viewable range. So it works well only if the reconstructed objects in this little area. In this project, maybe $x\in (0,1000)$, $y\in (-500,500)$ and $z\in (1900,2000)$. However, in our daily life, we want the depth information from some pictures took by camera, and the distance of the scenery may vary form 0 to very large number. The model proposed in the project may fail to this general task. 
+
+In my opinion, there are some solutions. The first one is use 3D calibration objects, actually, this idea is similar with using several 2D calibration plates with various $z$ value. But use several 3D calibration objects may get more accurate calibration because it provides continuous fit sample for functions. Actually, maybe this method does not be mentioned because of the coding difficulty. The second approach is use several cameras, They do not have to be put in the same horizontal level, in contrary, they can be put in the four conors of a rectangle. Multi cameras give both robustness and precision of the model. Of course there should be better solutions, these two are just some thinking of my.

@@ -1,31 +1,27 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Author:   Haonan Li                                    %
-% Purpose:  Given two signal file, these signals have    %
-%           come from the same the same sourcce and just %
-%           offset by some time, find the offset time    %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Author:   Haonan Li                                               %
+% Purpose:  Give two signal file with signals come from the same    %
+%           source and just offset by some time, find the offset    %
+%           time and sensor distance                                %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 function offset = signal_offset_checker(f_1, f_2)
-
-% read data from file
+%% read data from file
 file_1 = importdata(f_1);
 file_2 = importdata(f_2);
 sig_1 = file_1.data';
 sig_2 = file_2.data';
 SAMPLE_RATE = 44100;
 
+%% compute cross correlation of two signal, log run time
 tic;
-
-% compute cross correlation of two signal
 % special method
 cross_cor = spatial_correlation_1d(sig_1, sig_2)';
-% spectral method
+% spectral method (faster)
 % cross_cor = spectral_correlation_function(sig_1, sig_2)';
-
 run_time = toc
 
-% find the position of max cross coorelation value, 
-% then compute the offset.
+%% find the position of max cross coorelation value and compute the offset.
 [max_value, max_pos] = max(abs(cross_cor));
 offset = abs(length(sig_1) - max_pos)
 
