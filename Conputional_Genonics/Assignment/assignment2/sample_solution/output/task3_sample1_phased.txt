@@ -1,0 +1,231 @@
+# Metrics
+Total Haplotypes Considered: 188
+Total Two-Base Haplotypes Accepted: 38
+Total Two-Base Haplotypes Rejected: 150
+Total Extended Haplotypes: 29
+
+
+# Phased Haplotypes
+Positions: 28364366,28364367	Haplotype: CC	ConsensusScore: 0.9
+Positions: 28364366,28364367	Haplotype: TT	ConsensusScore: 1.0
+Positions: 28364367,28364391	Haplotype: CA	ConsensusScore: 1.0
+Positions: 28364391,28364405	Haplotype: CC	ConsensusScore: 1.0
+Positions: 28364405,28364406	Haplotype: TG	ConsensusScore: 0.941176470588
+Positions: 28364419,28364428	Haplotype: CC	ConsensusScore: 0.931034482759
+Positions: 28364428,28364438	Haplotype: TA	ConsensusScore: 0.916666666667
+Positions: 28364438,28364444	Haplotype: GC	ConsensusScore: 0.909090909091
+Positions: 28364444,28364452	Haplotype: CG	ConsensusScore: 0.9375
+Positions: 28364444,28364452	Haplotype: GA	ConsensusScore: 0.935483870968
+Positions: 28364459,28364466	Haplotype: CA	ConsensusScore: 0.916666666667
+Positions: 28364476,28364477	Haplotype: TG	ConsensusScore: 1.0
+Positions: 28364499,28364509	Haplotype: TT	ConsensusScore: 0.933333333333
+Positions: 28364517,28364530	Haplotype: GA	ConsensusScore: 1.0
+Positions: 28364530,28364539	Haplotype: AC	ConsensusScore: 0.925925925926
+Positions: 28364530,28364539	Haplotype: GT	ConsensusScore: 1.0
+Positions: 28364539,28364540	Haplotype: TG	ConsensusScore: 1.0
+Positions: 28364540,28364560	Haplotype: CA	ConsensusScore: 1.0
+Positions: 28364560,28364564	Haplotype: AA	ConsensusScore: 1.0
+Positions: 28364560,28364564	Haplotype: CC	ConsensusScore: 1.0
+Positions: 28364564,28364568	Haplotype: CC	ConsensusScore: 1.0
+Positions: 28364564,28364568	Haplotype: AA	ConsensusScore: 1.0
+Positions: 28364644,28364652	Haplotype: AA	ConsensusScore: 0.925925925926
+Positions: 28364652,28364654	Haplotype: GA	ConsensusScore: 0.9375
+Positions: 28364654,28364655	Haplotype: GC	ConsensusScore: 0.933333333333
+Positions: 28364654,28364655	Haplotype: AG	ConsensusScore: 1.0
+Positions: 28364655,28364659	Haplotype: CT	ConsensusScore: 1.0
+Positions: 28364695,28364702	Haplotype: CA	ConsensusScore: 0.909090909091
+Positions: 28364705,28364709	Haplotype: CC	ConsensusScore: 0.972972972973
+Positions: 28364709,28364717	Haplotype: CG	ConsensusScore: 0.921875
+Positions: 28364709,28364717	Haplotype: TC	ConsensusScore: 0.96
+Positions: 28364723,28364724	Haplotype: TG	ConsensusScore: 0.95
+Positions: 28364747,28364748	Haplotype: TG	ConsensusScore: 0.947368421053
+Positions: 28364758,28364759	Haplotype: AA	ConsensusScore: 0.928571428571
+Positions: 28364779,28364787	Haplotype: TT	ConsensusScore: 0.961538461538
+Positions: 28364787,28364797	Haplotype: CC	ConsensusScore: 1.0
+Positions: 28364797,28364800	Haplotype: TC	ConsensusScore: 0.916666666667
+Positions: 28364800,28364805	Haplotype: CC	ConsensusScore: 1.0
+
+
+# Not Phased Haplotypes
+Positions: 28364366,28364367	Haplotype: CT	ConsensusScore: 0.1
+Positions: 28364367,28364391	Haplotype: TC	ConsensusScore: 0.642857142857
+Positions: 28364367,28364391	Haplotype: TA	ConsensusScore: 0.357142857143
+Positions: 28364391,28364405	Haplotype: AC	ConsensusScore: 0.583333333333
+Positions: 28364391,28364405	Haplotype: AT	ConsensusScore: 0.416666666667
+Positions: 28364405,28364406	Haplotype: CA	ConsensusScore: 0.888888888889
+Positions: 28364405,28364406	Haplotype: CG	ConsensusScore: 0.111111111111
+Positions: 28364405,28364406	Haplotype: TA	ConsensusScore: 0.0588235294118
+Positions: 28364406,28364419	Haplotype: AC	ConsensusScore: 0.217391304348
+Positions: 28364406,28364419	Haplotype: GT	ConsensusScore: 0.375
+Positions: 28364406,28364419	Haplotype: GC	ConsensusScore: 0.625
+Positions: 28364406,28364419	Haplotype: AT	ConsensusScore: 0.782608695652
+Positions: 28364419,28364428	Haplotype: TT	ConsensusScore: 0.88
+Positions: 28364419,28364428	Haplotype: TC	ConsensusScore: 0.12
+Positions: 28364419,28364428	Haplotype: CT	ConsensusScore: 0.0689655172414
+Positions: 28364428,28364438	Haplotype: TG	ConsensusScore: 0.0833333333333
+Positions: 28364428,28364438	Haplotype: CA	ConsensusScore: 0.577777777778
+Positions: 28364428,28364438	Haplotype: CG	ConsensusScore: 0.422222222222
+Positions: 28364438,28364444	Haplotype: GG	ConsensusScore: 0.0909090909091
+Positions: 28364438,28364444	Haplotype: AC	ConsensusScore: 0.22972972973
+Positions: 28364438,28364444	Haplotype: AG	ConsensusScore: 0.77027027027
+Positions: 28364444,28364452	Haplotype: GG	ConsensusScore: 0.0645161290323
+Positions: 28364444,28364452	Haplotype: CA	ConsensusScore: 0.0625
+Positions: 28364452,28364459	Haplotype: AC	ConsensusScore: 0.189655172414
+Positions: 28364452,28364459	Haplotype: GT	ConsensusScore: 0.514285714286
+Positions: 28364452,28364459	Haplotype: GC	ConsensusScore: 0.485714285714
+Positions: 28364452,28364459	Haplotype: AT	ConsensusScore: 0.810344827586
+Positions: 28364459,28364466	Haplotype: TG	ConsensusScore: 0.769230769231
+Positions: 28364459,28364466	Haplotype: CG	ConsensusScore: 0.0833333333333
+Positions: 28364459,28364466	Haplotype: TA	ConsensusScore: 0.230769230769
+Positions: 28364466,28364469	Haplotype: AC	ConsensusScore: 0.567567567568
+Positions: 28364466,28364469	Haplotype: GT	ConsensusScore: 0.823529411765
+Positions: 28364466,28364469	Haplotype: GC	ConsensusScore: 0.176470588235
+Positions: 28364466,28364469	Haplotype: AT	ConsensusScore: 0.432432432432
+Positions: 28364469,28364476	Haplotype: CC	ConsensusScore: 0.875
+Positions: 28364469,28364476	Haplotype: TT	ConsensusScore: 0.729166666667
+Positions: 28364469,28364476	Haplotype: TC	ConsensusScore: 0.270833333333
+Positions: 28364469,28364476	Haplotype: CT	ConsensusScore: 0.125
+Positions: 28364476,28364477	Haplotype: CA	ConsensusScore: 0.657894736842
+Positions: 28364476,28364477	Haplotype: CG	ConsensusScore: 0.342105263158
+Positions: 28364477,28364494	Haplotype: AA	ConsensusScore: 0.235294117647
+Positions: 28364477,28364494	Haplotype: GG	ConsensusScore: 0.25
+Positions: 28364477,28364494	Haplotype: AG	ConsensusScore: 0.764705882353
+Positions: 28364477,28364494	Haplotype: GA	ConsensusScore: 0.75
+Positions: 28364494,28364499	Haplotype: AC	ConsensusScore: 0.102564102564
+Positions: 28364494,28364499	Haplotype: GT	ConsensusScore: 0.235294117647
+Positions: 28364494,28364499	Haplotype: GC	ConsensusScore: 0.764705882353
+Positions: 28364494,28364499	Haplotype: AT	ConsensusScore: 0.897435897436
+Positions: 28364499,28364509	Haplotype: CC	ConsensusScore: 0.875
+Positions: 28364499,28364509	Haplotype: TC	ConsensusScore: 0.0666666666667
+Positions: 28364499,28364509	Haplotype: CT	ConsensusScore: 0.125
+Positions: 28364509,28364517	Haplotype: CC	ConsensusScore: 0.789473684211
+Positions: 28364509,28364517	Haplotype: TG	ConsensusScore: 0.892857142857
+Positions: 28364509,28364517	Haplotype: CG	ConsensusScore: 0.210526315789
+Positions: 28364509,28364517	Haplotype: TC	ConsensusScore: 0.107142857143
+Positions: 28364517,28364530	Haplotype: CA	ConsensusScore: 0.3125
+Positions: 28364517,28364530	Haplotype: CG	ConsensusScore: 0.6875
+Positions: 28364530,28364539	Haplotype: AT	ConsensusScore: 0.0740740740741
+Positions: 28364539,28364540	Haplotype: CC	ConsensusScore: 0.88
+Positions: 28364539,28364540	Haplotype: CG	ConsensusScore: 0.12
+Positions: 28364540,28364560	Haplotype: GC	ConsensusScore: 0.285714285714
+Positions: 28364540,28364560	Haplotype: GA	ConsensusScore: 0.714285714286
+Positions: 28364644,28364652	Haplotype: GG	ConsensusScore: 0.833333333333
+Positions: 28364644,28364652	Haplotype: AG	ConsensusScore: 0.0740740740741
+Positions: 28364644,28364652	Haplotype: GA	ConsensusScore: 0.166666666667
+Positions: 28364652,28364654	Haplotype: AA	ConsensusScore: 0.147058823529
+Positions: 28364652,28364654	Haplotype: GG	ConsensusScore: 0.0625
+Positions: 28364652,28364654	Haplotype: AG	ConsensusScore: 0.852941176471
+Positions: 28364654,28364655	Haplotype: GG	ConsensusScore: 0.0666666666667
+Positions: 28364655,28364659	Haplotype: GT	ConsensusScore: 0.4
+Positions: 28364655,28364659	Haplotype: GC	ConsensusScore: 0.6
+Positions: 28364659,28364660	Haplotype: TG	ConsensusScore: 0.228571428571
+Positions: 28364659,28364660	Haplotype: CA	ConsensusScore: 0.8
+Positions: 28364659,28364660	Haplotype: CG	ConsensusScore: 0.2
+Positions: 28364659,28364660	Haplotype: TA	ConsensusScore: 0.771428571429
+Positions: 28364660,28364661	Haplotype: AC	ConsensusScore: 0.232558139535
+Positions: 28364660,28364661	Haplotype: GT	ConsensusScore: 0.222222222222
+Positions: 28364660,28364661	Haplotype: GC	ConsensusScore: 0.777777777778
+Positions: 28364660,28364661	Haplotype: AT	ConsensusScore: 0.767441860465
+Positions: 28364661,28364676	Haplotype: TG	ConsensusScore: 0.222222222222
+Positions: 28364661,28364676	Haplotype: CA	ConsensusScore: 0.125
+Positions: 28364661,28364676	Haplotype: CG	ConsensusScore: 0.875
+Positions: 28364661,28364676	Haplotype: TA	ConsensusScore: 0.777777777778
+Positions: 28364676,28364684	Haplotype: AC	ConsensusScore: 0.148148148148
+Positions: 28364676,28364684	Haplotype: GT	ConsensusScore: 0.515151515152
+Positions: 28364676,28364684	Haplotype: GC	ConsensusScore: 0.484848484848
+Positions: 28364676,28364684	Haplotype: AT	ConsensusScore: 0.851851851852
+Positions: 28364684,28364691	Haplotype: CC	ConsensusScore: 0.5
+Positions: 28364684,28364691	Haplotype: TT	ConsensusScore: 0.188679245283
+Positions: 28364684,28364691	Haplotype: TC	ConsensusScore: 0.811320754717
+Positions: 28364684,28364691	Haplotype: CT	ConsensusScore: 0.5
+Positions: 28364691,28364695	Haplotype: CC	ConsensusScore: 0.683333333333
+Positions: 28364691,28364695	Haplotype: TT	ConsensusScore: 0.791666666667
+Positions: 28364691,28364695	Haplotype: TC	ConsensusScore: 0.208333333333
+Positions: 28364691,28364695	Haplotype: CT	ConsensusScore: 0.316666666667
+Positions: 28364695,28364702	Haplotype: TG	ConsensusScore: 0.571428571429
+Positions: 28364695,28364702	Haplotype: CG	ConsensusScore: 0.0909090909091
+Positions: 28364695,28364702	Haplotype: TA	ConsensusScore: 0.428571428571
+Positions: 28364702,28364705	Haplotype: AC	ConsensusScore: 0.516666666667
+Positions: 28364702,28364705	Haplotype: GT	ConsensusScore: 0.857142857143
+Positions: 28364702,28364705	Haplotype: GC	ConsensusScore: 0.142857142857
+Positions: 28364702,28364705	Haplotype: AT	ConsensusScore: 0.483333333333
+Positions: 28364705,28364709	Haplotype: TT	ConsensusScore: 0.407407407407
+Positions: 28364705,28364709	Haplotype: TC	ConsensusScore: 0.592592592593
+Positions: 28364705,28364709	Haplotype: CT	ConsensusScore: 0.027027027027
+Positions: 28364709,28364717	Haplotype: CC	ConsensusScore: 0.078125
+Positions: 28364709,28364717	Haplotype: TG	ConsensusScore: 0.04
+Positions: 28364717,28364723	Haplotype: CC	ConsensusScore: 0.148148148148
+Positions: 28364717,28364723	Haplotype: GT	ConsensusScore: 0.274193548387
+Positions: 28364717,28364723	Haplotype: GC	ConsensusScore: 0.725806451613
+Positions: 28364717,28364723	Haplotype: CT	ConsensusScore: 0.851851851852
+Positions: 28364723,28364724	Haplotype: CA	ConsensusScore: 0.78431372549
+Positions: 28364723,28364724	Haplotype: CG	ConsensusScore: 0.21568627451
+Positions: 28364723,28364724	Haplotype: TA	ConsensusScore: 0.05
+Positions: 28364724,28364736	Haplotype: AC	ConsensusScore: 0.611111111111
+Positions: 28364724,28364736	Haplotype: GT	ConsensusScore: 0.723404255319
+Positions: 28364724,28364736	Haplotype: GC	ConsensusScore: 0.276595744681
+Positions: 28364724,28364736	Haplotype: AT	ConsensusScore: 0.388888888889
+Positions: 28364736,28364744	Haplotype: TG	ConsensusScore: 0.421052631579
+Positions: 28364736,28364744	Haplotype: CA	ConsensusScore: 0.787878787879
+Positions: 28364736,28364744	Haplotype: CG	ConsensusScore: 0.212121212121
+Positions: 28364736,28364744	Haplotype: TA	ConsensusScore: 0.578947368421
+Positions: 28364744,28364747	Haplotype: AC	ConsensusScore: 0.82
+Positions: 28364744,28364747	Haplotype: GT	ConsensusScore: 0.45
+Positions: 28364744,28364747	Haplotype: GC	ConsensusScore: 0.55
+Positions: 28364744,28364747	Haplotype: AT	ConsensusScore: 0.18
+Positions: 28364747,28364748	Haplotype: CA	ConsensusScore: 0.882352941176
+Positions: 28364747,28364748	Haplotype: CG	ConsensusScore: 0.117647058824
+Positions: 28364747,28364748	Haplotype: TA	ConsensusScore: 0.0526315789474
+Positions: 28364748,28364758	Haplotype: AA	ConsensusScore: 0.813953488372
+Positions: 28364748,28364758	Haplotype: AC	ConsensusScore: 0.186046511628
+Positions: 28364748,28364758	Haplotype: GC	ConsensusScore: 0.652173913043
+Positions: 28364748,28364758	Haplotype: GA	ConsensusScore: 0.347826086957
+Positions: 28364758,28364759	Haplotype: CA	ConsensusScore: 0.3
+Positions: 28364758,28364759	Haplotype: AT	ConsensusScore: 0.0714285714286
+Positions: 28364758,28364759	Haplotype: CT	ConsensusScore: 0.7
+Positions: 28364759,28364779	Haplotype: AA	ConsensusScore: 0.351351351351
+Positions: 28364759,28364779	Haplotype: TT	ConsensusScore: 0.357142857143
+Positions: 28364759,28364779	Haplotype: AT	ConsensusScore: 0.648648648649
+Positions: 28364759,28364779	Haplotype: TA	ConsensusScore: 0.642857142857
+Positions: 28364779,28364787	Haplotype: TC	ConsensusScore: 0.0384615384615
+Positions: 28364779,28364787	Haplotype: AC	ConsensusScore: 0.428571428571
+Positions: 28364779,28364787	Haplotype: AT	ConsensusScore: 0.571428571429
+Positions: 28364787,28364797	Haplotype: TT	ConsensusScore: 0.764705882353
+Positions: 28364787,28364797	Haplotype: TC	ConsensusScore: 0.235294117647
+Positions: 28364797,28364800	Haplotype: CC	ConsensusScore: 0.230769230769
+Positions: 28364797,28364800	Haplotype: TT	ConsensusScore: 0.0833333333333
+Positions: 28364797,28364800	Haplotype: CT	ConsensusScore: 0.769230769231
+Positions: 28364800,28364805	Haplotype: TG	ConsensusScore: 0.7
+Positions: 28364800,28364805	Haplotype: TC	ConsensusScore: 0.3
+
+
+# Extended Haplotypes
+Positions: 28364366,28364367,28364391	Haplotype: CCA
+Positions: 28364366,28364367	Haplotype: TT
+Positions: 28364391,28364405	Haplotype: CC
+Positions: 28364405,28364406	Haplotype: TG
+Positions: 28364419,28364428	Haplotype: CC
+Positions: 28364428,28364438	Haplotype: TA
+Positions: 28364438,28364444,28364452	Haplotype: GCG
+Positions: 28364444,28364452	Haplotype: GA
+Positions: 28364459,28364466	Haplotype: CA
+Positions: 28364476,28364477	Haplotype: TG
+Positions: 28364499,28364509	Haplotype: TT
+Positions: 28364517,28364530,28364539	Haplotype: GAC
+Positions: 28364530,28364539,28364540	Haplotype: GTG
+Positions: 28364540,28364560,28364564	Haplotype: CAA
+Positions: 28364560,28364564,28364568	Haplotype: CCC
+Positions: 28364564,28364568	Haplotype: AA
+Positions: 28364644,28364652	Haplotype: AA
+Positions: 28364652,28364654	Haplotype: GA
+Positions: 28364654,28364655,28364659	Haplotype: GCT
+Positions: 28364654,28364655	Haplotype: AG
+Positions: 28364695,28364702	Haplotype: CA
+Positions: 28364705,28364709,28364717	Haplotype: CCG
+Positions: 28364709,28364717	Haplotype: TC
+Positions: 28364723,28364724	Haplotype: TG
+Positions: 28364747,28364748	Haplotype: TG
+Positions: 28364758,28364759	Haplotype: AA
+Positions: 28364779,28364787	Haplotype: TT
+Positions: 28364787,28364797	Haplotype: CC
+Positions: 28364797,28364800,28364805	Haplotype: TCC

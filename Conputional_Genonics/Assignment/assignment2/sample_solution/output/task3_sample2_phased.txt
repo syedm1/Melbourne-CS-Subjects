@@ -1,0 +1,32 @@
+# Metrics
+Total Haplotypes Considered: 13
+Total Two-Base Haplotypes Accepted: 7
+Total Two-Base Haplotypes Rejected: 6
+Total Extended Haplotypes: 5
+
+
+# Phased Haplotypes
+Positions: 28364352,28364353	Haplotype: TC	ConsensusScore: 1.0
+Positions: 28364353,28364361	Haplotype: GT	ConsensusScore: 1.0
+Positions: 28364361,28364371	Haplotype: CC	ConsensusScore: 1.0
+Positions: 28364361,28364371	Haplotype: TT	ConsensusScore: 1.0
+Positions: 28364371,28364375	Haplotype: CG	ConsensusScore: 1.0
+Positions: 28364371,28364375	Haplotype: TC	ConsensusScore: 1.0
+Positions: 28364375,28364376	Haplotype: GT	ConsensusScore: 1.0
+
+
+# Not Phased Haplotypes
+Positions: 28364352,28364353	Haplotype: CC	ConsensusScore: 0.875
+Positions: 28364352,28364353	Haplotype: CG	ConsensusScore: 0.125
+Positions: 28364353,28364361	Haplotype: CC	ConsensusScore: 0.142857142857
+Positions: 28364353,28364361	Haplotype: CT	ConsensusScore: 0.857142857143
+Positions: 28364375,28364376	Haplotype: CA	ConsensusScore: 0.142857142857
+Positions: 28364375,28364376	Haplotype: CT	ConsensusScore: 0.857142857143
+
+
+# Extended Haplotypes
+Positions: 28364352,28364353	Haplotype: TC
+Positions: 28364353,28364361	Haplotype: GT
+Positions: 28364361,28364371,28364375,28364376	Haplotype: CCGT
+Positions: 28364361,28364371	Haplotype: TT
+Positions: 28364371,28364375	Haplotype: TC

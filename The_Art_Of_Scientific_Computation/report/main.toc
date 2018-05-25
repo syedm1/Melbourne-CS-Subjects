@@ -5,34 +5,38 @@
 \contentsline {section}{\numberline {2.3}Normalised Spatial Cross Correlation in 2d}{4}{section.2.3}
 \contentsline {section}{\numberline {2.4}Image Alignment}{5}{section.2.4}
 \contentsline {section}{\numberline {2.5}Spectral Cross Correlation}{5}{section.2.5}
-\contentsline {section}{\numberline {2.6}Pattern Finder}{7}{section.2.6}
+\contentsline {section}{\numberline {2.6}Pattern Finder}{6}{section.2.6}
 \contentsline {section}{\numberline {2.7}Cross correlation in three dimensions}{7}{section.2.7}
 \contentsline {chapter}{\numberline {3}Calibration Model}{8}{chapter.3}
 \contentsline {section}{\numberline {3.1}Dot Detection Algorithm}{8}{section.3.1}
 \contentsline {section}{\numberline {3.2}Create Calibration Model}{9}{section.3.2}
 \contentsline {section}{\numberline {3.3}Image Comparision}{10}{section.3.3}
-\contentsline {section}{\numberline {3.4}Cross Correlation Optimization}{12}{section.3.4}
+\contentsline {section}{\numberline {3.4}Cross Correlation Optimization}{11}{section.3.4}
 \contentsline {section}{\numberline {3.5}Test Scan on Computer Generated Calibrated Images}{14}{section.3.5}
 \contentsline {section}{\numberline {3.6}Optimized Test Scan}{14}{section.3.6}
-\contentsline {section}{\numberline {3.7}Better Calibration model}{14}{section.3.7}
+\contentsline {section}{\numberline {3.7}Better Calibration model}{15}{section.3.7}
 \contentsline {chapter}{\numberline {4}Depth Map Prediction using Machine Learning}{16}{chapter.4}
 \contentsline {section}{\numberline {4.1}Convolutional Neural Network}{16}{section.4.1}
-\contentsline {section}{\numberline {4.2}Stereo ConvNet}{18}{section.4.2}
-\contentsline {chapter}{Appendix \numberline {A}Matlab code }{19}{Appendix.a.A}
-\contentsline {section}{\numberline {A.1}Part 1}{19}{section.a.A.1}
-\contentsline {subsection}{\numberline {A.1.1}Spatial Cross Correlation in 1d}{19}{subsection.a.A.1.1}
-\contentsline {subsection}{\numberline {A.1.2}Normalised Spatial Cross Correlation in 1d}{19}{subsection.a.A.1.2}
-\contentsline {subsection}{\numberline {A.1.3}Signal Offset}{20}{subsection.a.A.1.3}
-\contentsline {subsection}{\numberline {A.1.4}Normalised Spatial Cross Correlation in 2d}{20}{subsection.a.A.1.4}
-\contentsline {subsection}{\numberline {A.1.5}Image Alignment}{21}{subsection.a.A.1.5}
-\contentsline {subsection}{\numberline {A.1.6}Spectral Cross Correlation}{22}{subsection.a.A.1.6}
-\contentsline {subsection}{\numberline {A.1.7}Pattern Finder}{23}{subsection.a.A.1.7}
-\contentsline {section}{\numberline {A.2}Part 2}{23}{section.a.A.2}
-\contentsline {subsection}{\numberline {A.2.1}Dot Detection Algorithm}{23}{subsection.a.A.2.1}
-\contentsline {subsection}{\numberline {A.2.2}Create Calibration Model}{25}{subsection.a.A.2.2}
-\contentsline {subsection}{\numberline {A.2.3}Image Comparision}{25}{subsection.a.A.2.3}
-\contentsline {subsection}{\numberline {A.2.4}Cross Correlation Optimisation}{27}{subsection.a.A.2.4}
-\contentsline {subsection}{\numberline {A.2.5}Multi-pass Cross Correlation}{29}{subsection.a.A.2.5}
-\contentsline {subsection}{\numberline {A.2.6}Multi-pass Cross Correlation}{30}{subsection.a.A.2.6}
-\contentsline {subsection}{\numberline {A.2.7}Multi-pass Cross Correlation}{31}{subsection.a.A.2.7}
-\contentsline {chapter}{Bibliography}{32}{lstnumber.-14.40}
+\contentsline {section}{\numberline {4.2}Stereo Convolutional Neural Network}{18}{section.4.2}
+\contentsline {chapter}{\numberline {5}Summary}{19}{chapter.5}
+\contentsline {chapter}{Appendix \numberline {A}Matlab code}{20}{Appendix.a.A}
+\contentsline {section}{\numberline {A.1}Part 1}{20}{section.a.A.1}
+\contentsline {subsection}{\numberline {A.1.1}Spatial Cross Correlation in 1d}{20}{subsection.a.A.1.1}
+\contentsline {subsection}{\numberline {A.1.2}Normalised Spatial Cross Correlation in 1d}{20}{subsection.a.A.1.2}
+\contentsline {subsection}{\numberline {A.1.3}Signal Offset}{21}{subsection.a.A.1.3}
+\contentsline {subsection}{\numberline {A.1.4}Normalised Spatial Cross Correlation in 2d}{21}{subsection.a.A.1.4}
+\contentsline {subsection}{\numberline {A.1.5}Image Alignment}{22}{subsection.a.A.1.5}
+\contentsline {subsection}{\numberline {A.1.6}Spectral Cross Correlation}{23}{subsection.a.A.1.6}
+\contentsline {subsection}{\numberline {A.1.7}Pattern Finder}{24}{subsection.a.A.1.7}
+\contentsline {section}{\numberline {A.2}Part 2}{24}{section.a.A.2}
+\contentsline {subsection}{\numberline {A.2.1}Dot Detection Algorithm}{24}{subsection.a.A.2.1}
+\contentsline {subsection}{\numberline {A.2.2}Create Calibration Model}{26}{subsection.a.A.2.2}
+\contentsline {subsection}{\numberline {A.2.3}Image Comparision}{26}{subsection.a.A.2.3}
+\contentsline {subsection}{\numberline {A.2.4}Cross Correlation Optimisation}{28}{subsection.a.A.2.4}
+\contentsline {subsection}{\numberline {A.2.5}Multi-pass Cross Correlation}{30}{subsection.a.A.2.5}
+\contentsline {subsection}{\numberline {A.2.6}Multi-pass Cross Correlation}{31}{subsection.a.A.2.6}
+\contentsline {subsection}{\numberline {A.2.7}Multi-pass Cross Correlation}{32}{subsection.a.A.2.7}
+\contentsline {section}{\numberline {A.3}Part 3}{33}{section.a.A.3}
+\contentsline {subsection}{\numberline {A.3.1}Convolutional Neural Network}{33}{subsection.a.A.3.1}
+\contentsline {chapter}{Appendix \numberline {B}Test Scan Result}{35}{Appendix.a.B}
+\contentsline {chapter}{Bibliography}{35}{figure.caption.23}

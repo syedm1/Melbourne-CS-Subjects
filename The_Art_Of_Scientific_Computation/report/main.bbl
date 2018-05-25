@@ -1,3 +1,88 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{10}
+
+\bibitem{Avrahami1991Sub}
+G.~Avrahami and V.~Pratt.
+\newblock Sub-pixel edge detection in character digitization.
+\newblock In {\em Conference proceedings on Raster imaging and digital
+  typography II}, pages 54--64, 1991.
+
+\bibitem{Dosovitskiy2015FlowNet}
+A.~Dosovitskiy, P.~Fischery, E.~Ilg, and P.~Usser.
+\newblock Flownet: Learning optical flow with convolutional networks.
+\newblock In {\em IEEE International Conference on Computer Vision}, pages
+  2758--2766, 2015.
+
+\bibitem{article2013}
+G.~Haberfehlner.
+\newblock 3d nanoimaging of semiconductor devices and materials by electron
+  tomography.
+\newblock 09 2013.
+
+\bibitem{Haskett2001Ares}
+H.~T. Haskett.
+\newblock Ares method of sub-pixel target detection, 2001.
+
+\bibitem{heiderman84}
+M.~Heideman, D.~Johnson, and C.~Burrus.
+\newblock {Gauss} and the history of the fast {Fourier} transform.
+\newblock {\em IEEE ASSP Magazine}, 1(4):14--21, October 1984.
+
+\bibitem{Howard1995Binocular}
+I.~P. Howard and B.~J. Rogers.
+\newblock {\em Binocular vision and stereopsis.}
+\newblock Oxford University Press, 1995.
+
+\bibitem{Huertas2009Detection}
+A.~Huertas and G.~Medioni.
+\newblock Detection of intensity changes with subpixel accuracy using
+  laplacian-gaussian masks.
+\newblock {\em IEEE Transactions on Pattern Analysis \& Machine Intelligence},
+  PAMI-8(5):651--664, 2009.
+
+\bibitem{Lecun2015Stereo}
+Y.~Lecun.
+\newblock Stereo matching by training a convolutional neural network to compare
+  image patches.
+\newblock 17(1):2287--2318, 2015.
+
+\bibitem{7298715}
+B.~Li, C.~Shen, Y.~Dai, A.~van~den Hengel, and M.~He.
+\newblock Depth and surface normal estimation from monocular images using
+  regression on deep features and hierarchical crfs.
+\newblock In {\em 2015 IEEE Conference on Computer Vision and Pattern
+  Recognition (CVPR)}, volume~00, pages 1119--1127, June 2015.
+
+\bibitem{Li2002Auto}
+B.~L. O. H. S. D. N. G. K. E.~K. Li~Fan, JianZhong~Qian.
+\newblock Automatic segmentation of pulmonary nodules by using dynamic 3d
+  cross-correlation for interactive cad systems, 2002.
+
+\bibitem{Lucas1981An}
+B.~D. Lucas and T.~Kanade.
+\newblock An iterative image registration technique with an application to
+  stereo vision.
+\newblock In {\em International Joint Conference on Artificial Intelligence},
+  pages 674--679, 1981.
+
+\bibitem{Marr1988A}
+D.~Marr and T.~Poggio.
+\newblock A computational theory of human stereo vision.
+\newblock {\em Readings in Cognitive Science}, 204(1156):301--328, 1988.
+
+\bibitem{Moravec1980Obstacle}
+H.~P. Moravec.
+\newblock {\em Obstacle avoidance and navigation in the real world by a seeing
+  robot rover}.
+\newblock Stanford University, 1980.
+
+\bibitem{rabiner1975theory}
+L.~Rabiner and B.~Gold.
+\newblock {\em Theory and application of digital signal processing}.
+\newblock Prentice-Hall signal processing series. Prentice-Hall, 1975.
+
+\bibitem{rabiner1978digital}
+L.~Rabiner and R.~Schafer.
+\newblock {\em Digital Processing of Speech Signals}.
+\newblock Prentice-Hall signal processing series. Prentice-Hall, 1978.
 
 \end{thebibliography}

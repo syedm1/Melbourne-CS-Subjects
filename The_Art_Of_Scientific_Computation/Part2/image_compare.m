@@ -59,6 +59,7 @@ search_region = mat_b(sr_top:sr_bottom, sr_left:sr_right);
 
 %% find the max cross correlation position
 cross_corr = my_norm_xcorr2(search_region, pattern);
+% cross_corr = normxcorr2(pattern, search_region);
 [rel_y,rel_x] = find(cross_corr == max(cross_corr(:)));
 if isempty(rel_x)
     dx = 1000;

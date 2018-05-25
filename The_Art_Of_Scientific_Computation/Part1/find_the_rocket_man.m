@@ -27,13 +27,13 @@ plot(cross_corr)
 hold on
 
 %% save marked image
-% imshow(pic_A);
-% hold on;
-% marker = plot(pic_A(1,1), 'p');
-% marker.XData = pos_x + tX/2;
-% marker.YData = pos_y + tY/2;
-% marker.MarkerSize = 30;
-% marker.Color = 'r';
-% marker.MarkerFaceColor = 'r';
-% saveas(gcf, 're','png');
+imshow(pic_A);
+hold on;
+marker = plot(pic_A(1,1), 'o');
+marker.XData = pos_x + tX/2;
+marker.YData = pos_y + tY/2;
+marker.MarkerSize = 50;
+marker.LineWidth = 5;
+marker.Color = 'b';
+saveas(gcf, 're','png');
 

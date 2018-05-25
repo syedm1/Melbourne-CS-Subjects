@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.6.5)  19 MAY 2018 01:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.6.5)  21 MAY 2018 14:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -318,7 +318,7 @@ Underfull \hbox (badness 2343) in paragraph at lines 130--130
  []
 
 [2]
-Overfull \hbox (1.79852pt too wide) in paragraph at lines 140--151
+Overfull \hbox (5.53954pt too wide) in paragraph at lines 140--151
  [][] 
  []
 
@@ -327,22 +327,22 @@ Overfull \hbox (0.67128pt too wide) in paragraph at lines 161--169
  [][] 
  []
 
-(./report.bbl [3]
+(./report.bbl
 Underfull \hbox (badness 4341) in paragraph at lines 28--33
 []\OT1/cmr/m/n/10.95 Spencer Cap-pallo, Thomas Mensink, and
  []
 
-) [4
+[3]) [4
 
 ] (./report.aux) ) 
 Here is how much of TeX's memory you used:
- 3209 strings out of 492995
- 42632 string characters out of 6132705
- 119858 words of memory out of 5000000
- 6694 multiletter control sequences out of 15000+600000
+ 3212 strings out of 492995
+ 42650 string characters out of 6132705
+ 119882 words of memory out of 5000000
+ 6697 multiletter control sequences out of 15000+600000
  11635 words of font info for 42 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,11n,35p,807b,228s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 39i,11n,35p,850b,228s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.e
 nc}</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pf
 b></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
@@ -354,7 +354,7 @@ cal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local
 /texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/
 texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/t
 exlive/2017/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb>
-Output written on report.pdf (4 pages, 154360 bytes).
+Output written on report.pdf (4 pages, 154458 bytes).
 PDF statistics:
  61 PDF objects out of 1000 (max. 8388607)
  42 compressed objects within 1 object stream

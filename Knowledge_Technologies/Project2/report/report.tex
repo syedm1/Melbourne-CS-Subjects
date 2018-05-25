@@ -12,8 +12,6 @@
 \usepackage{xcolor}
 \sloppy
 
-\renewcommand{\algorithmicrequire}{\textbf{Input:}} 
-\renewcommand{\algorithmicensure}{\textbf{Output:}}
 
 
 \title{COMP90049 Knowledge Technologies \\
@@ -33,19 +31,19 @@ Emojis are ideograms which are naturally combined with plain text to visually co
 
 \cite{Aoki2011A} propose a method to create emotional vectors of emoticons automatically, \cite{Cappallo:2015:IZE:2733373.2806335} presents a model that can generating emoji labels for an image in a zero-shot manner. \cite{Barbieri2016What} analyze emojis used in Twitter and \cite{Barbieri2017Are} investigate the relation between words and emojis, studying the novel task of predicting which emojis are evoked by text-based tweet messages. Which is similar with our work. 
 
-In this work, we employ two classification frameworks Naive Bayes and Decision Tree, to automatically predict the most likely emoji a Twitter message evokes. We build two classifiers and apply them to the same dataset. The evaluations are based on precision, recall, F1-score and other performance of them.
+In this work, we employ two classification frameworks Naive Bayes and Decision Tree, to automatically predict the missing emoji of a Twitter message. We build two classifiers and apply them to the same dataset. The evaluations are based on precision, recall and F1-score.
 
 \section{Dataset and Task}
 
-\noindent\textbf{Dataset:} We sent rate-limited queries and retrieved tweets through the Twitter API\footnote{https://developer.twitter.com/en/docs/tweets/search/api-reference/ get-search-tweets} over the course of several days in April 2018. These queries queries consisted of one of the 10 widely used emojis. To make the returned result suitable for classification task, we remove tweets containing two or more of the queried emojis and tweets not containing the emoji in the visible text. The remaining tweets are shuffled, and randomly assigned to training, development and test sets.
+\noindent\textbf{Dataset:} We sent rate-limited queries and retrieved tweets through the Twitter API\footnote{https://developer.twitter.com/en/docs/tweets/search/api-reference/ get-search-tweets} over several days in April 2018. These queries consisted of one of the 10 widely used emojis. To make the returned result suitable for classification task, we remove tweets containing two or more of the queried emojis and tweets not containing the emoji in the visible text. The remaining tweets are shuffled, and randomly assigned to training, development and test sets.
 
-\noindent\textbf{Task:} We remove the emoji from the sequence of tokens (tweets) and use it as a label both for training and testing. The task for our machine learning models is to predict the single emoji that appears in the input tweet.
+\noindent\textbf{Task:} We remove the emoji from the queried tweets and use it as a label for training and testing. The task for our machine learning models is to predict the single emoji that appears in the input tweet.
 
 \section{Model}
 
-In this Section, we present and simply introduce the models that we use to predict emoji for a  given tweet.
+There are two models in our project, Naive Bayes Classifier and Decision Tree Classifier.
 
-\noindent\textbf{Naive Bayes Classifier} is a model that assign class labels to problem instances, represented as vector of feature values. The model based on the presupposition that the value of a particular feature is independent of the value of any other feature, given the class variable. It calculates each label's probability for a given vector of features and chooses one with maximum probability.
+\noindent\textbf{Naive Bayes Classifier} is a model that assign class labels to problem instances, represented as vector of feature values. The model based on the hypothesis that the value of a particular feature is independent of the value of any other feature, given the class variable. It calculates each label's probability for a given vector of features and chooses one with maximum probability.
 
 \noindent\textbf{Decision Tree Classifier} applies a strait forward idea to solve the classification problem. It poses a series of questions about the features of the test record. Each time it receive an answer, a follow-up question is asked until a conclusion about the class label of the record is reached.
 
@@ -61,33 +59,33 @@ To evaluate the classification models, precision, recall and F1-score are used. 
 	\label{fig:1}
 \end{figure}
 
-\noindent\textbf{Precision} is the ratio of correctly predicted positive observations to the total predicted positive observations (Shown below). Specifically, the question that this metric answer is of all tweets that labeled as an emoji A, how many actually A? High precision relates to the low false positive rate.
+\noindent\textbf{Precision} is the ratio of correctly predicted positive observations to the total predicted positive observations (Equation \ref{eq:1}). Specifically, the question that this metric answer is of all tweets that labeled as an emoji A, how many actually A? High precision relates to the low false positive rate.
 
-\begin{equation*}
+\begin{equation}\label{eq:1}
 Precision = \frac{TP}{TP + FP}
-\end{equation*}
+\end{equation}
 
-\noindent\textbf{Recall} (Sensitivity) is the ratio of correctly predicted positive observations to the all observations in actual class (Shown below). Specifically, the question recall answers is: Of all the tweets that truly A, how many do we label?
+\noindent\textbf{Recall} (Sensitivity) is the ratio of correctly predicted positive observations to the all observations in actual class (Equation \ref{eq:2}). Specifically, the question recall answers is: Of all the tweets that truly A, how many do we label?
 
-\begin{equation*}
+\begin{equation}\label{eq:2}
 Recall = \frac{TP}{TP + FN}
-\end{equation*}
+\end{equation}
 
-\noindent\textbf{F1-score} is the weighted average of Precision and Recall. This score takes both false positives and false negatives into account. The calculate method is shown below.
+\noindent\textbf{F1-score} is the weighted average of Precision and Recall. This score takes both false positives and false negatives into account. (Equation \ref{eq:3})
 
-\begin{equation*}
+\begin{equation}\label{eq:3}
 F1\textrm{-}score = \frac{2*Recall*Precision}{Recall + Precision}
-\end{equation*}
+\end{equation}
 
 
 \section{Experiments \& Results}\label{lab:res}
 
-We use two feature sets to evaluate the classifiers. The first feature set (named \texttt{most100}) is a list of the 100 tokens which appear with the greatest frequency in the training collection and the second feature set (named \texttt{top10}) is the tokens whose presence was automatically determined to be predictive of one or more emoji classes use statistical method before. For each feature set, we employ Naive Bayes Algorithm and Decision Tree Algorithm separately. 
+We use two feature sets to evaluate the classifiers. The first feature set (\texttt{most100}) is a list of the 100 tokens which appear with the greatest frequency in the training set and the second feature set (\texttt{top10}) is the tokens whose presence was automatically determined to be predictive of one or more emoji classes. For each feature set, we employ Naive Bayes Algorithm and Decision Tree Algorithm separately. 
 
 \subsection{Feature Analysis}
-We evaluate the Naive Bayes Classifier using \texttt{top10} feature set and Table \ref{tab:1} shows the precision, recall,  and F1-score  of prediction on each emoji . We also added in the last column the occurrences of each emoji in the dev set.
+We evaluate the Naive Bayes Classifier using \texttt{top10} feature set. Table \ref{tab:1} shows the precision, recall,  and F1-score  of prediction on each emoji . We also added in the last column the occurrences of each emoji in the develop set.
 
-From Table \ref{tab:1} we find that emoji \texttt{Disappoint} and \texttt{Facepalm} both get a relative low score, the reason is there are fewer instance of these two emoji in dataset and Naive Bayes usually has a poor performance one the class with few instances. 
+From Table \ref{tab:1} we find that emoji \texttt{Disappoint} and \texttt{Facepalm} both get a low F1-score (0.253 and 0.175 separately), the reason may be there are few instances of these two emojis in the dataset and Naive Bayes usually has a poor performance on the class with few instances. 
 
 \begin{table}
 	\centering
@@ -111,9 +109,9 @@ From Table \ref{tab:1} we find that emoji \texttt{Disappoint} and \texttt{Facepa
 	\label{tab:1}
 \end{table}
 
-To evaluate the effectiveness of features. We choose some features which seem related to one or more certain emojis and delete them. Consider the assumption that attributes are conditionally independent, delete some feature would not influence other features. In other words, the comparison between predict results on features with contain one and without it is meaningful, In fact, it reveals only the particular feature's influence on the classifier. For convenience, we use cross-validation with ten folders to build and evaluate the classifier. 
+To evaluate the effectiveness of features. We choose some features which seem related to one or more particular emojis and delete these features. Because of the assumption that attributes are conditionally independent, delete some features would not influence other features. the comparison between predicted results on features with contain one and without it is meaningful, This experiment reveals the particular feature's influence on the classifier. For convenience, we use cross-validation with ten folders to build and evaluate the classifier. 
 
-Table \ref{tab:2} compare the prediction on emoji \texttt{Explode} and \texttt{Think} with feature \texttt{army} and without it. The result shows that the feature \texttt{army} has great influence on \texttt{Explode} and almost no influence on \texttt{Think}. Which means that a sentence with word `army' tends to have higher or lower probability to use emoji \texttt{Explode},  but this word would have almost no help on the prediction of emoji \texttt{Think}. Therefore, choose high quality feature is essential for a classification model.
+Table \ref{tab:2} shows the result of prediction on emoji \texttt{Explode} and \texttt{Think} with feature \texttt{army} and without it. The result shows that the feature \texttt{army} has great influence on the precision and recall of \texttt{Explode} (precision varies from 0.701 to 0.543 and recall varies from 0.297 to 0.317) and almost no influence on \texttt{Think} (almost no change in precision and recall). Which means that a sentence with word `army' tends to have higher or lower probability to use emoji \texttt{Explode},  but this word would have almost no help on the prediction of emoji \texttt{Think}. Therefore, choose high quality features is essential for a classification model.
 \begin{table}[h]
 	\centering
 	\begin{tabular}{c|c|ccc}
@@ -133,7 +131,7 @@ Table \ref{tab:2} compare the prediction on emoji \texttt{Explode} and \texttt{T
 
 \subsection{Algorithm Analysis}
 
-To compare the performance of different classifier . We evaluate Naive Bayes Classifier and Decision Tree Classifier on two feature sets. Table \ref{tab:4} shows the results of two classifiers on the two feature sets. From which we find that for the same feature set, Naive Bayes always much faster than Decision. Which is because Naive Bayes Classifier is very simple to build, extremely fast to make decisions, and easy to update the probabilities, it also scales easily for large number of dimensions (100s) and data sizes. 
+To compare the performance of different classifier, we evaluate two classifiers on two feature sets. Table \ref{tab:4} shows the results of two classifiers on the two feature sets, first two rows are results on \texttt{most100}, next two rows are results on \texttt{top10}. From the table we find that for the same feature set, Naive Bayes always much faster than Decision Tree. Which is because Naive Bayes Classifier is very simple to build, extremely fast to make decisions, and easy to update the probabilities, it also scales easily for large number of dimensions (100s) and data sizes. 
 
 \begin{table}[h]
 	\centering
@@ -142,19 +140,19 @@ To compare the performance of different classifier . We evaluate Naive Bayes Cla
 		\textbf{Fea} & \textbf{C} & \textbf{P} & \textbf{R} & \textbf{F} & \textbf{RT}\\
 		\hline
 		\multirow{2}{*}{most100} & NB & 0.330   &   0.304  &  0.303  &  0.73 \\
-		& DT & 0.467  &    0.456   & 0.457  & 127.7 \\
+		& DT & 0.467  &    0.456   & \textbf{0.457}  & 127.7 \\
 		\hline
 		\multirow{2}{*}{top10} & NB &0.441  &    0.262  &  0.253  &  0.54 \\
-		&	DT & 0.433   &   0.311  &  0.302  & 88.03  \\
+		&	DT & 0.433   &   0.311  &  \textbf{0.302}  & 88.03  \\
 		\hline
 	\end{tabular}
-	\caption{Results of two classifier Naive Bayes (NB) and Decision Tree (DT) on two feature sets. Evaluation on Precision, Recall, F1-score and Run Time.}
+	\caption{Results of two classifier Naive Bayes (NB) and Decision Tree (DT) on two feature sets. Evaluation on Precision (P), Recall (R), F1-score (F) and Run Time (RT).}
 	\label{tab:4}
 \end{table}
 
-However, Naive Bayes Classifier has obvious disadvantages. The presupposition that features are conditionally independent for a given class isn't always tenable and the model is too simple which makes it a general classifier but not custom-made for a particular task. In addition, this classifier is base on the probability which makes it can not have a good prediction on the labels with low frequency (demonstrate before).
+However, Naive Bayes Classifier has obvious disadvantages. The hypothesis that features are conditionally independent for a given class isn't always tenable and the model is too simple which makes it a general classifier but not custom-made for a particular task. In addition, this classifier is base on the probability which makes it perform bad on the labels with low frequency.
 
-Compared with Naive Bayes Classifier, Decision Tree Classifier is time consumed but  achieve better performance. Consider the  construction of a tree, it is actually inexpensive as a machine learning progress. Comparable performance on simple datasets make it also very popular. However, the fatal flaw is that it can attempt to fit a really complex tree to the data, which will leading to overfitting. Besides, it's accuracy depends a lot on the data presented. For example, the tree can become biased towards a specific class if it occurs a lot, or become "confused" when trying to fit certain rules inferred from the data. 
+Compared with Naive Bayes Classifier, Decision Tree Classifier is time consumed but  achieve better performance on both precision and recall. As a machine learning algorithm, the  progress of constructing a tree is inexpensive. Simple construction and comparable performance make the algorithm very popular. However, it may fit a very complex tree structure to the data, which will leading to overfitting. Besides, it's accuracy depends a lot on the data presented. For example, the tree can become biased towards a specific class if it occurs a lot, or become "confused" when trying to fit certain rules inferred from the data. 
 
 \begin{table}[h]
 	\centering
@@ -170,15 +168,15 @@ Compared with Naive Bayes Classifier, Decision Tree Classifier is time consumed 
 	\label{tab:5}
 \end{table}
 	
-To demonstrate the trait of Decision Tree classifier, we make a compare experiment between predictions with features contained \texttt{id} and removed \texttt{id}. The experiment is build on cross-validation with ten folders. Table \ref{tab:5} shows the results. It shows that if we do not remove \texttt{id} as a feature, the construct decision tree will extremely large. The reason is that decision tree find a currently best feature as a decision point. So it has great probability to choose \texttt{id} as the root decision point because it can classify all instances base on this feature. This bad feature \texttt{id} will also lead to a decrease of precision and recall, which is because of the overfit of the classifier, the performance was influenced by a bad feature.
+To demonstrate the trait of Decision Tree classifier, we make a compare experiment between predictions with features include \texttt{id} and removed \texttt{id}. The experiment is build on cross-validation with ten folders. Table \ref{tab:5} shows the results. It shows that if we do not remove \texttt{id} from feature set, the constructed decision tree will extremely large (consist of 1882 leaves). The reason is that decision tree find a currently best feature as a decision point. So it has great probability to choose \texttt{id} as the root decision point because it can classify all instances base on this feature. In addition, we find the bad feature lead to a decrease of precision and recall of the classifier, precision is 0.433 without $id$ but only 0.346 with it. This phenomenon is a kind of overfitting.
 
 \section{Conclusion}
 
-In this report we compare the Naive Bayes and Decision Tree algorithm on a particular classification task. We find that Naive Bayes Classifier could get compatible result in a very short time and it scales easily for large number of dimensions and data size, which made it the first choice for a new classification task. Whatever the classification is, we can build a Naive Bayes Classifier and prediction results can be used as a baseline.
+In this report we compare the Naive Bayes and Decision Tree algorithm on a particular classification task. We find that Naive Bayes Classifier could get competitive result in a very short time and it scales easily for large number of dimensions and data size, which makes it the first choice for a new classification task. Whatever the classification is, we can build a Naive Bayes Classifier as baseline.
 
-As for Decision Tree Classifier. It costs more time than Naive Bayes Classifier but also performance better than it on this task. It just builds a decision tree once and does not need to train which makes it one of the simplest model in machine learning area. The mechanism of the classifier looks like greedy algorithm, each step it choose a current best feature, usually it is the feature with maximum information gain Therefore, it has the flaw as the greedy algorithm, it can not ensure to build a global best decision tree. Another disadvantage is Decision Tree Classifier is easy to overfit because of the elaborate divide of the instance.
+As for Decision Tree Classifier. It costs more time than Naive Bayes Classifier but also perform better than it on this task. It just builds a decision tree once and does not need to train which makes it one of the simplest model in machine learning area. The disadvantage is Decision Tree Classifier is easy to overfitting because of the elaborate divide of the instance.
 
-In addition, we find that good features can help classifier performance better. Generally, good features always have obvious bias distribution among different classes. For Naive Bayes Classifier, a bad features may have little helpful for classifier. However, for Decision Tree Classifier, bad featuress may have huge influence on the performance, eg:\texttt{id}. As a conclusion, in the future, we should try to find best features for our machine learning tasks.
+In addition, good features can help classifier performance better. Generally, good features always have obvious bias distribution among different classes. For Naive Bayes Classifier, a bad features may have little helpful for classifier. However, for Decision Tree Classifier, bad features may have huge influence on the performance, eg:\texttt{id}. As a conclusion, in the future, we should try to find best features for our machine learning tasks.
 
 \bibliographystyle{acl}
 \bibliography{bibliography}

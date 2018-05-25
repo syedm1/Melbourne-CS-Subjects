@@ -46,14 +46,13 @@ def plot_cnv(X, cnvi):
 
 
 # output the segments with abs average log-ratio >= 0.1
-def output(X,I,index,out_file,ch):
+def output(X,D,index,out_file,ch):
     out_f = open(out_file,'w')
     # change point index
-    cpi = np.where(I >= 1)
+    cpi = np.where(D >= 1)
     cpi = cpi[0]
-    print cpi
     # change points
-    cps = [index[i][1] for i in cpi]
+    cps = [index[i][0] for i in cpi]
     # save CNV index and CNVs
     cnvi = []
     cnv = []
@@ -75,46 +74,54 @@ def output(X,I,index,out_file,ch):
     
 
 # recursive cbs
-def cbs(X,I,a,b,t):
-    
+def cbs(X,I,D,t):
+
     # too near
-    if b-a < 3:
-        return I
+    n = len(X)
+    if n < 2:
+        return D
 
     # S : cumulative sum of first n bins
-    X_ = X[a:b]
-    S = np.copy(X_)
-    n = len(S)
+    S = np.zeros((n))
     for i in range(n):
-        S[i] = X_[0:i+1].sum()
-
+        S[i] = X[0:i+1].sum()
+    
     # Z : 
     Z = np.zeros((n,n))
-    for i in range(0,n):
+    for i in range(0,n-1):
         for j in range(i+1,n):
-            coef = 1 / math.sqrt(1.0/(j-i) + 1.0/(n-j+i))
+            coef = 1 / math.sqrt(1.0/(j-i) + 1.0/(n-j+i+1))
             factor = (S[j]-S[i])/(j-i) - (S[n-1]-S[j]+S[i])/(n-j+i)
-            Z[i,j] = coef * factor
+            Z[i,j] = abs(coef * factor)
 
     # find max value and position
     maximum = np.max(Z)
     if maximum < t:
-        return I
+        return D
     else:
         # find change points recursively
         pos = np.where(Z == maximum)
-        pos1 = a + min(pos[0][0],pos[1][0])
-        pos2 = a + max(pos[0][0],pos[1][0])
-        # print pos1,pos2,a,b
-        # boundary detect
-        if abs(pos1-a)>1:
-            I[pos1] += 1
-        if abs(pos2-b)>2:
-            I[pos2] += 1
-        I1 = cbs(X,I,a,pos1+1,t)
-        I2 = cbs(X,I,pos1+1,pos2+1,t)
-        I3 = cbs(X,I,pos2+1,b,t)
-        return I1 + I2 + I3
+        pos1 = min(pos[0][0],pos[1][0])+1
+        pos2 = max(pos[0][0],pos[1][0])+1
+        
+        # boundary detecta and single extremum ignore
+        if pos2 - pos1 <= 1 or pos2 - pos1 >= n-1:
+            return D
+        if pos1 > 1:
+            D[I[pos1]] += 1
+        if pos2 < n-1:
+            D[I[pos2]] += 1
+        
+        X1 = X[pos1:pos2]
+        X2 = np.append(X[0:pos1],X[pos2:n])
+        
+        I1 = I[pos1:pos2]
+        I2 = np.append(I[0:pos1],I[pos2:n])
+        
+        D1 = cbs(X1,I1,D,t)
+        D2 = cbs(X2,I2,D,t)
+        
+        return D1 + D2
 
 
 # init the log-ratio data
@@ -131,17 +138,20 @@ def cbs_init(bin_file, threshold, out_file):
     X = np.log2(bins / np.median(bins[:n/3]))
     X[X > 2] = 0
     X[X < -5] = 0
-    
-    # I : segmentation index
-    I = np.zeros((n))
-    I[0] = 1
-    I[n-1] = 1
+   
+    # I : index of X
+    I = np.arange(0,n)
 
-    # call cbs resursion
-    cbs(X,I,0,n,threshold)
+    # D : segmentation index
+    D = np.zeros((n))
+    D[0] = 1
+    D[n-1] = 1
+
+    # call cbs
+    cbs(X,I,D,threshold)
     
     # output
-    output(X,I,index,out_file,ch)
+    output(X,D,index,out_file,ch)
 
 
 # Usage of the tool

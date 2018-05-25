@@ -3,47 +3,66 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: main.aux
 A level-1 auxiliary file: cover.aux
 The style file: abbrv.bst
-I found no \citation commands---while reading file main.aux
 Database file #1: biblio.bib
-You've used 0 entries,
+Warning--entry type for "Li2002Auto" isn't style-file defined
+--line 59 of file biblio.bib
+Too many commas in name 1 of "Li Fan,JianZhong Qian,Benjamin L. Odry,Hong Shen,David Naidich,Gerhard Kohl,Ernst Klotz" for entry Li2002Auto
+while executing---line 1049 of file abbrv.bst
+Too many commas in name 1 of "Li Fan,JianZhong Qian,Benjamin L. Odry,Hong Shen,David Naidich,Gerhard Kohl,Ernst Klotz" for entry Li2002Auto
+while executing---line 1049 of file abbrv.bst
+Too many commas in name 1 of "Li Fan,JianZhong Qian,Benjamin L. Odry,Hong Shen,David Naidich,Gerhard Kohl,Ernst Klotz" for entry Li2002Auto
+while executing---line 1049 of file abbrv.bst
+Too many commas in name 1 of "Li Fan,JianZhong Qian,Benjamin L. Odry,Hong Shen,David Naidich,Gerhard Kohl,Ernst Klotz" for entry Li2002Auto
+while executing---line 1049 of file abbrv.bst
+Warning--empty journal in article2013
+Warning--empty journal in Lecun2015Stereo
+Too many commas in name 1 of "Li Fan,JianZhong Qian,Benjamin L. Odry,Hong Shen,David Naidich,Gerhard Kohl,Ernst Klotz" for entry Li2002Auto
+while executing---line 1090 of file abbrv.bst
+Too many commas in name 1 of "Li Fan,JianZhong Qian,Benjamin L. Odry,Hong Shen,David Naidich,Gerhard Kohl,Ernst Klotz" for entry Li2002Auto
+while executing---line 1090 of file abbrv.bst
+Too many commas in name 1 of "Li Fan,JianZhong Qian,Benjamin L. Odry,Hong Shen,David Naidich,Gerhard Kohl,Ernst Klotz" for entry Li2002Auto
+while executing---line 1090 of file abbrv.bst
+Too many commas in name 1 of "Li Fan,JianZhong Qian,Benjamin L. Odry,Hong Shen,David Naidich,Gerhard Kohl,Ernst Klotz" for entry Li2002Auto
+while executing---line 1090 of file abbrv.bst
+You've used 15 entries,
             2118 wiz_defined-function locations,
-            498 strings with 3712 characters,
-and the built_in function-call counts, 18 in all, are:
-= -- 0
-> -- 0
-< -- 0
-+ -- 0
-- -- 0
-* -- 2
-:= -- 7
-add.period$ -- 0
-call.type$ -- 0
-change.case$ -- 0
+            598 strings with 6235 characters,
+and the built_in function-call counts, 4885 in all, are:
+= -- 467
+> -- 195
+< -- 5
++ -- 79
+- -- 62
+* -- 295
+:= -- 779
+add.period$ -- 45
+call.type$ -- 15
+change.case$ -- 72
 chr.to.int$ -- 0
-cite$ -- 0
-duplicate$ -- 0
-empty$ -- 1
-format.name$ -- 0
-if$ -- 1
+cite$ -- 17
+duplicate$ -- 210
+empty$ -- 425
+format.name$ -- 62
+if$ -- 1070
 int.to.chr$ -- 0
-int.to.str$ -- 0
-missing$ -- 0
-newline$ -- 3
-num.names$ -- 0
-pop$ -- 0
+int.to.str$ -- 15
+missing$ -- 17
+newline$ -- 76
+num.names$ -- 30
+pop$ -- 105
 preamble$ -- 1
-purify$ -- 0
+purify$ -- 61
 quote$ -- 0
-skip$ -- 1
+skip$ -- 165
 stack$ -- 0
-substring$ -- 0
-swap$ -- 0
-text.length$ -- 0
+substring$ -- 285
+swap$ -- 56
+text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 0
-warning$ -- 0
-while$ -- 0
-width$ -- 0
-write$ -- 2
-(There was 1 error message)
+type$ -- 52
+warning$ -- 2
+while$ -- 43
+width$ -- 17
+write$ -- 157
+(There were 8 error messages)
