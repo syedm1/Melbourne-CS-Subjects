@@ -1,6 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Author:   Haonan Li                                               %
-% Purpose:  Detect dots on a calibration plate                      %
+% Purpose:  Detect all dots on a calibration plate and sort them    %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 function dots = dot_detect(img_t)
@@ -15,8 +15,6 @@ v = [-2:2];
 [U,V] = meshgrid(u,v);
 mat_gauss = exp(-(U.^2+V.^2)./2/3^2);
 % draw the gaussian template
-% u = [-20:0.1:20];
-% v = [-20:0.1:20];
 % [U,V] = meshgrid(u,v);
 % mat_gauss = exp(-(U.^2+V.^2)./2/3^2);
 % surf(mat_gauss), shading flat

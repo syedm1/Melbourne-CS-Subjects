@@ -38,7 +38,7 @@ Source code of one dimensional cross correlation and normalized one dimensional 
 
 \section{Signal Offset}
 
-Consider two signals (denote by vector) come from the same source and they are just offset by some time since they are captured by two sensots with constant distance. Cross correlation can be used to find the offset time and distance between two sensors. First find the max value's position of the cross correlation vector computed from two signals. Then find corresponding positions of the two signals and compute the offset of the signal vector. Through the given sample rate and propagation speed, the offset time and distance can be calculated as follow:
+Consider two signals (denote by vector) come from the same source and they are just offset by some time since they are captured by two sensors with constant distance. Cross correlation can be used to find the offset time and distance between two sensors. First find the max value's position of the cross correlation vector computed from two signals. Then find corresponding positions of the two signals and compute the offset of the signal vector. Through the given sample rate and propagation speed, the offset time and distance can be calculated as follow:
 
 \begin{equation*}
 \text{offset time}=\frac{\text{offset}}{\text{sample rate}} 
@@ -61,9 +61,9 @@ The x coordinate of maximum correlation is 50081, the length of signal is 176401
 
 Source code of signal offset computing is in Appendix \ref{code:1.2}.
 
-\section{Normalised Spatial Cross Correlation in 2d}
+\section{Normalized Spatial Cross Correlation in 2d}
 
-Till now, the cross correlation we used can only computer one dimensional signal. But in later work, for comparing images and get the correlation of them smoothly, it is necessary to extend the cross correlation to two dimensions. Similar with signals can be represent by vector, images can represented by matrix. Consider two matrices, t (template) and A (search region), The matrix A will always larger than the matrix t. We can use two nested for-loops to ``lag'' t over A, compute for each ``lag'' the cross-correlation. Normalized cross correlation of two matrices defines as:
+Till now, the cross correlation we used can only computer one dimensional signal. But in later work, for comparing images and get the correlation of them smoothly, it is necessary to extend the cross correlation to two dimensions. Similar with signals can be represented by vector, images can represented by matrix. Consider two matrices, t (template) and A (search region), The matrix A will always larger than the matrix t. We can use two nested for-loops to ``lag'' t over A, compute for each ``lag'' the cross-correlation. Normalized cross correlation of two matrices defines as:
 
 \begin{equation*}
 R(lag_{x},lag_{y})=
@@ -206,8 +206,8 @@ Source code for pattern finder is in Appendix \ref{code:1.6}.
 
 This part is just some thinking by myself. 
 
-From the above research, we know that 1d cross correlation can be used to process acoustical signal and 2d cross correlation is very useful for image processing. Then, how about 3d cross correlation? If 3d cross correlation can be compute, we can easily know the space structure's similarity of two objects, theoretically. This task may have its value in microcosmos' research like molecular physics and microbiology. Consider there are one cell with a particular disease as specimen and no one know the reason of its pathogenicity. In the meanwhile, for several cells, some of them have the particular disease. If we can find spatial cross correlation between the specimen and other cell, base on the hypothesis that same diseased cell have the similar space structure, we can distinguish the healthy cell and diseased cell. 
+From the above research, we know that 1d cross correlation can be used to process acoustical signal and 2d cross correlation is very useful for image processing. Then, how about 3d cross correlation? If 3d cross correlation can be computed, we can easily know the space structure's similarity of two objects, theoretically. This task may have its value in microcosmos' research like molecular physics and microbiology. Consider there are one cell with a particular disease as specimen and no one know the reason of its pathogenicity. In the meanwhile, for several cells, some of them have the particular disease. If we can find spatial cross correlation between the specimen and other cell, base on the hypothesis that same diseased cell have the similar space structure, we can distinguish the healthy cell and diseased cell. 
 
-Computer vision is one of the most popular research today. One important reason is people believe 2d object is easy to understand and image compared with 3d object. The 2d technology today have been more and more mature. However, we live in a 3d (even higher dimensions) world, research in 3d will become mainstream someday, I believe 3d cross correlation will become a basic concept and tools like today's 2d cross correlation in the future. 
+Computer vision is one of the most popular research today. One important reason is people believe 2d object is easy to understand and image compared with 3d object. The 2d technology today have been more and more mature. However, we live in a 3d (even higher dimensions) world, research in 3d will become mainstream someday, I believe 3d cross correlation will become a basic concept and tool like today's 2d cross correlation in the future. 
 
 Well, there are already some research about 3D cross correlation\cite{Li2002Auto}\cite{article2013}.

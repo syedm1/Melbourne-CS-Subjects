@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Author:   Haonan Li                                               %
 % Purpose:  Receive two matrix, t(template) and A(search region)    %
-%           return normalized cross-correlation of these two matrix %
+%           return normalized cross-correlation of them             %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 function mat_res = normalised_spatial_correlation_2d(mat_t, mat_A)

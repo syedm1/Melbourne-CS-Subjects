@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.6.5)  23 MAY 2018 16:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.6.5)  27 MAY 2018 20:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -774,7 +774,7 @@ LaTeX Info: Redefining \nameref on input line 8.
 \openout2 = `cover.aux'.
 
  (./cover.tex
-<figures/uom_banner.pdf, id=112, 421.77576pt x 424.98775pt>
+<figures/uom_banner.pdf, id=108, 421.77576pt x 424.98775pt>
 File: figures/uom_banner.pdf Graphic file (type pdf)
 
 <use figures/uom_banner.pdf>
@@ -826,7 +826,7 @@ f>
 -converted-to.pdf figures/part1/crr_vis0.eps>
 (epstopdf)             \includegraphics on input line 55.
 Package epstopdf Info: Output file is already uptodate.
- <figures/part1/crr_vis0-eps-converted-to.pdf, id=182, 562.1pt x 421.575pt>
+ <figures/part1/crr_vis0-eps-converted-to.pdf, id=177, 562.1pt x 421.575pt>
 File: figures/part1/crr_vis0-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/part1/crr_vis0-eps-converted-to.pdf>
@@ -834,7 +834,7 @@ Package pdftex.def Info: figures/part1/crr_vis0-eps-converted-to.pdf used on in
 put line 55.
 (pdftex.def)             Requested size: 217.66211pt x 163.24283pt.
  [4 <./figures/part1/crr_vis0-eps-converted-to.pdf>]
-<figures/part1/wallypuzzle_rocketman.png, id=202, 20.05493pt x 22.22302pt>
+<figures/part1/wallypuzzle_rocketman.png, id=197, 20.05493pt x 22.22302pt>
 File: figures/part1/wallypuzzle_rocketman.png Graphic file (type png)
 
 <use figures/part1/wallypuzzle_rocketman.png>
@@ -853,7 +853,7 @@ result-eps-converted-to.pdf figures/part1/wallypuzzle_result.eps>
 (epstopdf)             \includegraphics on input line 96.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/part1/wallypuzzle_result-eps-converted-to.pdf, id=204, 959.585pt x 587
+<figures/part1/wallypuzzle_result-eps-converted-to.pdf, id=199, 959.585pt x 587
 .19376pt>
 File: figures/part1/wallypuzzle_result-eps-converted-to.pdf Graphic file (type 
 pdf)
@@ -873,7 +873,7 @@ f>
 (epstopdf)             \includegraphics on input line 108.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/part1/crr_vis1-eps-converted-to.pdf, id=208, 562.1pt x 421.575pt>
+<figures/part1/crr_vis1-eps-converted-to.pdf, id=203, 562.1pt x 421.575pt>
 File: figures/part1/crr_vis1-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/part1/crr_vis1-eps-converted-to.pdf>
@@ -892,7 +892,7 @@ f>
 (epstopdf)             \includegraphics on input line 114.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/part1/crr_vis2-eps-converted-to.pdf, id=209, 562.1pt x 421.575pt>
+<figures/part1/crr_vis2-eps-converted-to.pdf, id=204, 562.1pt x 421.575pt>
 File: figures/part1/crr_vis2-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/part1/crr_vis2-eps-converted-to.pdf>
@@ -913,7 +913,7 @@ verted-to.pdf figures/part1/drum.eps>
 (epstopdf)             \includegraphics on input line 181.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/part1/drum-eps-converted-to.pdf, id=249, 562.1pt x 421.575pt>
+<figures/part1/drum-eps-converted-to.pdf, id=244, 562.1pt x 421.575pt>
 File: figures/part1/drum-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/part1/drum-eps-converted-to.pdf>
@@ -931,7 +931,7 @@ nverted-to.pdf figures/part1/music.eps>
 (epstopdf)             \includegraphics on input line 187.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/part1/music-eps-converted-to.pdf, id=250, 562.1pt x 421.575pt>
+<figures/part1/music-eps-converted-to.pdf, id=245, 562.1pt x 421.575pt>
 File: figures/part1/music-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/part1/music-eps-converted-to.pdf>
@@ -950,7 +950,7 @@ f>
 (epstopdf)             \includegraphics on input line 193.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/part1/crr_vis3-eps-converted-to.pdf, id=251, 562.1pt x 421.575pt>
+<figures/part1/crr_vis3-eps-converted-to.pdf, id=246, 562.1pt x 421.575pt>
 File: figures/part1/crr_vis3-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/part1/crr_vis3-eps-converted-to.pdf>
@@ -988,7 +988,7 @@ o.pdf>
 (epstopdf)             \includegraphics on input line 15.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/part2/gaussian_dis-eps-converted-to.pdf, id=290, 562.1pt x 421.575pt>
+<figures/part2/gaussian_dis-eps-converted-to.pdf, id=285, 562.1pt x 421.575pt>
 File: figures/part2/gaussian_dis-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/part2/gaussian_dis-eps-converted-to.pdf>
@@ -1007,7 +1007,7 @@ ps-converted-to.pdf figures/part2/dot_detect.eps>
 (epstopdf)             \includegraphics on input line 21.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/part2/dot_detect-eps-converted-to.pdf, id=291, 943.525pt x 679.53876pt
+<figures/part2/dot_detect-eps-converted-to.pdf, id=286, 943.525pt x 679.53876pt
 >
 File: figures/part2/dot_detect-eps-converted-to.pdf Graphic file (type pdf)
  <use figures/part2/dot_detect-eps-converted-to.pdf>
@@ -1026,7 +1026,7 @@ o.pdf>
 (epstopdf)             \includegraphics on input line 34.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/part2/dot_disorder-eps-converted-to.pdf, id=294, 1445.4pt x 852.18375p
+<figures/part2/dot_disorder-eps-converted-to.pdf, id=289, 1445.4pt x 852.18375p
 t>
 File: figures/part2/dot_disorder-eps-converted-to.pdf Graphic file (type pdf)
  <use figures/part2/dot_disorder-eps-converted-to.pdf>
@@ -1045,7 +1045,7 @@ eps-converted-to.pdf figures/part2/dot_ordered.eps>
 (epstopdf)             \includegraphics on input line 40.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/part2/dot_ordered-eps-converted-to.pdf, id=295, 1445.4pt x 852.18375pt
+<figures/part2/dot_ordered-eps-converted-to.pdf, id=290, 1445.4pt x 852.18375pt
 >
 File: figures/part2/dot_ordered-eps-converted-to.pdf Graphic file (type pdf)
  <use figures/part2/dot_ordered-eps-converted-to.pdf>
@@ -1055,7 +1055,7 @@ Package pdftex.def Info: figures/part2/dot_ordered-eps-converted-to.pdf used on
  [8
 
  <./figures/part2/gaussian_dis-eps-converted-to.pdf> <./figures/part2/dot_detec
-t-eps-converted-to.pdf>] <figures/part2/extrinsic.pdf, id=316, 366.85457pt x 19
+t-eps-converted-to.pdf>] <figures/part2/extrinsic.pdf, id=311, 366.85457pt x 19
 6.7591pt>
 File: figures/part2/extrinsic.pdf Graphic file (type pdf)
 
@@ -1064,14 +1064,14 @@ Package pdftex.def Info: figures/part2/extrinsic.pdf used on input line 55.
 (pdftex.def)             Requested size: 290.22107pt x 155.66014pt.
  [9 <./figures/part2/dot_disorder-eps-converted-to.pdf> <./figures/part2/dot_or
 dered-eps-converted-to.pdf> <./figures/part2/extrinsic.pdf>] <figures/part2/mel
-_left.pdf, id=351, 4047.12pt x 3035.34pt>
+_left.pdf, id=346, 4047.12pt x 3035.34pt>
 File: figures/part2/mel_left.pdf Graphic file (type pdf)
 
 <use figures/part2/mel_left.pdf>
 Package pdftex.def Info: figures/part2/mel_left.pdf used on input line 89.
 (pdftex.def)             Requested size: 232.17242pt x 174.09996pt.
 
-<figures/part2/mel_right.pdf, id=352, 4047.12pt x 3035.34pt>
+<figures/part2/mel_right.pdf, id=347, 4047.12pt x 3035.34pt>
 File: figures/part2/mel_right.pdf Graphic file (type pdf)
 
 <use figures/part2/mel_right.pdf>
@@ -1093,7 +1093,7 @@ Package epstopdf Info: Source file: <figures/part2/img_cmp.eps>
 converted-to.pdf figures/part2/img_cmp.eps>
 (epstopdf)             \includegraphics on input line 111.
 Package epstopdf Info: Output file is already uptodate.
- <figures/part2/img_cmp-eps-converted-to.pdf, id=408, 562.1pt x 421.575pt>
+ <figures/part2/img_cmp-eps-converted-to.pdf, id=403, 562.1pt x 421.575pt>
 File: figures/part2/img_cmp-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/part2/img_cmp-eps-converted-to.pdf>
@@ -1101,7 +1101,7 @@ Package pdftex.def Info: figures/part2/img_cmp-eps-converted-to.pdf used on inp
 ut line 111.
 (pdftex.def)             Requested size: 241.84843pt x 181.38306pt.
 
-<figures/part2/img_cmp1.pdf, id=410, 2244.35486pt x 1418.48941pt>
+<figures/part2/img_cmp1.pdf, id=405, 2244.35486pt x 1418.48941pt>
 File: figures/part2/img_cmp1.pdf Graphic file (type pdf)
 
 <use figures/part2/img_cmp1.pdf>
@@ -1111,7 +1111,7 @@ Package pdftex.def Info: figures/part2/img_cmp1.pdf used on input line 120.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figures/part2/window_overlap.pdf, id=414, 803.0pt x 200.75pt>
+<figures/part2/window_overlap.pdf, id=409, 803.0pt x 200.75pt>
 File: figures/part2/window_overlap.pdf Graphic file (type pdf)
 
 <use figures/part2/window_overlap.pdf>
@@ -1123,7 +1123,7 @@ Package pdftex.def Info: figures/part2/window_overlap.pdf used on input line 13
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [11 <./figures/part2/img_cmp-eps-converted-to.pdf>]
-<figures/part2/search_region.pdf, id=435, 803.0pt x 304.98843pt>
+<figures/part2/search_region.pdf, id=430, 803.0pt x 304.98843pt>
 File: figures/part2/search_region.pdf Graphic file (type pdf)
 
 <use figures/part2/search_region.pdf>
@@ -1135,7 +1135,7 @@ ures/part2/search_region.pdf
 
 pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/part2/search_regio
 n.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->] <figures/part2/search_region1a.pdf, id=535, 1927.2pt x 1084.05pt>
+>] <figures/part2/search_region1a.pdf, id=530, 1927.2pt x 1084.05pt>
 File: figures/part2/search_region1a.pdf Graphic file (type pdf)
 
 <use figures/part2/search_region1a.pdf>
@@ -1143,7 +1143,7 @@ Package pdftex.def Info: figures/part2/search_region1a.pdf used on input line 1
 59.
 (pdftex.def)             Requested size: 232.17242pt x 130.59315pt.
 
-<figures/part2/search_region1b.pdf, id=536, 1927.2pt x 1084.05pt>
+<figures/part2/search_region1b.pdf, id=531, 1927.2pt x 1084.05pt>
 File: figures/part2/search_region1b.pdf Graphic file (type pdf)
 
 <use figures/part2/search_region1b.pdf>
@@ -1151,72 +1151,36 @@ Package pdftex.def Info: figures/part2/search_region1b.pdf used on input line 1
 64.
 (pdftex.def)             Requested size: 232.17242pt x 130.59315pt.
 
-<figures/part2/multi_pass1.pdf, id=539, 481.12747pt x 241.67188pt>
+<figures/part2/multi_pass1.pdf, id=534, 481.12747pt x 241.67188pt>
 File: figures/part2/multi_pass1.pdf Graphic file (type pdf)
 
 <use figures/part2/multi_pass1.pdf>
 Package pdftex.def Info: figures/part2/multi_pass1.pdf used on input line 186.
 (pdftex.def)             Requested size: 232.17242pt x 116.6207pt.
 
-<figures/part2/multi_pass2.pdf, id=540, 475.04877pt x 241.67188pt>
+<figures/part2/multi_pass2.pdf, id=535, 475.04877pt x 241.67188pt>
 File: figures/part2/multi_pass2.pdf Graphic file (type pdf)
 
 <use figures/part2/multi_pass2.pdf>
 Package pdftex.def Info: figures/part2/multi_pass2.pdf used on input line 191.
 (pdftex.def)             Requested size: 232.17242pt x 118.11049pt.
-
-
-Package caption Warning: \label without proper reference on input line 211.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `fig:test1' on page 13 undefined on input line 204.
-
-
-Package caption Warning: \label without proper reference on input line 216.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `fig:test2' on page 13 undefined on input line 204.
-
-
-Package caption Warning: \label without proper reference on input line 221.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `fig:test3' on page 13 undefined on input line 204.
-
-
-Package caption Warning: \label without proper reference on input line 226.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `fig:test4' on page 13 undefined on input line 204.
-
-
-Package caption Warning: \label without proper reference on input line 231.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `fig:test5' on page 13 undefined on input line 204.
-
-[13 <./figures/part2/search_region1a.pdf> <./figures/part2/search_region1b.pdf>
- <./figures/part2/multi_pass1.pdf> <./figures/part2/multi_pass2.pdf
+ [13 <./figures/part2/search_region1a.pdf> <./figures/part2/search_region1b.pdf
+> <./figures/part2/multi_pass1.pdf> <./figures/part2/multi_pass2.pdf
 
 pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./figures/part2/multi_pass2.
 pdf): PDF inclusion: multiple pdfs with page group included in a single page
->] <figures/part2/test_left_2.pdf, id=623, 578.64178pt x 499.92772pt>
+>] <figures/part2/test_left_2.pdf, id=618, 578.64178pt x 499.92772pt>
 File: figures/part2/test_left_2.pdf Graphic file (type pdf)
 
 <use figures/part2/test_left_2.pdf>
 Package pdftex.def Info: figures/part2/test_left_2.pdf used on input line 210.
 (pdftex.def)             Requested size: 116.08887pt x 100.29652pt.
 
-<figures/part2/test_right_2.pdf, id=624, 578.64178pt x 499.92772pt>
+<figures/part2/test_right_2.pdf, id=619, 578.64178pt x 499.92772pt>
 File: figures/part2/test_right_2.pdf Graphic file (type pdf)
 
 <use figures/part2/test_right_2.pdf>
-Package pdftex.def Info: figures/part2/test_right_2.pdf used on input line 215.
+Package pdftex.def Info: figures/part2/test_right_2.pdf used on input line 216.
 
 (pdftex.def)             Requested size: 116.08887pt x 100.29652pt.
 Package epstopdf Info: Source file: <figures/part2/test2_cmp.eps>
@@ -1228,15 +1192,15 @@ df>
 (epstopdf)                    size: 63579 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/part2/test2_cmp-ep
 s-converted-to.pdf figures/part2/test2_cmp.eps>
-(epstopdf)             \includegraphics on input line 220.
+(epstopdf)             \includegraphics on input line 222.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/part2/test2_cmp-eps-converted-to.pdf, id=625, 562.1pt x 421.575pt>
+<figures/part2/test2_cmp-eps-converted-to.pdf, id=620, 562.1pt x 421.575pt>
 File: figures/part2/test2_cmp-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/part2/test2_cmp-eps-converted-to.pdf>
 Package pdftex.def Info: figures/part2/test2_cmp-eps-converted-to.pdf used on i
-nput line 220.
+nput line 222.
 (pdftex.def)             Requested size: 169.29684pt x 126.96878pt.
 Package epstopdf Info: Source file: <figures/part2/test2_scan.eps>
 (epstopdf)                    date: 2018-05-20 19:26:32
@@ -1247,15 +1211,15 @@ pdf>
 (epstopdf)                    size: 141317 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/part2/test2_scan-e
 ps-converted-to.pdf figures/part2/test2_scan.eps>
-(epstopdf)             \includegraphics on input line 225.
+(epstopdf)             \includegraphics on input line 228.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/part2/test2_scan-eps-converted-to.pdf, id=626, 562.1pt x 421.575pt>
+<figures/part2/test2_scan-eps-converted-to.pdf, id=621, 562.1pt x 421.575pt>
 File: figures/part2/test2_scan-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/part2/test2_scan-eps-converted-to.pdf>
 Package pdftex.def Info: figures/part2/test2_scan-eps-converted-to.pdf used on 
-input line 225.
+input line 228.
 (pdftex.def)             Requested size: 217.66211pt x 163.24283pt.
 Package epstopdf Info: Source file: <figures/part2/test2_scan1.eps>
 (epstopdf)                    date: 2018-05-20 19:28:07
@@ -1266,23 +1230,19 @@ Package epstopdf Info: Source file: <figures/part2/test2_scan1.eps>
 (epstopdf)                    size: 145580 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/part2/test2_scan1-
 eps-converted-to.pdf figures/part2/test2_scan1.eps>
-(epstopdf)             \includegraphics on input line 230.
+(epstopdf)             \includegraphics on input line 234.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/part2/test2_scan1-eps-converted-to.pdf, id=627, 562.1pt x 421.575pt>
+<figures/part2/test2_scan1-eps-converted-to.pdf, id=622, 562.1pt x 421.575pt>
 File: figures/part2/test2_scan1-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/part2/test2_scan1-eps-converted-to.pdf>
 Package pdftex.def Info: figures/part2/test2_scan1-eps-converted-to.pdf used on
- input line 230.
+ input line 234.
 (pdftex.def)             Requested size: 217.66211pt x 163.24283pt.
-
-
-LaTeX Warning: Reference `test_scan' on page 14 undefined on input line 246.
-
-[14 <./figures/part2/test_left_2.pdf> <./figures/part2/test_right_2.pdf> <./fig
-ures/part2/test2_cmp-eps-converted-to.pdf> <./figures/part2/test2_scan-eps-conv
-erted-to.pdf> <./figures/part2/test2_scan1-eps-converted-to.pdf>]
+ [14 <./figures/part2/test_left_2.pdf> <./figures/part2/test_right_2.pdf> <./fi
+gures/part2/test2_cmp-eps-converted-to.pdf> <./figures/part2/test2_scan-eps-con
+verted-to.pdf> <./figures/part2/test2_scan1-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <figures/part2/scan2f.eps>
 (epstopdf)                    date: 2018-05-20 21:03:09
 (epstopdf)                    size: 883221 bytes
@@ -1292,15 +1252,15 @@ Package epstopdf Info: Source file: <figures/part2/scan2f.eps>
 (epstopdf)                    size: 209542 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/part2/scan2f-eps-c
 onverted-to.pdf figures/part2/scan2f.eps>
-(epstopdf)             \includegraphics on input line 252.
+(epstopdf)             \includegraphics on input line 257.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/part2/scan2f-eps-converted-to.pdf, id=678, 562.1pt x 421.575pt>
+<figures/part2/scan2f-eps-converted-to.pdf, id=674, 562.1pt x 421.575pt>
 File: figures/part2/scan2f-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/part2/scan2f-eps-converted-to.pdf>
 Package pdftex.def Info: figures/part2/scan2f-eps-converted-to.pdf used on inpu
-t line 252.
+t line 257.
 (pdftex.def)             Requested size: 145.11053pt x 108.82855pt.
 Package epstopdf Info: Source file: <figures/part2/scan2.eps>
 (epstopdf)                    date: 2018-05-20 21:02:28
@@ -1310,15 +1270,15 @@ Package epstopdf Info: Source file: <figures/part2/scan2.eps>
 (epstopdf)                    size: 200895 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/part2/scan2-eps-co
 nverted-to.pdf figures/part2/scan2.eps>
-(epstopdf)             \includegraphics on input line 258.
+(epstopdf)             \includegraphics on input line 263.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/part2/scan2-eps-converted-to.pdf, id=679, 562.1pt x 421.575pt>
+<figures/part2/scan2-eps-converted-to.pdf, id=675, 562.1pt x 421.575pt>
 File: figures/part2/scan2-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/part2/scan2-eps-converted-to.pdf>
 Package pdftex.def Info: figures/part2/scan2-eps-converted-to.pdf used on input
- line 258.
+ line 263.
 (pdftex.def)             Requested size: 145.11053pt x 108.82855pt.
 Package epstopdf Info: Source file: <figures/part2/scan3.eps>
 (epstopdf)                    date: 2018-05-20 21:29:21
@@ -1328,26 +1288,48 @@ Package epstopdf Info: Source file: <figures/part2/scan3.eps>
 (epstopdf)                    size: 190378 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/part2/scan3-eps-co
 nverted-to.pdf figures/part2/scan3.eps>
-(epstopdf)             \includegraphics on input line 264.
+(epstopdf)             \includegraphics on input line 269.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/part2/scan3-eps-converted-to.pdf, id=680, 562.1pt x 421.575pt>
+<figures/part2/scan3-eps-converted-to.pdf, id=676, 562.1pt x 421.575pt>
 File: figures/part2/scan3-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/part2/scan3-eps-converted-to.pdf>
 Package pdftex.def Info: figures/part2/scan3-eps-converted-to.pdf used on input
- line 264.
+ line 269.
 (pdftex.def)             Requested size: 145.11053pt x 108.82855pt.
+Package epstopdf Info: Source file: <figures/part2/sub_pixel.eps>
+(epstopdf)                    date: 2018-05-25 15:38:46
+(epstopdf)                    size: 54752 bytes
+(epstopdf)             Output file: <figures/part2/sub_pixel-eps-converted-to.p
+df>
+(epstopdf)                    date: 2018-05-25 20:12:23
+(epstopdf)                    size: 7410 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/part2/sub_pixel-ep
+s-converted-to.pdf figures/part2/sub_pixel.eps>
+(epstopdf)             \includegraphics on input line 284.
+Package epstopdf Info: Output file is already uptodate.
 
-Overfull \hbox (3.26613pt too wide) in paragraph at lines 272--273
-[]\OT1/cmr/m/n/12 In ad-di-tion to im-age com-par-i-son op-ti-miza-tion, cal-i-
-br-ra-tion model could be op-ti-mized through
- []
+<figures/part2/sub_pixel-eps-converted-to.pdf, id=685, 562.1pt x 421.575pt>
+File: figures/part2/sub_pixel-eps-converted-to.pdf Graphic file (type pdf)
 
-) (./part3.tex [15 <./figures/part2/scan2f-eps-converted-to.pdf> <./figures/par
-t2/scan2-eps-converted-to.pdf> <./figures/part2/scan3-eps-converted-to.pdf>]
+<use figures/part2/sub_pixel-eps-converted-to.pdf>
+Package pdftex.def Info: figures/part2/sub_pixel-eps-converted-to.pdf used on i
+nput line 284.
+(pdftex.def)             Requested size: 232.17242pt x 174.12697pt.
+
+<figures/part2/weight1.pdf, id=686, 506.81747pt x 230.84544pt>
+File: figures/part2/weight1.pdf Graphic file (type pdf)
+
+<use figures/part2/weight1.pdf>
+Package pdftex.def Info: figures/part2/weight1.pdf used on input line 290.
+(pdftex.def)             Requested size: 232.17242pt x 105.74988pt.
+ [15 <./figures/part2/scan2f-eps-converted-to.pdf> <./figures/part2/scan2-eps-c
+onverted-to.pdf> <./figures/part2/scan3-eps-converted-to.pdf> <./figures/part2/
+sub_pixel-eps-converted-to.pdf> <./figures/part2/weight1.pdf>]) (./part3.tex [1
+6]
 Chapter 4.
-<figures/part3/number.pdf, id=707, 432.61626pt x 191.71625pt>
+<figures/part3/number.pdf, id=735, 432.61626pt x 191.71625pt>
 File: figures/part3/number.pdf Graphic file (type pdf)
 
 <use figures/part3/number.pdf>
@@ -1357,27 +1339,23 @@ Package pdftex.def Info: figures/part3/number.pdf used on input line 19.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[16
+[17
 
-] <figures/part3/train.png, id=714, 1445.4pt x 903.375pt>
+] <figures/part3/train.png, id=742, 1445.4pt x 903.375pt>
 File: figures/part3/train.png Graphic file (type png)
 
 <use figures/part3/train.png>
 Package pdftex.def Info: figures/part3/train.png used on input line 35.
 (pdftex.def)             Requested size: 435.32422pt x 272.07599pt.
- [17 <./figures/part3/number.pdf> <./figures/part3/train.png>]
-<figures/part3/stereo_connet.pdf, id=792, 879.2619pt x 840.02933pt>
+ [18 <./figures/part3/number.pdf> <./figures/part3/train.png>]
+<figures/part3/stereo_connet.pdf, id=822, 879.2619pt x 840.02933pt>
 File: figures/part3/stereo_connet.pdf Graphic file (type pdf)
 
 <use figures/part3/stereo_connet.pdf>
 Package pdftex.def Info: figures/part3/stereo_connet.pdf used on input line 50.
 
 (pdftex.def)             Requested size: 386.95897pt x 369.69095pt.
-) (./part4.tex [18 <./figures/part3/stereo_connet.pdf>]
-Chapter 5.
-) (./appendix1.tex [19
-
-]
+) (./appendix1.tex [19 <./figures/part3/stereo_connet.pdf>]
 Appendix A.
 (./code/part1/spatial_correlation_1d.m
 LaTeX Font Info:    Try loading font information for TS1+pcr on input line 14.
@@ -1390,23 +1368,23 @@ File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
 ])
 (./code/part1/signal_offset_checker.m)
 (./code/part1/normalised_spatial_correlation_2d.m [21])
-(./code/part1/find_the_rocket_man.m) [22]
+(./code/part1/find_the_rocket_man.m [22])
 (./code/part1/spectral_correlation_function.m
-LaTeX Font Info:    Try loading font information for OML+pcr on input line 25.
+LaTeX Font Info:    Try loading font information for OML+pcr on input line 27.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/omlpcr.fd
 File: omlpcr.fd 
 )
 LaTeX Font Info:    Font shape `OML/pcr/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 25.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 27.
  [23])
-(./code/part1/pattern_finder.m) (./code/part2/dot_detect.m
+(./code/part1/pattern_finder.m) (./code/part2/dot_detect.m [24]
 Missing character: There is no ¡ in font pcrr7t!
 Missing character: There is no £ in font pcrr7t!
- [24]) [25]
-(./code/part2/calibration_model.m) (./code/part2/image_compare.m [26] [27])
-(./code/part2/image_compare_optimized.m [28]) [29]
-(./code/part2/image_compare_multipass.m
+ [25])
+(./code/part2/calibration_model.m [26]) (./code/part2/image_compare.m [27])
+(./code/part2/image_compare_optimized.m [28] [29])
+(./code/part2/image_compare_multipass.m [30]
 LaTeX Font Info:    Try loading font information for OMS+pcr on input line 57.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/omspcr.fd
@@ -1414,26 +1392,30 @@ File: omspcr.fd
 )
 LaTeX Font Info:    Font shape `OMS/pcr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 57.
- [30])
-(./code/part2/test_scan1.m [31]
+ [31])
+(./code/part2/test_scan1.m
 Overfull \hbox (13.37965pt too wide) in paragraph at lines 33--34
 [][][][][][][][][][][][][][][][][][][][][][][][]  
  []
 
-) (./code/part2/test_scan.m [32]) (./code/part3/number_cnn.m [33]) [34]
+) [32] (./code/part2/test_scan.m) (./code/part2/subpixel_dot_detect.m
+Missing character: There is no ¡ in font pcrr7t!
+Missing character: There is no £ in font pcrr7t!
+ [33]
+[34]) (./code/part3/number_cnn.m [35]) [36]
 Appendix B.
-<figures/part2/test_left_1.pdf, id=1690, 578.16pt x 499.92772pt>
+<figures/part2/test_left_1.pdf, id=1824, 578.16pt x 499.92772pt>
 File: figures/part2/test_left_1.pdf Graphic file (type pdf)
 
 <use figures/part2/test_left_1.pdf>
-Package pdftex.def Info: figures/part2/test_left_1.pdf used on input line 55.
+Package pdftex.def Info: figures/part2/test_left_1.pdf used on input line 58.
 (pdftex.def)             Requested size: 116.08887pt x 100.38043pt.
 
-<figures/part2/test_right_1.pdf, id=1691, 578.16pt x 499.92772pt>
+<figures/part2/test_right_1.pdf, id=1825, 578.16pt x 499.92772pt>
 File: figures/part2/test_right_1.pdf Graphic file (type pdf)
 
 <use figures/part2/test_right_1.pdf>
-Package pdftex.def Info: figures/part2/test_right_1.pdf used on input line 59.
+Package pdftex.def Info: figures/part2/test_right_1.pdf used on input line 62.
 (pdftex.def)             Requested size: 116.08887pt x 100.38043pt.
 Package epstopdf Info: Source file: <figures/part2/test1_cmp.eps>
 (epstopdf)                    date: 2018-05-20 19:17:22
@@ -1444,15 +1426,15 @@ df>
 (epstopdf)                    size: 40274 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/part2/test1_cmp-ep
 s-converted-to.pdf figures/part2/test1_cmp.eps>
-(epstopdf)             \includegraphics on input line 63.
+(epstopdf)             \includegraphics on input line 66.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/part2/test1_cmp-eps-converted-to.pdf, id=1692, 562.1pt x 421.575pt>
+<figures/part2/test1_cmp-eps-converted-to.pdf, id=1826, 562.1pt x 421.575pt>
 File: figures/part2/test1_cmp-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/part2/test1_cmp-eps-converted-to.pdf>
 Package pdftex.def Info: figures/part2/test1_cmp-eps-converted-to.pdf used on i
-nput line 63.
+nput line 66.
 (pdftex.def)             Requested size: 169.29684pt x 126.96878pt.
 Package epstopdf Info: Source file: <figures/part2/test1_scan.eps>
 (epstopdf)                    date: 2018-05-20 19:18:50
@@ -1463,15 +1445,15 @@ pdf>
 (epstopdf)                    size: 15398 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/part2/test1_scan-e
 ps-converted-to.pdf figures/part2/test1_scan.eps>
-(epstopdf)             \includegraphics on input line 67.
+(epstopdf)             \includegraphics on input line 70.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/part2/test1_scan-eps-converted-to.pdf, id=1693, 562.1pt x 421.575pt>
+<figures/part2/test1_scan-eps-converted-to.pdf, id=1827, 562.1pt x 421.575pt>
 File: figures/part2/test1_scan-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/part2/test1_scan-eps-converted-to.pdf>
 Package pdftex.def Info: figures/part2/test1_scan-eps-converted-to.pdf used on 
-input line 67.
+input line 70.
 (pdftex.def)             Requested size: 217.66211pt x 163.24283pt.
 Package epstopdf Info: Source file: <figures/part2/test1_scan1.eps>
 (epstopdf)                    date: 2018-05-20 19:18:19
@@ -1482,24 +1464,24 @@ Package epstopdf Info: Source file: <figures/part2/test1_scan1.eps>
 (epstopdf)                    size: 15866 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/part2/test1_scan1-
 eps-converted-to.pdf figures/part2/test1_scan1.eps>
-(epstopdf)             \includegraphics on input line 71.
+(epstopdf)             \includegraphics on input line 74.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/part2/test1_scan1-eps-converted-to.pdf, id=1694, 562.1pt x 421.575pt>
+<figures/part2/test1_scan1-eps-converted-to.pdf, id=1828, 562.1pt x 421.575pt>
 File: figures/part2/test1_scan1-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/part2/test1_scan1-eps-converted-to.pdf>
 Package pdftex.def Info: figures/part2/test1_scan1-eps-converted-to.pdf used on
- input line 71.
+ input line 74.
 (pdftex.def)             Requested size: 217.66211pt x 163.24283pt.
 File: figures/part2/test_left_2.pdf Graphic file (type pdf)
 
 <use figures/part2/test_left_2.pdf>
-Package pdftex.def Info: figures/part2/test_left_2.pdf used on input line 77.
+Package pdftex.def Info: figures/part2/test_left_2.pdf used on input line 81.
 (pdftex.def)             Requested size: 116.08887pt x 100.29652pt.
 File: figures/part2/test_right_2.pdf Graphic file (type pdf)
  <use figures/part2/test_right_2.pdf>
-Package pdftex.def Info: figures/part2/test_right_2.pdf used on input line 81.
+Package pdftex.def Info: figures/part2/test_right_2.pdf used on input line 85.
 (pdftex.def)             Requested size: 116.08887pt x 100.29652pt.
 Package epstopdf Info: Source file: <figures/part2/test2_cmp.eps>
 (epstopdf)                    date: 2018-05-20 00:01:01
@@ -1510,13 +1492,13 @@ df>
 (epstopdf)                    size: 63579 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/part2/test2_cmp-ep
 s-converted-to.pdf figures/part2/test2_cmp.eps>
-(epstopdf)             \includegraphics on input line 85.
+(epstopdf)             \includegraphics on input line 89.
 Package epstopdf Info: Output file is already uptodate.
 File: figures/part2/test2_cmp-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/part2/test2_cmp-eps-converted-to.pdf>
 Package pdftex.def Info: figures/part2/test2_cmp-eps-converted-to.pdf used on i
-nput line 85.
+nput line 89.
 (pdftex.def)             Requested size: 169.29684pt x 126.96878pt.
 Package epstopdf Info: Source file: <figures/part2/test2_scan.eps>
 (epstopdf)                    date: 2018-05-20 19:26:32
@@ -1527,13 +1509,13 @@ pdf>
 (epstopdf)                    size: 141317 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/part2/test2_scan-e
 ps-converted-to.pdf figures/part2/test2_scan.eps>
-(epstopdf)             \includegraphics on input line 89.
+(epstopdf)             \includegraphics on input line 93.
 Package epstopdf Info: Output file is already uptodate.
 File: figures/part2/test2_scan-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/part2/test2_scan-eps-converted-to.pdf>
 Package pdftex.def Info: figures/part2/test2_scan-eps-converted-to.pdf used on 
-input line 89.
+input line 93.
 (pdftex.def)             Requested size: 217.66211pt x 163.24283pt.
 Package epstopdf Info: Source file: <figures/part2/test2_scan1.eps>
 (epstopdf)                    date: 2018-05-20 19:28:07
@@ -1544,34 +1526,34 @@ Package epstopdf Info: Source file: <figures/part2/test2_scan1.eps>
 (epstopdf)                    size: 145580 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/part2/test2_scan1-
 eps-converted-to.pdf figures/part2/test2_scan1.eps>
-(epstopdf)             \includegraphics on input line 93.
+(epstopdf)             \includegraphics on input line 97.
 Package epstopdf Info: Output file is already uptodate.
 File: figures/part2/test2_scan1-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/part2/test2_scan1-eps-converted-to.pdf>
 Package pdftex.def Info: figures/part2/test2_scan1-eps-converted-to.pdf used on
- input line 93.
+ input line 97.
 (pdftex.def)             Requested size: 217.66211pt x 163.24283pt.
 
-Underfull \hbox (badness 7256) in paragraph at lines 75--95
+Underfull \hbox (badness 7256) in paragraph at lines 79--99
 [][] [] []
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figures/part2/test_left_3.pdf, id=1695, 578.16pt x 499.92772pt>
+<figures/part2/test_left_3.pdf, id=1829, 578.16pt x 499.92772pt>
 File: figures/part2/test_left_3.pdf Graphic file (type pdf)
 
 <use figures/part2/test_left_3.pdf>
-Package pdftex.def Info: figures/part2/test_left_3.pdf used on input line 99.
+Package pdftex.def Info: figures/part2/test_left_3.pdf used on input line 104.
 (pdftex.def)             Requested size: 116.08887pt x 100.38043pt.
 
-<figures/part2/test_right_3.pdf, id=1696, 578.16pt x 499.92772pt>
+<figures/part2/test_right_3.pdf, id=1830, 578.16pt x 499.92772pt>
 File: figures/part2/test_right_3.pdf Graphic file (type pdf)
 
 <use figures/part2/test_right_3.pdf>
-Package pdftex.def Info: figures/part2/test_right_3.pdf used on input line 103.
+Package pdftex.def Info: figures/part2/test_right_3.pdf used on input line 108.
 
 (pdftex.def)             Requested size: 116.08887pt x 100.38043pt.
 Package epstopdf Info: Source file: <figures/part2/test3_cmp.eps>
@@ -1583,15 +1565,15 @@ df>
 (epstopdf)                    size: 67767 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/part2/test3_cmp-ep
 s-converted-to.pdf figures/part2/test3_cmp.eps>
-(epstopdf)             \includegraphics on input line 107.
+(epstopdf)             \includegraphics on input line 112.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/part2/test3_cmp-eps-converted-to.pdf, id=1697, 562.1pt x 421.575pt>
+<figures/part2/test3_cmp-eps-converted-to.pdf, id=1831, 562.1pt x 421.575pt>
 File: figures/part2/test3_cmp-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/part2/test3_cmp-eps-converted-to.pdf>
 Package pdftex.def Info: figures/part2/test3_cmp-eps-converted-to.pdf used on i
-nput line 107.
+nput line 112.
 (pdftex.def)             Requested size: 169.29684pt x 126.96878pt.
 Package epstopdf Info: Source file: <figures/part2/test3_scan.eps>
 (epstopdf)                    date: 2018-05-20 19:13:25
@@ -1602,15 +1584,15 @@ pdf>
 (epstopdf)                    size: 135658 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/part2/test3_scan-e
 ps-converted-to.pdf figures/part2/test3_scan.eps>
-(epstopdf)             \includegraphics on input line 111.
+(epstopdf)             \includegraphics on input line 116.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/part2/test3_scan-eps-converted-to.pdf, id=1698, 562.1pt x 421.575pt>
+<figures/part2/test3_scan-eps-converted-to.pdf, id=1832, 562.1pt x 421.575pt>
 File: figures/part2/test3_scan-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/part2/test3_scan-eps-converted-to.pdf>
 Package pdftex.def Info: figures/part2/test3_scan-eps-converted-to.pdf used on 
-input line 111.
+input line 116.
 (pdftex.def)             Requested size: 217.66211pt x 163.24283pt.
 Package epstopdf Info: Source file: <figures/part2/test3_scan1.eps>
 (epstopdf)                    date: 2018-05-20 19:10:51
@@ -1621,67 +1603,63 @@ Package epstopdf Info: Source file: <figures/part2/test3_scan1.eps>
 (epstopdf)                    size: 142908 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/part2/test3_scan1-
 eps-converted-to.pdf figures/part2/test3_scan1.eps>
-(epstopdf)             \includegraphics on input line 115.
+(epstopdf)             \includegraphics on input line 120.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/part2/test3_scan1-eps-converted-to.pdf, id=1699, 562.1pt x 421.575pt>
+<figures/part2/test3_scan1-eps-converted-to.pdf, id=1833, 562.1pt x 421.575pt>
 File: figures/part2/test3_scan1-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/part2/test3_scan1-eps-converted-to.pdf>
 Package pdftex.def Info: figures/part2/test3_scan1-eps-converted-to.pdf used on
- input line 115.
+ input line 120.
 (pdftex.def)             Requested size: 217.66211pt x 163.24283pt.
 
-Underfull \hbox (badness 7256) in paragraph at lines 97--117
+Underfull \hbox (badness 7256) in paragraph at lines 102--122
 [][] [] []
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) (./main.bbl [35
+) (./main.bbl [37
 
  <./figures/part2/test_left_1.pdf> <./figures/part2/test_right_1.pdf> <./figure
 s/part2/test1_cmp-eps-converted-to.pdf> <./figures/part2/test1_scan-eps-convert
-ed-to.pdf> <./figures/part2/test1_scan1-eps-converted-to.pdf>] [36 <./figures/p
+ed-to.pdf> <./figures/part2/test1_scan1-eps-converted-to.pdf>] [38 <./figures/p
 art2/test_left_3.pdf> <./figures/part2/test_right_3.pdf> <./figures/part2/test3
 _cmp-eps-converted-to.pdf> <./figures/part2/test3_scan-eps-converted-to.pdf> <.
-/figures/part2/test3_scan1-eps-converted-to.pdf>] [37
+/figures/part2/test3_scan1-eps-converted-to.pdf>] [39
 
 ])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 38.
 
-[38]
+[40]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 38.
  (./main.aux (./cover.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 38.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 38.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 80EFAB7F889705BA89E774E4B128358A;1811.
-
-
-LaTeX Warning: There were undefined references.
-
+(rerunfilecheck)             Checksum: A62FB9F1C83321B33588C26878311ED1;1767.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 38.
  ) 
 Here is how much of TeX's memory you used:
- 13728 strings out of 492995
- 208707 string characters out of 6132705
- 410984 words of memory out of 5000000
- 15989 multiletter control sequences out of 15000+600000
+ 13859 strings out of 492995
+ 210955 string characters out of 6132705
+ 417984 words of memory out of 5000000
+ 16014 multiletter control sequences out of 15000+600000
  23664 words of font info for 86 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,8n,45p,1009b,1810s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 40i,8n,45p,1109b,1810s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{lstnumber.-14.40} has been referenced but does no
 t exist, replaced by a fixed one
 
 pdfTeX warning (dest): name{lstnumber.-13.40} has been referenced but does not 
 exist, replaced by a fixed one
 
-pdfTeX warning (dest): name{lstnumber.-10.81} has been referenced but does not 
+pdfTeX warning (dest): name{lstnumber.-10.86} has been referenced but does not 
 exist, replaced by a fixed one
 
-pdfTeX warning (dest): name{lstnumber.-5.34} has been referenced but does not e
+pdfTeX warning (dest): name{lstnumber.-5.39} has been referenced but does not e
 xist, replaced by a fixed one
 
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/tex
@@ -1707,10 +1685,10 @@ type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2017/texmf-dist/fonts/ty
 pe1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2017/texmf-dist/fonts/type
 1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/
 urw/courier/ucrr8a.pfb>
-Output written on main.pdf (39 pages, 10912637 bytes).
+Output written on main.pdf (41 pages, 10933725 bytes).
 PDF statistics:
- 2050 PDF objects out of 2073 (max. 8388607)
- 1710 compressed objects within 18 object streams
- 912 named destinations out of 1000 (max. 500000)
- 442 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2204 PDF objects out of 2487 (max. 8388607)
+ 1855 compressed objects within 19 object streams
+ 1016 named destinations out of 1200 (max. 500000)
+ 444 words of extra memory for PDF output out of 10000 (max. 10000000)
 

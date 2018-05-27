@@ -32,6 +32,11 @@ I.~P. Howard and B.~J. Rogers.
 \newblock {\em Binocular vision and stereopsis.}
 \newblock Oxford University Press, 1995.
 
+\bibitem{Hueckel1973A}
+M.~H. Hueckel.
+\newblock {\em A Local Visual Operator Which Recognizes Edges and Lines}.
+\newblock ACM, 1973.
+
 \bibitem{Huertas2009Detection}
 A.~Huertas and G.~Medioni.
 \newblock Detection of intensity changes with subpixel accuracy using

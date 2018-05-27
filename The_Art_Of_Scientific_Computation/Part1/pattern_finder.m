@@ -1,10 +1,11 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Author:   Haonan Li                                               %
-% Purpose:  Find all accurance of a particular element in a song    %
+% Purpose:  Find all accurance of a particular music element in a   %
+%           piece of music                                          %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 function res = pattern_finder(music,pat)
-%% load a music and a particular element (drum)
+%% load the music and a particular element (drum)
 [y1,Fs1] = audioread(music);
 x1 = y1(:,1);
 [y2,Fs2] = audioread(pat);

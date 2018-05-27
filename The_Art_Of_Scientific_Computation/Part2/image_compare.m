@@ -1,8 +1,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Author:   Haonan Li                                               %
 % Purpose:  Compare two images, split one image to several windows, %
-%           search more similar part in the other corresponding     %
-%           image                                                   %
+%           create template for each window and the search region   %
+%           (larger than the template) in the other image, scan the %
+%           template around the search region and find the most     %
+%           part, return the difference in pixel location           %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 function res = image_compare(img_a, img_b)
@@ -41,6 +43,8 @@ hold on
 end
 
 
+%% compute the difference in pixel location between template in left iamge
+%  and most similar region in right image
 function [dx,dy] = corr_search(mat_a, mat_b, wsize, xgrid, ygrid)
 %% pattern (window)
 [Y,X] = size(mat_a);

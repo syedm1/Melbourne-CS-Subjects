@@ -1,6 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Author:   Haonan Li                                               %
-% Purpose:  Give two pictures, one is a part of another find the    %
+% Purpose:  Give two pictures, one is a part of the other, find the %
 %           corresponding position and mark it                      %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -12,7 +12,7 @@ mat_t = mean(pic_t, 3);
 mat_A = mean(pic_A, 3);
 [tY,tX] = size(mat_t);
 
-%% compute cross correlation
+%% compute cross correlation and run time
 tic;
 % cross_corr = normalised_spatial_correlation_2d(mat_t,mat_A);
  cross_corr = my_norm_xcorr2(mat_A,mat_t);

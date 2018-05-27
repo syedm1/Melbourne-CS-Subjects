@@ -16,15 +16,23 @@ SAMPLE_RATE = 44100;
 %% compute cross correlation of two signal, log run time
 tic;
 % special method
-cross_cor = spatial_correlation_1d(sig_1, sig_2)';
+% cross_corr = spatial_correlation_1d(sig_1, sig_2)';
 % spectral method (faster)
-% cross_cor = spectral_correlation_function(sig_1, sig_2)';
+cross_corr = spectral_correlation_function(sig_1, sig_2)';
 run_time = toc
 
 %% find the position of max cross coorelation value and compute the offset.
-[max_value, max_pos] = max(abs(cross_cor));
+[max_value, max_pos] = max(abs(cross_corr))
 offset = abs(length(sig_1) - max_pos)
 
 % compute offset time and sensor distance
 offset_time = offset / SAMPLE_RATE
 distance = 333 * offset_time
+
+%% show
+figure
+plot(cross_corr)
+ylim([-0.4,1.2])
+hold on
+plot(max_pos,max_value,'ro')
+text(max_pos,max_value,'Maximum','FontSize',12)

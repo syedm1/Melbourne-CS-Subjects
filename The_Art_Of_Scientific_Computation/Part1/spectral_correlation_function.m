@@ -6,14 +6,16 @@
 
 function vec_res = spectral_correlation_1d(vec_a, vec_b)
 
+% transfer to spectral domain
 f_a = fft(vec_a);
 f_b = fft(vec_b);
+% spectral cross correlation
 conj_f_a = conj(f_a);
 mid_res = conj_f_a .* f_b;
 vec_res = ifft(mid_res);
 
 
-%% My fft, does not work is NN is not the power of 2
+%% My fft, does not work if N is not the power of 2
 function res_fft = my_fft(vec)
 
 vec_size = size(vec);

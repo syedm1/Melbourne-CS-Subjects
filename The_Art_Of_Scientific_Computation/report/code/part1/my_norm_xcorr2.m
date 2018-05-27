@@ -1,32 +1,18 @@
-function mat_r = my_norm_xcorr2_2(a, b)
-template = rgb2gray(imread(a));
-background = rgb2gray(imread(b));
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Author:   Haonan Li                                    %
+% Purpose:  Receive two matrix, t(template) and A(search %
+%           region) returns normalized cross power       %
+%           spectrum of these two matrix, A larger than t%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%% calculate padding
-bx = size(background, 2); 
-by = size(background, 1);
-tx = size(template, 2); % used for bbox placement
-ty = size(template, 1);
+function mat_r = my_norm_xcorr2(mat_A, mat_t)
 
-%% fft
-%c = real(ifft2(fft2(background) .* fft2(template, by, bx)));
+% calculate padding
+[tx,ty] = size(mat_t);
+[Ax, Ay] = size(mat_A);
 
-%// Change - Compute the cross power spectrum
-Ga = fft2(background);
-Gb = fft2(template, by, bx);
-c = (ifft2((Ga.*conj(Gb))./abs(Ga.*conj(Gb))));
+% Change - Compute the cross power spectrum
+Ga = fft2(mat_A);
+Gb = fft2(mat_t, Ax, Ay);
 
-%% find peak correlation
-[max_c, imax]   = max(abs(c(:)));
-[ypeak, xpeak] = find(c == max(c(:)));
-figure; surf(c), shading flat; % plot correlation    
-
-%% display best match
-hFig = figure;
-hAx  = axes;
-
-%// New - no need to offset the coordinates anymore
-%// xpeak and ypeak are already the top left corner of the matched window
-position = [xpeak(1), ypeak(1), tx, ty];
-imshow(background, 'Parent', hAx);
-imrect(hAx, position);
+mat_r = real(ifft2((Ga.*conj(Gb))./abs(Ga.*conj(Gb))));

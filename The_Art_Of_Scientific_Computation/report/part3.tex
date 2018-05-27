@@ -2,7 +2,7 @@
 
 Thinking about the original inspiration of our project, human can easily estimate the distance between the scenery and themselves, we believe that is based on binocular vision. However, after thinking over, we may find we are not so sure about this hypothesis, because when we close one eye, we can still see the world and we can still estimate the depth of the scenery, maybe a little harder. 
 
-On the other hand, we did plenty of calculations in our projects, including build calibration model, image comparison, to get the depth information. But do we really do this kind of calculations in our brain all the time? Do we estimate depth information simply based on the two images of left and right view? We may find the answer is no, because so many other cues are used when we estimate the distance of one object. For example, we know that one building should far larger than a person and when a building and a person project to our retina with the same size, we should know the build is far and the person is near to us. 
+On the other hand, we did plenty of calculations in our projects, including building calibration model, image comparison, to get the depth information. But do we really do this kind of calculations in our brain all the time? Do we estimate depth information simply based on the two images of left and right view? We may find the answer is no, because so many other cues are used when we estimate the distance of one object. For example, we know that one building should far larger than a person and when a building and a person project to our retina with the same size, we should know the build is far and the person is near to us. 
 
 Actually, our brain do so many amazing things, the brain can learn to process images, sounds, it can learn to process our sense of touch. It seems like if we want to mimic the brain, we have to write lots of different pieces of software and programs. But instead, the way the brain does it is just worth a single learning algorithms, this is a hypothesis and widely accepted by scientists now. This magical algorithm is neural network algorithm. 
 
@@ -12,7 +12,7 @@ Machine learning is a field of computer science that often uses statistical tech
 
 Convolutional neural networks (CNNs) are the current state-of-the-art model architecture for image classification tasks and other image processing tasks. CNNs apply a series of filters to the raw pixel data of an image to extract and learn higher-level features. This model can be used  to classification and other image processing tasks.
 
-In this section. We build a model to classify the images of hand write number, as shown in Figure \ref{fig:number}. Through studying amount of features, the classifier can label a new iamge with the number on it, the accuracy can reach 0.99.
+In this section. We build a model to classify the images of hand write number, as shown in Figure \ref{fig:number}. Through studying amount of features, the classifier can label a new image with the number on it, the accuracy can reach 0.99.
 
 \begin{figure}[h!]
 	\centering
@@ -24,7 +24,7 @@ In this section. We build a model to classify the images of hand write number, a
 Usually, CNNs contains three components:
 \begin{itemize}
 	\item Convolutional layers, which apply a specified number of convolution filters to the image. For each subregion, the layer performs a set of mathematical operations to produce a single value in the output feature map.
-	\item Pooling layers, which downsample the image data extracted by the convolutional layers to reduce the dimensionality of the feature map in order to decrease processing time. A commonly used pooling algorithm is max pooling, which extracts subregions of the feature map (e.g., 2x2-pixel tiles), keeps their maximum value, and discards all other values. In our model, we use 
+	\item Pooling layers, which downsample the image data extracted by the convolutional layers to reduce the dimensionality of the feature map in order to decrease processing time. A commonly used pooling algorithm is max pooling, which extracts subregions of the feature map (e.g., 2x2-pixel tiles), keeps their maximum value, and discards all other values.
 	\item Dense (fully connected) layers, which perform classification on the features extracted by the convolutional layers and downsampled by the pooling layers. In a dense layer, every node in the layer is connected to every node in the preceding layer.
 \end{itemize}
 
@@ -41,9 +41,9 @@ Source code for hand write image classifier is in Appendix \ref{code:3.1}.
 
 \section{Stereo Convolutional Neural Network}
 
-In this section, we introduce a stereo convolution neural network. The network is fully convolutional, and takes a couple of grayscale stereoscopic images concatenated along the channel axis, and ouputs a single image representing the depth map. A series of convolutional and maxpooling layers followed by a series of upscalling and deconvolutional layers allow the network to extract image disparity features at the smaller scale (object edges), and generate a smooth estimate of the depth map at the larger scale (full object). 
+This section introduce a stereo convolution neural network. The network is fully convolutional, and takes a couple of grayscale stereoscopic images concatenated along the channel axis, and outputs a single image representing the depth map. A series of convolutional and maxpooling layers followed by a series of upscalling and deconvolutional layers allow the network to extract image disparity features at the smaller scale (object edges), and generate a smooth estimate of the depth map at the larger scale (full object). 
 
-Figure \ref{fig:stereo_connet} show the depth map prediction of Stereo ConvNet. The traing/validation sets are created using the random virtual 3d scene generator \footnote{https://github.com/LouisFoucard/DepthMap\_dataset}.
+Figure \ref{fig:stereo_connet} show the depth map prediction of Stereo ConvNet. The training/validation sets are created using the random virtual 3d scene generator \footnote{https://github.com/LouisFoucard/DepthMap\_dataset}.
 
 \begin{figure}[h!]
 	\centering

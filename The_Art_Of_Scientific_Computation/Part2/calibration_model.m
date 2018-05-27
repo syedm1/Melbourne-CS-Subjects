@@ -18,7 +18,7 @@ for i = 0:5
     right_dot = [right_dot; dot_detect(right_img)];
 end
 
-%% build fit dunctions
+%% build fit functions
 ly = left_dot(:,1);
 lx = left_dot(:,2);
 ry = right_dot(:,1);
@@ -35,6 +35,7 @@ end
 
 %% compute dots positions in real space
 function real = build_dot(real_z)
+real = [];
 for j = 1:17
     for i = 1:21
         index = 21*(j-1)+i;

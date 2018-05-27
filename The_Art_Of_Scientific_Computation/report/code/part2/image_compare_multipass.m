@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Author:   Haonan Li                                               %
-% Purpose:  Multipass image comparation: recersively call image     %
-%           comparation function of part of the whole image         %
+% Purpose:  Multipass image comparison: recursively call image      %
+%           comparison function of part of the whole image          %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 function diff = image_compare_multipass(img_a, img_b)
@@ -12,7 +12,7 @@ img_b = imread(img_b);
 B = rgb2gray(img_b);
 [Y,X] = size(B);
 
-%% image comparasion
+%% image comparison
 % store the result
 diff = A.*0;
 % init window size
