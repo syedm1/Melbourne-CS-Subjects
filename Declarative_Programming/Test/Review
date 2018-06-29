@@ -16,17 +16,17 @@ Question 1. Type
 
 Variable & Function         Type
 3                           Num a => a
-!   "abc" ++ "def"              [Char]
+"abc" ++ "def"              [Char]
 (+)                         NUm a => a -> a -> a
-!   []                          [a]
+[]                          [a]
 (++)                        [a] -> [a] -> [a]
-show                        Show a => a -> String
-!   (. length)                  (Int -> a) -> [b] -> a
+!   show                        Show a => a -> String
+(. length)                  (Int -> a) -> [b] -> a
 (.)                         (b -> c) -> (a -> b) -> a -> c
 (:)                         a -> [a] -> [a]
 map length                  [[a]] -> [Int]
 length : "xyz"              type error
-!   [1, 2, 3]                   Num a => [a]
+[1, 2, 3]                   Num a => [a]
 (<)                         Ord a => a -> a -> Bool
 map (+3)                    Num a => [a] -> [a]
 foldl                       (a -> b -> a) -> a -> [b] -> a
@@ -35,53 +35,25 @@ Nothing                     Maybe a
 zip [True,True,False]       [a] -> [(Bool,a)]
 zip                         [a] -> [b] -> [(a,b)]
 flip                        (a -> b -> c) -> b -> a -> c 
-group                       Eq a => [a] -> [[a]]
 concatMap                   (a -> [b]) -> [a] -> [b]
 $                           (a -> b) -> a -> b
 Just                        a -> Maybe a
 foldl (++)                  [a] -> [[a]] -> [a]
-const                       a -> b -> a
+!   const                       a -> b -> a
 ((+).const 1)               Num a => b -> a -> a
+()                          ()
+>>=                         Monad m => m a -> (a -> m b) m b
+!   >>                          Monad m => m a -> m b -> m b
+return                      Monad m => a -> m a
+getChar                     IO Char
+putstrLn                    String -> IO ()
+!   print                       Show a => a -> IO ()
 
-
-Question 2: Give value or type error reason
-
-Expression                                                          Answer
-map (length < 3) [[1],[1,2,3]]                                      ? 
-filter (not.(==3)) [1,2,3]                                          [1,2]
-let a = head [] in 3                                                exception, rmpty list has no head
-map fst $ filter snd $ zip "abcde" [True,True,False,True]           "abd"
-head $ sort $ zip [3,0,0,2,0] $ reverse [9,0,0,4,8]                 (0,0)
-map snd $ sort $ zip "decl" [1..]                                   "3124"
-
-
-Question 3: Write one sentence comment
-
-1)
-q2 _ _ [] = []
-q2 a b (c:cs) =
-    if a == c then b:(q2 a b cs)
-            else c:(q2 a b cs)
--- replace a by b in the list.
-
-2)
-q3 a (b:[]) = a b
-q3 a (b1:b2:bs) = q3 a (b2:bs)
-
--- apply functin a to the last element in the list 
-
-3)
-q2 _ [] = 0
-q2 a (b:bs) = c + q2 a bs
-    where c = if a == b then 1 else 0
--- q2::Eq a => a -> [a] -> Int
--- count how many a in the list
--- q2 a lst returns the number of occurances of a in lst
 
 
 Qeustion 4 : Coding
 
-1) ***
+1) *
 type HTML = [HTML_element]
 data HTML_element
     = HTML_text String
@@ -133,7 +105,7 @@ showMtree' (Mnode node subtrees) indent = indent ++ show node ++ '\n' ++ concatM
 
 
 
-3) ***
+3)
 -- Given the following binary search tree (BST) data type
 data Tree a = Empty | Node (Tree a) a (Tree a)
     deriving Show  -- I added this for testing
@@ -155,4 +127,49 @@ insert a (Node left b right)
   | otherwise = Node left b (insert a right)
 
 
+QUESTION 3
+Write a Haskell function which takes a list of numbers and returns
+a triple containing the length, the sum of the numbers, and the sum of the 
+squares of the numbers. Try coding this with (1) three separate traversals
+of the list and (2) a single traversal of the list.
 
+ANSWER
+The three-pass version is simple. We use the length and sum functions
+from the Prelude (you can also easily define your own versions).
+
+>stats1 ns =
+>   (length ns, 
+>    sum ns, 
+>    sumsq ns
+>   )   
+
+>sumsq [] = 0 
+>sumsq (n:ns) = n*n + sumsq ns
+
+The single pass version uses pattern matching in a let expression
+to extract the three numbers from the result of the recursive call.
+
+>stats2 [] = (0,0,0)
+>stats2 (n:ns) =
+>   let (l,s,sq) = stats2 ns
+>   in (l+1, s+n, sq+n*n)
+
+QUESTION 3
+
+Revise the definition from the previous question not to use append/3
+to construct the list.  That is, ensure the cost of the operation is
+proportional to the number of elements in the tree.
+
+Hint:  look at the approach taken to write a tail recursive reverse
+predicate for inspiration.
+
+ANSWER
+
+tree_list(Tree, List) :-
+    tree_list(Tree, List, []).
+
+tree_list(empty, List, List).
+tree_list(node(Left,Elt,Right), List, List0) :-
+    tree_list(Left, List, List1),
+    List1 = [Elt|List2],
+    tree_list(Right, List2, List0).

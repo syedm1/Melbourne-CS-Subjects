@@ -37,3 +37,26 @@ fact(N, Fact) :-
     fact(N1, F1),
     Fact is N * F1.
 
+hello(haonan).
+hello(niu).
+nihao(X) :- hello(X).
+
+all_same([]).
+all_same([_]).
+all_same([E,E|T]) :- all_same([E|T]).
+
+before(E1, E2, [E1|List]) :-
+    member(E2, List).
+before(E1, E2, [_|List]) :-
+    before(E1, E2, List).
+
+hello(X,Y) :-
+    ( X>0,Y>0 ->
+        write("hello")
+    ; write("hi")
+    ).
+
+q2([H | T], H, T).
+q2([H | T], E, [H | NT]) :-
+    q2(T, E, NT).
+
