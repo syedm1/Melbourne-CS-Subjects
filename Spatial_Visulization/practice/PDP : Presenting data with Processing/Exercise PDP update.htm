@@ -1,0 +1,278 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head>
+  <title>Exercise PDP</title>
+  <style type="text/CSS" media="all">@import "teaching.css";</style>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body>
+<div id="content">
+<h2>Exercise
+PDP / Presenting data
+with Processing&nbsp;</h2>
+<h3>Objectives</h3>
+<ol>
+  <li>To introduce you to
+Processing, a language for rapid development of visual interfaces and
+computer graphics.&nbsp;</li>
+  <li>To gain some practice in
+using the Processing programming language for generating simple graphics and
+loading data. </li>
+  <li>To apply your new programming skills to the problem of developing an infographic based on a dataset of Australian air travel. </li></ol>
+<h3>In a nutshell...</h3>
+<p>Your task is to introduce
+yourself to the Processing language. Specifically, in
+addition to Processing basics, you must learn: how to draw and fill
+basic shapes and text; how to use variables, control flow, arrays, and 
+functions; how to load and parse data from a file; and how
+to put these functions together to construct a well-designed
+infographic.&nbsp; &nbsp;</p>
+<h3>The fine print...</h3>
+<p>You should
+complete this
+exercise individually, but you are strongly encouraged to work
+collaboratively and help each other in learning Processing.&nbsp;</p>
+<h4>Stage 1: Basics of processing</h4>
+<img style="width: 99px; height: 216px;" alt="Stick man" src="/bbcswebdav/xid-21408416_2" align="right">
+<ul>
+  <li>Read up on the basic principles of computer
+graphics,
+pixels, shapes, and colors. This material may be found in any of the 
+recommended course texts, including Chapter 1 of Shiffman [1], Shape 1 
+of Reas and Fry [2], as well as online (<a href="http://processing.org/tutorials/drawing/">http://processing.org/tutorials/drawing/</a>). If you are already familiar with
+programming and computer graphics, you may feel comfortable skimming or
+even skipping this step.&nbsp;</li>
+  <li>Familiarize yourself with
+Processing programming environment, how to load and execute some of the
+examples that come with Programming.&nbsp;Help with this step may be found in "Using Processing" in [2] and online (<a href="http://processing.org/tutorials/gettingstarted/">http://processing.org/tutorials/gettingstarted/</a>).</li>
+  <li>Using this introductory material, write, debug, and execute
+your own first simple program that draws, say, a red square in the
+middle of the screen. Ask for help if you get stuck. Save your code.&nbsp;</li>
+  <li>Familiarize yourself with
+the Processing documentation ("help" from the Processing application menu), and find some new functions for drawing
+more complex features, using different options and arguments. </li>
+  <li>Put it all together, and
+work out how to use Processing to construct and draw the simple cartoon
+figure right. Again, work together and ask for assistance from the demonstrator to solve this problem. </li>
+</ul>
+Once you have generated the figure, why
+not give it some friends, a
+speech bubble with some text, put
+it in some environment or situation, or even make up a simple cartoon
+strip? Seek assistance and help others by posting your code, problems,
+and answers to the course Wiki.
+<p>You should move onto stage 2
+when you are sure you have fully understood and mastered the
+key principles below:&nbsp;</p>
+<ul>
+  <li>like any digital image,
+shapes in Processing are drawn using pixels. The pixels form an array
+of cells (a raster), with the pixel (0,0) in the top left-hand corner
+of the canvas;</li>
+  <li>colors are specified using
+the RGB-alpha model (red, green, blue, alpha), with values from 0-255
+(e.g., <tt>color(255, 255, 0, 127)</tt> is 50% transparent yellow); </li>
+  <li>each Processing function has a unique name followed by 
+parenthesis. For many functions you may need to supply arguments (data 
+input into the function). The following Processing
+    functions should now be familiar to you: <tt>size()</tt>, <tt>point()</tt>, <tt>line()</tt>,
+    <tt>ellipse()</tt>, <tt>rect()</tt>, <tt>background()</tt>, <tt>color()</tt>, <tt>stroke()</tt>, <tt>fill()</tt>, <tt>noFill()</tt>,
+    <tt>noStroke()</tt>.&nbsp;</li>
+</ul>
+<h4>Stage 2: Programming with
+variables and control flow</h4>
+<img style="width: 216px; height: 216px;" alt="Stick man" src="/bbcswebdav/xid-21408417_2" align="right">In
+this section we look at programming
+in Processing with variables and with control flow.
+If you are already familiar with some programming, these constructs
+will not be new to you. If you are new to programming, then you have
+some homework to do!
+<ul>
+  <li>Read and complete Chapters 4, 5, and 6 of [1] 
+on
+Variables, Conditionals, and Loops; or Data 1, Control 1, and Control 2 of [2].</li>
+</ul>
+Now write code to draw the "tower" on the right using only straight
+lines (i.e., straight line from (200,0) to (400,0); (200,20) to (190,
+0); (200, 40) to (180, 0) and so on ...). The shape on the right was
+written using just four lines of processing code. It uses one variable
+and one "for" loop. Try malking the tower shorter or taller. Try
+recoding the tower using a "while" loop rather than a "for"
+loop.&nbsp;
+<p>Note that:&nbsp;&nbsp;</p>
+<ul>
+  <li>A variable is a handy name
+for a piece of stored data in the computer. Variables must have a type
+(integer, string, floating point number). Variables must be <span style="font-style: italic;">declared</span>,
+using the form "&lt;datatype&gt; &lt;variable
+name&gt;", before they can be <span style="font-style: italic;">assigned</span>,
+using the "=" operator, "&lt;variable name&gt; =
+&lt;value&gt;".&nbsp;</li>
+  <li>Loops are blocks of code
+that repeat, iterating over a set of values. Any "for" loop can be
+rewritten as a "while" loop. &nbsp;</li>
+</ul>
+<h4>Stage 3: Programming with arrays</h4>
+Arrays are compound variables for refering to indexed data (i.e., where 
+we want to refer to the first, second, third, ... data item in a list). 
+<ul>
+  <li>Read and complete Chapter 9 of [1] on
+ Arrays; or Data 4 of [2]; or <a href="http://processing.org/tutorials/2darray">http://processing.org/tutorials/2darray</a>.</li>
+</ul>
+Then, write the Processing code to read the following data into an
+(1D) array of 49 integers: <br>
+<ul>
+  <li><tt>1,2,3,1,2,3,1,2,4,1,2,3,4,2,3,1,4,3,4,2,3,1,2,3,4,2,3,1,2,3,1,4,3,1,2,3,1,2,4,1,2,3,1,2,3,1,2,3,1</tt></li>
+</ul>
+<img alt="grid" src="/bbcswebdav/xid-21408418_2" align="right">
+Now extend your code to draw a 7 x 7 grid of 10 pixel x 10 pixel
+squares, such as on the right. Using the colors:<br>
+<ul>
+  <li>1=yellow</li>
+  <li>2=white</li>
+  <li>3=green</li>
+  <li>4=black</li>
+</ul>
+now fill the 7 x 7 grid by rows with the colors indexed in your array
+(i.e., first row "yellow, white, green, yellow, white, green, yellow", second
+row "white, black, yellow, white, green, black, white"). What letter does
+your graphic reveal? <br>
+<h4>Stage 4: Programming with functions</h4>
+<p>Using the programming constructs above (variables, control flow, 
+arrays, and the functions supplied with Processing) you can build an 
+enormous variety of programs to perform many visualization tasks. 
+However, in addition to the Processing functions, it is important to be 
+able to structure your code into your own functions, for two key 
+reasons: </p>
+<ol>
+<li> As your code becomes longer and does more things, it gets harder 
+and harder to manage the complexity of your code. Creating your own 
+functions enables you to manage the complexity of your code by breaking 
+chunks of code into logical units that you can program, debug, but then 
+forget about the 
+detail. This is the principle of divide-and-conquer. Big problems should
+ be broken down into smaller problems. Solve each of the smaller 
+problems, then combine the small answers into the solution to your big 
+problem. Functions can be seen as answers to small problems. 
+</li><li> Some special functions already exist in Processing, which you 
+can over-write to enable your program to do more. Some of these special 
+functions include:  
+<ul>
+  <li>the <code>setup()</code> function is executed once when your Processing sketch starts. Any operations in the <span class="code"><tt>setup()</tt></span> function will be executed only
+once; </li>
+  <li>the <tt>draw(</tt>) function is repeatedly executed while your Processing
+sketch is running. Any operations in the <tt>draw()</tt> function will be
+executed in order over and over again; &nbsp;</li>
+</ul>
+</li></ol>
+<p>Read and complete Chapter 7 of [1]; or Structure 3 of [2]; or <a href="http://processing.org/tutorials/anatomy/">http://processing.org/tutorials/anatomy/</a>. Now taking your code from Stage 3 above, reorganize it by redefining the <tt>setup()</tt> and <tt>draw()</tt> functions, and adding a new function <tt>getcolor()</tt>, which takes one argument as input (an integer number 1 to 4) and returns one output (the color corresponding to that number). </p>
+<p>Note that: </p>
+<ul>
+<li> Every function must have the following components: a function name 
+(what you will call the function); a return data type (what sort of data
+ the function will generate as output; the data type "void" is required 
+if your function will generate no output); and some code that specifies 
+what the function does. In addition a function may optionally have any 
+number of arguments (data input to the function), each of which must 
+also have its own data type specified. For example, the function <tt>int plustwo(int x){return x+2;}</tt> is named <tt>plustwo</tt>; will return (output) an integer; and requires one integer argument  
+(input). 
+</li></ul>
+<h4>Stage 5: Load some
+data&nbsp;</h4>
+<p>In the earlier stages aboveyou no doubt manually typed in all the data. While this is fine for small data sets,
+clearly we need to computer to do all that manual data organization for
+us. In stage 5, you should learn how to read in data from a file. The first couple of sections of Chapter 18
+of&nbsp;[1]; Input 6 of [2]; or <a href="http://processing.org/tutorials/data/">http://processing.org/tutorials/data/</a> will help here.&nbsp;</p>
+<p>Place the 49 integers from stage 3 above in a file. Now adapt your 
+existing code to read in data from the file (using a function). Can you 
+even extend your code to ask the user for the file name, load a 
+specified file? &nbsp;</p>
+<h4>Stage 6: Stretch yourself!</h4>
+<p>By now you should have begun
+to
+accumulate if not master all the basic skills of programming
+(variables, control flow, input/output of data, top-down problem
+solving). Well done! These basic constructs appear in every
+procedural language, C, C++, C#, Java, JavaScript, Ruby,
+Basic,&nbsp;you name it. </p>
+<p>Now try stretching yourself by constructing an <em>infographic</em> 
+based on this data. An infographic is a data graphic intended to tell a 
+story. Use the public data about monthly airport traffic for the top-twenty
+ Australian airport (1985-2013) as your data set. You may also wish to include additional data up to May 2016.</p>
+<ul><a href="https://bitre.gov.au/publications/ongoing/airport_traffic_data.aspx">https://bitre.gov.au/publications/ongoing/airport_traffic_data.aspx</a> (files also available on LMS)</ul>
+<p>Try to construct an interesting story and infographic using this 
+data. You should not aim to display all the data; only to find an depict
+ some interesting patterns in the data. Your infographic will most 
+likely include a graph. You will also most likely need to convert your 
+data to text or .csv format (it is supplied in .xls format). You may 
+also want to explore using images, text, and other graphical elements in
+ your data graphic. </p>
+<p>As always, please upload any
+data, code, problems, solutions, or
+just pictures of graphs you made to the LMS blog. </p>
+<h4>Tips
+for coding</h4>
+<ul>
+  <li>Use comments in your code
+liberally to explain to yourself what each line or block does, why it
+is the way it is. In processing, any line beginning with "//" is a
+comment and is ignored by the computer. As a rule of thumb aim for your
+code to have at least one comment every 3-4 lines of code.&nbsp;</li>
+  <li>Use functions to decompose
+big, hard problems into small, easy parts. Most programming tasks are
+too big and complex to hold in your head all at one time. Instead,
+break
+the problem down into successively smaller parts, solving each one in
+turn, then combining into your solution (top-down problem solving).
+Functions make that process manifest in your code. Functions to solve
+small problems can be called by other functions that solve larger
+problems, and so on. As a rule of thumb in well-structured code, no
+function need ever be more than half a screen long, and the shorter the
+better.&nbsp; &nbsp; </li>
+  <li>Adapt rather than create
+where possible. Find code that someone else has written (e.g., on the
+web) and adapt that to your needs before resorting to coding from
+scratch. Using functions (above) helps with integrating other people's
+code into yours. However, you must always acknowledge any code you use
+from other sources, and abide by that code's license conditions.
+Adapting someone else's code, while acknowledging the source and
+abiding by their license conditions, is smart---it means you can spend
+more time working on other parts of your code. But using someone else's
+code without acknowledgment is plagiarism. Any form of plagiarism is
+likely to result in penalties including lost marks and University
+disciplinary action.</li>
+  <li>The golden rule of
+debugging
+(fixing problems in your code): "fixing the problem is trivial,
+finding the problem is not." Most of the stress and time wasted on
+debugging arises from trying to fix a problem without first making sure
+you know what the problem is.
+Don't assume you know what the problem is; debugging is the process of
+systematically and logically identify exactly what the problem is. If
+you can tell me exactly what the problem is, I can (usually!) tell you
+a solution within seconds.&nbsp;</li>
+  <li>Also be aware of the
+difference between
+syntactical errors (where the program crashes or doesn't run,
+generating errors) and logical errors (where the program runs, but just
+doesn't do what you expect it to). The latter are much harder to find
+than the former, because they arise from an error in thinking, in your
+head, not in the computer. Computers only ever do exactly what you tell
+them. Logical errors arise when you think you've told the computer to
+do one thing, but you've actually told it to do another. Computers are
+very stupid and will not spot they were meant to do something else.
+&nbsp;</li>
+</ul>
+<h3>References</h3>
+<ol>
+<li>Daniel Shiffman (2008) Learning Processing: A Beginner's Guide to 
+Programming Images, Animation, and Interaction, Morgan Kaufmann.</li>
+<li>Casey Reas and Ben Fry (2007) Processing: A Programming Handbook for Visual Designers and Artists, MIT Press.</li>
+</ol>
+<h3>Assessment</h3>
+<p>This exercise is not
+  assessed. </p>
+<p>&nbsp;</p>
+</div>
+
+
+</body></html>

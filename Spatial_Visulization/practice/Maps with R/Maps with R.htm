@@ -1,0 +1,167 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head>
+  
+  <title>Exercise MWR</title><style type="text/CSS" media="all">@import "teaching.css";</style>
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252"></head>
+<body>
+<div id="content">
+<h2>Practical: Maps with R&nbsp;</h2>
+<h3>Objectives</h3>
+<ol>
+  <li>Gain experience using
+ mapping packages for R; &nbsp;</li>
+  <li>Use R mapping packages to generate cartographic data graphics;&nbsp;</li>
+  <li>Critically examine your 
+maps, improving them through an iterative design process.&nbsp;</li>
+</ol>You are encouraged to work&nbsp;in groups of three or four people
+in order to troubleshoot problems which might arise. &nbsp; However,
+you should be able to complete this practical while working alone.&nbsp;
+<h4>The Required Packages</h4>Before commencing, you may need to download the latest version of Rtools and install it. You can download Rtools here: <a href="https://cran.r-project.org/bin/windows/Rtools/"> Rtools for Windows</a>.
+Rtools provides you will a set of tools to handle packages. Be sure to
+select BOTH check boxes on the last page of the installation wizard
+BEFORE you exit (this ensures your library paths are correctly linked). <br><br>There
+are specific libraries needed for this practical. &nbsp;Two through
+five are specific to spatial analysis and visualisation.<br><ol><li>Rtools&nbsp;</li><li>maptools (for handeling spatial data)</li><li>rgdal (R geometry engine)</li><li>ggplot2 (for
+specialized plotting of maps), and&nbsp;</li><li>ggmap (for integrating with Google
+maps).</li><li>classInt (for later in the practical)</li><li>RColorBrewer (explanation is in <a href="#Colors_and_legend">Colors and Legends</a>)</li></ol>
+
+<h4>
+Downloading a Package</h4><p>
+
+You must
+download packages using <tt>install.packages</tt>
+and then load it as a library using the <tt>library</tt> command:
+</p><pre style="color: rgb(51, 51, 255);">&gt; install.packages("maptools")<span style="font-family: verdana,sans-serif;"><br></span>&gt; library(maptools)</pre>
+<p>Repeat this for the other&nbsp;packages above.&nbsp; It is
+worth noting that there are many other mapping packages for R,
+such as GISTools.&nbsp;</p>
+
+<font color="red"><span style="color: black; font-style: italic;">If you have attempted this tutorial previously, check that you remove the package 'gpclib'.
+</span><pre><span style="color: black;">&gt;</span><span style="color: black;"> remove.packages("gpclib")</span><br><span style="font-family: verdana,sans-serif;"></span></pre>
+</font>
+
+
+<h4>Acquiring Data</h4>For this exercise, we will&nbsp; use European adminstrative boundaries and statistical data on expenditure
+on education from the Eurostat web site, <a href="http://epp.eurostat.ec.europa.eu/portal/page/portal/eurostat/home/">http://epp.eurostat.ec.europa.eu/portal/page/portal/eurostat/home/</a>.
+The data has been prepared and made available from the course website.
+Other sources of shapefile data include GADM (Global Administrative
+Areas <a href="http://gadm.org/">http://gadm.org/</a>)
+and CShapes (<a href="http://nils.weidmann.ws/projects/cshapes">http://nils.weidmann.ws/projects/cshapes</a>),
+which also includes temporal data about changes in administrative
+boundaries.
+<h4>Reading in Data</h4><p>To make the
+paths to the data sets easier to manage, you should use the <tt>getwd()</tt>
+(get working directory) and <tt>setwd()</tt>
+(set working directory) commands. &nbsp;Read in the data to R using the
+following commands:&nbsp;
+</p>
+<pre><span style="color: rgb(51, 51, 255);">&gt; eurMap &lt;- readOGR(dsn="your_file_path","CNTR_RG_60M_2010")    </span><br style="color: rgb(51, 51, 255);"><span style="color: rgb(51, 51, 255);">&gt; eurEdu &lt;- read.csv("your_file_path/educ_thexp_1_Data.csv", stringsAsFactors = F) </span><br>&gt; <span style="color: rgb(0, 153, 0);"># Note, your_file_path must be specified using forward slashes '/' </span><br>&gt; <span style="color: rgb(0, 153, 0);"># and, importantly, it must not end in a slash, e.g., dsn="C:/Data".</span><br><span style="color: rgb(0, 153, 0);"></span><br><span style="color: rgb(51, 51, 255);">&gt; plot(eurMap)</span><br>&gt; <span style="color: rgb(0, 153, 0);"># R can&nbsp;display the boundaries we have loaded, using the plot command.</span><br></pre><h4>ggplot2</h4><p>
+We can do better with ggplot2. &nbsp;To use ggplot2,
+the eurMap object must first be converted to a
+data frame (rather than a SpatialPolygonsDataFrame, see <tt>class(eurMap)</tt>).
+ggplot2 uses '<span style="font-family: monospace;">fortify</span>'. </p>
+
+
+<pre><span style="color: rgb(51, 51, 255);">&gt; eurMapDf &lt;- fortify(eurMap,region="CNTR_ID")</span><br>&gt; <span style="color: rgb(0, 153, 0);"># We can now view the most basic data in ggplot2:</span><br><span style="color: rgb(51, 51, 255);">&gt; ggplot(eurMapDf)+ aes(long,lat,group=group)+geom_polygon()</span><br><br></pre>
+Note the slightly unusual use of '+'. &nbsp;Typical ggplot maps arise from
+this type of combination of components, each component representing a
+"layer" or a ggplot operation. &nbsp;Next, we can combine spatial and
+attribute data together using the
+merge command:<br>
+<pre style="color: rgb(51, 51, 255);">&gt; eurEduMapDf &lt;- merge(eurMapDf, eurEdu, by.x="id", by.y="GEO")</pre>
+As our education data only pertains to certain countries in the world,
+we can restrict our data to our region of interest using the following:<br>
+<pre style="color: rgb(51, 51, 255);">&gt; eurEduMapDf &lt;- eurEduMapDf[order(eurEduMapDf$order),]<br>&gt; europe.limits &lt;- geocode(c("Cape Fligely, Franz Josef Land, Russia", "Gavdos, Greece", "Faja Grande, Azores", "Severny Island, Novaya Zemlya, Russia"))<br>&gt; eurEduMapDf &lt;- subset(eurEduMapDf, long &gt; min(europe.limits$lon) &amp; long &lt; max(europe.limits$lon) &amp; lat &gt; min(europe.limits$lat) &amp; lat &lt; max(europe.limits$lat))</pre>
+Now the data is ready to redisplay as a choropleth map: <br>
+<pre style="color: rgb(51, 51, 255);">&gt; ggplot(eurEduMapDf)+aes(long,lat,group=group,fill=Value)+geom_polygon()</pre>
+<p>
+The data in the <span style="font-family: monospace;">Value</span> column is total expenditure on education as a
+percentage of GDP.
+</p>
+<h3>More advanced
+mapping&nbsp;</h3>
+<p>Our initial map design can be improved in several key areas.&nbsp;To get you started, here are examples of&nbsp; immediate
+stages in an iterative&nbsp;redesign.&nbsp;</p>
+<h4>Map projections</h4>
+<p>The mapped data appears
+stretched because of the default
+map projection used. Try for example: </p>
+<pre style="color: rgb(51, 51, 255);">&gt; ggplot(eurEduMapDf,aes(long,lat,group=group,fill=Value)) + geom_polygon() + coord_equal()</pre>
+<p>ggplot2 understands a wide
+range of
+other projections. Experiment with replacing <tt>coord_equal</tt>
+with instead <tt>coord_map</tt>,
+e.g., <tt>coord_map("orthographic")</tt>,
+<tt>coord_map("stereographic")</tt>,
+<tt>coord_map("conic",
+lat0 = 30)</tt> (see <tt>?coord_map</tt>
+for more ideas and information).</p>
+<h4>Classification</h4>
+<p>One of our
+first tasks should be to classify systematically our data about
+education expenditure. This
+can be done with the <span style="font-family: monospace;">classInt</span>
+package.
+</p><ul>
+  <li>Ensure you have installed and loaded the "classInt"
+package.&nbsp;</li>
+  <li>Compute the class breaks the
+education data using the equal interval method:&nbsp;</li>
+  <pre style="color: rgb(51, 51, 255);">&gt; intervals &lt;- classIntervals(eurEduMapDf$Value, n=5, style="equal")</pre>
+  <li>Classify
+the data using these class breaks:&nbsp;</li>
+  <pre style="color: rgb(51, 51, 255);">&gt; rank &lt;- findInterval(intervals$var,intervals$brks)</pre>
+  <li>Store the classified data as
+a new column in the data frame:&nbsp;</li>
+  <pre style="color: rgb(51, 51, 255);">&gt; eurEduMapDf$rank &lt;- rank</pre>
+  <li>Finally, replot the data
+with the changed classification. </li>
+  <pre style="color: rgb(51, 51, 255);">&gt; ggplot(eurEduMapDf) + aes(long,lat,group=group,fill=rank)+geom_polygon()</pre>
+</ul>
+<p>Rebuild the map using different
+classification methods, e.g.,
+quantiles, jenks, different numbers of classes. Compare the different
+versions. Which is better?</p>
+<h4><a name="Colors_and_legend"></a>Colors and legend</h4>
+The presentation of the mapped data, the expenditure on
+education as a percentage of GDP, is somewhat arbitrary. Note that the legend is continuous where as the classes
+are discrete. This can be fixed through the ggplot2
+scale_fill_continuous() function. Try the following amendment to the
+plot:<br>
+<pre style="color: rgb(51, 51, 255);">&gt; ggplot(eurEduMapDf) + aes(long,lat,group=group,fill=rank) + geom_polygon() + scale_fill_continuous(guide="legend")</pre>
+As the ggplot commands become longer, they rapidly become more tedious
+to write. However, note that you can&nbsp;store in a variable
+and
+of the components of a ggplot summation. For example:&nbsp;
+&nbsp;<br>
+<pre style="color: rgb(51, 51, 255);">&gt; m0 &lt;- ggplot(eurEduMapDf)<br>&gt; m1 &lt;- aes(long,lat,group=group,fill=rank)<br>&gt; m2 &lt;- geom_polygon()<br>&gt; m3 &lt;- scale_fill_continuous(guide="legend")<br>&gt; m0 + m1 + m2 + m3</pre>
+The colors used are also somewhat arbitrary. To help with color
+selection for maps, Cynthia Brewer and colleagues have developed
+ColorBrewer,&nbsp;<a href="http://colorbrewer2.org/">http://colorbrewer2.org/</a>.,
+with carefully chosen color schemes that are clearly visible with
+strong value message. In fact, R also "speaks ColorBrewer" through the
+"RColorBrewer" package. You can apply a ColorBrewer palette directly
+through ggplot, using the <tt>scale_fill_brewer</tt>
+function. However, first we must change the numerical data in the ranks
+to ordinal (factor) data:<br>
+<pre style="color: rgb(51, 51, 255);">&gt; eurEduMapDf$rank &lt;- as.factor(rank)<br>&gt; m0 + m1 + m2 + scale_fill_brewer(type="seq",palette=7)</pre>
+The map may appear somewhat washed out as the country borderlines are
+not yet represented: <br>
+<pre><span style="color: rgb(51, 51, 255);">&gt; m0 + m1 + m2 + scale_fill_brewer(type="seq",palette=7) + geom_path(color='dark grey'</span>)</pre>
+There are many other improvements to explore. ggplot2 alters many
+aspects of appearance through "themes". For example: <br>
+<pre style="color: rgb(51, 51, 255);">&gt; m0 + m1 + m2 + scale_fill_brewer(type="seq",palette=7) + geom_path(color='dark grey') + theme(panel.background = element_rect(fill="white"))</pre>
+<p>This will remove the background grey color. Other improvements you should
+  investigate include&nbsp;</p><ul><li>clearer labels for the legend;&nbsp;</li><li>a title;&nbsp;</li><li>thinner
+  lines for country boundaries;&nbsp;</li><li>removing the "lat" and "long" labels;&nbsp;</li><li>adding Google map backgrounds; and
+  many other options. </li></ul><h3>Coda</h3>
+<p>Core material based on an
+original exercise
+by Max Marchi, <a href="http://www.milanor.net/blog/?p=634">http://www.milanor.net/blog/?p=634</a>.
+</p>
+<p><a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US"><img src="88x31.png" style="border: 0px solid ; width: 88px; height: 31px;" alt="Creative Commons License"></a>
+Additional material and adaptations by Matt Duckham and Nathaniel Carpenter,
+licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative
+Commons Attribution 3.0 Unported License</a>.</p>
+</div>
+</body></html>

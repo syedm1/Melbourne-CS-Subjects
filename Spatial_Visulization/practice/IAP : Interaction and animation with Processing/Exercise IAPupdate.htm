@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head>
+  <title>Exercise IAP</title>
+  <style type="text/CSS" media="all">@import "teaching.css";</style>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body>
+<div id="content">
+<h2>Exercise
+IAP / Interaction and animation with Processing&nbsp;</h2>
+<h3>Objectives</h3>
+<ol>
+  <li>To extend your knowledge of the Processing programming language to
+ enable you to accept user-interaction, for example though mouse clicks 
+and keyboard input. 
+  </li>
+  <li>To understand how to present animations using Processing. </li>
+  <li>To be aware of some options 
+for mapped displaying mapped data in a Processing environment. 
+</li></ol>
+<h3>In a nutshell...</h3>
+<p>Your task is to gain more experience with the Processing language. 
+Specifically, building on your Processing basics, you must learn: how to
+ respond to user interaction; how to contruct animations; and how to use
+ existing libraries to show simple maps.&nbsp; &nbsp;</p>
+<h3>The fine print...</h3>
+<p>You may
+again complete this
+exercise individually, but you are strongly encouraged to work
+collaboratively and help each other in learning Processing.&nbsp;</p>
+<h4>Stage 1: Interaction</h4>
+<p>Read and complete Chapter 3 of [1] or Input 1-4 of [2]. </p>
+<p>Interaction in Processing is captured using special system functions and variables. Let's look first at mouse interaction: </p>
+<ul>
+  <li>Insert the code <tt>ellipse(mouseX, mouseY, 10, 10);</tt> into the <tt>draw()</tt> function for a new processing sketch. <tt>mouseX</tt> and <tt>mouseY</tt> are special system variables that always contain the current coordinates of the mouse cursor. 
+  </li><li>Now insert a new function <tt>void mousePressed(){rect(mouseX, mouseY, 20, 20);}</tt> into your sketch. What happens now? 
+  </li></ul>
+<p>Using the Processing help system, research and try using the 
+following important mouse interaction functions, which work in the same 
+way as <tt>mousePressed()</tt>: <tt>mouseClicked()</tt>, <tt>mouseDragged()</tt>, <tt>mouseMoved()</tt>, <tt>mouseReleased()</tt>. You may also find it useful to investigate the functions <tt>cursor()</tt>, <tt>noCursor()</tt> and the variable <tt>mouseButton</tt>. </p>
+<p>Keyboard interaction works in a similar way.  Investigate the functions <tt>keyPressed()</tt>, <tt>keyReleased()</tt>, <tt>keyTyped()</tt> and the system variables <tt>key</tt>, <tt>keyCode</tt>, and <tt>keyPressed</tt>. </p>
+<p>Now use these skills to write your own "paint" application, to allow 
+the user to draw a picture using the mouse. Your paint program should 
+have at least the following tools: pencil (thin line), paintbrush 
+(thicker lines), eraser, and polyline (staight line between two selected
+ points). You might also think about more advanced options, like adding 
+text or an undo function. Using your initiative and background research,
+ find out how to add the ability to export the picture the user has 
+drawn makes to an .png image file. </p>
+<h4>Stage 2: Animation</h4>
+<p>You already have most of the knowledge required to build animated presentations. The key thing to note is that the <tt>draw()</tt> function is repeatedly executed, over and over again while the Processing sketch is running. Thus, anything you put in the <tt>draw()</tt> function is redrawn many times a second. If your <tt>draw()</tt> program code results in slight changes in what is drawn over time, then the changes will appear smooth. </p>
+<p>For example, start a new sketch, using the following code in the <tt>draw()</tt> function: </p>
+<pre>void draw() {
+  background(200);
+  text(hour() + ":" + minute() + ":" + second(), 20, 20);
+}</pre>
+<p>This is animation. To convince yourself that it is really animated, comment out the <tt>background(200)</tt> function call from the <tt>draw()</tt> function. Now what happens and why?</p>
+<p>Because the speed of animations might vary across different machines,
+ you can go some way to fixing the speed of an animation using the <tt>frameRate()</tt> function. The input argument to the <tt>frameRate()</tt>
+ function is an integer which instructs Processing on the maximum number
+ of frames that should be shown per second. The default rate is 60 
+frames per second. Try the following code: </p>
+<pre>void setup() {
+   frameRate(60);
+}
+void draw() {
+  background(200);
+  text(millis(), 20, 20);
+}</pre>
+<p>
+The function <tt>millis()</tt> shows the number of milliseconds since 
+the program started. Now, what happens to the behavior of your code when
+ you replace the frame rate of 60 (in <tt>setup()</tt>) with a frame rate of 1? </p>
+<p>Using the data on airport traffic from the previous exercise 
+(Exercise PDP), generate an animated and interactive data graphic, which
+ shows change of some aspect of traffic data over time. For example, you
+ might show an animated data graphic of air traffic along with a 
+timeslider. When the user moves the timeslider, the data should update 
+accordingly. </p>
+<h4>Stage 3: Maps</h4>
+<p>There are a number of packages that can be used for displaying mapped
+ data in Processing. Here we deal only with the simplest method: 
+displaying a georeferenced map image (from OpenStreetMap). The steps 
+are: </p>
+<ol>
+  <li>First, find the map you want on OSM, OpenStreetMap, <a href="http://www.openstreetmap.org/">http://www.openstreetmap.org/</a>. You can turn on or off layers as you wish to make your map clearer. </li>
+  <li>Next download your OSM map using the "export" function on the OSM 
+web page. Export your data to a map image (.png) and take care to take a
+ note of the latitude and longitude of your map (see "Area to Export", 
+top left)</li>
+<center><img src="/bbcswebdav/xid-21408429_2" alt="OSM web site export" width="900"></center>
+	<li>Now start a new Processing sketch. To help with managing the 
+coordinates of georeferenced map image, we will need an additional 
+package produced by the researchers at City University: gicentreUtils. 
+You can install the package directly from the Processing Sketch -&gt; 
+Import Library... -&gt; Add Library... menu item. In the resulting 
+dialog, search for an install the "gicentreUtils" package. You can find 
+out more about the package (which is also useful for a range of other 
+data graphics applications) on the package web site <a href="http://gicentre.org/utils/">http://gicentre.org/utils/</a></li>
+    <li>Save your (empty) sketch in a suitable location. Now, using the 
+file explorer on your computer copy the .png map file you generated in 
+step 2 above to the Processing sketch folder for your sketch. If you are
+ not sure where this is, you can use the Sketch -&gt; Show Sketch Folder
+ menu item to find it. When you have done this, use the file explorer to
+ find out the dimensions of your image (e.g., on a Mac, control-click on
+ the file and select "Get Info"). Take a note of the image width and 
+height. </li>
+    <li>Finally, enter the code below. This code is an simplification of
+ the code examples from gicentre at City University, London, available 
+in full at <a href="http://gicentre.org/utils/mapProjection/">http://gicentre.org/utils/mapProjection/</a>.
+     As you are entering the code, try to understand what each step 
+does. You will also need to take care to enter a number of pieces of 
+information that are specific to your map (underlined in the code 
+listing below): 
+    <ul><li>w is the width of your saved image, h is the height of your saved image, which you noted in step 4 above.  
+    </li><li>filename.png is the name of your saved image file, chosen in step 2 above, and moved to the sketch directory in step 4 above.  
+    </li><li>(lat1, long1) and (lat2, long2) are the geographic 
+latitude/longitude coordinates of the top left and bottom right of your 
+map, which you made a note of in step 2 above.   
+    </li></ul> 
+       A key feature of the code is the need to manage three different 
+coordinate systems: Lat/Long coordinates; the coordinates of the 
+projection used by the map; and the Processing screen coordinates. In 
+any geographic mapping application you can expect to need to convert 
+between the different coordinate systems, so make sure you understand 
+the difference between them.  
+  </li></ol>
+
+<pre>import org.gicentre.utils.spatial.*;    <span class="field">// For map projections.</span>
+
+<span class="field">// Displays map and map coordinates using the WebMercator projection.
+// Adapted from original code by Jo Wood, giCentre, City University London, http://gicentre.org/utils/mapProjection/</span>
+
+<span class="field">// --------------------- Sketch-wide variables ----------------------
+</span>ArrayList<pvector>coords;    			<span class="field">// Projected GPS coordinates.</span>
+PImage backgroundMap;        <span class="field">// OpenStreetMap.</span>
+PVector tlCorner,brCorner;   <span class="field">// Corners of map in WebMercator coordinates.</span>
+WebMercator proj;   			<span class="field">// WebMercator projection.</span>
+
+<span class="field">// ------------------------ Initialisation --------------------------</span>
+void setup(){
+  size(<span class="demolink">w</span>,<span class="demolink">h</span>);
+  smooth();
+  noLoop();
+  readData();
+}
+
+<span class="field">// ------------------------ Processing draw -------------------------</span>
+void draw(){
+  <span class="field">// Background map.</span>
+  image(backgroundMap,0,0,width,height);
+}
+
+void mousePressed(){
+  PVector screen = new PVector(mouseX, mouseY);
+  PVector wm = new PVector(map(screen.x,0,width,tlCorner.x,brCorner.x),
+                     map(screen.y,0,height,tlCorner.y,brCorner.y));
+  PVector geo = proj.webMercatorToLatLong(wm);
+  println("Screen = (" + screen.x + "," + screen.y + 
+    "); Proj = ("  + wm.x + "," + wm.y + ")" + 
+    "); Lat/Long = ("  + geo.x + "," + geo.y + ")");
+}
+
+<span class="field">// ---------------------------- Utility functions -----------------------------
+</span>void readData(){
+  <span class="field">// Read the background map.</span>
+  backgroundMap = loadImage(<span class="demolink">"filename.png"</span>);
+  
+  <span class="field">// Generate the projection</span>
+  proj = new WebMercator();
+  
+  <span class="field">// Store the WebMercator coordinates of the corner of the map.</span>
+  tlCorner = proj.transformCoords(new PVector(<span class="demolink">lat1</span>,<span class="demolink">long1</span>));
+  brCorner = proj.transformCoords(new PVector(<span class="demolink">lat2</span>,<span class="demolink">long2</span>));
+}</pvector></pre>
+<h3>References</h3>
+<ol>
+<li>Daniel Shiffman (2008) Learning Processing: A Beginner's Guide to 
+Programming Images, Animation, and Interaction, Morgan Kaufmann.</li>
+<li>Casey Reas and Ben Fry (2007) Processing: A Programming Handbook for Visual Designers and Artists, MIT Press.</li>
+</ol>
+<h3>Assessment</h3>
+<p>This exercise is not
+  assessed. </p>
+<p>&nbsp;</p>
+</div>
+
+
+</body></html>

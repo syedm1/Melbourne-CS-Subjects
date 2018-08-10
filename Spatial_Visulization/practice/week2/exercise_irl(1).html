@@ -1,0 +1,343 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Exercise IRL</title>
+  <style type="text/CSS" media="all">@import "teaching.css";</style>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=windows-1252">
+</head>
+<body>
+<div id="content">
+<h2>Exercise
+IRL
+/
+Introduction to R language&nbsp;</h2>
+<h3>Objectives</h3>
+<ol>
+  <li>To learn the basics of using
+the R language; &nbsp;</li>
+  <li>To use R to generate some
+non-spatial data graphics;&nbsp;</li>
+  <li>To critically examine your
+own data graphics, improving through iterative redesign.&nbsp;</li>
+</ol>
+<h3>In a nutshell...</h3>
+<p>Your task is to learn to use
+the R statistical language, and design some simple data graphics with
+R.&nbsp;&nbsp;</p>
+<h3>The fine print...</h3>
+<p>This
+exercise can be completed individually. However, you are
+strongly&nbsp;encouraged to work together on solving problems, and
+learning in your groups. &nbsp;</p>
+<h4>Stage 1: About R</h4>
+<p>Spend a little time
+familiarizing yourself with what R is, in particular browse through the
+"What is R?" section of <a href="http://www.r-project.org/">http://www.r-project.org/</a>.
+</p>
+<h4>Stage 2: Getting started with
+R&nbsp;</h4>
+<ul>
+  <li>Start the R console on your
+computer.</li>
+  <li>Typing in simple <span style="font-weight: bold;">calculations</span>
+at the R console command line will cause them to be immediately
+evaluated. For example, type <tt>5
+* 3</tt>
+(followed by "enter") into the console. What do you see? Can you
+calculate in R the answer to the following:&nbsp;</li>
+  <ul>
+    <li><tt>103
++ 54</tt></li>
+    <li><tt>103
+/ 54</tt></li>
+    <li><tt>5
+^ 2</tt> (5 squared)</li>
+    <li>The square root of 5</li>
+  </ul>
+  <li>R also has a great many <span style="font-weight: bold;">functions</span>
+available for calculations and other operations. Functions are always
+followed by parenthesis, e.g., <tt>ls()</tt>,
+sometimes with <span style="font-style: italic;">arguments</span>
+(inputs to the function) inside the parenthesis, e.g., <tt>sqrt(5)</tt>.
+Try out the following functions, and play with alternative
+arguments:&nbsp;</li>
+  <ul>
+    <li><tt>substr("Hello
+World",
+2, 5)</tt></li>
+    <li><tt>max(15,3*6)</tt></li>
+    <li><tt>intersect(c(1,2,3),c(3,2,5,6))</tt></li>
+    <li><tt>quit()</tt></li>
+  </ul>
+  <li>R has a built-in <span style="font-weight: bold;">help</span>
+system to aid getting to know functions. To access help you can type <tt>help(function)</tt>,
+or if you prefer <tt>? function</tt>,
+where "<tt>function</tt>"
+is the name of an R function. For example, type <tt>help(c)</tt>
+to get more information on the <tt>c()</tt>
+function. Explore some of the other functions above. Groups of
+functions in R are organized into packages. Typing <tt>library(help="base")</tt>
+will provide broader help information on some of the functions of the
+base package in R. As we shall see, there are many other packages for a
+great many different purposes that you can use.
+&nbsp;</li>
+  <li>R
+not only offers many
+different funtions, but is a full procedural programming language.
+Thus, R can store information in <span style="font-weight: bold;">variables</span>
+(names for stored data). For example, at the R prompt (<tt>&gt;</tt>)
+type:&nbsp;
+    <pre>&gt; a &lt;- 15<br>&gt; b &lt;- 50<br>&gt; min(a,b)</pre>
+R also offers&nbsp;<span style="font-weight: bold;">control flow</span>&nbsp;commands
+that will be familiar to anyone who has already
+programmed another procedural language. For example, type
+    <pre>&gt; for(i in 1:10){<br>+ print(i*2)<br>+ }</pre>
+Note how R waits for all the braces and parenthesis to balance before
+evaluating the expression (changing the command prompt to the <tt>+</tt>
+sign when R is expecting more information). Explore some other control
+flow commands, such as <tt>switch</tt>, <tt>while</tt>, <tt>if</tt>.
+(Note, if you have problems accessing help on certain commands via the
+R command line, you can always search the R help directly.)</li>
+  <li>R allows you to access
+previous commands via the up and down cursor keys. However, as your R
+code gets more sophisticated, you will most likely want to <span
+ style="font-weight: bold;">save</span>
+and <span style="font-weight: bold;">load</span>
+your work in a session. Typing <tt>save.image(file.choose(new=T))</tt>
+will allow you to save your session. Typing <tt>load(file.choose())</tt>&nbsp;will
+allow you to load a previously saved session.&nbsp;</li>
+</ul>
+<span style="font-style: italic;">Mini-exercise</span>:
+To check you have these skills, now work out how to use R to output in
+full the complete times tables for 1 to 12, i.e., "1 times 1 is 1", "2
+times 1 is 2", ... "11 times 12 is 132" 12 times 12 is 144". How short
+can you make the R code to do this? Use the course web site to see if
+anyone has found shorter code for the same task.
+<h4>Stage
+3: Data in R&nbsp;</h4>
+Variables in R are not only
+simple numbers or strings. R variables can
+also store and manipulate data tables. Begin this stage by creating a
+.csv (comma separated variable) containing the following data about the
+costs of educating a child in 2003 and 2013 (source <a
+ href="http://www.lv.com/assets/pdfs/other/COAC-10-report.pdf">http://www.lv.com/assets/pdfs/other/COAC-10-report.pdf</a>)
+using any software you prefer (Excel, text editor, Google docs).<br>
+<table border="1" cellpadding="2" cellspacing="2" width="100%">
+  <tbody>
+    <tr>
+      <td><span style="font-weight: bold;">Category</span> </td>
+      <td><span style="font-weight: bold;">2003</span> </td>
+      <td><span style="font-weight: bold;">2013 </span></td>
+    </tr>
+    <tr>
+      <td>Education </td>
+      <td>32,593 </td>
+      <td>71,780</td>
+    </tr>
+    <tr>
+      <td>Childcare &amp;
+babysitting </td>
+      <td>39,613 </td>
+      <td>62,099</td>
+    </tr>
+    <tr>
+      <td>Food </td>
+      <td>14,918 </td>
+      <td>18,667</td>
+    </tr>
+    <tr>
+      <td>Clothing </td>
+      <td>11,360 </td>
+      <td>10,781</td>
+    </tr>
+    <tr>
+      <td>Holidays </td>
+      <td>11,458 </td>
+      <td>15,532</td>
+    </tr>
+    <tr>
+      <td>Hobbies &amp; Toys </td>
+      <td>8,861 </td>
+      <td>9,248</td>
+    </tr>
+    <tr>
+      <td>Leisure &amp;
+Recreation </td>
+      <td>6,366 </td>
+      <td>7,303</td>
+    </tr>
+    <tr>
+      <td>Pocket money </td>
+      <td>3,386 </td>
+      <td>4,337</td>
+    </tr>
+    <tr>
+      <td>Furniture </td>
+      <td>2,074 </td>
+      <td>3,373</td>
+    </tr>
+    <tr>
+      <td>Personal </td>
+      <td>925 </td>
+      <td>1,143</td>
+    </tr>
+    <tr>
+      <td>Other </td>
+      <td>8,845 </td>
+      <td>13,761</td>
+    </tr>
+  </tbody>
+</table>
+<ul>
+  <li><span style="font-style: italic;">Read in CSV data</span>:
+Read in the education data
+from the .csv file you created using the command:&nbsp;
+    <pre>&gt; edudata &lt;- read.csv(file.choose())</pre>
+The name <tt>edudata</tt>
+can be anything you wish instead. It is simply a variable name for a <span
+ style="font-style: italic;">data frame</span>
+to hold your education data. &nbsp;</li>
+  <li><span style="font-style: italic;">Check data</span>:
+You can check the data has
+been correctly read in using the following commands, which provide
+information about a data frame (see help for more
+information):&nbsp;
+    <pre>&gt; head(edudata) <br>&gt; tail(edudata)<br>&gt; summary(edudata)<br>&gt; names(edudata)<br>&gt; ncol(edudata)<br>&gt; nrow(edudata)</pre>
+  </li>
+  <li><span style="font-style: italic;">Try to plot</span>:
+You can try to plot the data
+in a bar chart using...&nbsp;
+    <pre>&gt; barplot(edudata$X2003)</pre>
+... but don't panic if this
+doesn't work. Before we fix that problem, first, note that we refer to
+a column of a data frame
+using the dollar <tt>$ </tt>sign.
+Second, note that if you had "2003" as
+your column name in your original data, it will have been converted to
+"X2003". Column and variable names in R are not allowed to being with a
+number or some other reserved characters. (Perhaps do a web search, and
+find out for yourself what are allowed and disallowed variable names).
+&nbsp;</li>
+  <li><span style="font-style: italic;">Working with data types</span>:
+If your bar chart doesn't work, the most likely problem is that the
+data in your data frame uses the wrong data type to be plotted in a bar
+chart.&nbsp;Type <tt>class(edudata)</tt>.
+This should report that the data type of your edudata is correctly a
+data frame (a table in R). Now type <tt>class(edudata$X2003)</tt>.
+If this reports your X2003 column is of type "factor", then that means
+the data in that column is nominal/categorical data (i.e., numbers are
+represented as strings of characters rather than numeric data, check
+your help for "factor").</li>
+  <ul>
+    <li>You
+can try to fix this
+problem using the command <tt>barplot(is.numeric(edudata$X2003))</tt>.
+But look carefully at the plot. Is it what you expected? Is the data
+correct? Check by comparing whether these two look the same: &nbsp;
+      <pre>&gt; edudata$X2003<br>&gt; as.numeric(edudata$X2003)</pre>
+    </li>
+    <li>If the output of these two
+fucntions do not look the same, it is likely that there are some
+characters, such as commas, in your data that are making the conversion
+from character string to numeric go awry. Compare, for example, the
+output of the commands <tt>as.numeric("31234")</tt>
+and <tt>as.numeric("31,234")</tt>.
+We can fix this problem be first removing all the commas from the
+charater strings, before converting to numeric data. The&nbsp;<tt>gsub</tt>&nbsp;command
+is designed for substituting individual characters in character
+strings, as in:&nbsp;&nbsp;
+      <pre>&gt; edudata$X2003<br>&gt; barplot(as.numeric(gsub(",","",edudata$X2003)))</pre>
+You should now have a very basic barplot of your data. This step was
+intended to provide an example of how to work through problems and
+errors when they arise in R. If at this point you are still stuck, ask
+for help from a demonstrator.&nbsp;</li>
+  </ul>
+  <li><span style="font-style: italic;">Visual presentation</span>:
+You are now ready to refine the visual presentation of your data. There
+are many options to explore at this point, some of which are outlined
+below. Before beginning, you may want to store your reformatted
+numerical data in your data frame as new columns, "num2003" and
+"num2013" (e.g,. use <tt>edudata$num2003
+&lt;- as.numeric(gsub(",","",edudata$X2003))</tt>).
+&nbsp;</li>
+  <ul>
+    <li><span style="font-style: italic;">Add x labels</span>:
+Try adding the category names for each bar using <tt>barplot(edudata$num2003,names=edudata$Category)</tt>.
+Note the use of a comma to separate optional arguments, given as
+"optionname=value" pairs. For example, the option "las=3" will
+additionally print category names perpendicular to the x-axis, <tt>barplot(edudata$num2003,names=edudata$Category,las=3)</tt>.
+Alternatively,
+you could also print a horizontal bar plot, using a horizontal
+orientation, <tt>barplot(edudata$num2003,names=edudata$Category,las=1,horiz=TRUE)</tt>.&nbsp;</li>
+    <li><span style="font-style: italic;">Tweak axes and titles</span>:
+To add labels for the x axis, y axis, and a title to the plot, use the <tt>xlab</tt>,&nbsp;<tt>ylab</tt>,
+and <tt>main</tt>
+arguments. If you need to alter the
+limits for x or y axis, use <tt>xlim</tt>
+and <tt>ylim</tt>
+arguments. Changing the bar
+width and spacing can be achieved with <tt>width</tt>
+and <tt>space</tt>
+arguments.
+&nbsp;</li>
+    <li><span style="font-style: italic;">Add
+second data series</span>:
+To plot multiple data series, we need to use the <tt>rbind</tt>
+command to
+combine two data frame columns into one array.
+Try <tt>barplot(rbind(edudata$num2003,edudata$num2013),beside=TRUE)</tt>.&nbsp;</li>
+    <li><span style="font-style: italic;">Tweak
+colors and
+appearance</span>:
+Experiment with
+the <tt>col</tt>
+and <tt>border</tt>
+arguments to change the
+appearance of the bars. </li>
+    <li><span style="font-style: italic;">Output
+plot</span>:
+You can
+save
+the data graphics you generate in a variety of formats, including pdf,
+png, eps, jpeg, etc. Type <tt>png(file.choose(new=TRUE))</tt>.
+This outputs
+graphics to your chosen png file, rather than the Quartz graphics
+viewer R uses by default. Then submit your final barplot command again.
+You may notice this time nothing happens in your Quartz viewer;
+however, the file you chose will now contain your output. Use <tt>dev.off()</tt>
+to return graphics output back to the Quartz viewer.&nbsp;</li>
+  </ul>
+</ul>
+Mini-exercise:
+Now find some interesting data on the Internet. The
+Guardian data blog,<span style="text-decoration: underline;"> </span><a
+ href="http://www.guardian.co.uk/news/datablog">http://www.guardian.co.uk/news/datablog</a>,&nbsp;
+contains many interesting data sets, along with information about the
+source, and ideas for its presentation. Work out how to display the
+data using different chart types, such as scatter plots, line graphs,
+pie charts, and so forth. Post your best efforts (both R-code and
+graphics output) on the course website. Remember the principles of data
+graphics, and the graphical design process when developing and refining
+your own and critiquing others' data graphics.&nbsp; <br>
+<h3>Assessment</h3>
+<p>This
+exercise is not assessed.</p>
+<h3>Coda</h3>
+<p>This
+work is based on "A Short
+Introduction to R" by Richard Harris http://www.social-statistics.org,
+available under a CC Attribution-NonCommercial-ShareAlike 3.0 license. </p>
+<p><a rel="license"
+ href="http://creativecommons.org/licenses/by/3.0/deed.en_US"><img
+ src="88x31.png" style="border: 0px solid ; width: 88px; height: 31px;"
+ alt="Creative Commons License"></a>
+Additional material and adaptations by <a
+ xmlns:cc="http://creativecommons.org/ns#" href="http://duckham.org"
+ property="cc:attributionName" rel="cc:attributionURL">Matt Duckham</a>,
+licensed under a <a rel="license"
+ href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative
+Commons Attribution 3.0 Unported License</a>.</p>
+</div>
+</body>
+</html>
