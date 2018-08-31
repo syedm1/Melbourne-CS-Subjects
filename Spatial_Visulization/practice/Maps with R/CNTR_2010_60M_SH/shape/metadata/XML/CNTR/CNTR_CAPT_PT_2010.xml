@@ -1,0 +1,1090 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../ISO_GISCO_INSPIRE.xsl"?>
+<gmd:MD_Metadata xsi:schemaLocation="http://www.giscoLN.org/metadataModel/ gisco_LN.xsd" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<gmd:fileIdentifier>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">{E2C8EF37-3010-4A33-9115-8FD4E6099EC5}</gco:CharacterString>
+</gmd:fileIdentifier>
+<gmd:language>
+<gmd:LanguageCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/ML_gmxCodelists.xml#LanguageCode" codeListValue="eng">eng</gmd:LanguageCode>
+</gmd:language>
+<gmd:characterSet>
+<gmd:MD_CharacterSetCode codeList="./resources/Codelist/GiscoCodelists.xml#MD_CharacterSetCode" codeListValue="utf16">utf16</gmd:MD_CharacterSetCode>
+</gmd:characterSet>
+<gmd:parentIdentifier>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">
+</gco:CharacterString>
+</gmd:parentIdentifier>
+<gmd:hierarchyLevel>
+<gmd:MD_ScopeCode codeList="./resources/Codelist/GiscoCodelists.xml#MD_ScopeCode" codeListValue="dataset">dataset</gmd:MD_ScopeCode>
+</gmd:hierarchyLevel>
+<gmd:hierarchyLevelName>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">Geodatabase feature class</gco:CharacterString>
+</gmd:hierarchyLevelName>
+<gmd:contact>
+</gmd:contact>
+<gmd:dateStamp>
+<gco:Date xmlns:gco="http://www.isotc211.org/2005/gco">2011-12-15</gco:Date>
+</gmd:dateStamp>
+<gmd:metadataStandardName>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">ISO19115:2003</gco:CharacterString>
+</gmd:metadataStandardName>
+<gmd:metadataStandardVersion>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">GISCO 1.2.0</gco:CharacterString>
+</gmd:metadataStandardVersion>
+<gmd:dataSetURI>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">Server=crab.cc.cec.eu.int; Service=port:5154; User=giscoread; Version=SDE.DEFAULT</gco:CharacterString>
+</gmd:dataSetURI>
+<gmd:spatialRepresentationInfo>
+<gmd:MD_VectorSpatialRepresentation>
+<gmd:topologyLevel>
+<gmd:MD_TopologyLevelCode codeList="./resources/Codelist/GiscoCodelists.xml#MD_TopologyLevelCode" codeListValue="geometryOnly">geometryOnly</gmd:MD_TopologyLevelCode>
+</gmd:topologyLevel>
+<gmd:geometricObjects>
+<gmd:MD_GeometricObjects uuid="CNTR_CAPT_PT_2010">
+<gmd:geometricObjectType>
+<gmd:MD_GeometricObjectTypeCode codeList="./resources/Codelist/GiscoCodelists.xml#MD_GeometricObjectTypeCode" codeListValue="point">point</gmd:MD_GeometricObjectTypeCode>
+</gmd:geometricObjectType>
+<gmd:geometricObjectCount>
+<gco:Integer xmlns:gco="http://www.isotc211.org/2005/gco">225</gco:Integer>
+</gmd:geometricObjectCount>
+</gmd:MD_GeometricObjects>
+</gmd:geometricObjects>
+</gmd:MD_VectorSpatialRepresentation>
+</gmd:spatialRepresentationInfo>
+<gmd:referenceSystemInfo>
+<gmd:MD_ReferenceSystem>
+<gmd:referenceSystemIdentifier>
+<gmd:RS_Identifier>
+<gmd:code>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">GCS_ETRS_1989</gco:CharacterString>
+</gmd:code>
+</gmd:RS_Identifier>
+</gmd:referenceSystemIdentifier>
+</gmd:MD_ReferenceSystem>
+</gmd:referenceSystemInfo>
+<gmd:identificationInfo>
+<gmd:MD_DataIdentification xsi:type="gmd:MD_DataIdentification_Type">
+<gmd:citation>
+<gmd:CI_Citation>
+<gmd:title>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">Capitals of the World 2010</gco:CharacterString>
+</gmd:title>
+<gmd:alternateTitle>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">GISCO.CNTR_CAPT_PT_2010</gco:CharacterString>
+</gmd:alternateTitle>
+<gmd:date>
+<gmd:CI_Date>
+<gmd:date>
+<gco:Date xmlns:gco="http://www.isotc211.org/2005/gco">2010-11-08</gco:Date>
+</gmd:date>
+<gmd:dateType>
+<gmd:CI_DateTypeCode codeList="./resources/Codelist/GiscoCodelists.xml#CI_DateCode" codeListValue="creation">creation</gmd:CI_DateTypeCode>
+</gmd:dateType>
+</gmd:CI_Date>
+</gmd:date>
+<gmd:date>
+<gmd:CI_Date>
+<gmd:date>
+<gco:Date xmlns:gco="http://www.isotc211.org/2005/gco">2010-12-06</gco:Date>
+</gmd:date>
+<gmd:dateType>
+<gmd:CI_DateTypeCode codeList="./resources/Codelist/GiscoCodelists.xml#CI_DateCode" codeListValue="revision">revision</gmd:CI_DateTypeCode>
+</gmd:dateType>
+</gmd:CI_Date>
+</gmd:date>
+<gmd:date>
+<gmd:CI_Date>
+<gmd:date>
+<gco:Date xmlns:gco="http://www.isotc211.org/2005/gco">0001-01-01</gco:Date>
+</gmd:date>
+<gmd:dateType>
+<gmd:CI_DateTypeCode codeList="./resources/Codelist/GiscoCodelists.xml#CI_DateCode" codeListValue="publication">publication</gmd:CI_DateTypeCode>
+</gmd:dateType>
+</gmd:CI_Date>
+</gmd:date>
+<gmd:edition>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">2010</gco:CharacterString>
+</gmd:edition>
+<gmd:editionDate>
+<gco:Date xmlns:gco="http://www.isotc211.org/2005/gco">2011-12-02</gco:Date>
+</gmd:editionDate>
+<gmd:citedResponsibleParty>
+<gmd:CI_ResponsibleParty>
+<gmd:organisationName>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">Eurostat GISCO - European Commission</gco:CharacterString>
+</gmd:organisationName>
+<gmd:contactInfo>
+<gmd:CI_Contact>
+<gmd:phone>
+<gmd:CI_Telephone>
+<gmd:voice>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">+352 4301 32076</gco:CharacterString>
+</gmd:voice>
+<gmd:facsimile>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">+352 4301 32029</gco:CharacterString>
+</gmd:facsimile>
+</gmd:CI_Telephone>
+</gmd:phone>
+<gmd:address>
+<gmd:CI_Address>
+<gmd:deliveryPoint>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">5, rue Alphonse Weicker</gco:CharacterString>
+</gmd:deliveryPoint>
+<gmd:city>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">Luxembourg</gco:CharacterString>
+</gmd:city>
+<gmd:administrativeArea>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">Luxembourg</gco:CharacterString>
+</gmd:administrativeArea>
+<gmd:postalCode>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">2920</gco:CharacterString>
+</gmd:postalCode>
+<gmd:country>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">lu</gco:CharacterString>
+</gmd:country>
+<gmd:electronicMailAddress>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">estat-gisco@ec.europa.eu</gco:CharacterString>
+</gmd:electronicMailAddress>
+</gmd:CI_Address>
+</gmd:address>
+</gmd:CI_Contact>
+</gmd:contactInfo>
+<gmd:role>
+<gmd:CI_RoleCode codeList="./resources/Codelist/GiscoCodelists.xml#CI_RoleCode" codeListValue="pointOfContact">pointOfContact</gmd:CI_RoleCode>
+</gmd:role>
+</gmd:CI_ResponsibleParty>
+</gmd:citedResponsibleParty>
+<gmd:citedResponsibleParty>
+<gmd:CI_ResponsibleParty>
+<gmd:organisationName>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">Abaco Spa</gco:CharacterString>
+</gmd:organisationName>
+<gmd:contactInfo>
+<gmd:CI_Contact>
+<gmd:phone>
+<gmd:CI_Telephone>
+<gmd:voice>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">+39 0376 222 181</gco:CharacterString>
+</gmd:voice>
+<gmd:facsimile>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">+39 0376 222 182</gco:CharacterString>
+</gmd:facsimile>
+</gmd:CI_Telephone>
+</gmd:phone>
+<gmd:address>
+<gmd:CI_Address>
+<gmd:deliveryPoint>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">Corso Umberto I, 43</gco:CharacterString>
+</gmd:deliveryPoint>
+<gmd:city>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">Mantova</gco:CharacterString>
+</gmd:city>
+<gmd:administrativeArea>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">Mantova</gco:CharacterString>
+</gmd:administrativeArea>
+<gmd:postalCode>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">46100</gco:CharacterString>
+</gmd:postalCode>
+<gmd:country>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">it</gco:CharacterString>
+</gmd:country>
+<gmd:electronicMailAddress>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">info@abacogroup.eu</gco:CharacterString>
+</gmd:electronicMailAddress>
+</gmd:CI_Address>
+</gmd:address>
+</gmd:CI_Contact>
+</gmd:contactInfo>
+<gmd:role>
+<gmd:CI_RoleCode codeList="./resources/Codelist/GiscoCodelists.xml#CI_RoleCode" codeListValue="processor">processor</gmd:CI_RoleCode>
+</gmd:role>
+</gmd:CI_ResponsibleParty>
+</gmd:citedResponsibleParty>
+<gmd:presentationForm>
+<gmd:CI_PresentationFormCode codeList="./resources/Codelist/GiscoCodelists.xml#CI_PresentationFormCode" codeListValue="mapDigital">mapDigital</gmd:CI_PresentationFormCode>
+</gmd:presentationForm>
+</gmd:CI_Citation>
+</gmd:citation>
+<gmd:abstract>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">Capital cities of the world on country level
+
+This feature class are points and  the extent covers the entire world.</gco:CharacterString>
+</gmd:abstract>
+<gmd:purpose>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">The point of capital cities of the world are used mainly for mapping purposes.</gco:CharacterString>
+</gmd:purpose>
+<gmd:status>
+<gmd:MD_ProgressCode codeList="./resources/Codelist/GiscoCodelists.xml#MD_ProgressCode" codeListValue="completed">completed</gmd:MD_ProgressCode>
+</gmd:status>
+<gmd:pointOfContact>
+<gmd:CI_ResponsibleParty>
+<gmd:organisationName>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">Eurostat GISCO - European Commission</gco:CharacterString>
+</gmd:organisationName>
+<gmd:contactInfo>
+<gmd:CI_Contact>
+<gmd:phone>
+<gmd:CI_Telephone>
+<gmd:voice>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">+352 4301 32076</gco:CharacterString>
+</gmd:voice>
+<gmd:facsimile>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">+352 4301 32029</gco:CharacterString>
+</gmd:facsimile>
+</gmd:CI_Telephone>
+</gmd:phone>
+<gmd:address>
+<gmd:CI_Address>
+<gmd:deliveryPoint>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">5, rue Alphonse Weicker</gco:CharacterString>
+</gmd:deliveryPoint>
+<gmd:city>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">Luxembourg</gco:CharacterString>
+</gmd:city>
+<gmd:administrativeArea>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">Luxembourg</gco:CharacterString>
+</gmd:administrativeArea>
+<gmd:postalCode>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">2920</gco:CharacterString>
+</gmd:postalCode>
+<gmd:country>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">lu</gco:CharacterString>
+</gmd:country>
+<gmd:electronicMailAddress>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">estat-gisco@ec.europa.eu</gco:CharacterString>
+</gmd:electronicMailAddress>
+</gmd:CI_Address>
+</gmd:address>
+</gmd:CI_Contact>
+</gmd:contactInfo>
+<gmd:role>
+<gmd:CI_RoleCode codeList="./resources/Codelist/GiscoCodelists.xml#CI_RoleCode" codeListValue="pointOfContact">pointOfContact</gmd:CI_RoleCode>
+</gmd:role>
+</gmd:CI_ResponsibleParty>
+</gmd:pointOfContact>
+<gmd:pointOfContact>
+<gmd:CI_ResponsibleParty>
+<gmd:organisationName>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">Abaco Spa</gco:CharacterString>
+</gmd:organisationName>
+<gmd:contactInfo>
+<gmd:CI_Contact>
+<gmd:phone>
+<gmd:CI_Telephone>
+<gmd:voice>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">+39 0376 222 181</gco:CharacterString>
+</gmd:voice>
+<gmd:facsimile>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">+39 0376 222 182</gco:CharacterString>
+</gmd:facsimile>
+</gmd:CI_Telephone>
+</gmd:phone>
+<gmd:address>
+<gmd:CI_Address>
+<gmd:deliveryPoint>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">Corso Umberto I, 43</gco:CharacterString>
+</gmd:deliveryPoint>
+<gmd:city>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">Mantova</gco:CharacterString>
+</gmd:city>
+<gmd:administrativeArea>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">Mantova</gco:CharacterString>
+</gmd:administrativeArea>
+<gmd:postalCode>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">46100</gco:CharacterString>
+</gmd:postalCode>
+<gmd:country>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">it</gco:CharacterString>
+</gmd:country>
+<gmd:electronicMailAddress>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">info@abacogroup.eu</gco:CharacterString>
+</gmd:electronicMailAddress>
+</gmd:CI_Address>
+</gmd:address>
+</gmd:CI_Contact>
+</gmd:contactInfo>
+<gmd:role>
+<gmd:CI_RoleCode codeList="./resources/Codelist/GiscoCodelists.xml#CI_RoleCode" codeListValue="processor">processor</gmd:CI_RoleCode>
+</gmd:role>
+</gmd:CI_ResponsibleParty>
+</gmd:pointOfContact>
+<gmd:resourceMaintenance>
+<gmd:MD_MaintenanceInformation>
+<gmd:maintenanceAndUpdateFrequency>
+<gmd:MD_MaintenanceFrequencyCode codeList="./resources/Codelist/GiscoCodelists.xml#MD_MaintenanceFrequencyCode" codeListValue="irregular">irregular</gmd:MD_MaintenanceFrequencyCode>
+</gmd:maintenanceAndUpdateFrequency>
+</gmd:MD_MaintenanceInformation>
+</gmd:resourceMaintenance>
+<gmd:descriptiveKeywords>
+<gmd:MD_Keywords>
+<gmd:keyword>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">World</gco:CharacterString>
+</gmd:keyword>
+<gmd:type>
+<gmd:MD_KeywordTypeCode codeList="./resources/Codelist/GiscoCodelists.xml#MD_KeywordTypeCode" codeListValue="place">place</gmd:MD_KeywordTypeCode>
+</gmd:type>
+</gmd:MD_Keywords>
+</gmd:descriptiveKeywords>
+<gmd:descriptiveKeywords>
+<gmd:MD_Keywords>
+<gmd:keyword>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">Countries</gco:CharacterString>
+</gmd:keyword>
+<gmd:type>
+<gmd:MD_KeywordTypeCode codeList="./resources/Codelist/GiscoCodelists.xml#MD_KeywordTypeCode" codeListValue="theme">theme</gmd:MD_KeywordTypeCode>
+</gmd:type>
+</gmd:MD_Keywords>
+</gmd:descriptiveKeywords>
+<gmd:descriptiveKeywords>
+<gmd:MD_Keywords>
+<gmd:keyword>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">Administrative Units</gco:CharacterString>
+</gmd:keyword>
+<gmd:type>
+<gmd:MD_KeywordTypeCode codeList="./resources/Codelist/GiscoCodelists.xml#MD_KeywordTypeCode" codeListValue="theme">theme</gmd:MD_KeywordTypeCode>
+</gmd:type>
+<gmd:thesaurusName>
+<gmd:CI_Citation>
+<gmd:title>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">Directive 20007/.../EC/ of the European parliament and of the Council of establishing an Infrastructure for Spatial Information in the European Community (INSPIRE)</gco:CharacterString>
+</gmd:title>
+<gmd:date>
+<gmd:CI_Date>
+<gmd:date>
+<gco:Date xmlns:gco="http://www.isotc211.org/2005/gco">0001-01-01</gco:Date>
+</gmd:date>
+<gmd:dateType>
+<gmd:CI_DateTypeCode codeList="./resources/Codelist/GiscoCodelists.xml#CI_DateCode" codeListValue="">
+</gmd:CI_DateTypeCode>
+</gmd:dateType>
+</gmd:CI_Date>
+</gmd:date>
+</gmd:CI_Citation>
+</gmd:thesaurusName>
+</gmd:MD_Keywords>
+</gmd:descriptiveKeywords>
+<gmd:resourceConstraints>
+<gmd:MD_LegalConstraints>
+<gmd:accessConstraints>
+<gmd:MD_RestrictionCode codeList="./resources/Codelist/GiscoCodelists.xml#MD_RestrictionCode" codeListValue="copyright">copyright</gmd:MD_RestrictionCode>
+</gmd:accessConstraints>
+</gmd:MD_LegalConstraints>
+</gmd:resourceConstraints>
+<gmd:resourceConstraints>
+<gmd:MD_LegalConstraints>
+<gmd:useConstraints>
+<gmd:MD_RestrictionCode codeList="./resources/Codelist/GiscoCodelists.xml#MD_RestrictionCode" codeListValue="copyright">copyright</gmd:MD_RestrictionCode>
+</gmd:useConstraints>
+</gmd:MD_LegalConstraints>
+</gmd:resourceConstraints>
+<gmd:spatialRepresentationType>
+<gmd:MD_SpatialRepresentationTypeCode codeList="./resources/Codelist/GiscoCodelists.xml#MD_SpatialRepresentationTypeCode" codeListValue="vector">vector</gmd:MD_SpatialRepresentationTypeCode>
+</gmd:spatialRepresentationType>
+<gmd:spatialResolution>
+<gmd:MD_Resolution>
+<gmd:equivalentScale>
+<gmd:MD_RepresentativeFraction uuid="60000000">
+<gmd:denominator>
+<gco:Integer xmlns:gco="http://www.isotc211.org/2005/gco">60000000</gco:Integer>
+</gmd:denominator>
+</gmd:MD_RepresentativeFraction>
+</gmd:equivalentScale>
+</gmd:MD_Resolution>
+</gmd:spatialResolution>
+<gmd:language>
+<gmd:LanguageCode codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/ML_gmxCodelists.xml#LanguageCode" codeListValue="eng">eng</gmd:LanguageCode>
+</gmd:language>
+<gmd:characterSet>
+<gmd:MD_CharacterSetCode codeList="./resources/Codelist/GiscoCodelists.xml#MD_CharacterSetCode" codeListValue="utf16">utf16</gmd:MD_CharacterSetCode>
+</gmd:characterSet>
+<gmd:topicCategory>
+<gmd:MD_TopicCategoryCode>boundaries</gmd:MD_TopicCategoryCode>
+</gmd:topicCategory>
+<gmd:extent>
+<gmd:EX_Extent>
+<gmd:geographicElement>
+<gmd:EX_GeographicBoundingBox>
+<gmd:extentTypeCode>
+<gco:Boolean xmlns:gco="http://www.isotc211.org/2005/gco">1</gco:Boolean>
+</gmd:extentTypeCode>
+<gmd:westBoundLongitude>
+<gco:Decimal xmlns:gco="http://www.isotc211.org/2005/gco">-176.151564</gco:Decimal>
+</gmd:westBoundLongitude>
+<gmd:eastBoundLongitude>
+<gco:Decimal xmlns:gco="http://www.isotc211.org/2005/gco">178.686694</gco:Decimal>
+</gmd:eastBoundLongitude>
+<gmd:southBoundLatitude>
+<gco:Decimal xmlns:gco="http://www.isotc211.org/2005/gco">-51.701004</gco:Decimal>
+</gmd:southBoundLatitude>
+<gmd:northBoundLatitude>
+<gco:Decimal xmlns:gco="http://www.isotc211.org/2005/gco">78.200001</gco:Decimal>
+</gmd:northBoundLatitude>
+</gmd:EX_GeographicBoundingBox>
+</gmd:geographicElement>
+</gmd:EX_Extent>
+</gmd:extent>
+</gmd:MD_DataIdentification>
+</gmd:identificationInfo>
+<gmd:distributionInfo>
+<gmd:MD_Distribution>
+<gmd:distributor>
+<gmd:MD_Distributor>
+<gmd:distributorContact>
+<gmd:CI_ResponsibleParty>
+<gmd:organisationName>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">Eurostat GISCO - European Commission</gco:CharacterString>
+</gmd:organisationName>
+<gmd:contactInfo>
+<gmd:CI_Contact>
+<gmd:phone>
+<gmd:CI_Telephone>
+<gmd:voice>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">+352 4301 32076</gco:CharacterString>
+</gmd:voice>
+<gmd:facsimile>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">+352 4301 32029</gco:CharacterString>
+</gmd:facsimile>
+</gmd:CI_Telephone>
+</gmd:phone>
+<gmd:address>
+<gmd:CI_Address>
+<gmd:deliveryPoint>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">5, rue Alphonse Weicker</gco:CharacterString>
+</gmd:deliveryPoint>
+<gmd:city>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">Luxembourg</gco:CharacterString>
+</gmd:city>
+<gmd:administrativeArea>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">Luxembourg</gco:CharacterString>
+</gmd:administrativeArea>
+<gmd:postalCode>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">2920</gco:CharacterString>
+</gmd:postalCode>
+<gmd:country>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">lu</gco:CharacterString>
+</gmd:country>
+<gmd:electronicMailAddress>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">estat-gisco@ec.europa.eu</gco:CharacterString>
+</gmd:electronicMailAddress>
+</gmd:CI_Address>
+</gmd:address>
+</gmd:CI_Contact>
+</gmd:contactInfo>
+<gmd:role>
+<gmd:CI_RoleCode codeList="./resources/Codelist/GiscoCodelists.xml#CI_RoleCode" codeListValue="distributor">distributor</gmd:CI_RoleCode>
+</gmd:role>
+</gmd:CI_ResponsibleParty>
+</gmd:distributorContact>
+<gmd:distributorFormat>
+<gmd:MD_Format>
+<gmd:name>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">File Geodatabase Feature Class</gco:CharacterString>
+</gmd:name>
+<gmd:version>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">9.3.1</gco:CharacterString>
+</gmd:version>
+</gmd:MD_Format>
+</gmd:distributorFormat>
+<gmd:distributorTransferOptions>
+<gmd:MD_DigitalTransferOptions>
+<gmd:onLine>
+<gmd:CI_OnlineResource>
+<gmd:linkage>
+<gmd:URL>file://\\ABACOPORT-PC\C\Condivisa\work\EUROSTAT\work\SC3\ACT_2\work\SC3_A2_GENERALISATION.gdb</gmd:URL>
+</gmd:linkage>
+<gmd:protocol>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">Local Area Network</gco:CharacterString>
+</gmd:protocol>
+<gmd:description>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">002</gco:CharacterString>
+</gmd:description>
+</gmd:CI_OnlineResource>
+</gmd:onLine>
+<gmd:offLine>
+<gmd:MD_Medium>
+</gmd:MD_Medium>
+</gmd:offLine>
+</gmd:MD_DigitalTransferOptions>
+</gmd:distributorTransferOptions>
+</gmd:MD_Distributor>
+</gmd:distributor>
+</gmd:MD_Distribution>
+</gmd:distributionInfo>
+<gmd:dataQualityInfo>
+<gmd:DQ_DataQuality>
+<gmd:scope>
+<gmd:DQ_Scope>
+<gmd:level>
+<gmd:MD_ScopeCode codeList="./resources/Codelist/GiscoCodelists.xml#MD_ScopeCode" codeListValue="dataset">dataset</gmd:MD_ScopeCode>
+</gmd:level>
+</gmd:DQ_Scope>
+</gmd:scope>
+<gmd:report>
+<gmd:DQ_ConceptualConsistency>
+<gmd:nameOfMeasure>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">Completeness of Dataset</gco:CharacterString>
+</gmd:nameOfMeasure>
+<gmd:measureIdentification>
+<gmd:RS_Identifier>
+<gmd:code>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">
+</gco:CharacterString>
+</gmd:code>
+<gmd:codeSpace>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">INSPIRE</gco:CharacterString>
+</gmd:codeSpace>
+</gmd:RS_Identifier>
+</gmd:measureIdentification>
+<gmd:measureDescription>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">All feature classes, attribute tables and relationship classes should be present</gco:CharacterString>
+</gmd:measureDescription>
+<gmd:evaluationMethodType>
+<gmd:DQ_EvaluationMethodTypeCode codeList="./resources/Codelist/GiscoCodelists.xml#DQ_EvaluationMethodTypeCode" codeListValue="">
+</gmd:DQ_EvaluationMethodTypeCode>
+</gmd:evaluationMethodType>
+<gmd:evaluationMethodDescription>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">Re-application of schema to dataset</gco:CharacterString>
+</gmd:evaluationMethodDescription>
+<gmd:evaluationProcedure>
+<gmd:CI_Citation>
+<gmd:title>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">
+</gco:CharacterString>
+</gmd:title>
+<gmd:date>
+</gmd:date>
+</gmd:CI_Citation>
+</gmd:evaluationProcedure>
+<gmd:dateTime>
+<gco:DateTime xmlns:gco="http://www.isotc211.org/2005/gco">2010-12-01T00:00:00</gco:DateTime>
+</gmd:dateTime>
+<gmd:result>
+<gmd:DQ_ConformanceResult>
+<gmd:specification>
+<gmd:CI_Citation>
+<gmd:title>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">
+</gco:CharacterString>
+</gmd:title>
+<gmd:date>
+<gmd:CI_Date>
+<gmd:date>
+<gco:Date xmlns:gco="http://www.isotc211.org/2005/gco">0001-01-01</gco:Date>
+</gmd:date>
+<gmd:dateType>
+<gmd:CI_DateTypeCode codeList="./resources/Codelist/GiscoCodelists.xml#CI_DateCode" codeListValue="">
+</gmd:CI_DateTypeCode>
+</gmd:dateType>
+</gmd:CI_Date>
+</gmd:date>
+</gmd:CI_Citation>
+</gmd:specification>
+<gmd:explanation>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">All feature classes, attribute tables and relationship classes are present</gco:CharacterString>
+</gmd:explanation>
+<gmd:pass>
+<gco:Boolean xmlns:gco="http://www.isotc211.org/2005/gco">false</gco:Boolean>
+</gmd:pass>
+</gmd:DQ_ConformanceResult>
+</gmd:result>
+</gmd:DQ_ConceptualConsistency>
+</gmd:report>
+<gmd:report>
+<gmd:DQ_DomainConsistency>
+<gmd:nameOfMeasure>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">Referential Integrity of Dataset</gco:CharacterString>
+</gmd:nameOfMeasure>
+<gmd:measureIdentification>
+<gmd:RS_Identifier>
+<gmd:code>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">
+</gco:CharacterString>
+</gmd:code>
+<gmd:codeSpace>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">INSPIRE</gco:CharacterString>
+</gmd:codeSpace>
+</gmd:RS_Identifier>
+</gmd:measureIdentification>
+<gmd:measureDescription>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">The integrity and cardinality of the relationships (conceptual and implemented) was checked by enforcing primary and foreign key integrity constraints in Oracle. The constraints referencing coded value domain tables were a test of domain consistency.</gco:CharacterString>
+</gmd:measureDescription>
+<gmd:evaluationMethodType>
+<gmd:DQ_EvaluationMethodTypeCode codeList="./resources/Codelist/GiscoCodelists.xml#DQ_EvaluationMethodTypeCode" codeListValue="">
+</gmd:DQ_EvaluationMethodTypeCode>
+</gmd:evaluationMethodType>
+<gmd:evaluationMethodDescription>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">Errors will show during creation of integrity constraints in Oracle. Constraints will not be applicable in case of violations to the consistency.</gco:CharacterString>
+</gmd:evaluationMethodDescription>
+<gmd:evaluationProcedure>
+<gmd:CI_Citation>
+<gmd:title>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">
+</gco:CharacterString>
+</gmd:title>
+<gmd:date>
+</gmd:date>
+</gmd:CI_Citation>
+</gmd:evaluationProcedure>
+<gmd:dateTime>
+<gco:DateTime xmlns:gco="http://www.isotc211.org/2005/gco">2011-12-01T00:00:00</gco:DateTime>
+</gmd:dateTime>
+<gmd:result>
+<gmd:DQ_ConformanceResult>
+<gmd:specification>
+<gmd:CI_Citation>
+<gmd:title>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">
+</gco:CharacterString>
+</gmd:title>
+<gmd:date>
+<gmd:CI_Date>
+<gmd:date>
+<gco:Date xmlns:gco="http://www.isotc211.org/2005/gco">0001-01-01</gco:Date>
+</gmd:date>
+<gmd:dateType>
+<gmd:CI_DateTypeCode codeList="./resources/Codelist/GiscoCodelists.xml#CI_DateCode" codeListValue="">
+</gmd:CI_DateTypeCode>
+</gmd:dateType>
+</gmd:CI_Date>
+</gmd:date>
+</gmd:CI_Citation>
+</gmd:specification>
+<gmd:explanation>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">No errors occurred, so the integrity of all primary and foreign keys was confirmed. All the values of each coded value attribute are compliant to the domains (except for any NULL values). The cardinality can only be confirmed where it is strict enough for this test to detect errors.</gco:CharacterString>
+</gmd:explanation>
+<gmd:pass>
+<gco:Boolean xmlns:gco="http://www.isotc211.org/2005/gco">false</gco:Boolean>
+</gmd:pass>
+</gmd:DQ_ConformanceResult>
+</gmd:result>
+</gmd:DQ_DomainConsistency>
+</gmd:report>
+<gmd:report>
+<gmd:DQ_TopologicalConsistency>
+<gmd:nameOfMeasure>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">Consistency of CNTR Capitals of the World</gco:CharacterString>
+</gmd:nameOfMeasure>
+<gmd:measureIdentification>
+<gmd:RS_Identifier>
+<gmd:code>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">
+</gco:CharacterString>
+</gmd:code>
+<gmd:codeSpace>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">INSPIRE</gco:CharacterString>
+</gmd:codeSpace>
+</gmd:RS_Identifier>
+</gmd:measureIdentification>
+<gmd:measureDescription>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">CNTR_CAPT_PT_2010 must be properly inside a polygon in  CNTR_RG_nnM_2010</gco:CharacterString>
+</gmd:measureDescription>
+<gmd:evaluationMethodType>
+<gmd:DQ_EvaluationMethodTypeCode codeList="./resources/Codelist/GiscoCodelists.xml#DQ_EvaluationMethodTypeCode" codeListValue="">
+</gmd:DQ_EvaluationMethodTypeCode>
+</gmd:evaluationMethodType>
+<gmd:evaluationMethodDescription>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">Topology rule validation</gco:CharacterString>
+</gmd:evaluationMethodDescription>
+<gmd:evaluationProcedure>
+<gmd:CI_Citation>
+<gmd:title>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">
+</gco:CharacterString>
+</gmd:title>
+<gmd:date>
+</gmd:date>
+</gmd:CI_Citation>
+</gmd:evaluationProcedure>
+<gmd:dateTime>
+<gco:DateTime xmlns:gco="http://www.isotc211.org/2005/gco">2011-12-01T00:00:00</gco:DateTime>
+</gmd:dateTime>
+<gmd:result>
+<gmd:DQ_ConformanceResult>
+<gmd:specification>
+<gmd:CI_Citation>
+<gmd:title>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">
+</gco:CharacterString>
+</gmd:title>
+<gmd:date>
+<gmd:CI_Date>
+<gmd:date>
+<gco:Date xmlns:gco="http://www.isotc211.org/2005/gco">0001-01-01</gco:Date>
+</gmd:date>
+<gmd:dateType>
+<gmd:CI_DateTypeCode codeList="./resources/Codelist/GiscoCodelists.xml#CI_DateCode" codeListValue="">
+</gmd:CI_DateTypeCode>
+</gmd:dateType>
+</gmd:CI_Date>
+</gmd:date>
+</gmd:CI_Citation>
+</gmd:specification>
+<gmd:explanation>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">No real topology errors identified. See QC report.</gco:CharacterString>
+</gmd:explanation>
+<gmd:pass>
+<gco:Boolean xmlns:gco="http://www.isotc211.org/2005/gco">true</gco:Boolean>
+</gmd:pass>
+</gmd:DQ_ConformanceResult>
+</gmd:result>
+</gmd:DQ_TopologicalConsistency>
+</gmd:report>
+<gmd:lineage>
+<gmd:LI_Lineage>
+<gmd:statement>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">This dataset (together with the other datasets: NUTS_2010, COMM_2010 and COAS_2010) is based on geometry of EBM 2010 of EuroGeographics on commune level with a resolution of 30m (scale 1:100.000) and GRO SCOTLAND DATA data  enriched with some other datasources like  Gaul 2010  country data, Turkish features from GISCO data 2006 and Esri dataset for the Capitals of the World.
+This resulted in a common repository of geometry of which the different datasets were derived. The different scale levels were derived of generalisations of the common repository on 100K scale. This means that within each scale level the feature classes of all these datasets: COMM_2010, NUTS_2010, CNTR_2010 and COAS_2010, are fully coherent and compliant.
+
+In addition to the region and boundary feature classes there is also 1 label feature class which is scale independent and 1 point feature class about the Capitals of the World, data source from Esri datasets. For each CNTR in the region feature class there is exactly 1 label .
+For EU27 the accuracy is up to scale 1/100.000 but for the rest of the world the scale level is 1/1.000.000.
+The extent of this feature class is the world.</gco:CharacterString>
+</gmd:statement>
+<gmd:processStep>
+<gmd:LI_ProcessStep>
+<gmd:description>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">The Capitals of the World feature class were based in the Esri dataset.
+ Here only the process steps after  creation of the common repository are briefly described
+Step 1: Once the dataset CNTR_2010 was ready, was loaded the shape files Cities.shp in the feature class CNTR_CAPT_PT_2010
+Step 2:  Attribute manipulation to match the new structure;
+Step 3: Correct the location of the cities;
+Step 4: Topology correction
+Step 5: adding metadata
+</gco:CharacterString>
+</gmd:description>
+</gmd:LI_ProcessStep>
+</gmd:processStep>
+<gmd:source>
+<gmd:LI_Source>
+<gmd:description>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">(i) Eurogeographics EBM v5.0. and GRO SCOTLAND DATA data  (scale 1:100K) 
+(ii) GAUL 2008 country level data
+(iii) TR for the Turkish features FROM GISCO data 2006
+(v) VLIZ Maritime Boundaries Geodatabase Economic Exclusive Zones (EEZ)
+(vi) ArcWorld ESRI Data (Capitals of the World)
+</gco:CharacterString>
+</gmd:description>
+</gmd:LI_Source>
+</gmd:source>
+</gmd:LI_Lineage>
+</gmd:lineage>
+</gmd:DQ_DataQuality>
+</gmd:dataQualityInfo>
+<gmd:entityAttributeInformation>
+<gmd:entityType>
+<gmd:AT_EntityType>
+<gmd:label>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">CNTR_CAPT_PT_2010</gco:CharacterString>
+</gmd:label>
+<gmd:definition>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">Capitals Cities of the world version 2010</gco:CharacterString>
+</gmd:definition>
+</gmd:AT_EntityType>
+</gmd:entityType>
+<gmd:language>
+<gmd:AT_Attribute>
+<gmd:valueType>
+<gmd:AT_TypeNameCode>OID</gmd:AT_TypeNameCode>
+</gmd:valueType>
+<gmd:valueDomain>
+</gmd:valueDomain>
+<gmd:cardinality>
+</gmd:cardinality>
+<gmd:label>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">OBJECTID</gco:CharacterString>
+</gmd:label>
+<gmd:definition>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">Internal feature number.</gco:CharacterString>
+</gmd:definition>
+<gmd:source>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">ESRI</gco:CharacterString>
+</gmd:source>
+<gmd:binaryWidth>
+<gco:Integer xmlns:gco="http://www.isotc211.org/2005/gco">4</gco:Integer>
+</gmd:binaryWidth>
+<gmd:precision>
+<gco:Integer xmlns:gco="http://www.isotc211.org/2005/gco">0</gco:Integer>
+</gmd:precision>
+<gmd:scale>
+<gco:Integer xmlns:gco="http://www.isotc211.org/2005/gco">0</gco:Integer>
+</gmd:scale>
+</gmd:AT_Attribute>
+</gmd:language>
+<gmd:language>
+<gmd:AT_Attribute>
+<gmd:valueType>
+<gmd:AT_TypeNameCode>Geometry</gmd:AT_TypeNameCode>
+</gmd:valueType>
+<gmd:valueDomain>
+</gmd:valueDomain>
+<gmd:cardinality>
+</gmd:cardinality>
+<gmd:label>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">SHAPE</gco:CharacterString>
+</gmd:label>
+<gmd:definition>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">Feature geometry.</gco:CharacterString>
+</gmd:definition>
+<gmd:source>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">ESRI</gco:CharacterString>
+</gmd:source>
+<gmd:binaryWidth>
+<gco:Integer xmlns:gco="http://www.isotc211.org/2005/gco">0</gco:Integer>
+</gmd:binaryWidth>
+<gmd:precision>
+<gco:Integer xmlns:gco="http://www.isotc211.org/2005/gco">0</gco:Integer>
+</gmd:precision>
+<gmd:scale>
+<gco:Integer xmlns:gco="http://www.isotc211.org/2005/gco">0</gco:Integer>
+</gmd:scale>
+</gmd:AT_Attribute>
+</gmd:language>
+<gmd:language>
+<gmd:AT_Attribute>
+<gmd:valueType>
+<gmd:AT_TypeNameCode>String</gmd:AT_TypeNameCode>
+</gmd:valueType>
+<gmd:valueDomain>
+</gmd:valueDomain>
+<gmd:cardinality>
+</gmd:cardinality>
+<gmd:label>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">CNTR_ID</gco:CharacterString>
+</gmd:label>
+<gmd:definition>
+</gmd:definition>
+<gmd:source>
+</gmd:source>
+<gmd:binaryWidth>
+<gco:Integer xmlns:gco="http://www.isotc211.org/2005/gco">2</gco:Integer>
+</gmd:binaryWidth>
+<gmd:precision>
+<gco:Integer xmlns:gco="http://www.isotc211.org/2005/gco">0</gco:Integer>
+</gmd:precision>
+<gmd:scale>
+<gco:Integer xmlns:gco="http://www.isotc211.org/2005/gco">0</gco:Integer>
+</gmd:scale>
+</gmd:AT_Attribute>
+</gmd:language>
+<gmd:language>
+<gmd:AT_Attribute>
+<gmd:valueType>
+<gmd:AT_TypeNameCode>String</gmd:AT_TypeNameCode>
+</gmd:valueType>
+<gmd:valueDomain>
+</gmd:valueDomain>
+<gmd:cardinality>
+</gmd:cardinality>
+<gmd:label>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">CAPT_NAME</gco:CharacterString>
+</gmd:label>
+<gmd:definition>
+</gmd:definition>
+<gmd:source>
+</gmd:source>
+<gmd:binaryWidth>
+<gco:Integer xmlns:gco="http://www.isotc211.org/2005/gco">255</gco:Integer>
+</gmd:binaryWidth>
+<gmd:precision>
+<gco:Integer xmlns:gco="http://www.isotc211.org/2005/gco">0</gco:Integer>
+</gmd:precision>
+<gmd:scale>
+<gco:Integer xmlns:gco="http://www.isotc211.org/2005/gco">0</gco:Integer>
+</gmd:scale>
+</gmd:AT_Attribute>
+</gmd:language>
+<gmd:language>
+<gmd:AT_Attribute>
+<gmd:valueType>
+<gmd:AT_TypeNameCode>String</gmd:AT_TypeNameCode>
+</gmd:valueType>
+<gmd:valueDomain>
+</gmd:valueDomain>
+<gmd:cardinality>
+</gmd:cardinality>
+<gmd:label>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">NAME_LATN</gco:CharacterString>
+</gmd:label>
+<gmd:definition>
+</gmd:definition>
+<gmd:source>
+</gmd:source>
+<gmd:binaryWidth>
+<gco:Integer xmlns:gco="http://www.isotc211.org/2005/gco">255</gco:Integer>
+</gmd:binaryWidth>
+<gmd:precision>
+<gco:Integer xmlns:gco="http://www.isotc211.org/2005/gco">0</gco:Integer>
+</gmd:precision>
+<gmd:scale>
+<gco:Integer xmlns:gco="http://www.isotc211.org/2005/gco">0</gco:Integer>
+</gmd:scale>
+</gmd:AT_Attribute>
+</gmd:language>
+<gmd:language>
+<gmd:AT_Attribute>
+<gmd:valueType>
+<gmd:AT_TypeNameCode>String</gmd:AT_TypeNameCode>
+</gmd:valueType>
+<gmd:valueDomain>
+</gmd:valueDomain>
+<gmd:cardinality>
+</gmd:cardinality>
+<gmd:label>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">NAME_ASCI</gco:CharacterString>
+</gmd:label>
+<gmd:definition>
+</gmd:definition>
+<gmd:source>
+</gmd:source>
+<gmd:binaryWidth>
+<gco:Integer xmlns:gco="http://www.isotc211.org/2005/gco">255</gco:Integer>
+</gmd:binaryWidth>
+<gmd:precision>
+<gco:Integer xmlns:gco="http://www.isotc211.org/2005/gco">0</gco:Integer>
+</gmd:precision>
+<gmd:scale>
+<gco:Integer xmlns:gco="http://www.isotc211.org/2005/gco">0</gco:Integer>
+</gmd:scale>
+</gmd:AT_Attribute>
+</gmd:language>
+<gmd:language>
+<gmd:AT_Attribute>
+<gmd:valueType>
+<gmd:AT_TypeNameCode>String</gmd:AT_TypeNameCode>
+</gmd:valueType>
+<gmd:valueDomain>
+</gmd:valueDomain>
+<gmd:cardinality>
+</gmd:cardinality>
+<gmd:label>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">NAME_HTML</gco:CharacterString>
+</gmd:label>
+<gmd:definition>
+</gmd:definition>
+<gmd:source>
+</gmd:source>
+<gmd:binaryWidth>
+<gco:Integer xmlns:gco="http://www.isotc211.org/2005/gco">255</gco:Integer>
+</gmd:binaryWidth>
+<gmd:precision>
+<gco:Integer xmlns:gco="http://www.isotc211.org/2005/gco">0</gco:Integer>
+</gmd:precision>
+<gmd:scale>
+<gco:Integer xmlns:gco="http://www.isotc211.org/2005/gco">0</gco:Integer>
+</gmd:scale>
+</gmd:AT_Attribute>
+</gmd:language>
+<gmd:language>
+<gmd:AT_Attribute>
+<gmd:valueType>
+<gmd:AT_TypeNameCode>String</gmd:AT_TypeNameCode>
+</gmd:valueType>
+<gmd:valueDomain>
+</gmd:valueDomain>
+<gmd:cardinality>
+</gmd:cardinality>
+<gmd:label>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">NAME_ENGL</gco:CharacterString>
+</gmd:label>
+<gmd:definition>
+</gmd:definition>
+<gmd:source>
+</gmd:source>
+<gmd:binaryWidth>
+<gco:Integer xmlns:gco="http://www.isotc211.org/2005/gco">255</gco:Integer>
+</gmd:binaryWidth>
+<gmd:precision>
+<gco:Integer xmlns:gco="http://www.isotc211.org/2005/gco">0</gco:Integer>
+</gmd:precision>
+<gmd:scale>
+<gco:Integer xmlns:gco="http://www.isotc211.org/2005/gco">0</gco:Integer>
+</gmd:scale>
+</gmd:AT_Attribute>
+</gmd:language>
+<gmd:language>
+<gmd:AT_Attribute>
+<gmd:valueType>
+<gmd:AT_TypeNameCode>Double</gmd:AT_TypeNameCode>
+</gmd:valueType>
+<gmd:valueDomain>
+</gmd:valueDomain>
+<gmd:cardinality>
+</gmd:cardinality>
+<gmd:label>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">LAT</gco:CharacterString>
+</gmd:label>
+<gmd:definition>
+</gmd:definition>
+<gmd:source>
+</gmd:source>
+<gmd:binaryWidth>
+<gco:Integer xmlns:gco="http://www.isotc211.org/2005/gco">8</gco:Integer>
+</gmd:binaryWidth>
+<gmd:precision>
+<gco:Integer xmlns:gco="http://www.isotc211.org/2005/gco">0</gco:Integer>
+</gmd:precision>
+<gmd:scale>
+<gco:Integer xmlns:gco="http://www.isotc211.org/2005/gco">0</gco:Integer>
+</gmd:scale>
+</gmd:AT_Attribute>
+</gmd:language>
+<gmd:language>
+<gmd:AT_Attribute>
+<gmd:valueType>
+<gmd:AT_TypeNameCode>Double</gmd:AT_TypeNameCode>
+</gmd:valueType>
+<gmd:valueDomain>
+</gmd:valueDomain>
+<gmd:cardinality>
+</gmd:cardinality>
+<gmd:label>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">LON</gco:CharacterString>
+</gmd:label>
+<gmd:definition>
+</gmd:definition>
+<gmd:source>
+</gmd:source>
+<gmd:binaryWidth>
+<gco:Integer xmlns:gco="http://www.isotc211.org/2005/gco">8</gco:Integer>
+</gmd:binaryWidth>
+<gmd:precision>
+<gco:Integer xmlns:gco="http://www.isotc211.org/2005/gco">0</gco:Integer>
+</gmd:precision>
+<gmd:scale>
+<gco:Integer xmlns:gco="http://www.isotc211.org/2005/gco">0</gco:Integer>
+</gmd:scale>
+</gmd:AT_Attribute>
+</gmd:language>
+</gmd:entityAttributeInformation>
+<gmd:CRS>
+<gmd:ellipsoid>
+<gmd:RS_Identifier>
+<gmd:code>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">Geodetic Reference System 80</gco:CharacterString>
+</gmd:code>
+</gmd:RS_Identifier>
+</gmd:ellipsoid>
+<gmd:datum>
+<gmd:RS_Identifier>
+<gmd:code>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">D_ETRS_1989</gco:CharacterString>
+</gmd:code>
+</gmd:RS_Identifier>
+</gmd:datum>
+<gmd:ellipsoidParameters>
+<gmd:MD_EllipsoidParameters>
+<gmd:axisUnits>
+<gml:UnitDefinition gml:id="ellipsoid" xmlns:gml="http://www.opengis.net/gml">
+<gml:identifier codeSpace="Degrees">
+</gml:identifier>
+</gml:UnitDefinition>
+</gmd:axisUnits>
+<gmd:semiMajorAxis>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">6378137.000000</gco:CharacterString>
+</gmd:semiMajorAxis>
+<gmd:denominatorOfFlatteningRatio>
+<gco:CharacterString xmlns:gco="http://www.isotc211.org/2005/gco">298.257222</gco:CharacterString>
+</gmd:denominatorOfFlatteningRatio>
+</gmd:MD_EllipsoidParameters>
+</gmd:ellipsoidParameters>
+</gmd:CRS>
+</gmd:MD_Metadata>
